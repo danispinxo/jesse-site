@@ -1,0 +1,43 @@
+{
+  "name": "jesse-pajuaar-therapy-studios",
+  "version": "1.0.0",
+  "private": true,
+  "description": "jesse-pajuaar-therapy-studios",
+  "author": "Dani Spinosa",
+  "keywords": [
+    "gatsby"
+  ],
+  "scripts": {
+    "develop": "gatsby develop",
+    "start": "gatsby develop",
+    "build": "gatsby build",
+    "serve": "gatsby serve",
+    "clean": "gatsby clean"
+  },
+  "dependencies": {
+    "gatsby": "^4.24.6",
+    "gatsby-plugin-sass": "^5.24.0",
+    "react": "^18.1.0",
+    "react-dom": "^18.1.0",
+    "react-router": "^6.4.3",
+    "sass": "^1.55.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.19.6",
+    "@babel/preset-env": "^7.19.4",
+    "@babel/preset-react": "^7.18.6",
+    "babel-preset-es2015": "^6.24.1",
+    "babelify": "^10.0.0",
+    "browserify": "^17.0.0",
+    "es2015": "0.0.0",
+    "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-jsx-a11y": "^6.6.1",
+    "eslint-plugin-react": "^7.31.10"
+  },
+  "babel": {
+    "presets": [
+      "@babel/preset-env",
+      "@babel/preset-react"
+    ]
+  }
+}

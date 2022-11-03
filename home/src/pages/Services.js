@@ -53,6 +53,11 @@ export default function Services () {
         Pricing: $135 / 50 mins.
         </p>
       </div>
+
+      <div className="consult-box">
+        <h4>No Fee Consultation (Individual) - 15 min.</h4>
+        <button>Book Now</button>
+      </div>
     </main>
   )
 }

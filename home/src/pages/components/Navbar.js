@@ -30,6 +30,8 @@ export default function TopNavbar () {
             <Nav.Link >
               Help & Resources
             </Nav.Link>
+
+            <button>Current Clients</button>
           </Nav>
         </Navbar.Collapse>
       </Container>

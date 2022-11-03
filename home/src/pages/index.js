@@ -15,4 +15,6 @@ const IndexPage = () => {
 
 export default IndexPage
 
-export const Head = () => <title>Jesse Pajuaar Therapy Studios</title>
+export const Head = () => {
+  <title>Jesse Pajuaar Therapy Studios</title>
+};

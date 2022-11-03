@@ -1,9 +1,10 @@
 import * as React from "react";
+import "../styles/homepage.scss";
 
 export default function Homepage () {
   return (
     <main>
-      <h1>Jesse Pajuaar Therapy Studios</h1>
+      <h1>Jesse Pajuäär Therapy Studios</h1>
       <p>
         "Experience is not what happens to you.
         <br />

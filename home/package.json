@@ -1,0 +1,27 @@
+{
+  "name": "jesse-pajuaar-therapy-studios",
+  "version": "1.0.0",
+  "private": true,
+  "description": "jesse-pajuaar-therapy-studios",
+  "author": "Dani Spinosa",
+  "keywords": [
+    "gatsby"
+  ],
+  "scripts": {
+    "develop": "gatsby develop",
+    "start": "gatsby develop",
+    "build": "gatsby build",
+    "serve": "gatsby serve",
+    "clean": "gatsby clean"
+  },
+  "dependencies": {
+    "gatsby": "^4.24.6",
+    "gatsby-plugin-sass": "^5.24.0",
+    "react": "^18.1.0",
+    "react-bootstrap": "^2.5.0",
+    "react-dom": "^18.1.0",
+    "react-router": "^6.4.3",
+    "react-router-dom": "^6.4.3",
+    "sass": "^1.55.0"
+  }
+}

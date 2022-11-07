@@ -1,4 +1,5 @@
 import * as React from "react";
+import Footer from "./components/Footer";
 
 export default function About () {
   return (
@@ -65,6 +66,8 @@ export default function About () {
         <h4>No Fee Consultation (Individual) - 15 min.</h4>
         <button>Book Now</button>
       </div>
+
+      <Footer />
     </main>
   )
 }

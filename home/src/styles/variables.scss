@@ -9,3 +9,10 @@ $dark-blue: #0367A6;
 $med-blue: #4BB2F2;
 $teal: #027373;
 $dark-green: #324001;
+
+//mixins
+@mixin glassbg {
+  backdrop-filter: blur(25px) saturate(144%);
+  -webkit-backdrop-filter: blur(25px) saturate(144%);
+  background-color: rgba(80, 96, 80, 0.52);
+}

@@ -14,3 +14,17 @@ h3, h4, h5 {
 p {
   font-family: $body-font;
 }
+
+.quote-banner {
+  height: 20rem;
+  width: 100%;
+  background-image: url("../images/Waterfall.jpg");
+  background-position: center;
+  display: flex;
+
+  .quotation {
+    font-family: $sub-font;
+    font-size: 1.8rem;
+    color: white;
+  }
+}

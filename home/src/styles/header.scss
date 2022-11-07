@@ -1,0 +1,42 @@
+@import "variables.scss";
+
+.navbar {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  position: fixed;
+  width: 100%;
+  padding: 1rem;
+  @include glassbg;
+
+  .links {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 1rem;
+    font-family: $sub-font;
+    font-size: 1rem;
+    color: $dark-green;
+
+    &:hover {
+      box-shadow: 0.5rem;
+    }
+
+    &:visited {
+      color: $dark-green;
+    }
+  }
+
+  .title{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .btn-holder {
+    display: flex;
+    justify-content: end;
+    margin-right: 3rem;
+    margin-top: -3.5rem;
+  }
+}

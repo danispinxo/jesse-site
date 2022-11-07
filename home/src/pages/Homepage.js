@@ -1,35 +1,56 @@
 import * as React from "react";
 import { Link } from "react-router-dom";
 import "../styles/homepage.scss";
+import JessePhoto from "../images/JessePajuaar.jpg";
 
 export default function Homepage () {
   return (
     <main>
       <div className="quote-banner">
         <div className="quotation-text">
-          <p className="quotation">
-            "Experience is not what happens to you.<br /> 
-            It is what you do with what happens to you." <br />
-            - Aldous Huxley <br />
-            <Link to="/contact">Let's Talk</Link>
-          </p>
+          <div className="quotation">
+            <p>
+              "Experience is not what happens to you.<br /> 
+              It is what you do with what happens to you." <br />
+            </p>
+            <div className="name-holder">
+              <p> - Aldous Huxley -</p>            
+            </div>            
+          </div>
+
+          <Link to="/contact">
+            <button className="talk-btn">
+              Let's Talk
+            </button>
+          </Link>
         </div>
       </div>
 
+      <div className="about-me">
+        <div className="about-me-text">
+          <h2 className="about-me-title">About Me</h2>
+          <h3 className="about-me-name">Jesse Pajuäär</h3>
+          <h4 className="about-me-qualifications">Registered Psychotherapist, DTATI, HBA.</h4>
+          <p className="about-me-approach">
+            I approach each session with the belief that you are the expert of your own life. There are no judgements or assumptions made during our time. My focus is on collaborating with you to create a space where your voice, your wants, and your unique perspective  can not only be heard, but supported and advocated for.
+          </p>
+          <p className="about-me-approach">
+            You are not the problem, the problem is the problem.
+          </p>             
+        </div>
+        
+        <img src={JessePhoto} alt="Headshot of Jesse Pajuaar"/>
+      </div>
 
-      <h3>About me</h3>
-        <h4>Jesse Pajuäär</h4>
-        <h5>Registered Psychotherapist, DTATI, HBA.</h5>
-        <p>
-          I approach each session with the belief that you are the expert of your own life. There are no judgements or assumptions made during our time. My focus is on collaborating with you to create a space where your voice, your wants, and your unique perspective  can not only be heard, but supported and advocated for.
-          <br />
-          You are not the problem, the problem is the problem.
+      <div className="homepage-contact">
+        <p className="homepage-contact-text">
+          Do you feel you need to make some changes but don't know where or how to begin?
         </p>
+        <Link to="/contact">
+          <button className="homepage-contact-btn">Contact me now for a no-fee 15 minute consultation</button>
+        </Link>
+      </div>
 
-      <p>
-        Do you feel you need to make some changes but don't know where or how to begin?
-        <button>Contact me now for a no-fee 15 minute consultation</button>
-      </p>
     </main>
   )
 }

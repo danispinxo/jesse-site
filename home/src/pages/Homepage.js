@@ -51,6 +51,13 @@ export default function Homepage () {
         </Link>
       </div>
 
+      <div className="psychology-today-verification">
+        <iframe title="Psychology Today Verified -- Jesse Pajuaar" src="https://www-jptherapystudios-com.filesusr.com/html/900dd1_259a81179feffed44176301ed25faa6a.html" />
+        <p>
+          &copy; 2022, Jesse Pajuäär Therapy Studios
+        </p>
+      </div>
+
     </main>
   )
 }

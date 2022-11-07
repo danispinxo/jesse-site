@@ -1,0 +1,144 @@
+@import "variables.scss";
+
+main {
+  .about-title-holder {
+    height: 10rem;
+    width: 100%;
+    background-image: url("../images/Waterfall.jpg");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: center 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+
+    .about-title {
+      border-style: solid;
+      border-color: $dark-green;
+      border-radius: 10px;
+      padding: 1rem;
+      background: #b8cccc80;
+      font-size: 2.8rem;
+      padding-left: 6rem;
+      padding-right: 6rem;
+      padding-top: 2rem;
+      padding-bottom: 2rem;
+    }
+  }
+
+  .about-expectations {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 50%;
+    margin-bottom: 1rem;
+    padding: 1rem;
+    background-color: $light-teal;
+    border-style: solid;
+    border-width: 0.08rem;
+    border-color: $dark-teal;
+    border-radius: 10px;
+
+    p {
+      font-family: $sub-font;
+      font-size: 1.5rem;
+      color: $dark-teal;
+      text-shadow: 1px 1px 3px $teal;
+    }
+
+  }
+
+  .section {
+    display: flex;
+    flex-direction: row;
+    width: 90%;
+
+    .section-label {
+      width: 30%;
+      height: auto;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-content: center;
+      align-items: center;
+      background-color: $light-blue;
+      border-style: dotted;
+      border-color: $very-dark-blue;
+      border-radius: 10px;
+      margin: 1rem;
+
+      .label-title {
+        font-family: $sub-font;
+        font-size: 2rem;
+        font-weight: 700;
+        text-align: center;
+      }
+
+      .label-subtitle {
+        font-family: $sub-font;
+        font-size: 1.3rem;
+        font-style: italic;
+        margin-top: -1.3rem;
+      }
+    }
+
+    .section-content {
+      width: 70%;
+      height: auto;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-content: center;
+      align-items: center;
+      background-color: #a2cdf22e;
+      border-style: dotted;
+      border-color: $very-dark-blue;
+      border-radius: 10px;
+      margin: 1rem;
+      padding: 1rem;
+      font-family: $body-font;
+
+      ul {
+        column-count: 3;
+      }
+    }
+  }
+
+  .consult-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 50%;
+    margin-bottom: 1rem;
+    padding: 1rem;
+    background-color: $light-teal;
+    border-style: solid;
+    border-width: 0.08rem;
+    border-color: $dark-teal;
+    border-radius: 10px;
+  
+    .consult-text {
+      font-family: $sub-font;
+      font-size: 1.3rem;
+      color: $dark-teal;
+    }
+  
+    .consult-btn {
+      width: auto;
+      background-color: $dark-teal;
+      font-family: $sub-font;
+      font-size: 1.2rem;
+      color: $light-teal;
+      padding: 0.5rem;
+      border-style: groove;
+      border-color: $teal;
+      border-radius: 10px;
+  
+      &:hover {
+        cursor: pointer;
+        box-shadow: 3px 3px 5px $teal;
+      }
+    }
+  }
+}

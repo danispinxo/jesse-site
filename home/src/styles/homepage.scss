@@ -19,6 +19,15 @@ main {
     color: $dark-blue;
   }
 
+  iframe {
+    display: flex;
+    justify-content: center;
+    outline: none;
+    border: none;
+    width: 10rem;
+    height: 4rem;
+  }
+
 }
 
 .quote-banner {
@@ -175,5 +184,18 @@ main {
       cursor: pointer;
       box-shadow: 3px 3px 5px $teal;
     }
+  }
+}
+
+.psychology-today-verification {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+
+  p {
+    font-family: $body-font;
+    font-size: 0.7rem;
   }
 }

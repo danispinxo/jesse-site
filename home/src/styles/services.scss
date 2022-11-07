@@ -1,0 +1,40 @@
+@import "variables.scss";
+
+main {
+
+  .consult-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 50%;
+    padding: 1rem;
+    background-color: $light-teal;
+    border-style: solid;
+    border-width: 0.08rem;
+    border-color: $dark-teal;
+    border-radius: 10px;
+  
+    .consult-text {
+      font-family: $sub-font;
+      font-size: 1.3rem;
+      color: $dark-teal;
+    }
+  
+    .consult-btn {
+      width: auto;
+      background-color: $dark-teal;
+      font-family: $sub-font;
+      font-size: 1.2rem;
+      color: $light-teal;
+      padding: 0.5rem;
+      border-style: groove;
+      border-color: $teal;
+      border-radius: 10px;
+  
+      &:hover {
+        cursor: pointer;
+        box-shadow: 3px 3px 5px $teal;
+      }
+    }
+  }
+}

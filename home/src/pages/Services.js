@@ -1,4 +1,6 @@
 import * as React from "react";
+import "../styles/services.scss";
+import { Link } from "react-router-dom";
 import Footer from "../components/Footer";
 
 export default function Services () {
@@ -56,8 +58,13 @@ export default function Services () {
       </div>
 
       <div className="consult-box">
-        <h4>No Fee Consultation (Individual) - 15 min.</h4>
-        <button>Book Now</button>
+        <div className="consult-text">
+          <p>No Fee Consultation (Individual) - 15 min.</p>
+        </div>
+
+        <Link to="/contact">
+          <button className="consult-btn">Book Now</button>
+        </Link>
       </div>
 
       <Footer />

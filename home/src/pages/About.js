@@ -1,6 +1,6 @@
 import * as React from "react";
 import "../styles/about.scss";
-import {Link} from "react-router-dom";
+import { Link } from "react-router-dom";
 import Footer from "../components/Footer";
 
 export default function About () {

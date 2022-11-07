@@ -1,5 +1,7 @@
 import * as React from "react";
 import { Link } from "react-router-dom";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faHome } from '@fortawesome/free-solid-svg-icons';
 import "../styles/header.scss";
 
 export default function TopNavbar () {
@@ -18,7 +20,12 @@ export default function TopNavbar () {
       </div>
 
       <div className="btn-holder">
-        <a href="https://oab.owlpractice.ca/jpts"><button className="client-btn">Current Clients</button></a>
+        <a href="https://oab.owlpractice.ca/jpts">
+          <button className="client-btn">
+            <FontAwesomeIcon icon={faHome} /> <br/>
+            Client Portal
+          </button>
+        </a>
       </div>
 
     </div>

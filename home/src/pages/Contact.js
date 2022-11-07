@@ -1,4 +1,5 @@
 import * as React from "react";
+import { Link } from "react-router-dom";
 
 export default function Contact () {
   return (
@@ -9,7 +10,7 @@ export default function Contact () {
       <div className="contact-info">
         <p>The right fit is the most important part of finding the right therapist.</p>
 
-        <a href="https://www.jptherapystudios.com/4-stepguide">See more on how to choose the right therapist for you</a>
+        <Link as={Link} to="/guide">See more on how to choose the right therapist for you</Link>
 
         <p>To contact me for a no-fee 15 minute phone consultation simply fill out the form to the right.</p>
       </div>

@@ -16,7 +16,6 @@ export default function Resources () {
 
       <div className="resource-card">
         <h3>Crisis Services Canada</h3>
-        {/* This card includes several links that all redirect to the same place */}
         <p>
           Available to all Canadians seeking support. Visit <a href="https://talksuicide.ca/">Crisis Services Canada</a> for the distress centres and crisis organizations nearest you.
           <br/>

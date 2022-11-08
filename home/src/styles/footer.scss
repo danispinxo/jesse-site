@@ -1,0 +1,43 @@
+@import "variables.scss";
+
+.footer {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  @include glassbg;
+
+  .office-hours {
+    display: flex;
+    justify-content: center;
+
+    .footer-title {
+      display: flex;
+      align-items: center;
+      font-family: $header-font;
+      font-size: 1.4rem;
+      text-decoration: underline;
+      color: $very-dark-blue;
+    }
+
+    .schedule-line {
+      margin: 0.5rem;
+      padding: 1rem;
+      border-radius: 10px;
+      background-color: $light-teal;
+      text-align: center;
+
+      .schedule-dates {
+        font-family: $sub-font;
+        font-size: 1.2rem;
+        color: $dark-teal;
+      }
+
+      .schedule-times {
+        font-family: $body-font;
+        font-size: 0.9rem;
+        color: $dark-teal;
+      }
+    }
+  }
+}

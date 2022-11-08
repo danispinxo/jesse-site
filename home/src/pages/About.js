@@ -77,7 +77,7 @@ export default function About () {
 
       <div className="section">
         <div className="section-label">
-          <p className="label-title">Education & Qualifications</p>
+          <p className="label-title">Education <br/> & <br/>Qualifications</p>
         </div>
         <div className="section-content">
           I received my Honours BA in Psychology from York University, and my Masters level diploma in Art Therapy from the Toronto Art Therapy Institute (TATI). I am a fully qualified Registered Psychotherapist with the College of Registered Psychotherapists of Ontario (CRPO), a Professional member of the Canadian Art Therapy Association (CATA), and a member of the Society of Estonian Artists in Toronto (EKKT).

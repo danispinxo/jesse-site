@@ -8,6 +8,7 @@
   height: 5rem;
   padding: 1rem;
   color: $dark-green;
+  z-index: 99;
 
   @include glassbg;
 

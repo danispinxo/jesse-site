@@ -1,78 +1,89 @@
 import * as React from "react";
+import "../styles/contact.scss";
 import { Link } from "react-router-dom";
+import Footer from "../components/Footer";
+import Logo from "../images/Logo.png";
+import Box from '@mui/material/Box';
+import TextField from '@mui/material/TextField';
+import InputLabel from '@mui/material/InputLabel';
+import FormControl from '@mui/material/FormControl';
+import NativeSelect from '@mui/material/NativeSelect';
 
 export default function Contact () {
   return (
     <main>
-      <h1>Get In Touch</h1>
-      <h4>Note: My practice has been moved online for the foreseeable future. Consequent therapy sessions will be limited to secure video or telephone sessions.</h4>
-
-      <div className="contact-info">
-        <p>The right fit is the most important part of finding the right therapist.</p>
-
-        <Link as={Link} to="/guide">See more on how to choose the right therapist for you</Link>
-
-        <p>To contact me for a no-fee 15 minute phone consultation simply fill out the form to the right.</p>
+      <div className="contact-title-holder">
+        <p className="contact-title">Get In Touch</p>  
       </div>
 
-      <div className="contact-form">
-        <form className="contact-form">
-        
-          <div className="first-name-form">
-            <label for="first-name-id">First Name</label>
-            <input name="first-name" id="first-name-id" type="text" placeholder="" required="true" aria-required="true" maxlength="20" value="" />
-          </div>
-
-          <div className="last-name-form">
-            <label for="last-name-id">Last Name</label>
-            <input name="last-name" id="last-name-id" type="text" placeholder="" required="true" aria-required="true" maxlength="35" value="" />
-          </div>
-
-          <div className="email-form">
-            <label for="email-id">Email address</label>
-            <input name="email" id="email-id" type="email" placeholder="" required="true" aria-required="true" pattern="^.+@.+\.[a-zA-Z]{2,63}$" maxlength="250" value="" />
-          </div>
-          
-          <div className="phone-form">
-            <label for="phone-id">Phone</label>
-            <input name="phone" id="phone-id" type="tel" placeholder="" required="true" aria-required="true" maxlength="12" minlength="12" value=""/>
-          </div>
-
-          <div className="location-form" >
-            <label for="location-id" >Location</label>
-            <input name="location" id="location-id" type="text" placeholder="e.g., Toronto, ON" required="" aria-required="true" maxlength="250" value="" />
-          </div>
-
-          <div className="refer-form">
-            <label for="refer-id">How did you hear about JPTS?</label>
-            <select id="refer-id" required="true" aria-required="true">
-              <option value="" disabled="">Choose an option</option>
-              <option value="Recommendation" aria-selected="false">Recommendation</option>
-              <option value="Psychology Today" aria-selected="false">Psychology Today</option>
-              <option value="Affordable Therapy" aria-selected="false">Affordable Therapy</option>
-              <option value="CRPO directory" aria-selected="false">CRPO directory</option>
-              <option value="CATA directory" aria-selected="false">CATA directory</option>
-              <option value="Google search" aria-selected="false">Google search</option>
-              <option value="Other" aria-selected="false">Other</option>
-            </select>
-          </div>
-            
-          <div className="message-form">
-            <label for="message-id">Message</label>
-            <textarea name="message" id="message-id" type="text" placeholder="What's been troubling you?" required="true" aria-required="true" maxlength="100" value="" />
-          </div>
-          
-          <div className="form-submit-btn">
-            <button>
-              <span>Send</span>
-            </button>
-          </div>
-          
-          <div className="thanks-msg">
-            <p>Thanks for submitting! Be sure to sheck your SPAM folder for a response.</p>
-          </div>
-        </form>
+      <div className="covid-note">
+        <h3>Note: <br/> My practice has been moved online for the foreseeable future. Consequent therapy sessions will be limited to secure video or telephone sessions.</h3>      
       </div>
+
+      <div className="contact-body">
+        <div className="contact-info">
+          <img className="logo" src={Logo} alt="JPTS Logo" />
+          <p>The right fit is the most important part of finding the right therapist.</p>
+
+          <Link as={Link} to="/guide">Read more about how to choose the right therapist for you!</Link>
+
+          <p>To contact me for a no-fee 15 minute phone consultation simply fill out the form to the right.</p>
+        </div>
+
+        <div className="contact-form">
+          <p className="form-identifier">
+            <span className="name">Jesse Pajuäär, RP, DTATI, HBA</span> <br/>
+            Toronto, Ont. Canada.            
+          </p>
+
+          <Box
+            component="form"
+            sx={{
+              '& > :not(style)': { m: 1, width: '25ch' },
+            }}
+            noValidate
+            autoComplete="off"
+          >
+            <TextField id="standard-basic" label="First Name" variant="standard" required />
+            <TextField id="standard-basic" label="Last Name" variant="standard" required/>
+            <TextField id="standard-basic" label="Email" variant="standard" required fullWidth/>
+            <TextField id="standard-basic" label="Phone" variant="standard" required/>
+            <TextField id="standard-basic" label="Location" variant="standard" helperText="e.g., Toronto, ON" required/>
+            <FormControl fullWidth>
+              <InputLabel variant="standard" htmlFor="uncontrolled-native">
+                How did you hear about JPTS?
+              </InputLabel>
+              <NativeSelect
+                helperText="Choose an Option"
+                inputProps={{
+                  name: 'referal',
+                  id: 'uncontrolled-native',
+                }}
+              >
+                <option>Recommendation</option>
+                <option>Psychology Today</option>
+                <option>Affordable Therapy</option>
+                <option>CRPO Directory</option>
+                <option>CATA Directory</option>
+                <option>Google Search</option>
+                <option>Other</option>
+              </NativeSelect>
+            </FormControl>
+            <TextField
+              id="outlined-multiline-static"
+              label="Message"
+              multiline
+              fullWidth
+              rows={4}
+              defaultValue="What's been troubling you?"
+            />
+            <br />
+            <button className="form-submit-btn">Send</button>            
+          </Box>
+        </div>
+      </div>
+
+      <Footer />
     </main>
   )
 }

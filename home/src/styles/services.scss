@@ -1,6 +1,118 @@
 @import "variables.scss";
 
 main {
+  .services-title-holder {
+    height: 10rem;
+    width: 100%;
+    background-image: url("../images/Waterfall.jpg");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: center 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+
+    .services-title {
+      border-style: solid;
+      border-color: $very-dark-blue;
+      border-radius: 10px;
+      padding: 1rem;
+      background: #a2cdf28b;
+      font-size: 2.8rem;
+      padding-left: 6rem;
+      padding-right: 6rem;
+      padding-top: 2rem;
+      padding-bottom: 2rem;
+      color: $very-dark-blue;
+      font-family: $header-font;
+    }
+  }
+
+  .help-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 50%;
+    padding: 1rem;
+    background-color: $light-teal;
+    border-style: solid;
+    border-width: 0.08rem;
+    border-color: $dark-teal;
+    border-radius: 10px;
+
+    h3 {
+      font-family: $sub-font;
+      font-size: 1.5rem;
+      color: $dark-teal;
+      text-shadow: 1px 1px 3px $teal;
+    }
+
+    ul {
+      margin-top: -0.5rem;
+      font-family: $body-font;
+      color: $dark-teal;
+    }
+
+  }
+
+  .section {
+    display: flex;
+    flex-direction: row;
+    width: 90%;
+
+    .section-label {
+      width: 30%;
+      height: auto;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-content: center;
+      align-items: center;
+      margin: 0.5rem;
+      background-color: $light-blue;
+      border-style: dotted;
+      border-color: $very-dark-blue;
+      border-radius: 10px;
+
+      .label-title {
+        font-family: $sub-font;
+        font-size: 2rem;
+        font-weight: 700;
+        text-align: center;
+      }
+
+      .label-subtitle {
+        font-family: $sub-font;
+        font-size: 1.3rem;
+        font-style: italic;
+        text-align: center;
+        margin-top: -1.3rem;
+      }
+    }
+
+    .section-content {
+      width: 70%;
+      height: auto;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-content: center;
+      align-items: center;
+      text-align: center;
+      margin: 0.5rem;
+      background-color: #a2cdf22e;
+      border-style: dotted;
+      border-color: $very-dark-blue;
+      border-radius: 10px;
+      padding: 1rem;
+      font-family: $body-font;
+
+      ul {
+        column-count: 3;
+      }
+    }
+  }
 
   .consult-box {
     display: flex;

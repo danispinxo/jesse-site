@@ -17,7 +17,7 @@ export default function Resources () {
 
       <div className="resource-cards">
         <div className="resource-card">
-          <img className="card-img" src={KidsPhoto}/>
+          <img className="card-img" src={KidsPhoto} alt="Children Playing Tug-of-War"/>
           <p className="card-label">Kids Help Phone</p>
           <p className="card-content">
             <a href="https://kidshelpphone.ca/">Kids Help Phone</a> is a Canadian and world leader known for their expertise and continuous innovation as Canada's only 24/7 counselling and information service for young people.
@@ -28,7 +28,7 @@ export default function Resources () {
         </div>
 
         <div className="resource-card">
-          <img className="card-img" src={CrisisPhoto}/>
+          <img className="card-img" src={CrisisPhoto} alt="Folded Hands"/>
           <p className="card-label">Crisis Services Canada</p>
           <p className="card-content">
             Available to all Canadians seeking support. Visit <a href="https://talksuicide.ca/">Crisis Services Canada</a> for the distress centres and crisis organizations nearest you.
@@ -39,7 +39,7 @@ export default function Resources () {
         </div>
 
         <div className="resource-card">
-          <img className="card-img" src={IndigenousPhoto}/>
+          <img className="card-img" src={IndigenousPhoto} alt="Multicultural Support Group"/>
           <p className="card-label">Support for Indigenous Communities</p>
           <p className="card-content">
             <a href="https://www.hopeforwellness.ca/">Hope For Wellness</a> is available to all Indigenous peoples across Canada who need immediate crisis intervention. Experienced and culturally sensitive help line counsellors can help if you want to talk or are distressed.
@@ -53,7 +53,7 @@ export default function Resources () {
         </div>
 
         <div className="resource-card">
-          <img className="card-img" src={QueerPhoto}/>
+          <img className="card-img" src={QueerPhoto} alt="Pride Parade with Flags"/>
           <p className="card-label">2SLGBTQA+ Support Services</p>
           <p className="card-content">
             <a href="https://www.rainbowhealthontario.ca/">Rainbow Health Ontario</a> (RHO) is a province-wide program of Sherbourne Health that works to promote the health of Ontario's LGBT2SQ communities and improve their access to services. RHO creates resources, provides information and consultation services, delivers education and training, and supports research to develop evidence-based practice and informed public policy.
@@ -67,7 +67,7 @@ export default function Resources () {
         </div>
 
         <div className="resource-card">
-          <img className="card-img" src={VictimPhoto}/>
+          <img className="card-img" src={VictimPhoto} alt="Two People Holding Hands"/>
           <p className="card-label">Victim Services</p>
           <p className="card-content">
             <a href="https://trccmwar.ca/">Toronto Rape Crisis Centre/Multicultural Women Against Rape</a> is a grassroots, women-run collective working towards a violence-free world by providing anti-oppressive, feminist peer support to survivors of sexual violence.
@@ -78,7 +78,7 @@ export default function Resources () {
         </div>
 
         <div className="resource-card">
-          <img className="card-img" src={FamiliesPhoto}/>
+          <img className="card-img" src={FamiliesPhoto} alt="Woman and Child Holding Hands at Sunset"/>
           <p className="card-label">Assistance for Families, Refugees, and Women Fleeing Violence</p>
           <p className="card-content">
             The <a href="https://www.reddoorshelter.ca/">Red Door Family Shelter</a> provides emergency shelter and support for women and children affected by domestic abuse, families experiencing a housing crisis, and refugee claimants with nowhere else to turn.

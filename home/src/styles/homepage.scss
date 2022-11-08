@@ -91,6 +91,8 @@ main {
 
       &:hover {
         cursor: pointer;
+        border-color: $teal;
+        box-shadow: 2px 2px 3px $dark-teal;
       }
     }
   }
@@ -122,13 +124,13 @@ main {
 
     .about-me-name {
       margin-top: -1rem;
-      font-size: 1.8rem;
+      font-size: 1.5rem;
     }
 
     .about-me-qualifications {
       margin-top: -1rem;
       text-align: center;
-      font-size: 1.3rem;
+      font-size: 1rem;
       font-style: italic;
     }
 

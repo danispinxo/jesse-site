@@ -41,9 +41,8 @@ export default function Resources () {
         <div className="resource-card">
           <img className="card-img" src={IndigenousPhoto}/>
           <p className="card-label">Support for Indigenous Communities</p>
-          {/* THIS LINK IS DEAD. */}
           <p className="card-content">
-            Hope For Wellness is available to all Indigenous peoples across Canada who need immediate crisis intervention. Experienced and culturally sensitive help line counsellors can help if you want to talk or are distressed.
+            <a href="https://www.hopeforwellness.ca/">Hope For Wellness</a> is available to all Indigenous peoples across Canada who need immediate crisis intervention. Experienced and culturally sensitive help line counsellors can help if you want to talk or are distressed.
           </p>
           <p className="card-content">
             Call 1-855-242-3310 (toll-free) or connect to the online Hope for Wellness chat.

@@ -5,20 +5,21 @@
   height: auto;
   display: flex;
   flex-direction: column;
+  align-items: center;
   @include glassbg;
+  
+  .footer-title {
+    display: flex;
+    align-items: center;
+    font-family: $header-font;
+    font-size: 1.4rem;
+    // text-decoration: underline;
+    color: $very-dark-blue;
+  }
 
   .office-hours {
     display: flex;
     justify-content: center;
-
-    .footer-title {
-      display: flex;
-      align-items: center;
-      font-family: $header-font;
-      font-size: 1.4rem;
-      text-decoration: underline;
-      color: $very-dark-blue;
-    }
 
     .schedule-line {
       margin: 0.5rem;

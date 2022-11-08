@@ -15,16 +15,16 @@ main {
 
     .services-title {
       border-style: solid;
-      border-color: $very-dark-blue;
+      border-color: $dark-teal;
       border-radius: 10px;
       padding: 1rem;
-      background: #a2cdf28b;
+      background: #b8ccccab;
       font-size: 2.8rem;
       padding-left: 6rem;
       padding-right: 6rem;
       padding-top: 2rem;
       padding-bottom: 2rem;
-      color: $very-dark-blue;
+      color: $dark-teal;
       font-family: $header-font;
     }
   }
@@ -33,25 +33,25 @@ main {
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 50%;
+    width: 85%;
     padding: 1rem;
-    background-color: $light-teal;
     border-style: solid;
     border-width: 0.08rem;
-    border-color: $dark-teal;
+    border-color: $dark-blue;
     border-radius: 10px;
+    background-color: $light-blue;
 
     h3 {
       font-family: $sub-font;
       font-size: 1.5rem;
-      color: $dark-teal;
-      text-shadow: 1px 1px 3px $teal;
+      color: $very-dark-blue;
     }
 
     ul {
-      margin-top: -0.5rem;
+      margin-top: -0.2rem;
       font-family: $body-font;
-      color: $dark-teal;
+      color: $very-dark-blue;
+      columns: 2;
     }
 
   }
@@ -66,18 +66,18 @@ main {
       height: auto;
       display: flex;
       flex-direction: column;
-      justify-content: center;
+      justify-content: flex-start;
       align-content: center;
       align-items: center;
       margin: 0.5rem;
-      background-color: $light-blue;
+      background-color: $light-teal;
       border-style: dotted;
-      border-color: $very-dark-blue;
+      border-color: $dark-teal;
       border-radius: 10px;
 
       .label-title {
         font-family: $sub-font;
-        font-size: 2rem;
+        font-size: 1.5rem;
         font-weight: 700;
         text-align: center;
       }
@@ -94,16 +94,16 @@ main {
     .section-content {
       width: 70%;
       height: auto;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-content: center;
-      align-items: center;
-      text-align: center;
+      // display: flex;
+      // flex-direction: column;
+      // justify-content: center;
+      // align-content: center;
+      // align-items: center;
+      // text-align: center;
       margin: 0.5rem;
       background-color: #a2cdf22e;
       border-style: dotted;
-      border-color: $very-dark-blue;
+      border-color: $dark-teal;
       border-radius: 10px;
       padding: 1rem;
       font-family: $body-font;
@@ -120,32 +120,32 @@ main {
     align-items: center;
     width: 50%;
     padding: 1rem;
-    background-color: $light-teal;
+    background-color: $light-blue;
     border-style: solid;
     border-width: 0.08rem;
-    border-color: $dark-teal;
+    border-color: $dark-blue;
     border-radius: 10px;
   
     .consult-text {
       font-family: $sub-font;
       font-size: 1.3rem;
-      color: $dark-teal;
+      color: $very-dark-blue;
     }
   
     .consult-btn {
       width: auto;
-      background-color: $dark-teal;
+      background-color: $dark-blue;
       font-family: $sub-font;
       font-size: 1.2rem;
-      color: $light-teal;
+      color: $light-blue;
       padding: 0.5rem;
       border-style: groove;
-      border-color: $teal;
+      border-color: $med-blue;
       border-radius: 10px;
   
       &:hover {
         cursor: pointer;
-        box-shadow: 3px 3px 5px $teal;
+        box-shadow: 3px 3px 5px $med-blue;
       }
     }
   }

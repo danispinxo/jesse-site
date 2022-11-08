@@ -5,10 +5,11 @@ export default function Footer () {
   return (
     <div className="footer">
 
+      <div className="footer-title">
+        Office Hours
+      </div>
+
       <div className="office-hours">
-        <div className="footer-title">
-          Office Hours
-        </div>
         
         <div className="schedule-line">
           <div className="schedule-dates">

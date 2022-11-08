@@ -1,0 +1,83 @@
+@import "variables.scss";
+
+main {
+  .resources-title-holder {
+    height: 10rem;
+    width: 100%;
+    background-image: url("../images/Waterfall.jpg");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: center 45%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+
+    .resources-title {
+      border-style: solid;
+      border-color: $dark-teal;
+      border-radius: 10px;
+      padding: 1rem;
+      background: #b8ccccab;
+      font-size: 2.8rem;
+      padding-left: 6rem;
+      padding-right: 6rem;
+      padding-top: 2rem;
+      padding-bottom: 2rem;
+      color: $dark-teal;
+      font-family: $header-font;
+    }
+  }
+
+  .resource-cards {
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+    .resource-card {
+      display: flex;
+      flex-direction: column;
+      width: 25%;
+      height: auto;
+      display: flex;
+      flex-direction: column;
+      align-content: center;
+      align-items: center;
+      margin: 0.5rem;
+      background-color: $light-teal;
+      border-style: dotted;
+      border-color: $dark-teal;
+      border-radius: 10px;
+
+      .card-label {
+        font-family: $sub-font;
+        font-size: 1.5rem;
+        text-align: center;
+      }
+
+      .card-img {
+        width: 95%;
+        margin-top: 2.5%;
+        border-radius: 10px;
+      }
+
+      .card-content {
+        width: 90%;
+        height: auto;
+        text-align: left;
+        line-height: 1.2rem;
+        margin-top: -1.5rem;
+        padding: 1rem;
+        font-family: $body-font;
+        font-size: 0.9rem;
+
+        ul {
+          column-count: 3;
+        }
+      }
+    }    
+  }
+
+
+}

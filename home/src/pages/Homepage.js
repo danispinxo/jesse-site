@@ -1,11 +1,13 @@
 import * as React from "react";
 import { Link } from "react-router-dom";
 import "../styles/homepage.scss";
+import Modal from "../components/Modal";
 import JessePhoto from "../images/JessePajuaar.jpg";
 
 export default function Homepage () {
   return (
     <main>
+      <Modal />
       <div className="quote-banner">
         <div className="quotation-text">
           <div className="quotation">

@@ -73,9 +73,9 @@ export default function Contact () {
               id="outlined-multiline-static"
               label="Message"
               multiline
-              fullWidth
               rows={4}
-              defaultValue="What's been troubling you?"
+              helperText="What's been troubling you?"
+              defaultValue=" "
             />
             <br />
             <button className="form-submit-btn">Send</button>            

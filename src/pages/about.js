@@ -1,6 +1,6 @@
 import * as React from "react";
 import "./styles.scss";
-import { Link } from "react-router-dom";
+import { Link } from "gatsby";
 import Footer from "../components/Footer";
 
 export default function About () {

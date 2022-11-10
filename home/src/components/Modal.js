@@ -1,5 +1,5 @@
 import * as React from "react";
-import "../styles/modal.scss";
+import "../styles/index.scss";
 import ModalUnstyled from "@mui/material/Modal";
 
 export default function BasicModal() {

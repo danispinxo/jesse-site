@@ -1,6 +1,6 @@
 import * as React from "react";
 import { Link } from "react-router-dom";
-import "../styles/homepage.scss";
+import "../styles/index.scss";
 import Modal from "../components/Modal";
 import JessePhoto from "../images/JessePajuaar.jpg";
 

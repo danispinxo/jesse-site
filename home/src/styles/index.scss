@@ -1,0 +1,662 @@
+@import "variables.scss";
+
+.navbar {
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  width: 100%;
+  height: 5rem;
+  padding: 1rem;
+  color: $dark-green;
+  z-index: 99;
+  @include glassbg;
+
+  .links {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 1rem;
+    font-family: $sub-font;
+    font-size: 1rem;
+
+    a {
+      color: $teal;
+      text-decoration: none;
+
+      &:hover {
+        text-shadow: 1px 1px 3px $light-teal;
+        text-decoration: underline;
+      }
+    }
+  }
+
+  .title{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: -0.3rem;
+  }
+
+  .btn-holder {
+    display: flex;
+    justify-content: end;
+    margin-right: 8.5rem;
+    margin-top: -3.8rem;
+
+    .client-btn {
+      border-color: $dark-green;
+      border-width: 0.1rem;
+      border-radius: 8px;
+      background-color: transparent;
+      color: $dark-green;
+      font-family: $sub-font;
+
+      &:hover {
+        cursor: pointer;
+        box-shadow: 2px 2px 3px $dark-green;
+      }
+    }
+  }
+}
+
+@import "variables.scss";
+
+main {
+  padding-top: 6.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+
+  h1 {
+    font-family: $header-font;
+    color: $dark-green;
+    font-weight: 600;
+  }
+
+  h2, h3, h4, h5 {
+    font-family: $sub-font;
+    color: $dark-blue;
+  }
+
+  iframe {
+    display: flex;
+    justify-content: center;
+    outline: none;
+    border: none;
+    width: 10rem;
+    height: 4rem;
+  }
+
+}
+
+.quote-banner {
+  height: 20rem;
+  width: 100%;
+  background-image: url("../images/Waterfall.jpg");
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-position: center 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+
+  .quotation-text {
+    border-style: solid;
+    border-color: $dark-green;
+    border-radius: 10px;
+    padding: 1rem;
+    background: #b8ccccca;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+
+    .quotation {
+      p {
+        font-family: $header-font;
+        // letter-spacing: 0.05rem;
+        line-height: 1.9rem;
+        font-size: 1.4rem;
+        font-weight: 400;
+        color: $dark-teal;        
+      }
+
+    }
+
+    .name-holder {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      margin-top: -1.8rem;
+
+      p {
+        font-family: $header-font;
+        font-size: 1.1rem;
+        font-weight: 300;
+        color: $dark-teal;
+      }
+    }
+
+    .talk-btn {
+      border-color: $light-teal;
+      border-width: 0.1rem;
+      border-radius: 8px;
+      padding: 0.3rem;
+      background-color: $dark-teal;
+      color: $light-teal;
+      font-family: $sub-font;
+      margin-right: 1rem;
+      margin-bottom: 0.6rem;
+
+      &:hover {
+        cursor: pointer;
+        border-color: $teal;
+        box-shadow: 2px 2px 3px $dark-teal;
+      }
+    }
+  }
+}
+
+.about-me {
+  display: flex;
+  justify-content: space-evenly;
+  width: 90%;
+  padding: 1rem;
+  background-color: #a2cdf27e;
+  border-style: solid;
+  border-width: 0.08rem;
+  border-color: $very-dark-blue;
+  border-radius: 10px;
+
+  .about-me-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    width: 50%;
+    padding: 2rem;
+
+    .about-me-title {
+      font-size: 2rem;
+      color: $very-dark-blue;
+    }
+
+    .about-me-name {
+      margin-top: -1rem;
+      font-size: 1.5rem;
+    }
+
+    .about-me-qualifications {
+      margin-top: -1rem;
+      text-align: center;
+      font-size: 1rem;
+      font-style: italic;
+    }
+
+    .about-me-approach {
+      text-align: center;
+      font-family: $body-font;
+      line-height: 1.5rem;
+    }
+
+  }
+
+  img {
+    width: 35%;
+    border-style: solid;
+    border-color: white;
+    border-width: 1rem;
+    border-radius: 10px;
+    aspect-ratio: auto;
+  }
+}
+
+.homepage-contact {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 90%;
+  margin-bottom: 1rem;
+  padding: 1rem;
+  background-color: $light-teal;
+  border-style: solid;
+  border-width: 0.08rem;
+  border-color: $dark-teal;
+  border-radius: 10px;
+
+  .homepage-contact-text {
+    font-family: $body-font;
+    font-size: 1.3rem;
+    color: $dark-teal;
+  }
+
+  .homepage-contact-btn {
+    width: auto;
+    background-color: $dark-teal;
+    font-family: $sub-font;
+    font-size: 1.2rem;
+    color: $light-teal;
+    padding: 0.5rem;
+    border-style: groove;
+    border-color: $teal;
+    border-radius: 10px;
+
+    &:hover {
+      cursor: pointer;
+      box-shadow: 3px 3px 5px $teal;
+    }
+  }
+}
+
+.psychology-today-verification {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+
+  p {
+    font-family: $body-font;
+    font-size: 0.7rem;
+  }
+}
+
+.modal-box {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 50%;
+  background-image: url("../images/ModalBackground.jpg");
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-position: center 0%;
+  border: 2px solid $dark-teal;
+  box-shadow: 1px 1px 5px $teal;
+  padding: 1rem;
+  padding-left: 40%;
+  text-align: right;
+
+  .covid-modal-title {
+    font-size: 1.8rem;
+    font-family: $sub-font;
+    color: $med-blue;
+  }
+
+  .covid-modal-subtitle {
+    margin-top: -1rem;
+    font-family: $sub-font;
+    font-size: 1rem;
+    color: $dark-blue;
+  }
+
+  .covid-modal-content {
+    text-align: right;
+    font-family: $body-font;
+    line-height: 1.1rem;
+    color: $very-dark-blue;
+  }
+
+  .btn-holder {
+    display: flex;
+    justify-content: flex-end;
+
+    .close-btn {
+      border-color: $dark-blue;
+      border-width: 0.1rem;
+      border-radius: 8px;
+      padding: 0.5rem;
+      background-color: $very-dark-blue;
+      color: $light-blue;
+      font-family: $sub-font;
+      font-size: 1.2rem;
+
+      &:hover {
+        cursor: pointer;
+        border-color: $very-dark-blue;
+        box-shadow: 2px 2px 5px $very-dark-blue;
+      }
+    }
+  }
+}
+
+.about-title-holder {
+  @include title-holder;
+  background-position: center 10%;
+
+  .about-title {
+    @include title-format;
+  }
+}
+
+.about-expectations {
+  @include intro-box;
+  
+  p {
+    font-family: $sub-font;
+    font-size: 1.5rem;
+    color: $very-dark-blue;
+  }
+}
+
+.contact-title-holder {
+  @include title-holder;
+  background-position: center 65%;
+
+  .contact-title {
+    @include title-format;
+  }
+}
+
+.covid-note {
+  @include intro-box;
+}
+
+.contact-body {
+  display: flex;
+  flex-direction: row;
+  width: 90%;
+
+  .contact-info {
+    width: 45%;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-style: double;
+    border-left: none;
+    border-top: none; 
+    border-bottom: none;
+    border-width: 0.5rem;
+    border-color: $teal;
+
+    p {
+      font-family: $body-font;
+      text-align: center;
+    }
+
+    a {
+      text-decoration: underline;
+      text-align: center;
+      font-family: $body-font;
+      font-size: 1.1rem;
+      color: $dark-blue;
+    }
+
+    .logo {
+      width: 70%;
+      border-radius: 50%;
+      box-shadow: 5px 5px 10px $teal;
+      margin: 1rem;
+    }
+  }
+
+  .contact-form {
+    width: 45%;
+    padding: 1rem;
+    font-family: $body-font;
+
+    .form-identifier {
+      text-align: center;
+      font-size: 0.9rem;
+      .name {
+        text-decoration: underline;
+      }
+    }
+
+    .form-submit-btn {
+      width: auto;
+      padding: 0.5rem;
+      border-color: $dark-green;
+      border-width: 0.1rem;
+      border-radius: 8px;
+      color: $dark-green;
+      font-family: $sub-font;
+      font-size: 1.2rem;
+
+      &:hover {
+        cursor: pointer;
+        box-shadow: 2px 2px 3px $dark-green;
+      }
+    }
+  }
+}
+
+.guide-title-holder {
+  background-position: center 10%;
+  @include title-holder;
+
+  .guide-title {
+    @include title-format;
+  }
+}
+
+.guide-intro {
+  @include intro-box;
+
+  p {
+    font-family: $sub-font;
+    font-size: 1.2rem;
+    color: $very-dark-blue;
+  }
+
+}
+
+.resources-title-holder {
+  @include title-holder;
+  background-position: center 45%;
+
+  .resources-title {
+    @include title-format;
+  }
+}
+
+.resource-cards {
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: row;
+  flex-wrap: wrap;
+
+  .resource-card {
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+    margin: 0.5rem;
+    background-color: $light-teal;
+    border-style: dotted;
+    border-color: $dark-teal;
+    border-radius: 10px;
+
+    .card-label {
+      font-family: $sub-font;
+      font-size: 1.5rem;
+      text-align: center;
+    }
+
+    .card-img {
+      width: 95%;
+      margin-top: 2.5%;
+      border-radius: 10px;
+    }
+
+    .card-content {
+      width: 90%;
+      height: auto;
+      text-align: left;
+      line-height: 1.2rem;
+      margin-top: -1.5rem;
+      padding: 1rem;
+      font-family: $body-font;
+      font-size: 0.9rem;
+
+      ul {
+        column-count: 3;
+      }
+    }
+  }    
+}
+
+.services-title-holder {
+  @include title-holder;
+  background-position: center 100%;
+
+  .services-title {
+    @include title-format;
+  }
+}
+
+.help-list {
+  @include intro-box;
+
+  h3 {
+    font-family: $sub-font;
+    font-size: 1.5rem;
+    color: $very-dark-blue;
+  }
+
+  ul {
+    margin-top: -0.2rem;
+    font-family: $body-font;
+    color: $very-dark-blue;
+    columns: 2;
+  }
+
+}
+
+.section {
+  display: flex;
+  flex-direction: row;
+  width: 90%;
+
+  .section-label {
+    width: 30%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-content: center;
+    align-items: center;
+    margin: 0.5rem;
+    background-color: $light-teal;
+    border-style: dotted;
+    border-color: $dark-teal;
+    border-radius: 10px;
+
+    .label-title {
+      font-family: $sub-font;
+      font-size: 1.5rem;
+      font-weight: 700;
+      text-align: center;
+    }
+
+    .label-subtitle {
+      font-family: $sub-font;
+      font-size: 1.3rem;
+      font-style: italic;
+      text-align: center;
+      margin-top: -1.3rem;
+    }
+  }
+
+  .section-content {
+    width: 70%;
+    height: auto;
+    margin: 0.5rem;
+    background-color: #a2cdf22e;
+    border-style: dotted;
+    border-color: $dark-teal;
+    border-radius: 10px;
+    padding: 1rem;
+    font-family: $body-font;
+
+    ul {
+      column-count: 3;
+    }
+  }
+}
+
+.consult-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 50%;
+  padding: 1rem;
+  background-color: $light-blue;
+  border-style: solid;
+  border-width: 0.08rem;
+  border-color: $dark-blue;
+  border-radius: 10px;
+
+  .consult-text {
+    font-family: $sub-font;
+    font-size: 1.3rem;
+    color: $very-dark-blue;
+  }
+
+  .consult-btn {
+    width: auto;
+    background-color: $dark-blue;
+    font-family: $sub-font;
+    font-size: 1.2rem;
+    color: $light-blue;
+    padding: 0.5rem;
+    border-style: groove;
+    border-color: $med-blue;
+    border-radius: 10px;
+
+    &:hover {
+      cursor: pointer;
+      box-shadow: 3px 3px 5px $med-blue;
+    }
+  }
+}
+
+.footer {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  @include glassbg;
+  
+  .footer-title {
+    display: flex;
+    align-items: center;
+    margin-top: 0.3rem;
+    font-family: $header-font;
+    font-size: 1.4rem;
+    color: $very-dark-blue;
+  }
+
+  .office-hours {
+    display: flex;
+    justify-content: center;
+
+    .schedule-line {
+      margin: 0.5rem;
+      padding: 1rem;
+      border-radius: 10px;
+      background-color: $light-teal;
+      text-align: center;
+
+      .schedule-dates {
+        font-family: $sub-font;
+        font-size: 1.2rem;
+        color: $dark-teal;
+      }
+
+      .schedule-times {
+        font-family: $body-font;
+        font-size: 0.9rem;
+        color: $dark-teal;
+      }
+    }
+  }
+}

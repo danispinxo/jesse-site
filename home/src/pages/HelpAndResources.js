@@ -1,5 +1,5 @@
 import * as React from "react";
-import "../styles/resources.scss";
+import "../styles/index.scss";
 import CrisisPhoto from "../images/Crisis.jpg";
 import FamiliesPhoto from "../images/Families.jpg";
 import IndigenousPhoto from "../images/Indigenous.jpg";

@@ -1,4 +1,6 @@
 // fonts
+@import url("https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,500;1,400;1,500&family=Lato:ital,wght@0,100;0,400;0,700;0,900;1,400&family=Playfair+Display:wght@600;700;800;900&display=swap");
+
 $body-font: 'Georgia', serif;
 $sub-font: 'EB Garamond', serif;
 $header-font: 'Playfair Display', serif;
@@ -19,4 +21,44 @@ $light-green: #b7bf98;
   backdrop-filter: blur(25px) saturate(144%);
   -webkit-backdrop-filter: blur(25px) saturate(144%);
   background-color: rgba(207, 215, 207, 0.52);
+}
+
+@mixin title-holder {
+  height: 10rem;
+  width: 100%;
+  background-image: url("../images/Waterfall.jpg");
+  background-repeat: no-repeat;
+  background-size: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+}
+
+@mixin title-format {
+  border-style: solid;
+  border-color: $dark-teal;
+  border-radius: 10px;
+  padding: 1rem;
+  background: #b8ccccab;
+  font-size: 2.8rem;
+  padding-left: 6rem;
+  padding-right: 6rem;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  color: $dark-teal;
+  font-family: $header-font;
+}
+
+@mixin intro-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 85%;
+  padding: 1rem;
+  background-color: $light-blue;
+  border-style: solid;
+  border-width: 0.08rem;
+  border-color: $dark-blue;
+  border-radius: 10px;
 }

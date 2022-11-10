@@ -1,6 +1,6 @@
 import * as React from "react";
 import "normalize.css";
-import "../styles/index.scss";
+import "./styles.scss";
 import { Routes, Route, BrowserRouter } from "react-router-dom";
 import TopNavbar from "../components/Navbar";
 import Homepage from "./Homepage";

@@ -3,16 +3,14 @@ import './styles.scss'
 
 export default function Guide () {
   return (
-    <main>
-
+    <main className='page-content'>
       <div className="guide-title-holder">
-        <h1 className="guide-title">A 4-Step Guide to Finding the Right Therapist for You</h1>
+        <h1 className="guide-title">Finding Your Therapist</h1>
       </div>
 
       <div className="guide-intro">
-        <p>
-          If you search “therapist Toronto” the Internet will give you millions of search results. Literally. Finding the right therapist can feel hopeless and exhausting. And if you&apos;re googling therapist, you&apos;re probably already under some stress. Don&apos;t despair! Streamline your search by working through the FOUR following steps:
-        </p>
+        <p className="intro-title">A 4-Step Guide to Finding the Right Therapist for You</p>
+        If you search “therapist Toronto” the Internet will give you millions of search results. Literally. Finding the right therapist can feel hopeless and exhausting. And if you&apos;re googling therapist, you&apos;re probably already under some stress. Don&apos;t despair! Streamline your search by working through the FOUR following steps:
       </div>
 
       <div className="section">
@@ -135,7 +133,6 @@ export default function Guide () {
           </p>
         </div>
       </div>
-
     </main>
   )
 }

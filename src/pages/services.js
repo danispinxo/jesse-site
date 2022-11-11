@@ -5,7 +5,7 @@ import Footer from '../components/Footer'
 
 export default function Services () {
   return (
-    <main>
+    <main className='page-content'>
       <div className="services-title-holder">
         <p className="services-title">
           Available Services

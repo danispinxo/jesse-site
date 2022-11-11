@@ -23,6 +23,13 @@ $light-green: #b7bf98;
   background-color: rgba(207, 215, 207, 0.52);
 }
 
+@mixin centered {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+}
+
 @mixin title-holder {
   height: 10rem;
   width: 100%;
@@ -61,4 +68,39 @@ $light-green: #b7bf98;
   border-width: 0.08rem;
   border-color: $dark-blue;
   border-radius: 10px;
+}
+
+@mixin dark-btn {
+  border-color: $light-teal;
+  border-width: 0.1rem;
+  border-radius: 8px;
+  padding: 0.3rem;
+  background-color: $dark-teal;
+  color: $light-teal;
+  font-family: $sub-font;
+  margin-right: 1rem;
+  margin-bottom: 0.6rem;
+
+  &:hover {
+    cursor: pointer;
+    border-color: $teal;
+    box-shadow: 2px 2px 3px $dark-teal;
+  }
+}
+
+@mixin blue-btn {
+  border-color: $dark-blue;
+  border-width: 0.1rem;
+  border-radius: 8px;
+  padding: 0.5rem;
+  background-color: $very-dark-blue;
+  color: $light-blue;
+  font-family: $sub-font;
+  font-size: 1.2rem;
+
+  &:hover {
+    cursor: pointer;
+    border-color: $very-dark-blue;
+    box-shadow: 2px 2px 5px $very-dark-blue;
+  }
 }

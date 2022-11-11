@@ -11,7 +11,7 @@ import NativeSelect from '@mui/material/NativeSelect'
 
 export default function Contact () {
   return (
-    <main>
+    <main className='page-content'>
       <div className="contact-title-holder">
         <p className="contact-title">Get In Touch</p>
       </div>

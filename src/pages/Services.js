@@ -1,6 +1,5 @@
 import * as React from "react";
 import "./styles.scss";
-import { Link } from "react-router-dom";
 import Footer from "../components/Footer";
 
 export default function Services () {

@@ -1,6 +1,5 @@
 import * as React from "react";
 import "./styles.scss";
-import { Link } from "react-router-dom";
 import Footer from "../components/Footer";
 import Logo from "../images/Logo.png";
 import Box from '@mui/material/Box';
@@ -25,7 +24,7 @@ export default function Contact () {
           <img className="logo" src={Logo} alt="JPTS Logo" />
           <p>The right fit is the most important part of finding the right therapist.</p>
 
-          <Link as={Link} to="/guide">Read more about how to choose the right therapist for you!</Link>
+          <Link to="/guide">Read more about how to choose the right therapist for you!</Link>
 
           <p>To contact me for a no-fee 15 minute phone consultation simply fill out the form to the right.</p>
         </div>

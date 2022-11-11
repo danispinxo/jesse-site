@@ -4,7 +4,9 @@ import ModalUnstyled from '@mui/material/Modal'
 
 export default function BasicModal () {
   const [open, setOpen] = React.useState(true)
-  const handleClose = () => setOpen(false)
+  const handleClose = () => {
+    setOpen(false)
+  }
 
   return (
     <div className="covid-modal">

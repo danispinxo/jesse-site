@@ -1,21 +1,23 @@
 {
-  "extends": [
-    "eslint:recommended",
-    "plugin:import/errors",
-    "plugin:react/recommended",
-    "plugin:jsx-a11y/recommended"
-  ],
-  "plugins": ["react", "import", "jsx-a11y"],
-  "rules": {
-    "jsx-a11y/label-has-associated-control": ["error", {
-      "required": {
-        "some": ["nesting", "id"]
-      }
-    }],
-    "jsx-a11y/label-has-for": ["error", {
-      "required": {
-        "some": ["nesting", "id"]
-      }
-    }]
-  }
+    "env": {
+        "browser": true,
+        "es2021": true,
+        "node": true
+    },
+    "extends": [
+        "plugin:react/recommended",
+        "standard"
+    ],
+    "parserOptions": {
+        "ecmaFeatures": {
+            "jsx": true
+        },
+        "ecmaVersion": 12,
+        "sourceType": "module"
+    },
+    "plugins": [
+        "react"
+    ],
+    "rules": {
+    }
 }

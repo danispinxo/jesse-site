@@ -1,6 +1,6 @@
-import * as React from "react";
-import "./styles.scss";
-import Footer from "../components/Footer";
+import * as React from 'react'
+import './styles.scss'
+import Footer from '../components/Footer'
 
 export default function Services () {
   return (
@@ -43,7 +43,7 @@ export default function Services () {
           </p>
           <p>
             Pricing: $135 / 50 mins.
-          </p>          
+          </p>
         </div>
       </div>
 
@@ -62,7 +62,7 @@ export default function Services () {
           </p>
           <p>
             Pricing: $90-120 / 50 mins.
-          </p>          
+          </p>
         </div>
 
       </div>
@@ -74,14 +74,14 @@ export default function Services () {
 
         <div className="section-content">
           <p>
-            Using creative practices as a way to help reframe and (re)examine how we look at ourselves, our relationships, and the world. Art psychotherapy isn't about the end goal of creating “Art,” but about the process.
+            Using creative practices as a way to help reframe and (re)examine how we look at ourselves, our relationships, and the world. Art psychotherapy isn&apos;t about the end goal of creating “Art,” but about the process.
           </p>
           <p>
             This process means tapping into parts of the brain that often get overlooked or underused, but actually provide a wealth of knowledge about how we each uniquely experience and perceive the world.
           </p>
           <p>
             Pricing: $135 / 50 mins.
-          </p>          
+          </p>
         </div>
       </div>
 
@@ -90,9 +90,9 @@ export default function Services () {
           <p>No Fee Consultation (Individual) - 15 min.</p>
         </div>
 
-        <Link to="/contact">
+        <link to="/contact">
           <button className="consult-btn">Book Now</button>
-        </Link>
+        </link>
       </div>
 
       <Footer />

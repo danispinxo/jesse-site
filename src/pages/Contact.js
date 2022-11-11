@@ -1,22 +1,22 @@
-import * as React from "react";
-import "./styles.scss";
-import Footer from "../components/Footer";
-import Logo from "../images/Logo.png";
-import Box from '@mui/material/Box';
-import TextField from '@mui/material/TextField';
-import InputLabel from '@mui/material/InputLabel';
-import FormControl from '@mui/material/FormControl';
-import NativeSelect from '@mui/material/NativeSelect';
+import * as React from 'react'
+import './styles.scss'
+import Footer from '../components/Footer'
+import Logo from '../images/Logo.png'
+import Box from '@mui/material/Box'
+import TextField from '@mui/material/TextField'
+import InputLabel from '@mui/material/InputLabel'
+import FormControl from '@mui/material/FormControl'
+import NativeSelect from '@mui/material/NativeSelect'
 
 export default function Contact () {
   return (
     <main>
       <div className="contact-title-holder">
-        <p className="contact-title">Get In Touch</p>  
+        <p className="contact-title">Get In Touch</p>
       </div>
 
       <div className="covid-note">
-        <h3>Note: <br/> My practice has been moved online for the foreseeable future. Consequent therapy sessions will be limited to secure video or telephone sessions.</h3>      
+        <h3>Note: <br/> My practice has been moved online for the foreseeable future. Consequent therapy sessions will be limited to secure video or telephone sessions.</h3>
       </div>
 
       <div className="contact-body">
@@ -24,7 +24,7 @@ export default function Contact () {
           <img className="logo" src={Logo} alt="JPTS Logo" />
           <p>The right fit is the most important part of finding the right therapist.</p>
 
-          <Link to="/guide">Read more about how to choose the right therapist for you!</Link>
+          <link to="/guide">Read more about how to choose the right therapist for you!</link>
 
           <p>To contact me for a no-fee 15 minute phone consultation simply fill out the form to the right.</p>
         </div>
@@ -32,13 +32,13 @@ export default function Contact () {
         <div className="contact-form">
           <p className="form-identifier">
             <span className="name">Jesse Pajuäär, RP, DTATI, HBA</span> <br/>
-            Toronto, Ont. Canada.            
+            Toronto, Ont. Canada.
           </p>
 
           <Box
             component="form"
             sx={{
-              '& > :not(style)': { m: 1, width: '25ch' },
+              '& > :not(style)': { m: 1, width: '25ch' }
             }}
             noValidate
             autoComplete="off"
@@ -56,7 +56,7 @@ export default function Contact () {
                 helperText="Choose an Option"
                 inputProps={{
                   name: 'referal',
-                  id: 'uncontrolled-native',
+                  id: 'uncontrolled-native'
                 }}
               >
                 <option>Recommendation</option>
@@ -77,7 +77,7 @@ export default function Contact () {
               defaultValue=" "
             />
             <br />
-            <button className="form-submit-btn">Send</button>            
+            <button className="form-submit-btn">Send</button>
           </Box>
         </div>
       </div>

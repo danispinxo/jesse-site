@@ -1,12 +1,11 @@
-import * as React from "react";
-import "./styles.scss";
-import CrisisPhoto from "../images/Crisis.jpg";
-import FamiliesPhoto from "../images/Families.jpg";
-import IndigenousPhoto from "../images/Indigenous.jpg";
-import KidsPhoto from "../images/Kids.jpg";
-import QueerPhoto from "../images/Queer.jpg";
-import VictimPhoto from "../images/Victim.jpg";
-
+import * as React from 'react'
+import './styles.scss'
+import CrisisPhoto from '../images/Crisis.jpg'
+import FamiliesPhoto from '../images/Families.jpg'
+import IndigenousPhoto from '../images/Indigenous.jpg'
+import KidsPhoto from '../images/Kids.jpg'
+import QueerPhoto from '../images/Queer.jpg'
+import VictimPhoto from '../images/Victim.jpg'
 
 export default function Resources () {
   return (
@@ -20,10 +19,10 @@ export default function Resources () {
           <img className="card-img" src={KidsPhoto} alt="Children Playing Tug-of-War"/>
           <p className="card-label">Kids Help Phone</p>
           <p className="card-content">
-            <a href="https://kidshelpphone.ca/">Kids Help Phone</a> is a Canadian and world leader known for their expertise and continuous innovation as Canada's only 24/7 counselling and information service for young people.
+            <a href="https://kidshelpphone.ca/">Kids Help Phone</a> is a Canadian and world leader known for their expertise and continuous innovation as Canada&apos;s only 24/7 counselling and information service for young people.
           </p>
           <p className="card-content">
-            Since 1989, trained & professional counsellors have been listening to kids, often when no one else can or will. "We are always there."
+            Since 1989, trained & professional counsellors have been listening to kids, often when no one else can or will. &quot;We are always there.&quot;
           </p>
         </div>
 
@@ -56,10 +55,10 @@ export default function Resources () {
           <img className="card-img" src={QueerPhoto} alt="Pride Parade with Flags"/>
           <p className="card-label">2SLGBTQA+ Support Services</p>
           <p className="card-content">
-            <a href="https://www.rainbowhealthontario.ca/">Rainbow Health Ontario</a> (RHO) is a province-wide program of Sherbourne Health that works to promote the health of Ontario's LGBT2SQ communities and improve their access to services. RHO creates resources, provides information and consultation services, delivers education and training, and supports research to develop evidence-based practice and informed public policy.
+            <a href="https://www.rainbowhealthontario.ca/">Rainbow Health Ontario</a> (RHO) is a province-wide program of Sherbourne Health that works to promote the health of Ontario&apos;s LGBT2SQ communities and improve their access to services. RHO creates resources, provides information and consultation services, delivers education and training, and supports research to develop evidence-based practice and informed public policy.
           </p>
           <p className="card-content">
-            <a href="https://www.the519.org/">The 519</a> provides a range of services from counselling and queer parenting resources to coming out groups, trans programming, and seniors' support. They also provide free, accommodating and non-judgemental space where individuals, organizations and non-profit groups can meet, organize and work towards their goals.
+            <a href="https://www.the519.org/">The 519</a> provides a range of services from counselling and queer parenting resources to coming out groups, trans programming, and seniors&apos; support. They also provide free, accommodating and non-judgemental space where individuals, organizations and non-profit groups can meet, organize and work towards their goals.
           </p>
           <p className="card-content">
             Additional resources can be found <a href="https://rocketmanapp.com/blog/19-organizations-supporting-the-lgbtq-community-in-ontario/">here</a>.
@@ -87,13 +86,10 @@ export default function Resources () {
             If you or a family you know requires shelter call Central Family Intake at 416-397-5637.
           </p>
           <p className="card-content">
-            If you are a woman seeking shelter from situations of violence or intimate partner violence call their Crisis Line at 416-423-0310 (press '0'), or the Assaulted Women's Helpline at 1-866-863-0511.
+            If you are a woman seeking shelter from situations of violence or intimate partner violence call their Crisis Line at 416-423-0310 (press &lsquo;0&lsquo;), or the Assaulted Women&qpos;s Helpline at 1-866-863-0511.
           </p>
-        </div>        
+        </div>
       </div>
-
-
-
     </main>
   )
 }

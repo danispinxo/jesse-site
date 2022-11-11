@@ -1,33 +1,33 @@
-import * as React from "react";
-import "normalize.css";
-import "./styles.scss";
-import TopNavbar from "../components/Navbar";
-import Modal from "../components/Modal";
-import JessePhoto from "../images/JessePajuaar.jpg";
+import * as React from 'react'
+import 'normalize.css'
+import './styles.scss'
+import TopNavbar from '../components/Navbar'
+import Modal from '../components/Modal'
+import JessePhoto from '../images/JessePajuaar.jpg'
 
 export default function IndexPage () {
   return (
     <div className="main">
-      <TopNavbar />   
+      <TopNavbar />
       <main>
         <Modal />
         <div className="quote-banner">
           <div className="quotation-text">
             <div className="quotation">
               <p>
-                "Experience is not what happens to you.<br /> 
-                It is what you do with what happens to you." <br />
+                &quot;Experience is not what happens to you.<br />
+                It is what you do with what happens to you.&quot; <br />
               </p>
               <div className="name-holder">
-                <p> - Aldous Huxley -</p>            
-              </div>            
+                <p> - Aldous Huxley -</p>
+              </div>
             </div>
 
-            <Link to="/contact">
+            <link to="/contact">
               <button className="talk-btn">
-                Let's Talk
+                Let&apos;s Talk
               </button>
-            </Link>
+            </link>
           </div>
         </div>
 
@@ -41,7 +41,7 @@ export default function IndexPage () {
             </p>
             <p className="about-me-approach">
               You are not the problem, the problem is the problem.
-            </p>             
+            </p>
           </div>
           
           <img src={JessePhoto} alt="Headshot of Jesse Pajuaar"/>
@@ -49,11 +49,11 @@ export default function IndexPage () {
 
         <div className="homepage-contact">
           <p className="homepage-contact-text">
-            Do you feel you need to make some changes but don't know where or how to begin?
+            Do you feel you need to make some changes but don&apos;t know where or how to begin?
           </p>
-          <Link to="/contact">
+          <link to="/contact">
             <button className="homepage-contact-btn">Contact me now for a no-fee 15 minute consultation</button>
-          </Link>
+          </link>
         </div>
 
         <div className="psychology-today-verification">
@@ -66,4 +66,4 @@ export default function IndexPage () {
       </main>
     </div>
   )
-};
+}

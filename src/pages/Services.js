@@ -1,5 +1,6 @@
 import * as React from 'react'
 import './styles.scss'
+import { Link } from 'gatsby'
 import Footer from '../components/Footer'
 
 export default function Services () {
@@ -90,9 +91,9 @@ export default function Services () {
           <p>No Fee Consultation (Individual) - 15 min.</p>
         </div>
 
-        <link to="/contact">
+        <Link to="/contact">
           <button className="consult-btn">Book Now</button>
-        </link>
+        </Link>
       </div>
 
       <Footer />

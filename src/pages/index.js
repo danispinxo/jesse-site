@@ -1,14 +1,13 @@
 import * as React from 'react'
 import 'normalize.css'
 import './styles.scss'
-import TopNavbar from '../components/Navbar'
+import { Link } from 'gatsby'
 import Modal from '../components/Modal'
 import JessePhoto from '../images/JessePajuaar.jpg'
 
-export default function IndexPage () {
+export default function Homepage () {
   return (
     <div className="main">
-      <TopNavbar />
       <main>
         <Modal />
         <div className="quote-banner">
@@ -23,11 +22,11 @@ export default function IndexPage () {
               </div>
             </div>
 
-            <link to="/contact">
+            <Link to="/contact">
               <button className="talk-btn">
                 Let&apos;s Talk
               </button>
-            </link>
+            </Link>
           </div>
         </div>
 
@@ -51,9 +50,9 @@ export default function IndexPage () {
           <p className="homepage-contact-text">
             Do you feel you need to make some changes but don&apos;t know where or how to begin?
           </p>
-          <link to="/contact">
+          <Link to="/contact">
             <button className="homepage-contact-btn">Contact me now for a no-fee 15 minute consultation</button>
-          </link>
+          </Link>
         </div>
 
         <div className="psychology-today-verification">

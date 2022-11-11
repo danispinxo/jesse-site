@@ -1,12 +1,13 @@
 /**
  * @type {import('gatsby').GatsbyConfig}
  */
- module.exports = {
+
+module.exports = {
   siteMetadata: {
-    title: `Jesse Pajuaar Therapy Studios`,
-    siteUrl: `https://www.yourdomain.tld`
+    title: 'Jesse Pajuaar Therapy Studios',
+    siteUrl: 'https://www.yourdomain.tld'
   },
   plugins: [
-    "gatsby-plugin-sass",
+    'gatsby-plugin-sass'
   ]
-};
+}

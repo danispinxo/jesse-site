@@ -17,7 +17,7 @@ export default function Contact () {
       </div>
 
       <div className="covid-note">
-        <h3>Note: <br/> My practice has been moved online for the foreseeable future. Consequent therapy sessions will be limited to secure video or telephone sessions.</h3>
+        <h3>Note: My practice has been moved online for the foreseeable future. Consequent therapy sessions will be limited to secure video or telephone sessions.</h3>
       </div>
 
       <div className="contact-body">

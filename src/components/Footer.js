@@ -1,5 +1,5 @@
-import * as React from "react";
-import "../pages/styles.scss";
+import * as React from 'react'
+import '../pages/styles.scss'
 
 export default function Footer () {
   return (
@@ -36,7 +36,7 @@ export default function Footer () {
           <div className="schedule-times">
             No Office Hours
           </div>
-        </div>        
+        </div>
       </div>
       
       <div className="psychology-today-verification">
@@ -47,4 +47,4 @@ export default function Footer () {
       </div>
     </div>
   )
-};
+}

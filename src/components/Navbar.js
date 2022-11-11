@@ -1,17 +1,17 @@
-import * as React from "react";
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faHome } from '@fortawesome/free-solid-svg-icons';
-import "../pages/styles.scss";
+import * as React from 'react'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faHome } from '@fortawesome/free-solid-svg-icons'
+import '../pages/styles.scss'
 
 export default function TopNavbar () {
   return (
     <div className="navbar">
       <div className="links">
-        <Link to="/">Home</Link>
-        <Link to="/services">Services</Link>
-        <Link to="/about">About</Link>
-        <Link to="/contact">Contact</Link>
-        <Link to="/resources">Help & Resources</Link>
+        <link to="/">Home</link>
+        <link to="/services">Services</link>
+        <link to="/about">About</link>
+        <link to="/contact">Contact</link>
+        <link to="/resources">Help & Resources</link>
       </div>
 
       <div className="title">
@@ -29,4 +29,4 @@ export default function TopNavbar () {
 
     </div>
   )
-};
+}

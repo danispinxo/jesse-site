@@ -1,10 +1,10 @@
-import * as React from "react";
-import "../pages/styles.scss";
-import ModalUnstyled from "@mui/material/Modal";
+import * as React from 'react'
+import '../pages/styles.scss'
+import ModalUnstyled from '@mui/material/Modal'
 
-export default function BasicModal() {
-  const [open, setOpen] = React.useState(true);
-  const handleClose = () => setOpen(false);
+export default function BasicModal () {
+  const [open, setOpen] = React.useState(true)
+  const handleClose = () => setOpen(false)
 
   return (
     <div className="covid-modal">
@@ -27,10 +27,10 @@ export default function BasicModal() {
             Video sessions
           </p>
           <div className="btn-holder">
-            <button className="close-btn" onClick={handleClose}>Okay</button>            
+            <button className="close-btn" onClick={handleClose}>Okay</button>
           </div>
         </div>
       </ModalUnstyled>
     </div>
-  );
+  )
 }

@@ -1,15 +1,33 @@
-import * as React from 'react'
+import React from 'react'
 import './styles.scss'
+import { useForm } from 'react-hook-form'
 import { Link } from 'gatsby'
-import Footer from '../components/Footer'
 import Logo from '../images/Logo.png'
-import Box from '@mui/material/Box'
+import Footer from '../components/Footer'
 import TextField from '@mui/material/TextField'
 import InputLabel from '@mui/material/InputLabel'
 import FormControl from '@mui/material/FormControl'
 import NativeSelect from '@mui/material/NativeSelect'
 
 export default function Contact () {
+  const {
+    handleSubmit
+  } = useForm()
+
+  const onSubmit = data => {
+    fetch('/api/contact', {
+      method: 'POST',
+      body: JSON.stringify(data),
+      headers: {
+        'content-type': 'application/json'
+      }
+    })
+      .then(res => res.json())
+      .then(body => {
+        console.log('response from API:', body)
+      })
+  }
+
   return (
     <main className='page-content'>
       <div className="contact-title-holder">
@@ -36,20 +54,17 @@ export default function Contact () {
             Toronto, Ont. Canada.
           </p>
 
-          <Box
-            component="form"
-            sx={{
-              '& > :not(style)': { m: 1, width: '25ch' }
-            }}
-            noValidate
-            autoComplete="off"
+          <form
+            onSubmit={handleSubmit(onSubmit)}
+            style={{ display: 'block', width: 400 }}
           >
-            <TextField id="standard-basic" label="First Name" variant="standard" required />
-            <TextField id="standard-basic" label="Last Name" variant="standard" required/>
-            <TextField id="standard-basic" label="Email" variant="standard" required fullWidth/>
-            <TextField id="standard-basic" label="Phone" variant="standard" required/>
-            <TextField id="standard-basic" label="Location" variant="standard" helperText="e.g., Toronto, ON" required/>
-            <FormControl fullWidth>
+            <TextField className="input" id="standard-basic" label="First Name" variant="standard" required />
+            <TextField className="input" id="standard-basic" label="Last Name" variant="standard" required/>
+            <TextField className="input" id="standard-basic" label="Email" variant="standard" required fullWidth/>
+            <TextField className="input" id="standard-basic" label="Phone" variant="standard" required/>
+            <TextField className="input" id="standard-basic" label="Location" variant="standard" helperText="e.g., Toronto, ON" required/>
+
+            <FormControl className="input" fullWidth>
               <InputLabel variant="standard" htmlFor="uncontrolled-native">
                 How did you hear about JPTS?
               </InputLabel>
@@ -70,16 +85,17 @@ export default function Contact () {
               </NativeSelect>
             </FormControl>
             <TextField
+              className="input"
               id="outlined-multiline-static"
               label="Message"
               multiline
               rows={4}
               helperText="What's been troubling you?"
-              defaultValue=" "
+              fullWidth
             />
             <br />
             <button className="form-submit-btn">Send</button>
-          </Box>
+          </form>
         </div>
       </div>
 

@@ -10,7 +10,6 @@ export default function BasicModal () {
   }
 
   const [open, setOpen] = React.useState(!shown)
-  console.log(sessionStorage.getItem('shown-modal'))
 
   const handleClose = () => {
     if (!sessionStorage.getItem('shown-modal')) {

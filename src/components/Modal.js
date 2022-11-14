@@ -3,13 +3,8 @@ import '../pages/styles.scss'
 import ModalUnstyled from '@mui/material/Modal'
 
 export default function BasicModal () {
-  let shown = false
-  sessionStorage.getItem('shown-modal') ? shown = true : shown = false
-  const [open, setOpen] = React.useState(!shown)
+  const [open, setOpen] = React.useState(true)
   const handleClose = () => {
-    if (!sessionStorage.getItem('shown-modal')) {
-      sessionStorage.setItem('shown-modal', 'true')
-    }
     setOpen(false)
   }
 

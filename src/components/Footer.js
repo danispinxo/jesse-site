@@ -16,7 +16,7 @@ export default function Footer () {
             Monday - Thursday
           </div>
           <div className="schedule-times">
-            10:00am - 6:30pm
+            10:00am - 6:00pm
           </div>
         </div>
 

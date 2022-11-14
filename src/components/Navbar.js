@@ -2,6 +2,7 @@ import * as React from 'react'
 import { Link } from 'gatsby'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faHome } from '@fortawesome/free-solid-svg-icons'
+import Logo from '../images/Logo.png'
 import '../pages/styles.scss'
 
 export default function TopNavbar () {
@@ -18,6 +19,8 @@ export default function TopNavbar () {
       <div className="title">
         <h1>Jesse Pajuäär Therapy Studios</h1>
       </div>
+
+      <img className='nav-logo' src={Logo} />
 
       <div className="btn-holder">
         <a href="https://oab.owlpractice.ca/jpts">

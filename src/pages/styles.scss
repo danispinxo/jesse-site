@@ -30,6 +30,15 @@
     }
   }
 
+  .nav-logo {
+    width: 4rem;
+    margin-top: -5.5rem;
+    margin-left: 2%;
+    opacity: 0.7;
+    border-radius: 50%;
+    box-shadow: 2px 2px 3px $dark-teal;
+  }
+
   .title {
     display: flex;
     justify-content: center;
@@ -40,8 +49,8 @@
   .btn-holder {
     display: flex;
     justify-content: end;
-    margin-right: 8.5rem;
-    margin-top: -3.8rem;
+    margin-right: 10%;
+    margin-top: -3.5rem;
 
     .client-btn {
       border-color: $dark-green;
@@ -236,7 +245,7 @@ main {
   box-shadow: 1px 1px 5px $teal;
   padding: 1rem;
   padding-left: 40%;
-  text-align: right;
+  text-align: center;
 
   .covid-modal-title {
     font-size: 1.8rem;
@@ -252,7 +261,7 @@ main {
   }
 
   .covid-modal-content {
-    text-align: right;
+    text-align: center;
     font-family: $body-font;
     line-height: 1.1rem;
     color: $very-dark-blue;
@@ -332,7 +341,7 @@ main {
     }
 
     .logo {
-      width: 70%;
+      width: 50%;
       border-radius: 50%;
       box-shadow: 5px 5px 10px $teal;
       margin: 1rem;

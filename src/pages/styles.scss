@@ -277,25 +277,6 @@ main {
   }
 }
 
-.about-title-holder {
-  @include title-holder;
-  background-position: center 10%;
-
-  .about-title {
-    @include title-format;
-  }
-}
-
-.about-expectations {
-  @include intro-box;
-  
-  p {
-    font-family: $sub-font;
-    font-size: 1.5rem;
-    color: $very-dark-blue;
-  }
-}
-
 .contact-title-holder {
   @include title-holder;
   background-position: center 65%;
@@ -467,107 +448,6 @@ main {
   }    
 }
 
-.services-title-holder {
-  @include title-holder;
-  background-position: center 100%;
-
-  .services-title {
-    @include title-format;
-  }
-}
-
-.help-list {
-  @include intro-box;
-
-  h3 {
-    font-family: $sub-font;
-    font-size: 1.5rem;
-    color: $very-dark-blue;
-  }
-
-  ul {
-    margin-top: -0.2rem;
-    font-family: $body-font;
-    color: $very-dark-blue;
-    columns: 2;
-  }
-
-}
-
-.section {
-  display: flex;
-  flex-direction: row;
-  width: 90%;
-
-  .section-label {
-    width: 30%;
-    height: auto;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-content: center;
-    align-items: center;
-    margin: 0.5rem;
-    background-color: $light-teal;
-    border-style: dotted;
-    border-color: $dark-teal;
-    border-radius: 10px;
-
-    .label-title {
-      font-family: $sub-font;
-      font-size: 1.5rem;
-      font-weight: 700;
-      text-align: center;
-    }
-
-    .label-subtitle {
-      font-family: $sub-font;
-      font-size: 1.3rem;
-      font-style: italic;
-      text-align: center;
-      margin-top: -1.3rem;
-    }
-  }
-
-  .section-content {
-    width: 70%;
-    height: auto;
-    margin: 0.5rem;
-    background-color: #a2cdf22e;
-    border-style: dotted;
-    border-color: $dark-teal;
-    border-radius: 10px;
-    padding: 1rem;
-    font-family: $body-font;
-
-    ul {
-      column-count: 3;
-    }
-  }
-}
-
-.consult-box {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 50%;
-  padding: 1rem;
-  background-color: $light-blue;
-  border-style: solid;
-  border-width: 0.08rem;
-  border-color: $dark-blue;
-  border-radius: 10px;
-
-  .consult-text {
-    font-family: $sub-font;
-    font-size: 1.3rem;
-    color: $very-dark-blue;
-  }
-
-  .consult-btn {
-    @include blue-btn;
-  }
-}
 
 .footer {
   width: 100%;

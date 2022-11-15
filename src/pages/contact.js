@@ -1,6 +1,6 @@
 import React from 'react'
 import './styles.scss'
-import { useForm } from 'react-hook-form'
+import { useForm, ValidationError } from '@formspree/react'
 import { Link } from 'gatsby'
 import Logo from '../images/Logo.png'
 import Footer from '../components/Footer'
@@ -10,22 +10,10 @@ import FormControl from '@mui/material/FormControl'
 import NativeSelect from '@mui/material/NativeSelect'
 
 export default function Contact () {
-  const {
-    handleSubmit
-  } = useForm()
+  const [state, handleSubmit] = useForm('xkneyzbr')
 
-  const onSubmit = data => {
-    fetch('/api/contact', {
-      method: 'POST',
-      body: JSON.stringify(data),
-      headers: {
-        'content-type': 'application/json'
-      }
-    })
-      .then(res => res.json())
-      .then(body => {
-        console.log('response from API:', body)
-      })
+  if (state.succeeded) {
+    return <p>Thanks for your submission!</p>
   }
 
   return (
@@ -55,15 +43,52 @@ export default function Contact () {
           </p>
 
           <form
-            onSubmit={handleSubmit(onSubmit)}
+            onSubmit={handleSubmit}
             style={{ display: 'block', width: 400 }}
           >
-            <TextField className="input" id="standard-basic" label="First Name" variant="standard" required />
-            <TextField className="input" id="standard-basic" label="Last Name" variant="standard" required/>
-            <TextField className="input" id="standard-basic" label="Email" variant="standard" required fullWidth/>
-            <TextField className="input" id="standard-basic" label="Phone" variant="standard" required/>
-            <TextField className="input" id="standard-basic" label="Location" variant="standard" helperText="e.g., Toronto, ON" required/>
-
+            <TextField
+              className="input"
+              id="standard-basic"
+              name="first-name"
+              label="First Name"
+              variant="standard"
+              required
+            />
+            <TextField
+              className="input"
+              id="standard-basic"
+              name="last-name"
+              label="Last Name"
+              variant="standard"
+              required
+            />
+            <TextField
+              className="input"
+              id="standard-basic"
+              name="email"
+              label="Email"
+              variant="standard"
+              required
+              fullWidth
+            />
+            <ValidationError prefix="Email" field="email" errors={state.errors} />
+            <TextField
+              className="input"
+              id="standard-basic"
+              name="phone"
+              label="Phone"
+              variant="standard"
+              required
+            />
+            <TextField
+              className="input"
+              id="standard-basic"
+              name="location"
+              label="Location"
+              variant="standard"
+              helperText="e.g., Toronto, ON"
+              required
+            />
             <FormControl className="input" fullWidth>
               <InputLabel variant="standard" htmlFor="uncontrolled-native">
                 How did you hear about JPTS?
@@ -94,7 +119,8 @@ export default function Contact () {
               fullWidth
             />
             <br />
-            <button className="form-submit-btn">Send</button>
+            <button className="form-submit-btn" type="submit">Send</button>
+            <ValidationError errors={state.errors} />
           </form>
         </div>
       </div>

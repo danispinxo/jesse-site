@@ -1,5 +1,5 @@
 import * as React from 'react'
-import './styles.scss'
+import './about-and-services.scss'
 import { Link } from 'gatsby'
 import Footer from '../components/Footer'
 

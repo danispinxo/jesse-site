@@ -86,6 +86,10 @@
       @include xs {
         font-size: 1rem;
       }
+
+      @include sm {
+        font-size: 1.3rem;
+      }
     }
 
     .label-subtitle {
@@ -98,6 +102,10 @@
       @include xs {
         margin-top: -1rem;
         font-size: 0.9rem;
+      }
+
+      @include sm {
+        font-size: 1rem;
       }
     }
   }
@@ -117,11 +125,19 @@
       font-size: 0.9rem;
     }
 
+    @include sm {
+      font-size: 0.9rem;
+    }
+
     ul {
       column-count: 3;
 
       @include xs {
         column-count: 1;
+      }
+
+      @include sm {
+        column-count: 2;
       }
     }
   }

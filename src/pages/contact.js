@@ -112,6 +112,7 @@ export default function Contact () {
             <TextField
               className="input"
               id="outlined-multiline-static"
+              name="message"
               label="Message"
               multiline
               rows={4}

@@ -1,5 +1,6 @@
 import * as React from 'react'
 import './styles.scss'
+import './resources.scss'
 import CrisisPhoto from '../images/Crisis.jpg'
 import FamiliesPhoto from '../images/Families.jpg'
 import IndigenousPhoto from '../images/Indigenous.jpg'

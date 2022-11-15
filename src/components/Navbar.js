@@ -17,7 +17,7 @@ export default function TopNavbar () {
       </div>
 
       <div className="title">
-        <h1>Jesse Pajuäär Therapy Studios</h1>
+        Jesse Pajuäär Therapy Studios
       </div>
 
       <img className='nav-logo' src={Logo} />

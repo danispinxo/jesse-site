@@ -1,5 +1,6 @@
 import React from 'react'
 import './styles.scss'
+import './contact.scss'
 import { useForm, ValidationError } from '@formspree/react'
 import { Link } from 'gatsby'
 import Logo from '../images/Logo.png'
@@ -44,7 +45,7 @@ export default function Contact () {
 
           <form
             onSubmit={handleSubmit}
-            style={{ display: 'block', width: 400 }}
+            style={{ display: 'block' }}
           >
             <TextField
               className="input"
@@ -53,6 +54,7 @@ export default function Contact () {
               label="First Name"
               variant="standard"
               required
+              fullWidth
             />
             <TextField
               className="input"
@@ -61,6 +63,7 @@ export default function Contact () {
               label="Last Name"
               variant="standard"
               required
+              fullWidth
             />
             <TextField
               className="input"
@@ -79,6 +82,7 @@ export default function Contact () {
               label="Phone"
               variant="standard"
               required
+              fullWidth
             />
             <TextField
               className="input"
@@ -88,6 +92,7 @@ export default function Contact () {
               variant="standard"
               helperText="e.g., Toronto, ON"
               required
+              fullWidth
             />
             <FormControl className="input" fullWidth>
               <InputLabel variant="standard" htmlFor="uncontrolled-native">

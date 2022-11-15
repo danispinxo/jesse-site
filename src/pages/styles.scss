@@ -19,6 +19,11 @@
     font-family: $sub-font;
     font-size: 1rem;
 
+    @include xs {
+      gap: 0.7rem;
+      font-size: 0.8rem;
+    }
+
     a {
       color: $teal;
       text-decoration: none;
@@ -32,33 +37,70 @@
 
   .nav-logo {
     width: 4rem;
-    margin-top: -5.5rem;
-    margin-left: 2%;
+    position: absolute;
+    margin-left: 10%;
     opacity: 0.7;
     border-radius: 50%;
     box-shadow: 2px 2px 3px $dark-teal;
+
+    @include xs {
+      width: 3.5rem;
+      margin-left: 1%;
+      margin-top: 4%;
+    }
+
+    @include sm {
+      margin-left: 7%;
+    }
   }
 
   .title {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: -0.3rem;
+    @include centered;
+    margin-top: 1rem;
+    font-family: $header-font;
+    color: $dark-green;
+    font-weight: 600;
+    text-align: center;
+    font-size: 2rem;
+
+    @include xs {
+      width: 40%;
+      margin-top: 1rem;
+      margin-left: 26%;
+      font-size: 1rem;
+    }
+
+    @include sm {
+      margin-top: 1rem;
+      font-size: 1.5rem;
+    }
   }
 
   .btn-holder {
     display: flex;
     justify-content: end;
-    margin-right: 10%;
-    margin-top: -3.5rem;
+    position: absolute;
+    margin-left: 78%;
+    margin-top: 1%;
+
+    @include xs {
+      margin-top: 6%;
+      margin-left: 68%;
+    }
 
     .client-btn {
+      padding: 0.2rem;
       border-color: $dark-green;
       border-width: 0.1rem;
       border-radius: 8px;
       background-color: transparent;
       color: $dark-green;
       font-family: $sub-font;
+
+      @include xs {
+        padding: 0.1rem;
+        font-size: 0.8rem;
+      }
 
       &:hover {
         cursor: pointer;
@@ -119,12 +161,21 @@ main {
     flex-direction: column;
     align-items: flex-end;
 
+    @include xs {
+      padding: 0.6rem;
+    }
+
     .quotation {
       font-family: $header-font;
       line-height: 1.9rem;
       font-size: 1.4rem;
       font-weight: 400;
       color: $dark-teal;  
+
+      @include xs {
+        font-size: 1.1rem;
+        line-height: 1.5rem;
+      }
     }
 
     .name-holder {
@@ -135,6 +186,10 @@ main {
       font-size: 1.1rem;
       font-weight: 300;
       color: $dark-teal;
+
+      @include xs {
+        font-size: 0.9rem;
+      }
     }
 
     .talk-btn {
@@ -155,6 +210,20 @@ main {
   border-color: $very-dark-blue;
   border-radius: 10px;
 
+  @include xs {
+    flex-direction: column-reverse;
+    @include centered
+  }
+
+  @include sm {
+    flex-direction: column;
+    @include centered;
+  }
+
+  @include md {
+    padding: 0.5rem;
+  }
+
   .about-me-text {
     display: flex;
     flex-direction: column;
@@ -163,14 +232,45 @@ main {
     width: 50%;
     padding: 2rem;
 
+    @include xs {
+      width: 95%;
+      padding: 1rem;
+    }
+
+    @include sm {
+      width: 95%;
+      padding: 1rem;
+    }
+
+    @include md {
+      width: 95%;
+      padding: 1rem;
+    }
+
     .about-me-title {
       font-size: 2rem;
       color: $very-dark-blue;
+
+      @include xs {
+        font-size: 1.5rem;
+      }
+
+      @include lg {
+        font-size: 2.5rem;
+      }
     }
 
     .about-me-name {
       margin-top: -1rem;
       font-size: 1.5rem;
+
+      @include xs {
+        font-size: 1.2rem;
+      }
+
+      @include lg {
+        font-size: 1.8rem;
+      }
     }
 
     .about-me-qualifications {
@@ -178,12 +278,29 @@ main {
       text-align: center;
       font-size: 1rem;
       font-style: italic;
+
+      @include xs {
+        font-size: 0.9rem;
+      }
+
+      @include lg {
+        font-size: 1.5rem;
+      }
     }
 
     .about-me-approach {
       text-align: center;
       font-family: $body-font;
       line-height: 1.5rem;
+
+      @include xs {
+        font-size: 0.9rem;
+        line-height: 1.1rem;
+      }
+
+      @include lg {
+        font-size: 1.3rem;
+      }
     }
   }
 
@@ -193,6 +310,14 @@ main {
     border-color: white;
     border-width: 1rem;
     border-radius: 10px;
+
+    @include xs {
+      width: 90%;
+    }
+
+    @include sm {
+      width: 40%;
+    }
   }
 }
 
@@ -207,10 +332,22 @@ main {
   border-color: $dark-teal;
   border-radius: 10px;
 
+  @include xs {
+    text-align: center;
+  }
+
+  @include lg {
+    font-size: 2rem;
+  }
+
   .homepage-contact-text {
     font-family: $body-font;
     font-size: 1rem;
     color: $dark-teal;
+
+    @include lg {
+      font-size: 1.5rem;
+    }
   }
 
   .homepage-contact-btn {
@@ -219,11 +356,8 @@ main {
 }
 
 .psychology-today-verification {
-  display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-content: center;
-  align-items: center;
+  @include centered;
 
   p {
     font-family: $body-font;
@@ -237,20 +371,17 @@ main {
   left: 50%;
   transform: translate(-50%, -50%);
   width: 50%;
-  background-image: url("../images/ModalBackground.jpg");
-  background-repeat: no-repeat;
-  background-size: 100%;
-  background-position: center 0%;
+  background-color: #a2cdf2;
+  background-image: url("../images/fresh-snow.png");
   border: 2px solid $dark-teal;
   box-shadow: 1px 1px 5px $teal;
   padding: 1rem;
-  padding-left: 40%;
   text-align: center;
 
   .covid-modal-title {
     font-size: 1.8rem;
     font-family: $sub-font;
-    color: $med-blue;
+    color: $dark-blue;
   }
 
   .covid-modal-subtitle {
@@ -265,6 +396,10 @@ main {
     font-family: $body-font;
     line-height: 1.1rem;
     color: $very-dark-blue;
+
+    @include xs {
+      font-size: 0.9rem;
+    }
   }
 
   .btn-holder {
@@ -273,96 +408,6 @@ main {
 
     .close-btn {
       @include blue-btn
-    }
-  }
-}
-
-.contact-title-holder {
-  @include title-holder;
-  background-position: center 65%;
-
-  .contact-title {
-    @include title-format;
-  }
-}
-
-.covid-note {
-  @include intro-box;
-}
-
-.contact-body {
-  display: flex;
-  flex-direction: row;
-  width: 90%;
-
-  .contact-info {
-    width: 45%;
-    padding: 1rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    border-style: double;
-    border-left: none;
-    border-top: none; 
-    border-bottom: none;
-    border-width: 0.5rem;
-    border-color: $teal;
-
-    p {
-      font-family: $body-font;
-      text-align: center;
-    }
-
-    a {
-      text-decoration: underline;
-      text-align: center;
-      font-family: $body-font;
-      font-size: 1.1rem;
-      color: $dark-blue;
-    }
-
-    .logo {
-      width: 50%;
-      border-radius: 50%;
-      box-shadow: 5px 5px 10px $teal;
-      margin: 1rem;
-    }
-  }
-
-  .contact-form {
-    width: 45%;
-    display: flex;
-    flex-direction: column;
-    padding: 1rem;
-    font-family: $body-font;
-
-    .form-identifier {
-      text-align: center;
-      font-size: 0.9rem;
-      .name {
-        text-decoration: underline;
-      }
-    }
-
-    .input {
-      margin: 1rem;
-    }
-
-    .form-submit-btn {
-      width: auto;
-      padding: 0.5rem;
-      margin-right: 2rem;
-      border-color: $dark-green;
-      border-width: 0.1rem;
-      border-radius: 8px;
-      color: $dark-green;
-      font-family: $sub-font;
-      font-size: 1.2rem;
-
-      &:hover {
-        cursor: pointer;
-        box-shadow: 2px 2px 3px $dark-green;
-      }
     }
   }
 }
@@ -388,66 +433,6 @@ main {
     text-align: center;
   }
 }
-
-.resources-title-holder {
-  @include title-holder;
-  background-position: center 45%;
-
-  .resources-title {
-    @include title-format;
-  }
-}
-
-.resource-cards {
-  display: flex;
-  justify-content: space-evenly;
-  flex-direction: row;
-  flex-wrap: wrap;
-
-  .resource-card {
-    display: flex;
-    flex-direction: column;
-    width: 30%;
-    height: auto;
-    display: flex;
-    flex-direction: column;
-    align-content: center;
-    align-items: center;
-    margin: 0.5rem;
-    background-color: $light-teal;
-    border-style: dotted;
-    border-color: $dark-teal;
-    border-radius: 10px;
-
-    .card-label {
-      font-family: $sub-font;
-      font-size: 1.5rem;
-      text-align: center;
-    }
-
-    .card-img {
-      width: 95%;
-      margin-top: 2.5%;
-      border-radius: 10px;
-    }
-
-    .card-content {
-      width: 90%;
-      height: auto;
-      text-align: left;
-      line-height: 1.2rem;
-      margin-top: -1.5rem;
-      padding: 1rem;
-      font-family: $body-font;
-      font-size: 0.9rem;
-
-      ul {
-        column-count: 3;
-      }
-    }
-  }    
-}
-
 
 .footer {
   width: 100%;

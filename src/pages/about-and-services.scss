@@ -25,6 +25,10 @@
     font-family: $sub-font;
     font-size: 1.5rem;
     color: $very-dark-blue;
+
+    @include xs {
+      font-size: 1.2rem;
+    }
   }
 }
 
@@ -35,6 +39,10 @@
     font-family: $sub-font;
     font-size: 1.5rem;
     color: $very-dark-blue;
+
+    @include xs {
+      font-size: 1.3rem;
+    }
   }
 
   ul {
@@ -42,8 +50,12 @@
     font-family: $body-font;
     color: $very-dark-blue;
     columns: 2;
-  }
 
+    @include xs {
+      columns: 1;
+      font-size: 0.9rem;
+    }
+  }
 }
 
 .section {
@@ -70,6 +82,10 @@
       font-size: 1.5rem;
       font-weight: 700;
       text-align: center;
+
+      @include xs {
+        font-size: 1rem;
+      }
     }
 
     .label-subtitle {
@@ -78,6 +94,11 @@
       font-style: italic;
       text-align: center;
       margin-top: -1.3rem;
+
+      @include xs {
+        margin-top: -1rem;
+        font-size: 0.9rem;
+      }
     }
   }
 
@@ -92,8 +113,16 @@
     padding: 1rem;
     font-family: $body-font;
 
+    @include xs {
+      font-size: 0.9rem;
+    }
+
     ul {
       column-count: 3;
+
+      @include xs {
+        column-count: 1;
+      }
     }
   }
 }
@@ -114,6 +143,10 @@
     font-family: $sub-font;
     font-size: 1.3rem;
     color: $very-dark-blue;
+
+    @include xs {
+      text-align: center;
+    }
   }
 
   .consult-btn {

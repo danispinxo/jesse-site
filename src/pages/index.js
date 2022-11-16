@@ -6,8 +6,13 @@ import Modal from '../components/Modal'
 import JessePhoto from '../images/JessePajuaar.jpg'
 
 export default function Homepage () {
-  const windowGlobal = typeof window !== 'undefined' && window
-  const opened = windowGlobal.localStorage.getItem('opened') && typeof windowGlobal.localStorage.getItem('opened') === 'string'
+  const isBrowser = typeof window !== 'undefined'
+
+  let opened = false
+  
+  if (isBrowser) {
+    opened = typeof window.localStorage.getItem('opened') === 'string'
+  }
 
   return (
     <main>

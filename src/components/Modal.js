@@ -12,7 +12,7 @@ export default function Modal (props) {
 
   const handleClose = () => {
     setOpen(false)
-    sessionStorage.setItem('opened', 1)
+    localStorage.setItem('opened', 1)
   }
 
   return (

@@ -6,7 +6,8 @@ import Modal from '../components/Modal'
 import JessePhoto from '../images/JessePajuaar.jpg'
 
 export default function Homepage () {
-  const opened = typeof sessionStorage.getItem('opened') === 'string'
+  const windowGlobal = typeof window !== 'undefined' && window
+  const opened = typeof windowGlobal.localStorage.getItem('opened') === 'string'
 
   return (
     <main>

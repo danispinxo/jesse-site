@@ -4,6 +4,7 @@ import './contact.scss'
 import { useForm, ValidationError } from '@formspree/react'
 import { Link } from 'gatsby'
 import Logo from '../images/Logo.webp'
+import SubmitModal from '../components/SubmitModal'
 import Footer from '../components/Footer'
 import TextField from '@mui/material/TextField'
 import InputLabel from '@mui/material/InputLabel'
@@ -14,7 +15,28 @@ export default function Contact () {
   const [state, handleSubmit] = useForm('xkneyzbr')
 
   if (state.succeeded) {
-    return <p>Thanks for your submission!</p>
+    return (
+      <main className='page-content'>
+      <div className="contact-title-holder">
+        <p className="contact-title">Get In Touch</p>
+      </div>
+
+      <SubmitModal />
+
+      <div className="submit-contact-body">
+        <div className="contact-info">
+          <img className="logo" src={Logo} alt="JPTS Logo" />
+          <p>The right fit is the most important part of finding the right therapist.</p>
+
+          <Link to="/guide">Read more about how to choose the right therapist for you!</Link>
+
+          <p>To contact me for a no-fee 15 minute phone consultation simply fill out the form to the right.</p>
+        </div>
+      </div>
+
+      <Footer />
+    </main>
+    )
   }
 
   return (
@@ -125,7 +147,13 @@ export default function Contact () {
               fullWidth
             />
             <br />
-            <button className="form-submit-btn" type="submit">Send</button>
+            <button
+              className="form-submit-btn"
+              type="submit"
+              disabled={state.submitting}
+            >
+              Send
+            </button>
             <ValidationError errors={state.errors} />
           </form>
         </div>

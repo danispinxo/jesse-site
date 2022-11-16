@@ -367,6 +367,103 @@ main {
   }
 }
 
+.submit-modal-box {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 20rem;
+  height: 20rem;
+  background-color: #a2cdf2;
+  background-image: url("../images/leaf-border.webp");
+  background-size: 98%;
+  background-position: 1% center;
+  background-repeat: no-repeat;
+  border: 2px solid $dark-teal;
+  box-shadow: 1px 1px 5px $teal;
+  padding: 4rem;
+  @include centered;
+  flex-direction: column;
+  text-align: center;
+
+
+  @include xs {
+    width: 10rem;
+    height: 10rem;
+  }
+
+  @include lg {
+    width: 30rem;
+    height: 30rem;
+    padding: 5rem;
+  }
+
+  .submit-modal-title {
+    font-size: 1.8rem;
+    font-family: $sub-font;
+    color: $dark-blue;
+
+    @include xs {
+      font-size: 1.1rem;
+    }
+
+    @include lg {
+      font-size: 2.3rem;
+    }
+
+  }
+
+  .submit-modal-subtitle {
+    margin-top: -1rem;
+    font-family: $sub-font;
+    font-size: 1rem;
+    color: $dark-blue;
+
+    @include xs {
+      font-size: 0.9rem;
+    }
+
+    @include lg {
+      font-size: 1.7rem;
+    }
+  }
+
+  .submit-modal-content {
+    text-align: center;
+    font-family: $body-font;
+    line-height: 1.1rem;
+    color: $very-dark-blue;
+
+    @include xs {
+      font-size: 0.8rem;
+      line-height: 0.8rem;
+    }
+
+    @include lg {
+      font-size: 1.5rem;
+      line-height: 1.5rem;
+    }
+  
+  }
+
+  .btn-holder {
+    display: flex;
+    justify-content: center;
+
+    .close-btn {
+      @include blue-btn;
+
+      @include xs {
+        font-size: 0.8rem;
+      }
+
+      @include lg {
+        font-size: 1.5rem;
+      }
+    }
+  }
+}
+
 .modal-box {
   position: absolute;
   top: 50%;

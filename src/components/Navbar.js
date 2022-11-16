@@ -2,7 +2,7 @@ import * as React from 'react'
 import { Link } from 'gatsby'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faHome } from '@fortawesome/free-solid-svg-icons'
-import Logo from '../images/Logo.png'
+import Logo from '../images/Logo.webp'
 import '../pages/styles.scss'
 
 export default function TopNavbar () {

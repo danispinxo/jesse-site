@@ -111,6 +111,7 @@
 
   @include xs {
     flex-direction: column;
+    @include centered;
   }
 
   .section-label {

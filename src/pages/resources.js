@@ -1,28 +1,28 @@
 import * as React from 'react'
 import './styles.scss'
 import './resources.scss'
-import CrisisPhoto from '../images/Crisis.jpg'
-import FamiliesPhoto from '../images/Families.jpg'
-import IndigenousPhoto from '../images/Indigenous.jpg'
-import KidsPhoto from '../images/Kids.jpg'
-import QueerPhoto from '../images/Queer.jpg'
-import VictimPhoto from '../images/Victim.jpg'
+import CrisisPhoto from '../images/Crisis.webp'
+import FamiliesPhoto from '../images/Families.webp'
+import IndigenousPhoto from '../images/Indigenous.webp'
+import KidsPhoto from '../images/Kids.webp'
+import QueerPhoto from '../images/Queer.webp'
+import VictimPhoto from '../images/Victim.webp'
 
 export default function Resources () {
   return (
     <main>
-      <div className="resources-title-holder">
-        <p className="resources-title">Mental Health Resources</p>
+      <div className='resources-title-holder'>
+        <p className='resources-title'>Mental Health Resources</p>
       </div>
 
-      <div className="resource-cards">
-        <div className="resource-card">
-          <img className="card-img" src={KidsPhoto} alt="Children Playing Tug-of-War"/>
-          <p className="card-label">Kids Help Phone</p>
-          <p className="card-content">
-            <a href="https://kidshelpphone.ca/">Kids Help Phone</a> is a Canadian and world leader known for their expertise and continuous innovation as Canada&apos;s only 24/7 counselling and information service for young people.
+      <div className='resource-cards'>
+        <div className='resource-card'>
+          <img className='card-img' src={KidsPhoto} alt='Children Playing Tug-of-War'/>
+          <p className='card-label'>Kids Help Phone</p>
+          <p className='card-content'>
+            <a href='https://kidshelpphone.ca/'>Kids Help Phone</a> is a Canadian and world leader known for their expertise and continuous innovation as Canada&apos;s only 24/7 counselling and information service for young people.
           </p>
-          <p className="card-content">
+          <p className='card-content'>
             Since 1989, trained & professional counsellors have been listening to kids, often when no one else can or will. &quot;We are always there.&quot;
           </p>
         </div>

@@ -3,7 +3,7 @@ import 'normalize.css'
 import './styles.scss'
 import { Link } from 'gatsby'
 import Modal from '../components/Modal'
-import JessePhoto from '../images/JessePajuaar.jpg'
+import JessePhoto from '../images/JessePajuaar.webp'
 
 export default function Homepage () {
   const isBrowser = typeof window !== 'undefined'

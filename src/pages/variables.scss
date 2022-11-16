@@ -1,6 +1,4 @@
 // fonts
-@import url("https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,500;1,400;1,500&family=Lato:ital,wght@0,100;0,400;0,700;0,900;1,400&family=Playfair+Display:wght@600;700;800;900&display=swap");
-
 $body-font: 'Georgia', serif;
 $sub-font: 'EB Garamond', serif;
 $header-font: 'Playfair Display', serif;
@@ -33,7 +31,7 @@ $light-green: #b7bf98;
 @mixin title-holder {
   height: 10rem;
   width: 100%;
-  background-image: url("../images/Waterfall.jpg");
+  background-image: url("../images/Waterfall.webp");
   background-repeat: no-repeat;
   background-size: 100%;
   display: flex;

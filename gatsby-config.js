@@ -8,6 +8,7 @@ module.exports = {
     siteUrl: 'https://jessesitemain.gatsbyjs.io/'
   },
   plugins: [
-    'gatsby-plugin-sass'
+    'gatsby-plugin-sass',
+    'gatsby-plugin-react-helmet'
   ]
 }

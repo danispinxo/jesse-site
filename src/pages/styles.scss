@@ -45,6 +45,7 @@
 
     @include xs {
       width: 3.5rem;
+      height: 3.5rem;
       margin-left: 1%;
       margin-top: 4%;
     }
@@ -145,7 +146,7 @@ main {
 .quote-banner {
   height: 20rem;
   width: 100%;
-  background-image: url("../images/Waterfall.jpg");
+  background-image: url("../images/Waterfall.webp");
   background-repeat: no-repeat;
   background-size: 100%;
   background-position: center 50%;
@@ -306,6 +307,7 @@ main {
 
   img {
     width: 35%;
+    height: auto;
     border-style: solid;
     border-color: white;
     border-width: 1rem;
@@ -372,7 +374,7 @@ main {
   transform: translate(-50%, -50%);
   width: 50%;
   background-color: #a2cdf2;
-  background-image: url("../images/fresh-snow.png");
+  background-image: url("../images/fresh-snow.webp");
   border: 2px solid $dark-teal;
   box-shadow: 1px 1px 5px $teal;
   padding: 1rem;

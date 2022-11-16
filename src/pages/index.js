@@ -1,4 +1,4 @@
-import * as React from 'react'
+import React from 'react'
 import 'normalize.css'
 import './styles.scss'
 import { Link } from 'gatsby'
@@ -6,9 +6,11 @@ import Modal from '../components/Modal'
 import JessePhoto from '../images/JessePajuaar.jpg'
 
 export default function Homepage () {
+  const opened = typeof sessionStorage.getItem('opened') === 'string'
+
   return (
     <main>
-      <Modal />
+      <Modal opened={opened}/>
 
       <div className="quote-banner">
         <div className="quotation-text">

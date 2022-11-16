@@ -1,11 +1,18 @@
-import * as React from 'react'
+import React, { useState } from 'react'
 import '../pages/styles.scss'
+import PropTypes from 'prop-types'
 import ModalUnstyled from '@mui/material/Modal'
 
-export default function BasicModal () {
-  const [open, setOpen] = React.useState(true)
+export default function Modal (props) {
+  Modal.propTypes = {
+    opened: PropTypes.boolean
+  }
+  
+  const [open, setOpen] = useState(props.opened === false)
+
   const handleClose = () => {
     setOpen(false)
+    sessionStorage.setItem('opened', 1)
   }
 
   return (

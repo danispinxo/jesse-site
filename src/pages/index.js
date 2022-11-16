@@ -7,7 +7,7 @@ import JessePhoto from '../images/JessePajuaar.jpg'
 
 export default function Homepage () {
   const windowGlobal = typeof window !== 'undefined' && window
-  const opened = typeof windowGlobal.localStorage.getItem('opened') === 'string'
+  const opened = windowGlobal.localStorage.getItem('opened') && typeof windowGlobal.localStorage.getItem('opened') === 'string'
 
   return (
     <main>

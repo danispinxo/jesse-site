@@ -5,7 +5,7 @@
 module.exports = {
   siteMetadata: {
     title: 'Jesse Pajuaar Therapy Studios',
-    siteUrl: 'https://www.yourdomain.tld'
+    siteUrl: 'http(s)://www.yourdomain.tld'
   },
   plugins: [
     'gatsby-plugin-sass'

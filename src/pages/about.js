@@ -99,3 +99,5 @@ export default function About () {
     </main>
   )
 }
+
+export { Head } from './index'

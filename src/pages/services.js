@@ -101,3 +101,5 @@ export default function Services () {
     </main>
   )
 }
+
+export { Head } from './index'

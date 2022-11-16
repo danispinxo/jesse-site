@@ -142,3 +142,5 @@ export default function Guide () {
     </main>
   )
 }
+
+export { Head } from './index'

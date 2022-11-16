@@ -94,3 +94,5 @@ export default function Resources () {
     </main>
   )
 }
+
+export { Head } from './index'

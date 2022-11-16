@@ -28,6 +28,42 @@
   }
 }
 
+.guide-title-holder {
+  background-position: center 10%;
+  @include title-holder;
+
+  .guide-title {
+    @include title-format;
+
+    @include xs {
+      padding: 0.5rem;
+      font-size: 1.5rem;
+    }
+  }
+}
+
+.guide-intro {
+  @include intro-box;
+  font-family: $sub-font;
+  font-size: 1.4rem;
+  color: $very-dark-blue;
+
+  @include xs {
+    font-size: 1.2rem;
+    text-align: center;
+  }
+
+  p {
+    font-family: $body-font;
+    font-size: 1.4rem;
+    color: $very-dark-blue;
+
+    @include xs {
+      font-size: 1rem;
+    }
+  }
+}
+
 .about-expectations {
   @include intro-box;
   
@@ -73,6 +109,10 @@
   flex-direction: row;
   width: 90%;
 
+  @include xs {
+    flex-direction: column;
+  }
+
   .section-label {
     width: 30%;
     height: auto;
@@ -86,6 +126,11 @@
     border-style: dotted;
     border-color: $dark-teal;
     border-radius: 10px;
+
+    @include xs {
+      margin: 0;
+      width: 100%;
+    }
 
     .label-title {
       font-family: $sub-font;
@@ -133,6 +178,9 @@
 
     @include xs {
       font-size: 0.9rem;
+      margin: 0;
+      margin-top: 1rem;
+      width: 90%;
     }
 
     @include sm {
@@ -150,6 +198,9 @@
         column-count: 2;
       }
     }
+    span {
+      text-decoration: underline;
+    }
   }
 }
 
@@ -164,6 +215,10 @@
   border-width: 0.08rem;
   border-color: $dark-blue;
   border-radius: 10px;
+  
+  @include xs {
+    width: 80%;
+  }
 
   .consult-text {
     font-family: $sub-font;

@@ -1,5 +1,6 @@
 import * as React from 'react'
 import './styles.scss'
+import './about-and-services.scss'
 
 export default function Guide () {
   return (
@@ -9,13 +10,15 @@ export default function Guide () {
       </div>
 
       <div className="guide-intro">
-        <p className="intro-title">A 4-Step Guide to Finding the Right Therapist for You</p>
-        If you search “therapist Toronto” the Internet will give you millions of search results. Literally. Finding the right therapist can feel hopeless and exhausting. And if you&apos;re googling therapist, you&apos;re probably already under some stress. Don&apos;t despair! Streamline your search by working through the FOUR following steps:
+        <div className="intro-title">A 4-Step Guide to Finding the Right Therapist for You</div>
+        <p>
+          If you search “therapist Toronto” the Internet will give you millions of search results. Literally. Finding the right therapist can feel hopeless and exhausting. And if you&apos;re googling therapist, you&apos;re probably already under some stress. Don&apos;t despair! Streamline your search by working through the FOUR following steps:
+        </p>
       </div>
 
       <div className="section">
         <div className="section-label">
-          <p className="label-title">Step ONE: <br/> Decide what kind of mental health care practitioner you need</p>
+          <p className="label-title">STEP ONE: </p> <p className='label-subtitle'>Decide what kind of mental health care practitioner you need</p>
         </div>
 
         <div className="section-content">
@@ -54,11 +57,15 @@ export default function Guide () {
           </ul>
 
           <p className="subtitle">4. There are other options too</p>
+          <ul>
+            <li>
+              Counsellors, coaches, social workers or therapists who work in spaces other than psychotherapy. And there are pastoral or spiritual guides who offer counselling services. Some of these areas are regulated (i.e., social work) and others are not (i.e., coaching). There are excellent practitioners in every field so it&apos;s really about doing your homework and deciding which kind counsellor best suits your individual needs.
+            </li>
+            <li>
+              Although psychotherapists cannot prescribe medication or diagnose mental health conditions, we often work with clients who are taking psychotropic medication and/or who have diagnoses (i.e., for depression, anxiety, PTSD, eating disorders, etc.). Psychotherapists often play a role in an integrated approach to managing formally diagnosed conditions.
+            </li>
+          </ul>
           <p>
-            Counsellors, coaches, social workers or therapists who work in spaces other than psychotherapy. And there are pastoral or spiritual guides who offer counselling services. Some of these areas are regulated (i.e., social work) and others are not (i.e., coaching). There are excellent practitioners in every field so it&apos;s really about doing your homework and deciding which kind counsellor best suits your individual needs.
-            <br/>
-            * Although psychotherapists cannot prescribe medication or diagnose mental health conditions we often work with clients who are taking psychotropic medication and/or who have diagnoses (i.e., for depression, anxiety, PTSD, eating disorders, etc.). Psychotherapists often play a role in an integrated approach to managing formally diagnosed conditions.
-            <br/>
             So, if you&apos;re still with me AND you think psychotherapy could be right for you then proceed to Step TWO. Otherwise, consult with your family physician for a referral to a psychiatrist or psychologist, or conduct your own research into other areas.
           </p>
         </div>
@@ -66,7 +73,7 @@ export default function Guide () {
 
       <div className="section">
         <div className="section-label">
-          <p className="label-title">STEP TWO: <br/> You want to see a psychotherapist. Refine your search by asking yourself the following questions</p>
+          <p className="label-title">STEP TWO: </p> <p className='label-subtitle'>You want to see a psychotherapist. Refine your search by asking yourself the following questions</p>
         </div>
         <div className="section-content">
           <p>
@@ -83,16 +90,13 @@ export default function Guide () {
             </li>
             <li>
               Ask yourself which practical considerations are important to you - These factors often determine whether or not you actually make it to therapy. And therapy won&apos;t work if you don&apos;t go. Do give these considerations just weight.
-              <br/>
-              Cost: How much will sessions cost, do you have insurance coverage, etc.
-              <br/>
-              Location: Is it convenient for you to get to the office?
-              <br/>
-              Availability: Does the therapist have office hours that work for you (evenings, weekends). Does she offer e-therapy, if this is an alternate route for you.
-              <br/>
-              Qualifications: Is it important to you that your therapist have any particular qualifications, training, knowledge, or experience.
-              <br/>
-              Other considerations: Sex/gender, age, race/ethnicity, religious faith, sexual orientation. It may be important for you to feel that your therapist can relate to a particular domain of experience. If this is the case, be honest with yourself. For example, a woman working through sexual assault trauma may not want to work with a male therapist if her assailant was a man. You need to feel a sense of safety and trust to be open in therapy. Sometimes ostensibly “personal” factors do matter when choosing a therapist.
+              <ul>
+                <li><span>Cost</span>: How much will sessions cost, do you have insurance coverage, etc.</li>
+                <li><span>Location</span>: Is it convenient for you to get to the office?</li>
+                <li><span>Availability</span>: Does the therapist have office hours that work for you (evenings, weekends)? Do they offer e-therapy, if this is an alternate route for you?</li>
+                <li><span>Qualifications</span>: Is it important to you that your therapist have any particular qualifications, training, knowledge, or experience?</li>
+                <li><span>Other considerations</span>: Sex/gender, age, race/ethnicity, religious faith, sexual orientation. It may be important for you to feel that your therapist can relate to a particular domain of experience. If this is the case, be honest with yourself. For example, a woman working through sexual assault trauma may not want to work with a male therapist if her assailant was a man. You need to feel a sense of safety and trust to be open in therapy. Sometimes ostensibly “personal” factors do matter when choosing a therapist.</li>
+              </ul>
             </li>
           </ol>
         </div>
@@ -100,32 +104,34 @@ export default function Guide () {
 
       <div className="section">
         <div className="section-label">
-          <p className="label-title">PART THREE: <br/> Do your research and make a short list of candidates</p>
+          <p className="label-title">STEP THREE: </p>
+          <p className='label-subtitle'>Do your research and make a short list of candidates</p>
         </div>
         <div className="section-content">
-          <p>
-            1. Do your research Now that you&apos;re clear on which criteria you find most important, you can go forth and conduct your search. But where should you look?
-            <br/>
-            Personal references - I know this may be a private matter, but other people are often your best resources. Ask around (i.e., trusted friends and family, your doctor, alternative health care practitioners such as naturopaths or physiotherapists, etc.).
-            <br/>
-            Directories - i.e., Psychology Today or the CRPO web site for general inquiries. Or consult specialist directories if you know your desired treatment modality.
-            <br/>
-            Internet searches - I know, I know, it&apos;s a terrible rabbit hole, but if you have a refined or specialized idea of what you&apos;re seeking you can yield good results.
-            <br/>
-            Keep an eye open for advertisements or flyers in places you frequent or for clinics or practitioners near your home, work, or in neighbourhoods / communities you often visit.
-            <br/>
-            2. Make a short list of candidates - Who resonates with you? By now you&apos;ve probably read lots of advertisements and web sites. Trust yourself to know who&apos;s making a connection. Aim to find 2-4 therapists you think could be a good fit. Or perhaps you have a strong feeling about one individual based on their web site, a personal reference, etc.?
-            <br/>
-            3. Take a brief phone consultation - Either way, it&apos;s time well spent to contact or interview a practitioner before you make your initial appointment. Many therapists offer a short phone consultation free of charge. Those who don&apos;t advertise this fact may still be willing to take a short call. This is your opportunity to ask any questions you might have about the therapist&apos;s qualifications, approach, availability, fees, etc. Sometimes candidates weed themselves out quickly once you get them on the phone. Does the practitioner respond to you in a timely and professional manner? Are they attentive? Do they seem interested in you and your concerns? When you talk, do they make you feel heard? Do your schedules work? Do you get a good vibe?
-            <br/>
-            4. Listen. With your stomach - Do you get a good vibe? This is admittedly an unscientific question. But fit is the alchemical x-factor that makes for a strong therapeutic alliance. This collaborative relationship between client and therapist is the most reliable indicator of whether a course of treatment will be successful. Doing your research matters, but when making a final decision you also need to listen to your gut.
-          </p>
+          <ol>
+            <li>
+              Do your research - Now that you&apos;re clear on which criteria you find most important, you can go forth and conduct your search. But where should you look?
+              <ul>
+                <li><span>Personal References</span>: I know this may be a private matter, but other people are often your best resources. Ask around (i.e., trusted friends and family, your doctor, alternative health care practitioners such as naturopaths or physiotherapists, etc.).</li>
+                <li><span>Directories</span>: for example, Psychology Today or the CRPO web site for general inquiries. Or consult specialist directories if you know your desired treatment modality.</li>
+                <li><span>Internet searches</span>: I know, I know, it&apos;s a terrible rabbit hole, but if you have a refined or specialized idea of what you&apos;re seeking you can yield good results.</li>
+                <li><span>Local advertisements</span>: Keep an eye open for advertisements or flyers in places you frequent or for clinics or practitioners near your home, work, or in neighbourhoods / communities you often visit.</li>
+              </ul>
+            </li>
+
+            <li>Make a short list of candidates - Who resonates with you? By now you&apos;ve probably read lots of advertisements and web sites. Trust yourself to know who&apos;s making a connection. Aim to find 2-4 therapists you think could be a good fit. Or perhaps you have a strong feeling about one individual based on their web site, a personal reference, etc.?</li>
+
+            <li>Take a brief phone consultation - Either way, it&apos;s time well spent to contact or interview a practitioner before you make your initial appointment. Many therapists offer a short phone consultation free of charge. Those who don&apos;t advertise this fact may still be willing to take a short call. This is your opportunity to ask any questions you might have about the therapist&apos;s qualifications, approach, availability, fees, etc. Sometimes candidates weed themselves out quickly once you get them on the phone. Does the practitioner respond to you in a timely and professional manner? Are they attentive? Do they seem interested in you and your concerns? When you talk, do they make you feel heard? Do your schedules work? Do you get a good vibe?</li>
+
+            <li>Listen. With your stomach - Do you get a good vibe? This is admittedly an unscientific question. But fit is the alchemical x-factor that makes for a strong therapeutic alliance. This collaborative relationship between client and therapist is the most reliable indicator of whether a course of treatment will be successful. Doing your research matters, but when making a final decision you also need to listen to your gut.</li>
+          </ol>
         </div>
       </div>
 
       <div className="section">
         <div className="section-label">
-          <p className="label-title">PART FOUR: <br/> Book it!</p>
+          <p className="label-title">STEP FOUR: </p>
+          <p className='label-subtitle'>Book it!</p>
         </div>
         <div className="section-content">
           <p>

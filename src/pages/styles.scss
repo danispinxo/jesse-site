@@ -412,28 +412,6 @@ main {
   }
 }
 
-.guide-title-holder {
-  background-position: center 10%;
-  @include title-holder;
-
-  .guide-title {
-    @include title-format;
-  }
-}
-
-.guide-intro {
-  @include intro-box;
-  font-family: $sub-font;
-  font-size: 1.2rem;
-  color: $very-dark-blue;
-
-  .intro-title {
-    font-family: $sub-font;
-    font-size: 1.5rem;
-    text-align: center;
-  }
-}
-
 .footer {
   width: 100%;
   height: auto;

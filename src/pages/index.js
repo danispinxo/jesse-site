@@ -2,6 +2,7 @@ import React from 'react'
 import 'normalize.css'
 import './styles.scss'
 import { Link } from 'gatsby'
+import { SEO } from '../components/seo'
 import Logo from '../images/Logo.webp'
 import Modal from '../components/Modal'
 import JessePhoto from '../images/JessePajuaar.webp'
@@ -19,32 +20,32 @@ export default function Homepage () {
     <main>
       <Modal opened={opened}/>
 
-      <div className="quote-banner">
-        <div className="quotation-text">
-          <div className="quotation">
+      <div className='quote-banner'>
+        <div className='quotation-text'>
+          <div className='quotation'>
             &quot;Experience is not what happens to you.<br />
             It is what you do with what happens to you.&quot; <br />
-            <div className="name-holder"> - Aldous Huxley -</div>
+            <div className='name-holder'> - Aldous Huxley -</div>
           </div>
 
-          <Link to="/contact">
-            <button className="talk-btn">Let&apos;s Talk</button>
+          <Link to='/contact'>
+            <button className='talk-btn'>Let&apos;s Talk</button>
           </Link>
 
         </div>
       </div>
 
       <div className='page-content'>
-        <div className="about-me">
-          <div className="about-me-text">
-            <h2 className="about-me-title">About Me</h2>
-            <h3 className="about-me-name">Jesse Pajuäär</h3>
-            <h4 className="about-me-qualifications">Registered Psychotherapist, DTATI, HBA.</h4>
-            <p className="about-me-approach">
+        <div className='about-me'>
+          <div className='about-me-text'>
+            <h2 className='about-me-title'>About Me</h2>
+            <h3 className='about-me-name'>Jesse Pajuäär</h3>
+            <h4 className='about-me-qualifications'>Registered Psychotherapist, DTATI, HBA.</h4>
+            <p className='about-me-approach'>
               I approach each session with the belief that you are the expert of your own life. There are no judgements or assumptions made during our time. <br/><br/>
               My focus is on collaborating with you to create a space where your voice, your wants, and your unique perspective  can not only be heard, but supported and advocated for.
             </p>
-            <p className="about-me-approach">
+            <p className='about-me-approach'>
               You are not the problem, the problem is the problem.
             </p>
           </div>
@@ -74,6 +75,7 @@ export const Head = () => {
   return (
     <>
       <html lang="en" />
+      <SEO />
       <meta name='description' content='Information and contact page for Toronto-based art therapist and psychotherapist.' />
       <link rel="icon" type="image/png" href={Logo}/>
       <link rel="preconnect" href="https://fonts.googleapis.com" />

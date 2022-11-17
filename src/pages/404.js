@@ -1,30 +1,21 @@
 import * as React from 'react'
+import './styles.scss'
 import { Link } from 'gatsby'
-
-const pageStyles = {
-  color: '#232129',
-  padding: '96px',
-  fontFamily: '-apple-system, Roboto, sans-serif, serif'
-}
-const headingStyles = {
-  marginTop: 0,
-  marginBottom: 64,
-  maxWidth: 320
-}
-
-const paragraphStyles = {
-  marginBottom: 48
-}
 
 const NotFoundPage = () => {
   return (
-    <main style={pageStyles}>
-      <h1 style={headingStyles}>Page not found</h1>
-      <p style={paragraphStyles}>
-        Sorry 😔, we couldn&apos;t find what you were looking for.
-        <br />
-        <Link to="/">Go home</Link>.
-      </p>
+    <main className='page-content'>
+      <div className='about-me'>
+        <div className='about-me-text'>
+          <h1 className='about-me-title'>Page Not Found</h1>
+          <h2 className='about-me-name'>
+            Sorry! It looks like the page you are trying to visit doesn&apos;t exist.
+          </h2>
+          <h4 className='about-me-text'>
+            <Link to="/">Go home</Link>.
+          </h4>
+        </div>
+      </div>
     </main>
   )
 }

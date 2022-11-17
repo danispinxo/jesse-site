@@ -203,3 +203,11 @@
     }
   }
 }
+
+.error {
+  padding: 1rem;
+  font-family: $body-font;
+  border-radius: 10px;
+  background-color: rgba(139, 0, 0, 0.125);
+  color: darkred;
+}

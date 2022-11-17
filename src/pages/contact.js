@@ -96,7 +96,7 @@ export default function Contact () {
               required
               fullWidth
             />
-            <ValidationError prefix="Email" field="email" errors={state.errors} />
+            <ValidationError className="error" prefix="Email" field="email" errors={state.errors} />
             <TextField
               className="input"
               id="standard-basic"
@@ -106,6 +106,7 @@ export default function Contact () {
               required
               fullWidth
             />
+            <ValidationError className="error" prefix="Phone" field="phone" errors={state.errors} />
             <TextField
               className="input"
               id="standard-basic"
@@ -154,7 +155,7 @@ export default function Contact () {
             >
               Send
             </button>
-            <ValidationError errors={state.errors} />
+            <ValidationError className="error" errors={state.errors} />
           </form>
         </div>
       </div>

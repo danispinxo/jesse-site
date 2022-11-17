@@ -79,7 +79,7 @@ export const Head = () => {
       <link rel="icon" type="image/png" href={Logo}/>
       <link rel="preconnect" href="https://fonts.googleapis.com" />
       <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="true" />
-      <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,500;1,400;1,500&family=Lato:ital,wght@0,100;0,400;0,700;0,900;1,400&family=Playfair+Display:wght@600;700;800;900&display=swap" rel="stylesheet" defer/>
+      <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&family=Cormorant:wght@500;600;700&family=EB+Garamond:ital,wght@0,500;1,400;1,500&family=Playfair+Display:wght@600;700;800;900&display=swap" rel="stylesheet" defer />
       <script src="https://www.google.com/recaptcha/api.js" async defer />
       <title>Jesse Pajuäär Therapy Studios</title>
     </>

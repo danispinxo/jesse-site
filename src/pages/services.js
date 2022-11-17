@@ -52,7 +52,7 @@ export default function Services () {
       <div className="section">
         <div className="section-label">
           <p className="label-title">Psychotherapy Session</p>
-          <p className="label-subtitle">Low-income individuals and students</p>
+          <p className="label-subtitle">Low-income &amp; students</p>
         </div>
 
         <div className="section-content">
@@ -71,7 +71,7 @@ export default function Services () {
 
       <div className="section">
         <div className="section-label">
-          <p className="label-title">Art Psychotherapy</p>
+          <p className="label-title">Art <br/> Psychotherapy</p>
         </div>
 
         <div className="section-content">

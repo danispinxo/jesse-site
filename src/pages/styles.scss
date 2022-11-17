@@ -5,23 +5,26 @@
   flex-direction: column;
   position: fixed;
   width: 100%;
-  height: 5rem;
+  height: 5.5rem;
   padding: 1rem;
   color: $dark-green;
   z-index: 99;
   @include glassbg;
 
   .links {
+    width: 100%;
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    @include centered;
+    margin-left: -1.5rem;
     gap: 1rem;
     font-family: $sub-font;
     font-size: 1rem;
 
     @include xs {
-      gap: 0.7rem;
-      font-size: 0.8rem;
+      margin-left: -0.2rem;
+      gap: 0.5rem;
+      font-size: 1rem;
     }
 
     a {
@@ -35,78 +38,66 @@
     }
   }
 
-  .nav-logo {
-    width: 4rem;
-    position: absolute;
-    margin-left: 10%;
-    opacity: 0.7;
-    border-radius: 50%;
-    box-shadow: 2px 2px 3px $dark-teal;
-
-    @include xs {
-      width: 3.5rem;
-      height: 3.5rem;
-      margin-left: 1%;
-      margin-top: 4%;
-    }
-
-    @include sm {
-      margin-left: 7%;
-    }
-  }
-
-  .title {
-    @include centered;
-    margin-top: 1rem;
-    font-family: $header-font;
-    color: $dark-green;
-    font-weight: 600;
-    text-align: center;
-    font-size: 2rem;
-
-    @include xs {
-      width: 40%;
-      margin-top: 1rem;
-      margin-left: 26%;
-      font-size: 1rem;
-    }
-
-    @include sm {
-      margin-top: 1rem;
-      font-size: 1.5rem;
-    }
-  }
-
-  .btn-holder {
+  .nav-content {
+    width: 100%;
     display: flex;
-    justify-content: end;
-    position: absolute;
-    margin-left: 78%;
-    margin-top: 1%;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    margin-left: -1rem;
 
-    @include xs {
-      margin-top: 6%;
-      margin-left: 68%;
-    }
-
-    .client-btn {
-      padding: 0.2rem;
-      border-color: $dark-green;
-      border-width: 0.1rem;
-      border-radius: 8px;
-      background-color: transparent;
-      color: $dark-green;
-      font-family: $sub-font;
-
-      @include xs {
-        padding: 0.1rem;
-        font-size: 0.8rem;
-      }
+    .nav-logo {
+      width: 4rem;
+      opacity: 0.7;
+      border-radius: 50%;
+      box-shadow: 2px 2px 3px $dark-teal;
 
       &:hover {
-        cursor: pointer;
-        box-shadow: 2px 2px 3px $dark-green;
+        box-shadow: 2px 2px 8px $dark-teal;
       }
+  
+      @include xs {
+        width: 3.3rem;
+        height: 3.3rem;
+      }
+    }
+
+    .title {
+      font-family: $header-font;
+      color: $dark-green;
+      text-align: center;
+      font-size: 2rem;
+  
+      @include xs {
+        width: 40%;
+        font-size: 1rem;
+      }
+  
+      @include sm {
+        font-size: 1.5rem;
+      }
+    }
+
+
+  }
+
+  .client-btn {
+    padding: 0.2rem;
+    border-color: $dark-green;
+    border-width: 0.1rem;
+    border-radius: 8px;
+    background-color: transparent;
+    color: $dark-green;
+    font-family: $sub-font;
+
+    @include xs {
+      padding: 0.1rem;
+      font-size: 0.8rem;
+    }
+
+    &:hover {
+      cursor: pointer;
+      box-shadow: 2px 2px 3px $dark-green;
     }
   }
 }
@@ -119,8 +110,11 @@
 
 main {
   @include centered;
+  padding-top: 7.5rem;
 
-  padding-top: 6.5rem;
+  @include xs {
+    padding-top: 5.5rem;
+  }
 
   h1 {
     font-family: $header-font;
@@ -156,11 +150,11 @@ main {
     border-style: solid;
     border-color: $dark-green;
     border-radius: 10px;
-    padding: 1rem;
+    padding: 1.5rem;
     background: #b8ccccca;
     display: flex;
     flex-direction: column;
-    align-items: flex-end;
+    text-align: center;
 
     @include xs {
       padding: 0.6rem;
@@ -185,16 +179,16 @@ main {
       justify-content: center;
       font-family: $header-font;
       font-size: 1.1rem;
-      font-weight: 300;
       color: $dark-teal;
 
       @include xs {
-        font-size: 0.9rem;
+        font-size: 1rem;
       }
     }
 
     .talk-btn {
       @include dark-btn;
+      margin-top: 1rem;
     }
   }
 }
@@ -213,7 +207,8 @@ main {
 
   @include xs {
     flex-direction: column-reverse;
-    @include centered
+    @include centered;
+    margin-top: 0;
   }
 
   @include sm {
@@ -339,6 +334,10 @@ main {
   }
 
   @include lg {
+    font-size: 1.5rem;
+  }
+
+  @include xl {
     font-size: 2rem;
   }
 
@@ -347,7 +346,7 @@ main {
     font-size: 1rem;
     color: $dark-teal;
 
-    @include lg {
+    @include xl {
       font-size: 1.5rem;
     }
   }
@@ -477,10 +476,18 @@ main {
   padding: 1rem;
   text-align: center;
 
+  @include xs {
+    width: 80%;
+  }
+
   .covid-modal-title {
     font-size: 1.8rem;
     font-family: $sub-font;
     color: $dark-blue;
+
+    @include xs {
+      font-size: 1.3rem;
+    }
   }
 
   .covid-modal-subtitle {
@@ -493,11 +500,12 @@ main {
   .covid-modal-content {
     text-align: center;
     font-family: $body-font;
-    line-height: 1.1rem;
+    line-height: 1.4rem;
     color: $very-dark-blue;
 
     @include xs {
-      font-size: 0.9rem;
+      font-size: 1rem;
+      line-height: 1.2rem;
     }
   }
 

@@ -16,10 +16,8 @@
 
 .covid-note {
   @include intro-box;
-
-  @include xs {
-    text-align: center;
-  }
+  text-align: center;
+  line-height: 1.5rem;
 }
 
 .contact-body {
@@ -173,38 +171,37 @@
         text-decoration: underline;
       }
     }
+  }
+}
 
-    .input {
-      margin: 1rem;
-    }
+.form-submit-btn {
+  width: auto;
+  padding: 5rem;
+  border-color: $dark-green;
+  border-width: 0.1rem;
+  border-radius: 8px;
+  color: $dark-green;
+  font-family: $sub-font;
+  font-size: 1.2rem;
+  margin-left: 1rem;
 
-    .form-submit-btn {
-      width: auto;
-      padding: 0.5rem;
-      border-color: $dark-green;
-      border-width: 0.1rem;
-      border-radius: 8px;
-      color: $dark-green;
-      font-family: $sub-font;
-      font-size: 1.2rem;
+  &:hover {
+    cursor: pointer;
+    box-shadow: 2px 2px 3px $dark-green;
+  }
+}
 
-      @include xs {
-        margin-left: 90%;
-      }
+.captcha-holder {
 
-      @include sm {
-        margin-left: 88%;
-      }
-
-      &:hover {
-        cursor: pointer;
-        box-shadow: 2px 2px 3px $dark-green;
-      }
-    }
+  iframe {
+    margin-left: 1rem;
+    width: 19rem;
+    height: auto;
   }
 }
 
 .error {
+  margin: 1rem;
   padding: 1rem;
   font-family: $body-font;
   border-radius: 10px;

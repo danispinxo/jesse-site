@@ -123,7 +123,12 @@
     align-content: center;
     align-items: center;
     margin: 0.5rem;
+    padding: 0.5rem;
     background-color: $light-teal;
+    background-image: url('../images/brush-stroke.svg');
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: top -1.8rem right 0;
     border-style: dotted;
     border-color: $dark-teal;
     border-radius: 10px;
@@ -131,6 +136,19 @@
     @include xs {
       margin: 0;
       width: 100%;
+      background-position: center right 0;
+    }
+
+    @include sm {
+      background-position: top -1rem right 0;
+    }
+
+    @include lg {
+      background-position: top -4.2rem right 0;
+    }
+
+    @include xl {
+      background-position: top -9rem right 0;
     }
 
     .label-title {
@@ -140,11 +158,15 @@
       text-align: center;
 
       @include xs {
-        font-size: 1rem;
+        font-size: 1.1rem;
       }
 
       @include sm {
         font-size: 1.3rem;
+      }
+
+      @include xl {
+        font-size: 2rem;
       }
     }
 
@@ -162,6 +184,10 @@
 
       @include sm {
         font-size: 1rem;
+      }
+
+      @include xl {
+        font-size: 1.5rem;
       }
     }
   }

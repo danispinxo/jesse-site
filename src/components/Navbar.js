@@ -16,13 +16,13 @@ export default function TopNavbar () {
         <Link to="/resources">Help & Resources</Link>
       </div>
 
-      <div className="title">
-        Jesse Pajuäär Therapy Studios
-      </div>
+      <div className='nav-content'>
+        <Link to="/contact"><img className='nav-logo' src={Logo} /></Link>
 
-      <img className='nav-logo' src={Logo} />
+        <div className="title">
+          Jesse Pajuäär Therapy Studios
+        </div>
 
-      <div className="btn-holder">
         <a href="https://oab.owlpractice.ca/jpts">
           <button className="client-btn">
             <FontAwesomeIcon icon={faHome} /> <br/>
@@ -30,7 +30,6 @@ export default function TopNavbar () {
           </button>
         </a>
       </div>
-
     </div>
   )
 }

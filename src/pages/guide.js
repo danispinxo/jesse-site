@@ -18,12 +18,11 @@ export default function Guide () {
 
       <div className="section">
         <div className="section-label">
-          <p className="label-title">STEP ONE: </p> <p className='label-subtitle'>Decide what kind of mental health care practitioner you need</p>
+          <p className="label-title">STEP ONE: </p> <p className='label-subtitle'>Decide on Your Needs</p>
         </div>
 
         <div className="section-content">
-          <p>
-            Psychiatrist, psychologist, psychotherapist—are you confused about the differences? You&apos;re definitely not alone, but the key distinctions are worth knowing and could make all the difference in your search.
+          <p>Decide what kind of mental health care practitioner you need. Psychiatrist, psychologist, psychotherapist—are you confused about the differences? You&apos;re definitely not alone, but the key distinctions are worth knowing and could make all the difference in your search.
           </p>
     
           <p className="subtitle">1. A psychiatrist is a medical doctor.</p>
@@ -73,11 +72,12 @@ export default function Guide () {
 
       <div className="section">
         <div className="section-label">
-          <p className="label-title">STEP TWO: </p> <p className='label-subtitle'>You want to see a psychotherapist. Refine your search by asking yourself the following questions</p>
+          <p className="label-title">STEP TWO:</p>
+          <p className='label-subtitle'>Refine Your Search</p>
         </div>
         <div className="section-content">
           <p>
-            If you search the Psychology Today directory for therapists in Toronto you&apos;re still going to come up with 50+ pages of entries. And some of those ads will contain technical information you might find confusing and off-putting. Here&apos;s how to wade through all that psycho-babble to find your match.
+          You want to see a psychotherapist. Refine your search by asking yourself the following questions. If you search the Psychology Today directory for therapists in Toronto you&apos;re still going to come up with 50+ pages of entries. And some of those ads will contain technical information you might find confusing and off-putting. Here&apos;s how to wade through all that psycho-babble to find your match.
           </p>
           <ol>
             <li>
@@ -105,12 +105,12 @@ export default function Guide () {
       <div className="section">
         <div className="section-label">
           <p className="label-title">STEP THREE: </p>
-          <p className='label-subtitle'>Do your research and make a short list of candidates</p>
+          <p className='label-subtitle'>Research</p>
         </div>
         <div className="section-content">
           <ol>
             <li>
-              Do your research - Now that you&apos;re clear on which criteria you find most important, you can go forth and conduct your search. But where should you look?
+              Do your research and make a short list of candidates. Now that you&apos;re clear on which criteria you find most important, you can go forth and conduct your search. But where should you look?
               <ul>
                 <li><span>Personal References</span>: I know this may be a private matter, but other people are often your best resources. Ask around (i.e., trusted friends and family, your doctor, alternative health care practitioners such as naturopaths or physiotherapists, etc.).</li>
                 <li><span>Directories</span>: for example, Psychology Today or the CRPO web site for general inquiries. Or consult specialist directories if you know your desired treatment modality.</li>

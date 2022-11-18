@@ -225,8 +225,17 @@
         column-count: 2;
       }
     }
+
+    .single-column {
+      column-count: 1;
+    }
+
     span {
       text-decoration: underline;
+    }
+
+    .bolded-text {
+      font-weight: bold;
     }
   }
 }

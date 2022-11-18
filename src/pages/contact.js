@@ -10,6 +10,8 @@ import TextField from '@mui/material/TextField'
 import InputLabel from '@mui/material/InputLabel'
 import FormControl from '@mui/material/FormControl'
 import NativeSelect from '@mui/material/NativeSelect'
+import FormControlLabel from '@mui/material/FormControlLabel'
+import Checkbox from '@mui/material/Checkbox'
 
 export default function Contact () {
   const [state, handleSubmit] = useForm('xkneyzbr')
@@ -107,16 +109,15 @@ export default function Contact () {
               fullWidth
             />
             <ValidationError className='error' prefix='Phone' field='phone' errors={state.errors} />
-            <TextField
-              className='input'
-              id='standard-basic'
-              name='location'
-              label='Location'
-              variant='standard'
-              helperText='e.g., Toronto, ON'
-              required
-              fullWidth
-            />
+            <div className='checkbox-container'>
+              <p>
+                I am currently only accepting clients residing in the province of Ontario. Please check the box below to confirm that you are a current Ontario resident.
+              </p>
+              <FormControlLabel
+                control={<Checkbox />}
+                label='Ontario Resident'
+              />
+            </div>
             <FormControl className='input' fullWidth>
               <InputLabel variant='standard' htmlFor='uncontrolled-native'>
                 How did you hear about JPTS?

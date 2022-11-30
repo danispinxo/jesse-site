@@ -51,26 +51,6 @@ export default function Services () {
 
       <div className="section">
         <div className="section-label">
-          <p className="label-title">Psychotherapy Session</p>
-          <p className="label-subtitle">Low-income &amp; students</p>
-        </div>
-
-        <div className="section-content">
-          <p>
-            Psychotherapy for individuals specializing in anxiety and stress, self esteem, relationships difficulties, and personal development.
-          </p>
-          <p>
-            *Sliding scale rates are subject to availability
-          </p>
-          <p>
-            Pricing: $90-120 / 50 mins.
-          </p>
-        </div>
-
-      </div>
-
-      <div className="section">
-        <div className="section-label">
           <p className="label-title">Art <br/> Psychotherapy</p>
         </div>
 
@@ -85,6 +65,26 @@ export default function Services () {
             Pricing: $135 / 50 mins.
           </p>
         </div>
+      </div>
+
+      <div className="section">
+        <div className="section-label">
+          <p className="label-title">Reduced Rate & Sliding Scale</p>
+          <p className="label-subtitle">Low-income &amp; students</p>
+        </div>
+
+        <div className="section-content">
+          <p>
+            Sliding scale options are available* to those individuals demonstrating special need on a case-by-case basis. Please inquire for further details.
+          </p>
+          <p>
+            *Sliding scale rates are subject to availability
+          </p>
+          <p>
+            Pricing: $90-120 / 50 mins.
+          </p>
+        </div>
+
       </div>
 
       <div className="consult-box">

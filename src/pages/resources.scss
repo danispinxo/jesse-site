@@ -6,6 +6,7 @@
 
   .resources-title {
     @include title-format;
+    background: #b8ccccc8;
 
     @include xs {
       padding: 0.5rem;

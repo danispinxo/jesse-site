@@ -3,11 +3,9 @@
 .navbar {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  @include centered;
   position: fixed;
   width: 100%;
-  height: 5.5rem;
-  padding: 1rem;
   color: $dark-green;
   z-index: 99;
   @include glassbg;
@@ -16,11 +14,11 @@
     width: 100%;
     display: flex;
     flex-direction: row;
-    @include centered;
-    margin-left: -1.5rem;
+    justify-content: center;
+    padding: 1rem;
     gap: 1rem;
     font-family: $sub-font;
-    font-size: 1rem;
+    text-align: center;
 
     @include xs {
       margin-left: -0.2rem;
@@ -40,13 +38,12 @@
   }
 
   .nav-content {
-    width: 100%;
     display: flex;
-    flex-direction: row;
     justify-content: space-around;
     align-items: center;
-    align-content: center;
-    margin-left: -1rem;
+    margin-top: -1rem;
+    width: 100%;
+    padding-bottom: 1rem;
 
     .nav-logo {
       width: 4rem;
@@ -65,10 +62,10 @@
     }
 
     .title {
+      margin-left: 1.6rem;
       font-family: $header-font;
       font-weight: 700;
       color: $dark-green;
-      text-align: center;
       font-size: 2rem;
       text-shadow: 6px 6px 3px $light-green;
   
@@ -112,10 +109,10 @@
 
 main {
   @include centered;
-  padding-top: 7.5rem;
+  padding-top: 7.4rem;
 
   @include xs {
-    padding-top: 5.5rem;
+    padding-top: 6.2rem;
   }
 
   h1 {

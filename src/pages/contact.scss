@@ -48,6 +48,11 @@
       text-align: center;
     }
 
+    .border-bottom-text {
+      padding-bottom: 1rem;
+      border-bottom: 0.3rem double $teal;
+    }
+
     a {
       text-decoration: underline;
       text-align: center;
@@ -61,6 +66,17 @@
       border-radius: 50%;
       box-shadow: 5px 5px 10px $teal;
       margin: 1rem;
+    }
+
+    .affiliation-images {
+      display: flex;
+      flex-direction: column;
+      @include centered;
+      gap: 2rem;
+
+      .affiliation-img {
+        width: 60%;
+      }
     }
   }
 

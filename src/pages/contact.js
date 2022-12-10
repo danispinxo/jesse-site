@@ -12,6 +12,10 @@ import FormControl from '@mui/material/FormControl'
 import NativeSelect from '@mui/material/NativeSelect'
 import FormControlLabel from '@mui/material/FormControlLabel'
 import Checkbox from '@mui/material/Checkbox'
+import CATA from '../images/CATA.webp'
+import CRPO from '../images/CRPO.webp'
+import TATI from '../images/TATI.webp'
+import EKKT from '../images/EKKT.webp'
 
 export default function Contact () {
   const [state, handleSubmit] = useForm('xkneyzbr')
@@ -58,7 +62,27 @@ export default function Contact () {
 
           <Link to='/guide'>Read more about how to choose the right therapist for you!</Link>
 
-          <p>To contact me for a no-fee 15 minute phone consultation simply fill out the form to the right.</p>
+          <p className='border-bottom-text'>To contact me for a no-fee 15 minute phone consultation simply fill out the form to the right.</p>
+
+          <p>I am affiliated with the following organizations:</p>
+
+          <div className='affiliation-images'>
+            <a href='http://www.canadianarttherapy.org' target='_blank' rel='noreferrer'>
+              <img className='affiliation-img' src={CATA} alt='CATA Logo'/>
+            </a>
+
+            <a href='http://www.crpo.ca' target='_blank' rel='noreferrer'>
+              <img className='affiliation-img' src={CRPO} alt='CRPO Logo'/>
+            </a>
+
+            <a href='http://www.tati.on.ca' target='_blank' rel='noreferrer'>
+              <img className='affiliation-img' src={TATI} alt='TATI Logo'/>
+            </a>
+
+            <a href='http://www.estonianartiststoronto.com' target='_blank' rel='noreferrer'>
+              <img className='affiliation-img' src={EKKT} alt='EKKT Logo' />
+            </a>
+          </div>
         </div>
 
         <div className='contact-form'>

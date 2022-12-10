@@ -42,7 +42,12 @@ export default function Homepage () {
             <h3 className='about-me-name'>Jesse Pajuäär</h3>
             <h4 className='about-me-qualifications'>Registered Psychotherapist, DTATI, HBA.</h4>
             <p className='about-me-approach'>
-              I approach each session with the belief that you are the expert of your own life. There are no judgements or assumptions made during our time. <br/><br/>
+              Toronto-based therapist offering psychotherapy and art therapy sessions.
+            </p>
+            <p className='about-me-approach'>
+              I approach each session with the belief that you are the expert of your own life. There are no judgements or assumptions made during our time.
+            </p>
+            <p className='about-me-approach'>
               My focus is on collaborating with you to create a space where your voice, your wants, and your unique perspective  can not only be heard, but supported and advocated for.
             </p>
             <p className='about-me-approach'>

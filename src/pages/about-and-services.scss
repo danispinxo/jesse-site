@@ -134,6 +134,18 @@
     border-color: $dark-teal;
     border-radius: 10px;
 
+    .section-image-holder {
+      display: flex;
+      @include centered;
+      margin-bottom: 1rem;
+      
+      .section-image {
+        width: 70%;
+        border-radius: 50%;
+        box-shadow: 4px 4px 6px $dark-teal;
+      }
+    }
+
     @include xs {
       margin: 0;
       width: 100%;

@@ -3,6 +3,9 @@ import './styles.scss'
 import './about-and-services.scss'
 import { Link } from 'gatsby'
 import Footer from '../components/Footer'
+import Psychotherapy from '../images/Psychotherapy.webp'
+import ArtTherapy from '../images/ArtTherapy.webp'
+import LowIncome from '../images/LowIncome.webp'
 
 export default function Services () {
   return (
@@ -31,6 +34,9 @@ export default function Services () {
         <div className="section-label">
           <p className="label-title">Psychotherapy Session</p>
           <p className="label-subtitle">Individual</p>
+          <div className='section-image-holder'>
+            <img className="section-image" src={Psychotherapy} />
+          </div>
         </div>
 
         <div className="section-content">
@@ -52,6 +58,9 @@ export default function Services () {
       <div className="section">
         <div className="section-label">
           <p className="label-title">Art <br/> Psychotherapy</p>
+          <div className='section-image-holder'>
+            <img className="section-image" src={ArtTherapy} />
+          </div>
         </div>
 
         <div className="section-content">
@@ -71,6 +80,9 @@ export default function Services () {
         <div className="section-label">
           <p className="label-title">Reduced Rate & Sliding Scale</p>
           <p className="label-subtitle">Low-income &amp; students</p>
+          <div className='section-image-holder'>
+            <img className="section-image" src={LowIncome} />
+          </div>
         </div>
 
         <div className="section-content">

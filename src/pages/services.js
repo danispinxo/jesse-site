@@ -50,7 +50,7 @@ export default function Services () {
             In these sessions you are the expert of your own life. There are no judgements or assumptions made during our time; the focus is on collaborating with you to create a space where your voice, your wants, and your unique perspectives are not only heard, but supported and advocated for.
           </p>
           <p>
-            Pricing: $135 / 50 mins.
+            Pricing: $140 / 50 mins.
           </p>
         </div>
       </div>
@@ -71,7 +71,7 @@ export default function Services () {
             This process means tapping into parts of the brain that often get overlooked or underused, but actually provide a wealth of knowledge about how we each uniquely experience and perceive the world.
           </p>
           <p>
-            Pricing: $135 / 50 mins.
+            Pricing: $140 / 50 mins.
           </p>
         </div>
       </div>
@@ -93,7 +93,7 @@ export default function Services () {
             *Sliding scale rates are subject to availability
           </p>
           <p>
-            Pricing: $90-120 / 50 mins.
+            Pricing: $90-130 / 50 mins.
           </p>
         </div>
 

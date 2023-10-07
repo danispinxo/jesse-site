@@ -1,9 +1,6 @@
-import { GatsbyFunctionRequest, GatsbyFunctionResponse } from 'gatsby'
+import { GatsbyFunctionRequest, GatsbyFunctionResponse } from 'gatsby';
 
-export default function handler(
-  req: GatsbyFunctionRequest,
-  res: GatsbyFunctionResponse
-) {
-  console.log('submitted form', req.body)
-  res.json(req.body.data)
+export default function handler(req: GatsbyFunctionRequest, res: GatsbyFunctionResponse) {
+  console.log('submitted form', req.body);
+  res.json(req.body.data);
 }

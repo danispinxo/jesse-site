@@ -1,24 +1,24 @@
-import React from 'react';
-import './styles.scss';
-import './contact.scss';
-import { useForm, ValidationError } from '@formspree/react';
-import { Link } from 'gatsby';
-import Logo from '../images/Logo.webp';
-import SubmitModal from '../components/SubmitModal';
-import Footer from '../components/Footer';
-import TextField from '@mui/material/TextField';
-import InputLabel from '@mui/material/InputLabel';
-import FormControl from '@mui/material/FormControl';
-import NativeSelect from '@mui/material/NativeSelect';
-import FormControlLabel from '@mui/material/FormControlLabel';
-import Checkbox from '@mui/material/Checkbox';
-import CATA from '../images/CATA.webp';
-import CRPO from '../images/CRPO.webp';
-import TATI from '../images/TATI.webp';
-import EKKT from '../images/EKKT.webp';
+import React from "react";
+import "./styles.scss";
+import "./contact.scss";
+import { useForm, ValidationError } from "@formspree/react";
+import { Link } from "gatsby";
+import Logo from "../images/Logo.webp";
+import SubmitModal from "../components/SubmitModal";
+import Footer from "../components/Footer";
+import TextField from "@mui/material/TextField";
+import InputLabel from "@mui/material/InputLabel";
+import FormControl from "@mui/material/FormControl";
+import NativeSelect from "@mui/material/NativeSelect";
+import FormControlLabel from "@mui/material/FormControlLabel";
+import Checkbox from "@mui/material/Checkbox";
+import CATA from "../images/CATA.webp";
+import CRPO from "../images/CRPO.webp";
+import TATI from "../images/TATI.webp";
+import EKKT from "../images/EKKT.webp";
 
 export default function Contact() {
-  const [state, handleSubmit] = useForm('xkneyzbr');
+  const [state, handleSubmit] = useForm("xkneyzbr");
 
   if (state.succeeded) {
     return (
@@ -32,13 +32,18 @@ export default function Contact() {
         <div className="submit-contact-body">
           <div className="contact-info">
             <img className="logo" src={Logo} alt="JPTS Logo" />
-            <p>The right fit is the most important part of finding the right therapist.</p>
+            <p>
+              The right fit is the most important part of finding the right
+              therapist.
+            </p>
 
-            <Link to="/guide">Read more about how to choose the right therapist for you!</Link>
+            <Link to="/guide">
+              Read more about how to choose the right therapist for you!
+            </Link>
 
             <p>
-              To contact me for a no-fee 15 minute phone consultation simply fill out the form to
-              the right.
+              To contact me for a no-fee 15 minute phone consultation simply
+              fill out the form to the right.
             </p>
           </div>
         </div>
@@ -56,28 +61,37 @@ export default function Contact() {
 
       <div className="covid-note">
         <h3>
-          My practice has been moved online for the foreseeable future. <br /> Therapy sessions will
-          therefore be limited to secure video or telephone sessions. <br /> Get in touch for more
-          information.
+          My practice has been moved online for the foreseeable future. <br />{" "}
+          Therapy sessions will therefore be limited to secure video or
+          telephone sessions. <br /> Get in touch for more information.
         </h3>
       </div>
 
       <div className="contact-body">
         <div className="contact-info">
           <img className="logo" src={Logo} alt="JPTS Logo" />
-          <p>The right fit is the most important part of finding the right therapist.</p>
+          <p>
+            The right fit is the most important part of finding the right
+            therapist.
+          </p>
 
-          <Link to="/guide">Read more about how to choose the right therapist for you!</Link>
+          <Link to="/guide">
+            Read more about how to choose the right therapist for you!
+          </Link>
 
           <p className="border-bottom-text">
-            To contact me for a no-fee 15 minute phone consultation simply fill out the form to the
-            right.
+            To contact me for a no-fee 15 minute phone consultation simply fill
+            out the form to the right.
           </p>
 
           <p>I am affiliated with the following organizations:</p>
 
           <div className="affiliation-images">
-            <a href="http://www.canadianarttherapy.org" target="_blank" rel="noreferrer">
+            <a
+              href="http://www.canadianarttherapy.org"
+              target="_blank"
+              rel="noreferrer"
+            >
               <img className="affiliation-img" src={CATA} alt="CATA Logo" />
             </a>
 
@@ -89,7 +103,11 @@ export default function Contact() {
               <img className="affiliation-img" src={TATI} alt="TATI Logo" />
             </a>
 
-            <a href="http://www.estonianartiststoronto.com" target="_blank" rel="noreferrer">
+            <a
+              href="http://www.estonianartiststoronto.com"
+              target="_blank"
+              rel="noreferrer"
+            >
               <img className="affiliation-img" src={EKKT} alt="EKKT Logo" />
             </a>
           </div>
@@ -101,7 +119,7 @@ export default function Contact() {
             Toronto, Ont. Canada.
           </p>
 
-          <form onSubmit={handleSubmit} style={{ display: 'block' }}>
+          <form onSubmit={handleSubmit} style={{ display: "block" }}>
             <TextField
               className="input"
               id="standard-basic"
@@ -129,7 +147,12 @@ export default function Contact() {
               required
               fullWidth
             />
-            <ValidationError className="error" prefix="Email" field="email" errors={state.errors} />
+            <ValidationError
+              className="error"
+              prefix="Email"
+              field="email"
+              errors={state.errors}
+            />
             <TextField
               className="input"
               id="standard-basic"
@@ -139,13 +162,22 @@ export default function Contact() {
               required
               fullWidth
             />
-            <ValidationError className="error" prefix="Phone" field="phone" errors={state.errors} />
+            <ValidationError
+              className="error"
+              prefix="Phone"
+              field="phone"
+              errors={state.errors}
+            />
             <div className="checkbox-container">
               <p>
-                I am currently only accepting clients residing in the province of Ontario. Please
-                check the box below to confirm that you are a current Ontario resident.
+                I am currently only accepting clients residing in the province
+                of Ontario. Please check the box below to confirm that you are a
+                current Ontario resident.
               </p>
-              <FormControlLabel control={<Checkbox />} label="Ontario Resident" />
+              <FormControlLabel
+                control={<Checkbox />}
+                label="Ontario Resident"
+              />
             </div>
             <FormControl className="input" fullWidth>
               <InputLabel variant="standard" htmlFor="uncontrolled-native">
@@ -154,8 +186,8 @@ export default function Contact() {
               <NativeSelect
                 helpertext="Choose an Option"
                 inputProps={{
-                  name: 'referal',
-                  id: 'uncontrolled-native',
+                  name: "referal",
+                  id: "uncontrolled-native",
                 }}
               >
                 <option>Recommendation</option>
@@ -186,7 +218,11 @@ export default function Contact() {
               ></div>
               <br />
             </div>
-            <button className="form-submit-btn" type="submit" disabled={state.submitting}>
+            <button
+              className="form-submit-btn"
+              type="submit"
+              disabled={state.submitting}
+            >
               Send
             </button>
             <ValidationError className="error" errors={state.errors} />
@@ -199,4 +235,4 @@ export default function Contact() {
   );
 }
 
-export { Head } from './index';
+export { Head } from "./index";

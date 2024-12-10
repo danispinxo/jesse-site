@@ -1,8 +1,8 @@
 import React from "react";
 import "normalize.css";
 import "./styles.scss";
-import {Link} from "gatsby";
-import {SEO} from "../components/seo";
+import { Link } from "gatsby";
+import { SEO } from "../components/seo";
 import Logo from "../images/Logo.webp";
 import JessePhoto from "../images/JessePajuaar.webp";
 

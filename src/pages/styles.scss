@@ -59,7 +59,7 @@
       &:hover {
         box-shadow: 2px 2px 8px $dark-teal;
       }
-  
+
       @include xs {
         width: 3.3rem;
         height: 3.3rem;
@@ -74,12 +74,12 @@
       color: $dark-green;
       font-size: 2rem;
       text-shadow: 6px 6px 3px $light-green;
-  
+
       @include xs {
         width: 40%;
         font-size: 1rem;
       }
-  
+
       @include sm {
         font-size: 1.5rem;
       }
@@ -127,7 +127,10 @@ main {
     font-weight: 600;
   }
 
-  h2, h3, h4, h5 {
+  h2,
+  h3,
+  h4,
+  h5 {
     font-family: $sub-font;
     color: $dark-blue;
   }
@@ -170,7 +173,7 @@ main {
       line-height: 1.9rem;
       font-size: 1.4rem;
       font-weight: 600;
-      color: $dark-teal;  
+      color: $dark-teal;
 
       @include xs {
         font-size: 1.1rem;
@@ -395,7 +398,6 @@ main {
   flex-direction: column;
   text-align: center;
 
-
   @include xs {
     width: 10rem;
     height: 10rem;
@@ -419,7 +421,6 @@ main {
     @include lg {
       font-size: 2.3rem;
     }
-
   }
 
   .submit-modal-subtitle {
@@ -452,7 +453,6 @@ main {
       font-size: 1.5rem;
       line-height: 1.5rem;
     }
-  
   }
 
   .btn-holder {
@@ -524,7 +524,7 @@ main {
     justify-content: flex-end;
 
     .close-btn {
-      @include blue-btn
+      @include blue-btn;
     }
   }
 }
@@ -536,7 +536,7 @@ main {
   flex-direction: column;
   align-items: center;
   @include glassbg;
-  
+
   .footer-title {
     display: flex;
     align-items: center;

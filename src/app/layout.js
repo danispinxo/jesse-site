@@ -3,8 +3,6 @@ import Navbar from "./components/Navbar";
 export const metadata = {
   title: "Jesse Pajuaar Therapy Studios",
   siteUrl: "https://jptherapystudios.com/",
-  description:
-    "Toronto-based art therapist and psychotherapist available for teletherapy and remote therapy, phone and video sessions. Servicing the Toronto area and nearby (Barrie, York Region, Caledon, Mississauga, Brampton, Scarborough, Kitchener-Waterloo, Hamilton, Niagara, St. Catharines, Georgian Bay). Offering psychotherapy and art therapy for teens and adults.",
   image: "../../public/images/Logo.webp",
 };
 
@@ -12,6 +10,17 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta charSet="UTF-8" />
+        <meta
+          name="description"
+          content="Toronto-based art therapist and psychotherapist available for teletherapy and remote therapy, phone and video sessions. Servicing the Toronto area and nearby (Barrie, York Region, Caledon, Mississauga, Brampton, Scarborough, Kitchener-Waterloo, Hamilton, Niagara, St. Catharines, Georgian Bay). Offering psychotherapy and art therapy for teens and adults."
+        />
+        <meta
+          name="keywords"
+          content="art therapy, psychotherapy, psychotherapist, Toronto psychotherapist, Toronto art therapist, remote therapy, online therapy, online art therapy, therapist"
+        />
+        <meta name="author" content="Jesse Pajuaar" />
         <link rel="icon" type="image/png" href="/images/Logo.webp" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link

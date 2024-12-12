@@ -1,13 +1,13 @@
-@import "variables.scss";
+@use "variables.scss";
 
 .services-title-holder {
-  @include title-holder;
+  @include variables.title-holder;
   background-position: center 100%;
 
   .services-title {
-    @include title-format;
+    @include variables.title-format;
 
-    @include xs {
+    @include variables.xs {
       padding: 0.5rem;
       font-size: 1.5rem;
     }
@@ -15,14 +15,14 @@
 }
 
 .about-title-holder {
-  @include title-holder;
+  @include variables.title-holder;
   background-position: center 10%;
 
   .about-title {
-    @include title-format;
+    @include variables.title-format;
     background: #b8ccccc8;
 
-    @include xs {
+    @include variables.xs {
       padding: 0.5rem;
       font-size: 1.5rem;
     }
@@ -31,12 +31,12 @@
 
 .guide-title-holder {
   background-position: center 10%;
-  @include title-holder;
+  @include variables.title-holder;
 
   .guide-title {
-    @include title-format;
+    @include variables.title-format;
 
-    @include xs {
+    @include variables.xs {
       padding: 0.5rem;
       font-size: 1.5rem;
     }
@@ -44,112 +44,112 @@
 }
 
 .guide-intro {
-  @include intro-box;
-  font-family: $sub-font;
+  @include variables.intro-box;
+  font-family: variables.$sub-font;
   font-size: 1.4rem;
-  color: $very-dark-blue;
+  color: variables.$very-dark-blue;
 
-  @include xs {
+  @include variables.xs {
     font-size: 1.2rem;
     text-align: center;
   }
 
   p {
-    font-family: $body-font;
+    font-family: variables.$body-font;
     font-size: 1.4rem;
-    color: $very-dark-blue;
+    color: variables.$very-dark-blue;
 
-    @include xs {
+    @include variables.xs {
       font-size: 1rem;
     }
   }
 }
 
 .about-expectations {
-  @include intro-box;
+  @include variables.intro-box;
 
   p {
-    font-family: $sub-font;
+    font-family: variables.$sub-font;
     font-size: 1.5rem;
-    color: $very-dark-blue;
+    color: variables.$very-dark-blue;
 
-    @include xs {
+    @include variables.xs {
       font-size: 1.2rem;
     }
   }
 }
 
 .session-format {
-  @include intro-box;
+  @include variables.intro-box;
   margin: -0.1rem;
   width: 50%;
 
-  @include sm {
+  @include variables.sm {
     width: 70%;
   }
 
-  @include xs {
+  @include variables.xs {
     width: 80%;
   }
 
-  @include lg {
+  @include variables.lg {
     width: 40%;
   }
 
-  @include xl {
+  @include variables.xl {
     width: 40%;
   }
 
   h3 {
     margin-top: -0.1rem;
     margin-bottom: -0.1rem;
-    font-family: $sub-font;
+    font-family: variables.$sub-font;
     font-size: 1.5rem;
-    color: $very-dark-blue;
+    color: variables.$very-dark-blue;
 
-    @include xs {
+    @include variables.xs {
       font-size: 1.3rem;
     }
   }
 
   p {
     text-align: center;
-    font-family: $body-font;
-    color: $very-dark-blue;
+    font-family: variables.$body-font;
+    color: variables.$very-dark-blue;
   }
 
   ul {
     margin-top: -0.4rem;
     margin-bottom: -0.2rem;
-    font-family: $body-font;
-    color: $very-dark-blue;
+    font-family: variables.$body-font;
+    color: variables.$very-dark-blue;
 
-    @include xs {
+    @include variables.xs {
       font-size: 1rem;
     }
   }
 }
 
 .help-list {
-  @include intro-box;
+  @include variables.intro-box;
 
   h3 {
-    font-family: $sub-font;
+    font-family: variables.$sub-font;
     font-size: 1.5rem;
-    color: $very-dark-blue;
+    color: variables.$very-dark-blue;
 
-    @include xs {
+    @include variables.xs {
       font-size: 1.3rem;
     }
   }
 
   ul {
     margin-top: -0.2rem;
-    font-family: $body-font;
-    color: $very-dark-blue;
+    font-family: variables.$body-font;
+    color: variables.$very-dark-blue;
     columns: 2;
 
-    @include xs {
+    @include variables.xs {
       columns: 1;
       font-size: 1rem;
     }
@@ -161,9 +161,9 @@
   flex-direction: row;
   width: 90%;
 
-  @include xs {
+  @include variables.xs {
     flex-direction: column;
-    @include centered;
+    @include variables.centered;
   }
 
   .section-label {
@@ -176,81 +176,81 @@
     align-items: center;
     margin: 0.5rem;
     padding: 0.5rem;
-    background-color: $light-teal;
+    background-color: variables.$light-teal;
     background-image: url("../../../public/images/brush-stroke.svg");
     background-size: 100%;
     background-repeat: no-repeat;
     background-position: top -3rem right 0;
     border-style: dotted;
-    border-color: $dark-teal;
+    border-color: variables.$dark-teal;
     border-radius: 10px;
 
     .section-image-holder {
       display: flex;
-      @include centered;
+      @include variables.centered;
       margin-bottom: 1rem;
 
       .section-image {
         width: 70%;
         border-radius: 50%;
-        box-shadow: 4px 4px 6px $dark-teal;
+        box-shadow: 4px 4px 6px variables.$dark-teal;
       }
     }
 
-    @include xs {
+    @include variables.xs {
       margin: 0;
       width: 100%;
       background-position: center right 0;
     }
 
-    @include sm {
+    @include variables.sm {
       background-position: top -1rem right 0;
     }
 
-    @include lg {
+    @include variables.lg {
       background-position: top -4.2rem right 0;
     }
 
-    @include xl {
+    @include variables.xl {
       background-position: top -9rem right 0;
     }
 
     .label-title {
-      font-family: $sub-font;
+      font-family: variables.$sub-font;
       font-size: 1.5rem;
       font-weight: 700;
       text-align: center;
 
-      @include xs {
+      @include variables.xs {
         font-size: 1.1rem;
       }
 
-      @include sm {
+      @include variables.sm {
         font-size: 1.3rem;
       }
 
-      @include xl {
+      @include variables.xl {
         font-size: 2rem;
       }
     }
 
     .label-subtitle {
-      font-family: $sub-font;
+      font-family: variables.$sub-font;
       font-size: 1.3rem;
       font-style: italic;
       text-align: center;
       margin-top: -1.3rem;
 
-      @include xs {
+      @include variables.xs {
         margin-top: -1rem;
         font-size: 1rem;
       }
 
-      @include sm {
+      @include variables.sm {
         font-size: 1rem;
       }
 
-      @include xl {
+      @include variables.xl {
         font-size: 1.5rem;
       }
     }
@@ -262,30 +262,30 @@
     margin: 0.5rem;
     background-color: #a2cdf22e;
     border-style: dotted;
-    border-color: $dark-teal;
+    border-color: variables.$dark-teal;
     border-radius: 10px;
     padding: 1rem;
-    font-family: $body-font;
+    font-family: variables.$body-font;
 
-    @include xs {
+    @include variables.xs {
       font-size: 1rem;
       margin: 0;
       margin-top: 1rem;
       width: 90%;
     }
 
-    @include sm {
+    @include variables.sm {
       font-size: 1rem;
     }
 
     ul {
       column-count: 3;
 
-      @include xs {
+      @include variables.xs {
         column-count: 1;
       }
 
-      @include sm {
+      @include variables.sm {
         column-count: 2;
       }
     }
@@ -310,27 +310,27 @@
   align-items: center;
   width: 50%;
   padding: 1rem;
-  background-color: $light-blue;
+  background-color: variables.$light-blue;
   border-style: solid;
   border-width: 0.08rem;
-  border-color: $dark-blue;
+  border-color: variables.$dark-blue;
   border-radius: 10px;
 
-  @include xs {
+  @include variables.xs {
     width: 80%;
   }
 
   .consult-text {
-    font-family: $sub-font;
+    font-family: variables.$sub-font;
     font-size: 1.3rem;
-    color: $very-dark-blue;
+    color: variables.$very-dark-blue;
 
-    @include xs {
+    @include variables.xs {
       text-align: center;
     }
   }
 
   .consult-btn {
-    @include blue-btn;
+    @include variables.blue-btn;
   }
 }

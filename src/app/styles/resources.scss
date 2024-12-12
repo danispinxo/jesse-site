@@ -1,14 +1,14 @@
-@import "variables.scss";
+@use "variables.scss";
 
 .resources-title-holder {
-  @include title-holder;
+  @include variables.title-holder;
   background-position: center 45%;
 
   .resources-title {
-    @include title-format;
+    @include variables.title-format;
     background: #b8ccccc8;
 
-    @include xs {
+    @include variables.xs {
       padding: 0.5rem;
       font-size: 1.5rem;
     }
@@ -31,18 +31,18 @@
     align-content: center;
     align-items: center;
     margin: 0.5rem;
-    background-color: $light-teal;
+    background-color: variables.$light-teal;
     border-style: dotted;
-    border-color: $dark-teal;
+    border-color: variables.$dark-teal;
     border-radius: 10px;
 
-    @include xs {
+    @include variables.xs {
       width: 80%;
       margin: 0.5rem;
     }
 
     .card-label {
-      font-family: $sub-font;
+      font-family: variables.$sub-font;
       font-size: 1.5rem;
       text-align: center;
     }
@@ -60,7 +60,7 @@
       line-height: 1.2rem;
       margin-top: -1.5rem;
       padding: 1rem;
-      font-family: $body-font;
+      font-family: variables.$body-font;
       font-size: 1rem;
     }
   }

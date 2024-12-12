@@ -1,4 +1,5 @@
 import Navbar from "./components/Navbar";
+import { ServerStyleSheets } from "@mui/styles";
 
 export const metadata = {
   title: "Jesse Pajuaar Therapy Studios",

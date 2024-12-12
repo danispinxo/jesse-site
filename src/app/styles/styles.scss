@@ -187,18 +187,15 @@ main {
 
 .about-me-image {
   width: 344px;
-  height: 402px;
   border-width: 1rem;
   border-radius: 10px;
 
   @include variables.xs {
     width: 140px;
-    height: 152px;
   }
 
   @include variables.sm {
     width: 210px;
-    height: 228px;
   }
 
   .profile-image {

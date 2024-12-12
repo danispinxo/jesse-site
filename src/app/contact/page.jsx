@@ -133,8 +133,7 @@ export default function Contact() {
 
         <div className="contact-form">
           <p className="form-identifier">
-            <span className="name">Jesse Pajuäär, RP, DTATI, HBA</span> <br />
-            Toronto, Ont. Canada.
+            <span className="name">Jesse Pajuäär, RP, RCAT, DTATI, HBA</span>
           </p>
 
           <form onSubmit={handleSubmit} style={{ display: "block" }}>

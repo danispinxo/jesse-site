@@ -34,7 +34,7 @@ export default function HomePage() {
             <h2 className="about-me-title">About Me</h2>
             <h3 className="about-me-name">Jesse Pajuäär</h3>
             <h4 className="about-me-qualifications">
-              Registered Psychotherapist, DTATI, HBA.
+              Registered Psychotherapist, RCAT, DTATI, HBA.
             </h4>
             <p>
               Ontario therapist offering psychotherapy and art therapy sessions.

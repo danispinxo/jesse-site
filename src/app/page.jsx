@@ -1,12 +1,12 @@
-import React from "react";
 import "normalize.css";
-import "./styles.scss";
-import { Link } from "gatsby";
-import { SEO } from "../components/seo";
-import Logo from "../images/Logo.webp";
-import JessePhoto from "../images/JessePajuaar.webp";
+import "./styles/styles.scss";
+import "./styles/about-and-services.scss";
+import Link from "next/link";
+import Image from "next/image";
+import JessePhoto from "../../public/images/JessePajuaar.webp";
+import Logo from "../../public/images/Logo.webp";
 
-export default function Homepage() {
+export default function HomePage() {
   return (
     <main>
       <div className="quote-banner">
@@ -18,7 +18,7 @@ export default function Homepage() {
             <div className="name-holder"> - Aldous Huxley -</div>
           </div>
 
-          <Link to="/contact">
+          <Link href="/contact">
             <button className="talk-btn">Let&apos;s Talk</button>
           </Link>
         </div>
@@ -51,7 +51,12 @@ export default function Homepage() {
             </p>
           </div>
 
-          <img src={JessePhoto} alt="Headshot of Jesse Pajuaar" />
+          <Image
+            src="/images/JessePajuaar.webp" // use path relative to public/
+            alt="Headshot of Jesse Pajuaar"
+            width={500} // specify width
+            height={500} // specify height
+          />
         </div>
 
         <div className="homepage-contact">
@@ -59,7 +64,7 @@ export default function Homepage() {
             Do you feel you need to make some changes but don&apos;t know where
             or how to begin?
           </p>
-          <Link to="/contact">
+          <Link href="/contact">
             <button className="homepage-contact-btn">
               Contact me now for a no-fee 15 minute consultation
             </button>
@@ -77,29 +82,3 @@ export default function Homepage() {
     </main>
   );
 }
-
-export const Head = () => {
-  return (
-    <>
-      <SEO />
-      <meta
-        name="description"
-        content="Information and contact page for Toronto-based art therapist and psychotherapist."
-      />
-      <link rel="icon" type="image/png" href={Logo} />
-      <link rel="preconnect" href="https://fonts.googleapis.com" />
-      <link
-        rel="preconnect"
-        href="https://fonts.gstatic.com"
-        crossOrigin="true"
-      />
-      <link
-        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&family=Cormorant:wght@500;600;700&family=EB+Garamond:ital,wght@0,500;1,400;1,500&family=Playfair+Display:wght@600;700;800;900&display=swap"
-        rel="stylesheet"
-        defer
-      />
-      <script src="https://www.google.com/recaptcha/api.js" async defer />
-      <title>Jesse Pajuäär Therapy Studios</title>
-    </>
-  );
-};

@@ -3,7 +3,7 @@
 ## Stack
 
 - React 18
-- Gatsby
+- Next.js
 - ESlint
 - Axios
 

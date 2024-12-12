@@ -115,6 +115,8 @@
 
 main {
   @include centered;
+  display: flex;
+  flex-direction: column;
   padding-top: 6.4rem;
 
   @include xs {
@@ -148,7 +150,7 @@ main {
 .quote-banner {
   height: 20rem;
   width: 100%;
-  background-image: url("../images/Waterfall.webp");
+  background-image: url("../../../public/images/Waterfall.webp");
   background-repeat: no-repeat;
   background-size: 100%;
   background-position: center 50%;
@@ -387,7 +389,7 @@ main {
   width: 20rem;
   height: 20rem;
   background-color: #a2cdf2;
-  background-image: url("../images/leaf-border.webp");
+  background-image: url("../../../public/images/leaf-border.webp");
   background-size: 98%;
   background-position: 1% center;
   background-repeat: no-repeat;
@@ -480,7 +482,7 @@ main {
   transform: translate(-50%, -50%);
   width: 50%;
   background-color: #a2cdf2;
-  background-image: url("../images/fresh-snow.webp");
+  background-image: url("../../../public/images/fresh-snow.webp");
   border: 2px solid $dark-teal;
   box-shadow: 1px 1px 5px $teal;
   padding: 1rem;

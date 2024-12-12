@@ -2,6 +2,7 @@
 
 import "../styles/styles.scss";
 import "../styles/contact.scss";
+import { useEffect, useState } from "react";
 import { useForm, ValidationError } from "@formspree/react";
 import Link from "next/link";
 import SubmitModal from "../components/SubmitModal";
@@ -15,6 +16,11 @@ import Checkbox from "@mui/material/Checkbox";
 
 export default function Contact() {
   const [state, handleSubmit] = useForm("xkneyzbr");
+  const [isClient, setIsClient] = useState(false);
+
+  useEffect(() => {
+    setIsClient(true);
+  }, []);
 
   if (state.succeeded) {
     return (
@@ -223,11 +229,13 @@ export default function Contact() {
             />
             <br />
             <div className="captcha-holder">
-              <div
-                className="g-recaptcha"
-                data-sitekey="6LfzzPwiAAAAADR5tUVeL1r4cpMwVTxoamtBAkIT"
-                data-size="normal"
-              ></div>
+              {isClient && (
+                <div
+                  className="g-recaptcha"
+                  data-sitekey="6LfzzPwiAAAAADR5tUVeL1r4cpMwVTxoamtBAkIT"
+                  data-size="normal"
+                />
+              )}
               <br />
             </div>
             <button

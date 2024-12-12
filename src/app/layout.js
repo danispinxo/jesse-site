@@ -1,3 +1,5 @@
+import Navbar from "./components/Navbar";
+
 export const metadata = {
   title: "Jesse Pajuaar Therapy Studios",
   siteUrl: "https://jptherapystudios.com/",
@@ -9,7 +11,26 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <head>
+        <link rel="icon" type="image/png" href="/images/Logo.webp" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link
+          rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossOrigin="true"
+        />
+        <link
+          href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&family=Cormorant:wght@500;600;700&family=EB+Garamond:ital,wght@0,500;1,400;1,500&family=Playfair+Display:wght@600;700;800;900&display=swap"
+          rel="stylesheet"
+          defer
+        />
+        <script src="https://www.google.com/recaptcha/api.js" async defer />
+        <title>Jesse Pajuäär Therapy Studios</title>
+      </head>
+      <body>
+        <Navbar />
+        {children}
+      </body>
     </html>
   );
 }

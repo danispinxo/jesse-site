@@ -21,7 +21,11 @@ export default function TopNavbar() {
 
         <div className="title">Jesse Pajuäär Therapy Studios</div>
 
-        <a href="https://oab.owlpractice.ca/jpts">
+        <a
+          href="https://oab.owlpractice.ca/jpts"
+          target="_blank"
+          rel="noreferrer"
+        >
           <button className="client-btn">
             <FontAwesomeIcon icon={faHome} className="client-icon" /> <br />
             Client Portal

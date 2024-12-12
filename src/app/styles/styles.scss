@@ -5,7 +5,7 @@
 }
 
 .nav-logo {
-  margin: 0.5rem;
+  margin-right: 1.3rem;
   width: 3rem;
   opacity: 0.7;
   border-radius: 50%;
@@ -57,226 +57,195 @@ main {
 }
 
 .quote-banner {
-  height: 20rem;
-  width: 100%;
-  background-image: url("../../../public/images/Waterfall.webp");
-  background-repeat: no-repeat;
-  background-size: 100%;
-  background-position: center 50%;
-  @include variables.centered;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  background: linear-gradient(to right, variables.$dark-teal, variables.$teal);
+  color: #ffffff;
+  text-align: center;
 
-  .quotation-text {
-    border-style: solid;
-    border-color: variables.$dark-green;
-    border-radius: 10px;
+  .quotation-container {
+    max-width: 600px;
     padding: 1.5rem;
-    background: #b8ccccca;
-    display: flex;
-    flex-direction: column;
-    text-align: center;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+
+  .quotation {
+    font-family: variables.$sub2-font;
+    font-style: italic;
+    font-size: 1.5rem;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+    color: #f1f1f1;
 
     @include variables.xs {
-      padding: 0.6rem;
-    }
-
-    .quotation {
-      font-family: variables.$header-font;
-      line-height: 1.9rem;
-      font-size: 1.4rem;
-      font-weight: 600;
-      color: variables.$dark-teal;
-
-      @include variables.xs {
-        font-size: 1.1rem;
-        line-height: 1.5rem;
-      }
-    }
-
-    .name-holder {
-      display: flex;
-      flex-direction: row;
-      justify-content: center;
-      font-family: variables.$header-font;
       font-size: 1.1rem;
-      color: variables.$dark-teal;
-
-      @include variables.xs {
-        font-size: 1rem;
-      }
+      line-height: 1.3rem;
     }
+  }
 
-    .talk-btn {
-      @include variables.dark-btn;
-      margin-top: 1rem;
+  .quotation-author {
+    margin-top: 0.5rem;
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: #e0e0e0;
+  }
+
+  .talk-btn {
+    margin-top: 1rem;
+    padding: 0.75rem 1.5rem;
+    background-color: #ffffff;
+    color: variables.$very-dark-blue;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+
+    &:hover {
+      background-color: variables.$very-dark-blue;
+      color: #ffffff;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
     }
   }
 }
 
 .about-me {
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-  width: 90%;
-  padding: 1rem;
   margin-top: 1rem;
-  background-color: #a2cdf27e;
-  border-style: solid;
-  border-width: 0.08rem;
-  border-color: variables.$very-dark-blue;
-  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  padding: 3rem;
+  background: #f8f9fa;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
 
-  @include variables.xs {
+  @media (max-width: 768px) {
     flex-direction: column;
-    @include variables.centered;
-    margin-top: 0;
+    text-align: center;
+  }
+}
+
+.about-me-text {
+  @include variables.xs {
+    max-width: 100px;
   }
 
   @include variables.sm {
-    flex-direction: column;
-    @include variables.centered;
+    max-width: 250px;
   }
-
   @include variables.md {
-    padding: 0.5rem;
+    max-width: 400px;
   }
 
-  .about-me-text {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
-    width: 50%;
-    padding: 2rem;
-
-    @include variables.xs {
-      width: 95%;
-      padding: 1rem;
-      padding-top: 0;
-    }
-
-    @include variables.sm {
-      width: 95%;
-      padding: 1rem;
-    }
-
-    @include variables.md {
-      width: 95%;
-      padding: 1rem;
-    }
-
-    .about-me-title {
-      font-size: 2rem;
-      color: variables.$very-dark-blue;
-
-      @include variables.xs {
-        font-size: 1.5rem;
-      }
-
-      @include variables.lg {
-        font-size: 2.5rem;
-      }
-    }
-
-    .about-me-name {
-      margin-top: -1rem;
-      font-size: 1.5rem;
-
-      @include variables.xs {
-        font-size: 1.2rem;
-      }
-
-      @include variables.lg {
-        font-size: 1.8rem;
-      }
-    }
-
-    .about-me-qualifications {
-      margin-top: -1rem;
-      text-align: center;
-      font-size: 1rem;
-      font-style: italic;
-
-      @include variables.xs {
-        font-size: 1rem;
-      }
-
-      @include variables.lg {
-        font-size: 1.5rem;
-      }
-    }
-
-    .about-me-approach {
-      text-align: center;
-      font-family: variables.$body-font;
-      line-height: 1.5rem;
-
-      @include variables.xs {
-        font-size: 1rem;
-        line-height: 1.1rem;
-      }
-
-      @include variables.lg {
-        font-size: 1.3rem;
-      }
-    }
+  @include variables.lg {
+    max-width: 600px;
   }
 
-  img {
-    width: 284px;
-    height: 342px;
-    border-style: solid;
-    border-color: white;
-    border-width: 1rem;
-    border-radius: 10px;
+  @include variables.xl {
+    max-width: 1000px;
+  }
 
-    @include variables.xs {
-      width: 140px;
-      height: 152px;
-    }
+  h2 {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+    color: #333333;
+  }
 
-    @include variables.sm {
-      width: 210px;
-      height: 228px;
+  h3 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    color: #555555;
+    font-weight: 600;
+  }
+
+  h4 {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    color: #777777;
+    font-weight: 500;
+  }
+
+  p {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #555555;
+    margin-bottom: 1rem;
+
+    &:last-child {
+      font-weight: bold;
+      color: #333333;
     }
   }
 }
 
-.homepage-contact {
-  @include variables.centered;
-  flex-direction: column;
-  width: 90%;
-  padding: 1rem;
-  background-color: variables.$light-teal;
-  border-style: solid;
-  border-width: 0.08rem;
-  border-color: variables.$dark-teal;
+.about-me-image {
+  width: 344px;
+  height: 402px;
+  border-width: 1rem;
   border-radius: 10px;
 
   @include variables.xs {
-    text-align: center;
+    width: 140px;
+    height: 152px;
   }
 
-  @include variables.lg {
-    font-size: 1.5rem;
+  @include variables.sm {
+    width: 210px;
+    height: 228px;
   }
 
-  @include variables.xl {
-    font-size: 2rem;
+  .profile-image {
+    border-radius: 50%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   }
+}
 
-  .homepage-contact-text {
-    font-weight: 600;
-    font-family: variables.$body-font;
-    font-size: 1.2rem;
-    color: variables.$dark-teal;
+.homepage-contact {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 2rem;
+  margin-top: 2rem;
+  background: linear-gradient(135deg, variables.$dark-teal, variables.$teal);
+  color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 
-    @include variables.xl {
-      font-size: 1.5rem;
+  .contact-content {
+    max-width: 600px;
+
+    .contact-text {
+      font-size: 1.25rem;
+      line-height: 1.6;
+      margin-bottom: 1.5rem;
+      color: #ffffff;
     }
-  }
 
-  .homepage-contact-btn {
-    @include variables.dark-btn;
+    .contact-btn {
+      padding: 0.75rem 1.5rem;
+      font-size: 1rem;
+      font-weight: bold;
+      background-color: #ffffff;
+      color: variables.$very-dark-blue;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: all 0.3s ease-in-out;
+
+      &:hover {
+        background-color: variables.$very-dark-blue;
+        color: #ffffff;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+      }
+    }
   }
 }
 

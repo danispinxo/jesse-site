@@ -1,5 +1,8 @@
 "use client";
 import { Nav, Container, Navbar } from "react-bootstrap";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faArrowsTurnRight } from "@fortawesome/free-solid-svg-icons";
+
 import "bootstrap/dist/css/bootstrap.min.css";
 import "../styles/styles.scss";
 
@@ -32,7 +35,7 @@ export default function TopNavbar() {
                 target="_blank"
                 rel="noreferrer"
               >
-                Client Portal
+                Client Portal <FontAwesomeIcon icon={faArrowsTurnRight} />
               </Nav.Link>
             </Nav>
           </Navbar.Collapse>

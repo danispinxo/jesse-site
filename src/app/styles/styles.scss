@@ -95,6 +95,10 @@
     color: $dark-green;
     font-family: $sub-font;
 
+    .client-icon {
+      width: 50px;
+    }
+
     @include xs {
       padding: 0.1rem;
       font-size: 1rem;

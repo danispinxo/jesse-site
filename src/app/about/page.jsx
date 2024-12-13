@@ -118,10 +118,7 @@ export default function About() {
 
       <div className="section">
         <div className="section-label">
-          <p className="label-title">
-            Education & <br />
-            Qualifications
-          </p>
+          <p className="label-title">Education & Qualifications</p>
         </div>
         <div className="section-content">
           I received my Honours BA in Psychology from York University, and my
@@ -133,15 +130,14 @@ export default function About() {
         </div>
       </div>
 
-      <div className="consult-box">
-        <div className="consult-text">
-          <p>No Fee Consultation (Individual) - 15 min.</p>
-        </div>
-
+      <section className="consult-box defined-section">
+        <p className="consult-text">
+          No Fee Consultation (Individual) - 15 min.
+        </p>
         <Link href="/contact">
           <button className="consult-btn">Book Now</button>
         </Link>
-      </div>
+      </section>
 
       <Footer />
     </main>

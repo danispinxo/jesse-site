@@ -1,20 +1,5 @@
 @use "variables.scss";
 
-.about-title-holder {
-  @include variables.title-holder;
-  background-position: center 10%;
-
-  .about-title {
-    @include variables.title-format;
-    background: #b8ccccc8;
-
-    @include variables.xs {
-      padding: 0.5rem;
-      font-size: 1.5rem;
-    }
-  }
-}
-
 .guide-title-holder {
   background-position: center 10%;
   @include variables.title-holder;
@@ -51,27 +36,14 @@
   }
 }
 
-.about-expectations {
-  @include variables.intro-box;
-
-  p {
-    font-family: variables.$sub-font;
-    font-size: 1.5rem;
-    color: variables.$very-dark-blue;
-
-    @include variables.xs {
-      font-size: 1.2rem;
-    }
-  }
-}
-
 .page-content {
   padding: 2rem;
 
-  .services-header {
+  .services-header,
+  .about-title-holder {
     position: relative;
     text-align: center;
-    padding: 2rem 4rem 2rem 4rem;
+    padding: 1rem 2rem 1rem 2rem;
     margin: 0 auto;
     max-width: 1200px;
     background: linear-gradient(135deg, variables.$dark-teal, variables.$teal);
@@ -180,6 +152,49 @@
         font-weight: bold;
       }
     }
+  }
+
+  .section {
+    margin: 2rem 0;
+    padding: 1.5rem;
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+
+    .section-label {
+      margin-bottom: 1rem;
+
+      .label-title {
+        font-size: 1.8rem;
+        font-weight: bold;
+        color: var(--dark-teal);
+      }
+
+      .label-subtitle {
+        font-size: 1.2rem;
+        color: var(--teal);
+      }
+    }
+
+    .section-content {
+      font-size: 1rem;
+      color: #555;
+
+      ul {
+        padding-left: 1.5rem;
+
+        li {
+          margin-bottom: 0.5rem;
+        }
+      }
+    }
+  }
+
+  .about-expectations {
+    margin: 2rem 0;
+    text-align: center;
+    font-size: 1.5rem;
+    color: var(--dark-teal);
   }
 
   .consult-box {

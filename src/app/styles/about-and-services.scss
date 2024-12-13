@@ -1,19 +1,5 @@
 @use "variables.scss";
 
-.services-title-holder {
-  @include variables.title-holder;
-  background-position: center 100%;
-
-  .services-title {
-    @include variables.title-format;
-
-    @include variables.xs {
-      padding: 0.5rem;
-      font-size: 1.5rem;
-    }
-  }
-}
-
 .about-title-holder {
   @include variables.title-holder;
   background-position: center 10%;
@@ -79,258 +65,144 @@
   }
 }
 
-.session-format {
-  @include variables.intro-box;
-  margin: -0.1rem;
-  width: 50%;
+.page-content {
+  padding: 2rem;
 
-  @include variables.sm {
-    width: 70%;
-  }
-
-  @include variables.xs {
-    width: 80%;
-  }
-
-  @include variables.lg {
-    width: 40%;
-  }
-
-  @include variables.xl {
-    width: 40%;
-  }
-
-  h3 {
-    margin-top: -0.1rem;
-    margin-bottom: -0.1rem;
-    font-family: variables.$sub-font;
-    font-size: 1.5rem;
-    color: variables.$very-dark-blue;
-
-    @include variables.xs {
-      font-size: 1.3rem;
-    }
-  }
-
-  p {
+  .services-header {
+    position: relative;
     text-align: center;
-    font-family: variables.$body-font;
-    color: variables.$very-dark-blue;
-  }
+    padding: 2rem 4rem 2rem 4rem;
+    margin: 0 auto;
+    max-width: 1200px;
+    background: linear-gradient(135deg, variables.$dark-teal, variables.$teal);
+    z-index: 1;
 
-  ul {
-    margin-top: -0.4rem;
-    margin-bottom: -0.2rem;
-    font-family: variables.$body-font;
-    color: variables.$very-dark-blue;
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 180%;
+      height: 100%;
+      background: linear-gradient(
+        to right,
+        rgba(variables.$dark-teal, 0) 0%,
+        rgba(variables.$dark-teal, 1) 20%,
+        rgba(variables.$teal, 1) 80%,
+        rgba(variables.$teal, 0) 100%
+      );
+      z-index: -1;
+    }
 
-    @include variables.xs {
-      font-size: 1rem;
+    h1 {
+      color: white;
+      font-family: variables.$sub2-font;
     }
   }
-}
 
-.help-list {
-  @include variables.intro-box;
-
-  h3 {
-    font-family: variables.$sub-font;
-    font-size: 1.5rem;
-    color: variables.$very-dark-blue;
-
-    @include variables.xs {
-      font-size: 1.3rem;
-    }
+  .defined-section {
+    margin: 2rem 0;
+    padding: 2rem;
+    background-color: #f8f9fa;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   }
 
-  ul {
-    margin-top: -0.2rem;
-    font-family: variables.$body-font;
-    color: variables.$very-dark-blue;
-    columns: 2;
-
-    @include variables.xs {
-      columns: 1;
-      font-size: 1rem;
-    }
-  }
-}
-
-.section {
-  display: flex;
-  flex-direction: row;
-  width: 90%;
-
-  @include variables.xs {
-    flex-direction: column;
-    @include variables.centered;
-  }
-
-  .section-label {
-    width: 30%;
-    height: auto;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-content: center;
-    align-items: center;
-    margin: 0.5rem;
-    padding: 0.5rem;
-    background-color: variables.$light-teal;
-    background-image: url("../../../public/images/brush-stroke.svg");
-    background-size: 100%;
-    background-repeat: no-repeat;
-    background-position: top -3rem right 0;
-    border-style: dotted;
-    border-color: variables.$dark-teal;
-    border-radius: 10px;
-
-    .section-image-holder {
-      display: flex;
-      @include variables.centered;
-      margin-bottom: 1rem;
-
-      .section-image {
-        width: 70%;
-        border-radius: 50%;
-        box-shadow: 4px 4px 6px variables.$dark-teal;
-      }
-    }
-
-    @include variables.xs {
-      margin: 0;
-      width: 100%;
-      background-position: center right 0;
-    }
-
-    @include variables.sm {
-      background-position: top -1rem right 0;
-    }
-
-    @include variables.lg {
-      background-position: top -4.2rem right 0;
-    }
-
-    @include variables.xl {
-      background-position: top -9rem right 0;
-    }
-
-    .label-title {
-      font-family: variables.$sub-font;
+  .help-list {
+    .help-title {
       font-size: 1.5rem;
-      font-weight: 700;
-      text-align: center;
-
-      @include variables.xs {
-        font-size: 1.1rem;
-      }
-
-      @include variables.sm {
-        font-size: 1.3rem;
-      }
-
-      @include variables.xl {
-        font-size: 2rem;
+      margin-bottom: 1rem;
+    }
+    .help-items {
+      list-style-type: disc;
+      padding-left: 2rem;
+      li {
+        margin-bottom: 0.5rem;
+        font-size: 1rem;
+        line-height: 1.5;
       }
     }
+  }
 
-    .label-subtitle {
-      font-family: variables.$sub-font;
-      font-size: 1.3rem;
-      font-style: italic;
+  .session-format {
+    .section-title {
+      font-size: 1.5rem;
+      margin-bottom: 1rem;
+    }
+    .session-info,
+    .contact-info {
+      margin-bottom: 1rem;
+    }
+    .session-options {
+      list-style: none;
+      padding: 0;
+      li {
+        margin-bottom: 0.5rem;
+      }
+    }
+  }
+
+  .service-section {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+
+    .section-label {
+      flex: 1;
       text-align: center;
-      margin-top: -1.3rem;
-
-      @include variables.xs {
-        margin-top: -1rem;
-        font-size: 1rem;
-      }
-
-      @include variables.sm {
-        font-size: 1rem;
-      }
-
-      @include variables.xl {
+      .label-title {
         font-size: 1.5rem;
+        font-weight: bold;
+      }
+      .label-subtitle {
+        font-size: 1rem;
+        color: gray;
+      }
+      .section-image-holder {
+        margin-top: 1rem;
+        .section-image {
+          width: 50%;
+          border-radius: 8px;
+          box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+      }
+    }
+
+    .section-content {
+      flex: 2;
+      p {
+        margin-bottom: 1rem;
+      }
+      .pricing,
+      .format {
+        font-weight: bold;
       }
     }
   }
 
-  .section-content {
-    width: 70%;
-    height: auto;
-    margin: 0.5rem;
-    background-color: #a2cdf22e;
-    border-style: dotted;
-    border-color: variables.$dark-teal;
-    border-radius: 10px;
-    padding: 1rem;
-    font-family: variables.$body-font;
+  .consult-box {
+    text-align: center;
+    background: linear-gradient(135deg, variables.$dark-teal, variables.$teal);
 
-    @include variables.xs {
-      font-size: 1rem;
-      margin: 0;
-      margin-top: 1rem;
-      width: 90%;
+    .consult-text {
+      font-size: 1.2rem;
+      margin-bottom: 1rem;
+      color: white;
     }
-
-    @include variables.sm {
-      font-size: 1rem;
-    }
-
-    ul {
-      column-count: 3;
-
-      @include variables.xs {
-        column-count: 1;
-      }
-
-      @include variables.sm {
-        column-count: 2;
+    .consult-btn {
+      padding: 0.75rem 1.5rem;
+      background: white;
+      color: variables.$very-dark-blue;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      &:hover {
+        background: variables.$very-dark-blue;
+        color: white;
       }
     }
-
-    .single-column {
-      column-count: 1;
-    }
-
-    span {
-      text-decoration: underline;
-    }
-
-    .bolded-text {
-      font-weight: bold;
-    }
-  }
-}
-
-.consult-box {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 50%;
-  padding: 1rem;
-  background-color: variables.$light-blue;
-  border-style: solid;
-  border-width: 0.08rem;
-  border-color: variables.$dark-blue;
-  border-radius: 10px;
-
-  @include variables.xs {
-    width: 80%;
-  }
-
-  .consult-text {
-    font-family: variables.$sub-font;
-    font-size: 1.3rem;
-    color: variables.$very-dark-blue;
-
-    @include variables.xs {
-      text-align: center;
-    }
-  }
-
-  .consult-btn {
-    @include variables.blue-btn;
   }
 }

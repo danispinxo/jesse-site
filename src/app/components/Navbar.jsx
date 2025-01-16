@@ -24,18 +24,28 @@ export default function TopNavbar() {
           <Navbar.Toggle aria-controls="responsive-navbar-nav" />
           <Navbar.Collapse id="responsive-navbar-nav">
             <Nav className="me-auto">
-              <Nav.Link href="/services">Services</Nav.Link>
-              <Nav.Link href="/about">About</Nav.Link>
-              <Nav.Link href="/contact">Contact</Nav.Link>
-              <Nav.Link href="/resources">Help & Resources</Nav.Link>
+              <Nav.Link href="/services" className="navbar-link">
+                Services
+              </Nav.Link>
+              <Nav.Link href="/about" className="navbar-link">
+                About
+              </Nav.Link>
+              <Nav.Link href="/contact" className="navbar-link">
+                Contact
+              </Nav.Link>
+              <Nav.Link href="/resources" className="navbar-link">
+                Help & Resources
+              </Nav.Link>
             </Nav>
             <Nav>
               <Nav.Link
-                href="https://oab.owlpractice.ca/jpts"
+                className="navbar-link client-portal-link"
+                href="https://jpts.noustalk.com/login"
                 target="_blank"
                 rel="noreferrer"
               >
-                Client Portal <FontAwesomeIcon icon={faArrowsTurnRight} />
+                NousTalk Client Portal{" "}
+                <FontAwesomeIcon icon={faArrowsTurnRight} />
               </Nav.Link>
             </Nav>
           </Navbar.Collapse>

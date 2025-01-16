@@ -12,12 +12,33 @@
   box-shadow: 2px 2px 3px variables.$dark-teal;
 
   &:hover {
-    box-shadow: 2px 2px 8px variables.$dark-teal;
+    box-shadow: 2px 2px 8px variables.$med-blue;
   }
 
   @include variables.xs {
     width: 3.3rem;
     height: 3.3rem;
+  }
+}
+
+.navbar-link {
+  color: variables.$very-light-teal;
+
+  &.client-portal-link {
+    border: 1px solid variables.$very-light-teal !important;
+    border-radius: 6px;
+  }
+
+  &:hover {
+    border: none;
+    background-color: variables.$very-light-teal;
+    color: black;
+  }
+
+  &:visited,
+  :focus,
+  :active {
+    color: variables.$very-light-teal !important;
   }
 }
 

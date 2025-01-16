@@ -1,5 +1,8 @@
+import "@fortawesome/fontawesome-svg-core/styles.css";
+import { config } from "@fortawesome/fontawesome-svg-core";
 import Navbar from "./components/Navbar";
 import { ServerStyleSheets } from "@mui/styles";
+config.autoAddCss = false;
 
 export const metadata = {
   title: "Jesse Pajuaar Therapy Studios",

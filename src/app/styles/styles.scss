@@ -24,15 +24,19 @@
 .navbar-link {
   color: variables.$very-light-teal;
 
+  &:hover {
+    text-decoration: underline;
+  }
+
   &.client-portal-link {
     border: 1px solid variables.$very-light-teal !important;
     border-radius: 6px;
-  }
 
-  &:hover {
-    border: none;
-    background-color: variables.$very-light-teal;
-    color: black;
+    &:hover {
+      border: none;
+      background-color: variables.$very-light-teal;
+      color: black;
+    }
   }
 
   &:visited,

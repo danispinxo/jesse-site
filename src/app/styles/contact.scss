@@ -1,16 +1,39 @@
 @use "variables.scss";
 
+.page-content {
+  padding: 2rem;
+}
+
 .contact-title-holder {
-  @include variables.title-holder;
-  background-position: center 65%;
+  position: relative;
+  text-align: center;
+  padding: 1rem 2rem 1rem 2rem;
+  margin: 0 auto;
+  max-width: 1200px;
+  background: linear-gradient(135deg, variables.$dark-teal, variables.$teal);
+  z-index: 1;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 180%;
+    height: 100%;
+    background: linear-gradient(
+      to right,
+      rgba(variables.$dark-teal, 0) 0%,
+      rgba(variables.$dark-teal, 1) 20%,
+      rgba(variables.$teal, 1) 80%,
+      rgba(variables.$teal, 0) 100%
+    );
+    z-index: -1;
+  }
 
   .contact-title {
-    @include variables.title-format;
-
-    @include variables.xs {
-      padding: 0.5rem;
-      font-size: 1.5rem;
-    }
+    color: white;
+    font-family: variables.$sub2-font;
   }
 }
 

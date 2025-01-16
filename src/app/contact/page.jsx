@@ -26,7 +26,7 @@ export default function Contact() {
     return (
       <main className="page-content">
         <div className="contact-title-holder">
-          <p className="contact-title">Get In Touch</p>
+          <h1 className="contact-title">Get In Touch</h1>
         </div>
 
         <SubmitModal />
@@ -58,7 +58,7 @@ export default function Contact() {
   return (
     <main className="page-content">
       <div className="contact-title-holder">
-        <p className="contact-title">Get In Touch</p>
+        <h1 className="contact-title">Get In Touch</h1>
       </div>
 
       <div className="covid-note">

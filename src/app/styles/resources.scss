@@ -1,0 +1,86 @@
+@use "variables.scss";
+
+.page-content {
+  padding: 2rem;
+  .resources-title-holder {
+    position: relative;
+    text-align: center;
+    padding: 1rem 2rem 1rem 2rem;
+    margin: 0 auto;
+    max-width: 1200px;
+    background: linear-gradient(135deg, variables.$dark-teal, variables.$teal);
+    z-index: 1;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 180%;
+      height: 100%;
+      background: linear-gradient(
+        to right,
+        rgba(variables.$dark-teal, 0) 0%,
+        rgba(variables.$dark-teal, 1) 20%,
+        rgba(variables.$teal, 1) 80%,
+        rgba(variables.$teal, 0) 100%
+      );
+      z-index: -1;
+    }
+
+    h1 {
+      color: white;
+      font-family: variables.$sub2-font;
+    }
+  }
+
+  .resource-cards {
+    display: flex;
+    flex-direction: column;
+
+    a {
+      color: variables.$teal;
+    }
+    .resource-card {
+      display: flex;
+      margin: 1rem 0;
+      padding: 1.5rem;
+      width: 80%;
+      background: rgba(255, 255, 255, 0.8);
+      border-radius: 12px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+
+      @include variables.xs {
+        flex-direction: column;
+        align-items: center;
+      }
+      .resource-content {
+        padding-left: 1rem;
+      }
+      .card-label {
+        margin-bottom: 1rem;
+        font-size: 1.8rem;
+        font-weight: bold;
+        color: var(--dark-teal);
+        font-family: variables.$sub2-font;
+      }
+
+      .card-img {
+        width: 25%;
+        height: 25%;
+        aspect-ratio: 1;
+        border-radius: 10px;
+
+        @include variables.xs {
+          width: 90%;
+        }
+      }
+
+      .card-content {
+        font-size: 1rem;
+        color: #555;
+      }
+    }
+  }
+}

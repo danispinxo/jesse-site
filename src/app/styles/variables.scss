@@ -1,0 +1,149 @@
+// fonts
+$sub2-font: "Bellota Text", sans-serif;
+$body-font: "Host Grotesk", sans-serif;
+$sub-font: "Harmattan", sans-serif;
+$header-font: "Gabarito", sans-serif;
+
+// colours
+$light-blue: #b9d0e3e1;
+$dark-blue: #4281a8;
+$very-dark-blue: #012a44;
+$med-blue: #6091afa8;
+$dark-teal: #193b3b;
+$teal: #618383;
+$very-light-teal: #c4ededb6;
+$light-teal: #aecfcf;
+$dark-green: #324001;
+$light-green: #b7bf98;
+
+//mixins
+@mixin glassbg {
+  backdrop-filter: blur(25px) saturate(144%);
+  -webkit-backdrop-filter: blur(25px) saturate(144%);
+  background-color: rgba(207, 215, 207, 0.52);
+}
+
+@mixin centered {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+}
+
+@mixin title-holder {
+  height: 10rem;
+  width: 100%;
+  background-image: url("../../../public/images/Waterfall.webp");
+  background-repeat: no-repeat;
+  background-size: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+}
+
+@mixin title-format {
+  border-style: solid;
+  border-color: $dark-teal;
+  border-radius: 10px;
+  padding: 1rem;
+  background: #b8ccccab;
+  font-size: 2rem;
+  padding-left: 3rem;
+  padding-right: 3rem;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  color: $dark-teal;
+  font-family: $header-font;
+}
+
+@mixin intro-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 85%;
+  padding: 1rem;
+  background-color: $light-blue;
+  border-style: solid;
+  border-width: 0.08rem;
+  border-color: $dark-blue;
+  border-radius: 10px;
+}
+
+@mixin dark-btn {
+  border-color: $light-teal;
+  border-width: 0.1rem;
+  border-radius: 8px;
+  padding: 0.3rem;
+  background-color: $dark-teal;
+  color: $light-teal;
+  font-family: $sub-font;
+  margin-right: 1rem;
+  margin-bottom: 0.6rem;
+
+  &:hover {
+    cursor: pointer;
+    border-color: $teal;
+    box-shadow: 2px 2px 3px $dark-teal;
+  }
+}
+
+@mixin blue-btn {
+  border-color: $dark-blue;
+  border-width: 0.1rem;
+  border-radius: 8px;
+  padding: 0.5rem;
+  background-color: $very-dark-blue;
+  color: $light-blue;
+  font-family: $sub-font;
+  font-size: 1.2rem;
+
+  &:hover {
+    cursor: pointer;
+    border-color: $very-dark-blue;
+    box-shadow: 2px 2px 5px $very-dark-blue;
+  }
+}
+
+// media queries -- aliases and breakpoints
+$screen-sm-min: 600px;
+$screen-md-min: 960px;
+$screen-lg-min: 1280px;
+$screen-xl-min: 1920px;
+
+$screen-xs-max: 599px;
+$screen-sm-max: 959px;
+$screen-md-max: 1279px;
+$screen-lg-max: 1919px;
+$screen-xl-max: 5000px;
+
+// media devices
+@mixin xs {
+  @media screen and (max-width: #{$screen-xs-max}) {
+    @content;
+  }
+}
+
+@mixin sm {
+  @media screen and (min-width: #{$screen-sm-min}) and (max-width: #{$screen-sm-max}) {
+    @content;
+  }
+}
+
+@mixin md {
+  @media screen and (min-width: #{$screen-md-min}) and (max-width: #{$screen-md-max}) {
+    @content;
+  }
+}
+
+@mixin lg {
+  @media screen and (min-width: #{$screen-lg-min}) and (max-width: #{$screen-lg-max}) {
+    @content;
+  }
+}
+
+@mixin xl {
+  @media screen and (min-width: #{$screen-xl-min}) and (max-width: #{$screen-xl-max}) {
+    @content;
+  }
+}

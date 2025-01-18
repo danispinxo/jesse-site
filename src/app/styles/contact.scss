@@ -1,0 +1,252 @@
+@use "variables.scss";
+
+.page-content {
+  padding: 2rem;
+}
+
+.contact-title-holder {
+  position: relative;
+  text-align: center;
+  padding: 1rem 2rem 1rem 2rem;
+  margin: 0 auto;
+  max-width: 1200px;
+  background: linear-gradient(135deg, variables.$dark-teal, variables.$teal);
+  z-index: 1;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 180%;
+    height: 100%;
+    background: linear-gradient(
+      to right,
+      rgba(variables.$dark-teal, 0) 0%,
+      rgba(variables.$dark-teal, 1) 20%,
+      rgba(variables.$teal, 1) 80%,
+      rgba(variables.$teal, 0) 100%
+    );
+    z-index: -1;
+  }
+
+  .contact-title {
+    color: white;
+    font-family: variables.$sub2-font;
+  }
+}
+
+.covid-note {
+  @include variables.intro-box;
+  text-align: center;
+  line-height: 1.5rem;
+}
+
+.contact-body {
+  display: flex;
+  flex-direction: row;
+  width: 90%;
+
+  @include variables.xs {
+    flex-direction: column;
+  }
+
+  .contact-info {
+    width: 45%;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-right: 0.5rem double variables.$teal;
+
+    @include variables.xs {
+      width: 90%;
+      border-bottom: 0.5rem double variables.$teal;
+      border-right: none;
+    }
+
+    p {
+      font-family: variables.$body-font;
+      text-align: center;
+    }
+
+    .border-bottom-text {
+      padding-bottom: 1rem;
+      border-bottom: 0.3rem double variables.$teal;
+    }
+
+    a {
+      text-decoration: underline;
+      text-align: center;
+      font-family: variables.$body-font;
+      font-size: 1.1rem;
+      color: variables.$dark-blue;
+    }
+
+    .logo {
+      width: 30%;
+      border-radius: 50%;
+      box-shadow: 5px 5px 10px variables.$teal;
+      margin: 1rem;
+    }
+
+    .affiliation-images {
+      display: flex;
+      flex-direction: column;
+      @include variables.centered;
+      gap: 2rem;
+
+      .affiliation-img {
+        width: 60%;
+      }
+    }
+  }
+
+  .contact-form {
+    width: 45%;
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    font-family: variables.$body-font;
+
+    @include variables.xs {
+      width: 90%;
+      padding: 0;
+    }
+
+    .form-identifier {
+      text-align: center;
+      font-size: 1rem;
+
+      .name {
+        text-decoration: underline;
+      }
+    }
+
+    .input {
+      margin: 1rem;
+    }
+
+    .form-submit-btn {
+      width: auto;
+      padding: 0.5rem;
+      border-color: variables.$dark-green;
+      border-width: 0.1rem;
+      border-radius: 8px;
+      color: variables.$dark-green;
+      font-family: variables.$sub-font;
+      font-size: 1.2rem;
+
+      @include variables.xs {
+        margin-left: 90%;
+      }
+
+      @include variables.sm {
+        margin-left: 88%;
+      }
+
+      &:hover {
+        cursor: pointer;
+        box-shadow: 2px 2px 3px variables.$dark-green;
+      }
+    }
+  }
+}
+
+.submit-contact-body {
+  display: flex;
+  flex-direction: column;
+  @include variables.centered;
+  width: 100%;
+
+  .contact-info {
+    width: 90%;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-top: 0.5rem double variables.$teal;
+    border-right: none;
+
+    p {
+      font-family: variables.$body-font;
+      text-align: center;
+    }
+
+    a {
+      text-decoration: underline;
+      text-align: center;
+      font-family: variables.$body-font;
+      font-size: 1.1rem;
+      color: variables.$dark-blue;
+    }
+
+    .logo {
+      width: 20%;
+      border-radius: 50%;
+      box-shadow: 5px 5px 10px variables.$teal;
+      margin: 1rem;
+    }
+  }
+
+  .contact-form {
+    width: 45%;
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    font-family: variables.$body-font;
+
+    @include variables.xs {
+      width: 90%;
+      padding: 0;
+    }
+
+    .form-identifier {
+      text-align: center;
+      font-size: 1rem;
+
+      .name {
+        text-decoration: underline;
+      }
+    }
+  }
+}
+
+.form-submit-btn {
+  width: auto;
+  padding: 5rem;
+  border-color: variables.$dark-green;
+  border-width: 0.1rem;
+  border-radius: 8px;
+  color: variables.$dark-green;
+  font-family: variables.$sub-font;
+  font-size: 1.2rem;
+  margin-left: 1rem;
+
+  &:hover {
+    cursor: pointer;
+    box-shadow: 2px 2px 3px variables.$dark-green;
+  }
+}
+
+.checkbox-container {
+  margin-left: 1rem;
+}
+
+.captcha-holder {
+  iframe {
+    margin-left: 1rem;
+    width: 19rem;
+    height: auto;
+  }
+}
+
+.error {
+  margin: 1rem;
+  padding: 1rem;
+  font-family: variables.$body-font;
+  border-radius: 10px;
+  background-color: rgba(139, 0, 0, 0.125);
+  color: darkred;
+}

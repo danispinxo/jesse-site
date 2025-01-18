@@ -1,5 +1,5 @@
 import "../styles/styles.scss";
-import "../styles/about-and-services.scss";
+import "../styles/about.scss";
 import Link from "next/link";
 import Footer from "../components/Footer";
 
@@ -32,7 +32,7 @@ export default function About() {
           <p className="label-title">Expertise</p>
           <p className="label-subtitle">Client Focus</p>
         </div>
-        <div className="section-content">
+        <div className="section-content three-column-list">
           <ul>
             <li>2SLGBTQA+</li>
             <li>Addiction</li>

@@ -58,8 +58,8 @@ main {
   flex-direction: column;
 
   h1 {
-    font-family: variables.$header-font;
-    color: variables.$dark-green;
+    font-family: variables.$sub2-font;
+    color: white;
     font-weight: 600;
   }
 
@@ -390,35 +390,6 @@ main {
 
   @include variables.xs {
     width: 80%;
-  }
-
-  .covid-modal-title {
-    font-size: 1.8rem;
-    font-family: variables.$sub-font;
-    color: variables.$dark-blue;
-
-    @include variables.xs {
-      font-size: 1.3rem;
-    }
-  }
-
-  .covid-modal-subtitle {
-    margin-top: -1rem;
-    font-family: variables.$sub-font;
-    font-size: 1rem;
-    color: variables.$dark-blue;
-  }
-
-  .covid-modal-content {
-    text-align: center;
-    font-family: variables.$body-font;
-    line-height: 1.4rem;
-    color: variables.$very-dark-blue;
-
-    @include variables.xs {
-      font-size: 1rem;
-      line-height: 1.2rem;
-    }
   }
 
   .btn-holder {

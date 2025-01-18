@@ -1,5 +1,5 @@
 import "../styles/styles.scss";
-import "../styles/about-and-services.scss";
+import "../styles/guide.scss";
 
 export default function Guide() {
   return (

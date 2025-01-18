@@ -1,0 +1,98 @@
+@use "variables.scss";
+
+.page-content {
+  padding: 2rem;
+
+  .guide-title-holder {
+    position: relative;
+    text-align: center;
+    padding: 1rem 2rem 1rem 2rem;
+    margin: 0 auto;
+    max-width: 1200px;
+    background: linear-gradient(135deg, variables.$dark-teal, variables.$teal);
+    z-index: 1;
+
+    .guide-title {
+      &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 180%;
+        height: 100%;
+        background: linear-gradient(
+          to right,
+          rgba(variables.$dark-teal, 0) 0%,
+          rgba(variables.$dark-teal, 1) 20%,
+          rgba(variables.$teal, 1) 80%,
+          rgba(variables.$teal, 0) 100%
+        );
+        z-index: -1;
+      }
+
+      h1 {
+        color: white;
+        font-family: variables.$sub2-font;
+      }
+    }
+  }
+
+  .guide-intro {
+    margin: 1rem;
+    padding: 2rem;
+    width: 80%;
+    text-align: center;
+    background: linear-gradient(135deg, variables.$dark-teal, variables.$teal);
+    border-radius: 12px;
+
+    .intro-title {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+      color: white;
+      font-family: variables.$sub2-font;
+    }
+
+    p {
+      font-size: 1.2rem;
+      margin-bottom: 1rem;
+      color: white;
+    }
+  }
+
+  .section {
+    margin: 1rem 0;
+    padding: 1rem;
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+
+    .section-label {
+      margin-bottom: 1rem;
+
+      .label-title {
+        font-size: 1.8rem;
+        font-weight: bold;
+        color: var(--dark-teal);
+      }
+
+      .label-subtitle {
+        font-size: 1.2rem;
+        color: var(--teal);
+      }
+    }
+
+    .section-content {
+      font-size: 1rem;
+      color: #555;
+
+      ul {
+        padding-left: 1.5rem;
+
+        li {
+          margin-bottom: 0.5rem;
+        }
+      }
+    }
+  }
+}

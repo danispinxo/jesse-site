@@ -1,7 +1,6 @@
 "use client";
 import "normalize.css";
 import "./styles/styles.scss";
-import "./styles/about-and-services.scss";
 import Link from "next/link";
 import { Image } from "react-bootstrap";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";

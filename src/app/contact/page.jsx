@@ -5,6 +5,7 @@ import "../styles/contact.scss";
 import { useEffect, useState } from "react";
 import { useForm, ValidationError } from "@formspree/react";
 import Link from "next/link";
+import Script from "next/script";
 import SubmitModal from "../components/SubmitModal";
 import Footer from "../components/Footer";
 import TextField from "@mui/material/TextField";
@@ -250,6 +251,10 @@ export default function Contact() {
       </div>
 
       <Footer />
+      <Script
+        src="https://www.google.com/recaptcha/api.js"
+        strategy="lazyOnload"
+      />
     </main>
   );
 }

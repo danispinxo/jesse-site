@@ -2,7 +2,22 @@ import "@fortawesome/fontawesome-svg-core/styles.css";
 import { config } from "@fortawesome/fontawesome-svg-core";
 import Navbar from "./components/Navbar";
 import { ServerStyleSheets } from "@mui/styles";
+import { Bellota_Text, Gabarito, Harmattan } from "next/font/google";
+
 config.autoAddCss = false;
+
+const bellota = Bellota_Text({
+  subsets: ["latin"],
+  weight: ["300", "400", "700"],
+});
+const gabarito = Gabarito({
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700", "800", "900"],
+});
+const harmattan = Harmattan({
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700"],
+});
 
 export const metadata = {
   title: "Jesse Pajuaar Therapy Studios",
@@ -12,7 +27,10 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
+    <html
+      lang="en"
+      className={`${bellota.className} ${gabarito.className} ${harmattan.className}`}
+    >
       <head>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta charSet="UTF-8" />
@@ -26,17 +44,6 @@ export default function RootLayout({ children }) {
         />
         <meta name="author" content="Jesse Pajuaar" />
         <link rel="icon" type="image/png" href="/images/Logo.webp" />
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link
-          rel="preconnect"
-          href="https://fonts.gstatic.com"
-          crossOrigin="true"
-        />
-        <link
-          href="https://fonts.googleapis.com/css2?family=Bellota+Text:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Gabarito:wght@400..900&family=Harmattan:wght@400;500;600;700&family=Host+Grotesk:ital,wght@0,300..800;1,300..800&display=swap"
-          rel="stylesheet"
-          defer
-        />
         <script src="https://www.google.com/recaptcha/api.js" async defer />
         <title>Jesse Pajuäär Therapy Studios</title>
       </head>

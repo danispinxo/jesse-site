@@ -63,11 +63,11 @@ export default function Contact() {
       </div>
 
       <div className="covid-note">
-        <h3>
+        <p>
           My practice has been moved online for the foreseeable future. <br />{" "}
-          Therapy sessions will therefore be limited to secure video or
+          Therapy sessions will therefore be limited to <br /> secure video or
           telephone sessions. <br /> Get in touch for more information.
-        </h3>
+        </p>
       </div>
 
       <div className="contact-body">

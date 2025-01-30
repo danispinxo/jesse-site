@@ -38,9 +38,23 @@
 }
 
 .covid-note {
-  @include variables.intro-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   text-align: center;
-  line-height: 1.5rem;
+  padding: 2rem;
+  padding-bottom: 1rem;
+  margin-top: 2rem;
+  background: linear-gradient(135deg, variables.$dark-teal, variables.$teal);
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+  p {
+    font-size: 1.25rem;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+    color: #ffffff;
+  }
 }
 
 .contact-body {

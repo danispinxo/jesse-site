@@ -44,7 +44,7 @@ export default function TopNavbar() {
                 target="_blank"
                 rel="noreferrer"
               >
-                NousTalk Client Portal{" "}
+                <span>NousTalk </span> Client Portal{" "}
                 <FontAwesomeIcon icon={faArrowsTurnRight} />
               </Nav.Link>
             </Nav>

@@ -32,6 +32,12 @@
     border: 1px solid variables.$very-light-teal !important;
     border-radius: 6px;
 
+    span {
+      @include variables.md {
+        display: none;
+      }
+    }
+
     &:hover {
       border: none;
       background-color: variables.$very-light-teal;

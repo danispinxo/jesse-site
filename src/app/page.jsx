@@ -15,8 +15,8 @@ export default function HomePage() {
         <div className="quotation-container">
           <blockquote className="quotation">
             <p>
-              &#8220;Experience is not what happens to you. <br /> It is what
-              you do with what happens to you.&#8221;
+              &#8220;Experience is not what happens to you. It is what you do
+              with what happens to you.&#8221;
             </p>
             <footer className="quotation-author">- Aldous Huxley -</footer>
           </blockquote>

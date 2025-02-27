@@ -56,7 +56,7 @@ export default function Services() {
           "Build upon what was discussed in previous weeks, or explore new topics or concerns that have taken precedence in your life.",
           "In these sessions, you are the expert of your own life. There are no judgments or assumptions made during our time; the focus is on collaborating with you to create a space where your voice, your wants, and your unique perspectives are not only heard but supported and advocated for.",
         ]}
-        pricing="Pricing: $140 / 50 mins."
+        pricing="Pricing: $150 / 50 mins."
         format="Format: Video and telephone sessions"
       />
 
@@ -68,7 +68,7 @@ export default function Services() {
           "Art psychotherapy isn't about the end goal of creating 'Art,' but about the process.",
           "This process means tapping into parts of the brain that often get overlooked or underused but actually provide a wealth of knowledge about how we each uniquely experience and perceive the world.",
         ]}
-        pricing="Pricing: $140 / 50 mins."
+        pricing="Pricing: $150 / 50 mins."
         format="Format: Video and telephone sessions"
       />
 
@@ -80,7 +80,7 @@ export default function Services() {
           "Sliding scale options are available* to those individuals demonstrating special need on a case-by-case basis. Please inquire for further details.",
           "*Sliding scale rates are subject to availability.",
         ]}
-        pricing="Pricing: $90-130 / 50 mins."
+        pricing="Pricing: $90-140 / 50 mins."
         format="Format: Video and telephone sessions"
       />
 

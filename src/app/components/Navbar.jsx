@@ -17,9 +17,9 @@ export default function TopNavbar() {
         expand="lg"
       >
         <Container className="nav-custom">
-          <Navbar.Brand href="/">
+          <Navbar.Brand href="/" className="navbar-brand-link-logo-container">
             <img className="nav-logo" src="/images/Logo.webp" alt="JPTS logo" />
-            JESSE PAJUÄÄR THERAPY STUDIOS
+            <span>JESSE PAJUÄÄR THERAPY STUDIOS</span>
           </Navbar.Brand>
           <Navbar.Toggle aria-controls="responsive-navbar-nav" />
           <Navbar.Collapse id="responsive-navbar-nav">

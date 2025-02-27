@@ -2,6 +2,14 @@
 
 .nav-custom {
   font-family: variables.$header-font;
+
+  .navbar-brand-link-logo-container {
+    @include variables.xs {
+      span {
+        display: none;
+      }
+    }
+  }
 }
 
 .nav-logo {
@@ -160,11 +168,15 @@ main {
     flex-direction: column;
     text-align: center;
   }
+
+  @include variables.xs {
+    padding: 0.5rem;
+  }
 }
 
 .about-me-text {
   @include variables.xs {
-    max-width: 100px;
+    max-width: 80%;
   }
 
   @include variables.sm {

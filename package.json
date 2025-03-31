@@ -22,7 +22,7 @@
     "normalize.css": "^8.0.1",
     "react": "^18.0.0",
     "react-bootstrap": "^2.10.1",
-    "react-dom": "^18.0.0",
+    "react-dom": "^19.1.0",
     "react-recaptcha": "^2.3.10",
     "sass": "^1.82.0"
   },

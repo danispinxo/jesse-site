@@ -1,221 +1,173 @@
+"use client";
 import "../styles/styles.scss";
 import "../styles/resources.scss";
+import Link from "next/link";
+import Footer from "../components/Footer";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faDownload, faBook, faLink } from "@fortawesome/free-solid-svg-icons";
 
 export default function Resources() {
   return (
-    <main>
-      <div className="page-content">
-        <div className="resources-title-holder">
-          <h1 className="resources-title">Mental Health Resources</h1>
+    <main className="page-content">
+      {/* Hero Section */}
+      <section className="page-hero">
+        <div className="hero-content">
+          <h1>
+            Resources
+            <span className="subtitle">Tools for Your Mental Health Journey</span>
+          </h1>
+          <p className="hero-text">
+            Access helpful articles, worksheets, and recommended readings to support your personal growth.
+          </p>
         </div>
+      </section>
 
-        <div className="resource-cards">
-          <div className="resource-card">
-            <img
-              className="card-img"
-              src="/images/Kids.webp"
-              alt="Children Playing Tug-of-War"
-            />
-            <div className="resource-content">
-              <p className="card-label">Kids Help Phone</p>
-              <p className="card-content">
-                <a
-                  href="https://kidshelpphone.ca/"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  Kids Help Phone
-                </a>{" "}
-                is a Canadian and world leader known for their expertise and
-                continuous innovation as Canada&apos;s only 24/7 counselling and
-                information service for young people.
-              </p>
-              <p className="card-content">
-                Since 1989, trained & professional counsellors have been
-                listening to kids, often when no one else can or will. &quot;We
-                are always there.&quot;
-              </p>
-            </div>
-          </div>
-
-          <div className="resource-card">
-            <img
-              className="card-img"
-              src="/images/Crisis.webp"
-              alt="Folded Hands"
-            />
-            <div className="resource-content">
-              <p className="card-label">Crisis Services Canada</p>
-              <p className="card-content">
-                Available to all Canadians seeking support. Visit{" "}
-                <a
-                  href="https://talksuicide.ca/"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  Crisis Services Canada
-                </a>{" "}
-                for the distress centres and crisis organizations nearest you.
-              </p>
-              <p className="card-content">
-                If you or someone you know is thinking about suicide, call the
-                Canada Suicide Prevention Service at 1-833-456-4566 (24/7) or
-                text 45645 (4 pm to 12 am ET).
-              </p>
-            </div>
-          </div>
-
-          <div className="resource-card">
-            <img
-              className="card-img"
-              src="/images/Indigenous.webp"
-              alt="Multicultural Support Group"
-            />
-            <div className="resource-content">
-              <p className="card-label">Support for Indigenous Communities</p>
-              <p className="card-content">
-                <a
-                  href="https://www.hopeforwellness.ca/"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  Hope For Wellness
-                </a>{" "}
-                is available to all Indigenous peoples across Canada who need
-                immediate crisis intervention. Experienced and culturally
-                sensitive help line counsellors can help if you want to talk or
-                are distressed.
-              </p>
-              <p className="card-content">
-                Call 1-855-242-3310 (toll-free) or connect to the online Hope
-                for Wellness chat.
-              </p>
-              <p className="card-content">
-                Additional resources can be found{" "}
-                <a
-                  href="https://www.camh.ca//-/media/files/community-resource-sheets/aboriginal-resources-pdf.pdf"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  here
-                </a>
-                .
-              </p>
-            </div>
-          </div>
-
-          <div className="resource-card">
-            <img
-              className="card-img"
-              src="/images/Queer.webp"
-              alt="Pride Parade with Flags"
-            />
-            <div className="resource-content">
-              <p className="card-label">2SLGBTQA+ Support Services</p>
-              <p className="card-content">
-                <a
-                  href="https://www.rainbowhealthontario.ca/"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  Rainbow Health Ontario
-                </a>{" "}
-                (RHO) is a province-wide program of Sherbourne Health that works
-                to promote the health of Ontario&apos;s LGBT2SQ communities and
-                improve their access to services. RHO creates resources,
-                provides information and consultation services, delivers
-                education and training, and supports research to develop
-                evidence-based practice and informed public policy.
-              </p>
-              <p className="card-content">
-                <a
-                  href="https://www.the519.org/"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  The 519
-                </a>{" "}
-                provides a range of services from counselling and queer
-                parenting resources to coming out groups, trans programming, and
-                seniors&apos; support. They also provide free, accommodating and
-                non-judgemental space where individuals, organizations and
-                non-profit groups can meet, organize and work towards their
-                goals.
-              </p>
-              <p className="card-content">
-                Additional resources can be found{" "}
-                <a
-                  href="https://rocketmanapp.com/blog/19-organizations-supporting-the-lgbtq-community-in-ontario/"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  here
-                </a>
-                .
-              </p>
-            </div>
-          </div>
-
-          <div className="resource-card">
-            <img
-              className="card-img"
-              src="/images/Victim.webp"
-              alt="Two People Holding Hands"
-            />
-            <div className="resource-content">
-              <p className="card-label">Victim Services</p>
-              <p className="card-content">
-                <a href="https://trccmwar.ca/" target="_blank" rel="noreferrer">
-                  Toronto Rape Crisis Centre/Multicultural Women Against Rape
-                </a>{" "}
-                is a grassroots, women-run collective working towards a
-                violence-free world by providing anti-oppressive, feminist peer
-                support to survivors of sexual violence.
-              </p>
-              <p className="card-content">
-                Their 24 hour hotline is 416-597-8808 or you can email a
-                counselor at crisis@trccmwar.ca.
-              </p>
-            </div>
-          </div>
-
-          <div className="resource-card">
-            <img
-              className="card-img"
-              src="/images/Families.webp"
-              alt="Woman and Child Holding Hands at Sunset"
-            />
-            <div className="resource-content">
-              <p className="card-label">
-                Assistance for Families, Refugees, and Women Fleeing Violence
-              </p>
-              <p className="card-content">
-                The{" "}
-                <a
-                  href="https://www.reddoorshelter.ca/"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  Red Door Family Shelter
-                </a>{" "}
-                provides emergency shelter and support for women and children
-                affected by domestic abuse, families experiencing a housing
-                crisis, and refugee claimants with nowhere else to turn.
-              </p>
-              <p className="card-content">
-                If you or a family you know requires shelter call Central Family
-                Intake at 416-397-5637.
-              </p>
-              <p className="card-content">
-                If you are a woman seeking shelter from situations of violence
-                or intimate partner violence call their Crisis Line at
-                416-423-0310 (press &lsquo;0&lsquo;), or the Assaulted
-                Women&qpos;s Helpline at 1-866-863-0511.
-              </p>
-            </div>
+      {/* Articles Section */}
+      <section className="articles-section">
+        <div className="articles-content">
+          <h2>Featured Articles</h2>
+          <div className="articles-grid">
+            {articles.map((article, index) => (
+              <div key={index} className="article-card">
+                <h3>{article.title}</h3>
+                <p>{article.description}</p>
+                <Link href={article.link} className="read-more">
+                  Read More
+                  <FontAwesomeIcon icon={faLink} className="icon" />
+                </Link>
+              </div>
+            ))}
           </div>
         </div>
-      </div>
+      </section>
+
+      {/* Downloadable Resources */}
+      <section className="downloads-section">
+        <div className="downloads-content">
+          <h2>Downloadable Resources</h2>
+          <div className="downloads-grid">
+            {downloads.map((resource, index) => (
+              <div key={index} className="download-card">
+                <h3>{resource.title}</h3>
+                <p>{resource.description}</p>
+                <button className="download-button">
+                  Download PDF
+                  <FontAwesomeIcon icon={faDownload} className="icon" />
+                </button>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Reading List */}
+      <section className="reading-section">
+        <div className="reading-content">
+          <h2>Recommended Reading</h2>
+          <div className="reading-grid">
+            {recommendedBooks.map((book, index) => (
+              <div key={index} className="book-card">
+                <div className="book-info">
+                  <h3>{book.title}</h3>
+                  <p className="author">by {book.author}</p>
+                  <p className="description">{book.description}</p>
+                </div>
+                <Link href={book.link} className="book-link" target="_blank">
+                  Find Book
+                  <FontAwesomeIcon icon={faBook} className="icon" />
+                </Link>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Newsletter Section */}
+      <section className="newsletter-section">
+        <div className="newsletter-content">
+          <h2>Stay Updated</h2>
+          <p>Subscribe to receive monthly mental health tips and resources.</p>
+          <form className="newsletter-form">
+            <input type="email" placeholder="Enter your email" required />
+            <button type="submit" className="cta-button">Subscribe</button>
+          </form>
+        </div>
+      </section>
+
+      <Footer />
     </main>
   );
 }
+
+const articles = [
+  {
+    title: "Understanding Anxiety in Men",
+    description: "Learn about the unique ways anxiety manifests in men and effective coping strategies.",
+    link: "/articles/understanding-anxiety"
+  },
+  {
+    title: "Building Emotional Resilience",
+    description: "Discover practical techniques for developing emotional strength and adaptability.",
+    link: "/articles/emotional-resilience"
+  },
+  {
+    title: "Navigating Work-Life Balance",
+    description: "Tips for maintaining a healthy balance between professional and personal life.",
+    link: "/articles/work-life-balance"
+  },
+  {
+    title: "Improving Communication in Relationships",
+    description: "Essential strategies for better communication with partners, family, and friends.",
+    link: "/articles/communication-skills"
+  }
+];
+
+const downloads = [
+  {
+    title: "Stress Management Worksheet",
+    description: "Track and manage your stress levels with this practical worksheet.",
+    link: "/downloads/stress-worksheet.pdf"
+  },
+  {
+    title: "Mindfulness Exercise Guide",
+    description: "Step-by-step guide to daily mindfulness practices.",
+    link: "/downloads/mindfulness-guide.pdf"
+  },
+  {
+    title: "Goal Setting Template",
+    description: "Structure your personal development goals with this template.",
+    link: "/downloads/goal-template.pdf"
+  },
+  {
+    title: "Emotional Awareness Journal",
+    description: "Daily prompts for emotional reflection and growth.",
+    link: "/downloads/emotional-journal.pdf"
+  }
+];
+
+const recommendedBooks = [
+  {
+    title: "The Body Keeps the Score",
+    author: "Bessel van der Kolk",
+    description: "Understanding trauma and healing through the lens of mind-body connection.",
+    link: "https://www.amazon.com/Body-Keeps-Score-Healing-Trauma/dp/0143127748"
+  },
+  {
+    title: "Atomic Habits",
+    author: "James Clear",
+    description: "Build good habits and break bad ones with proven strategies.",
+    link: "https://www.amazon.com/Atomic-Habits-Proven-Build-Break/dp/0735211299"
+  },
+  {
+    title: "Man's Search for Meaning",
+    author: "Viktor E. Frankl",
+    description: "A powerful exploration of finding purpose and meaning in life.",
+    link: "https://www.amazon.com/Mans-Search-Meaning-Viktor-Frankl/dp/0807014273"
+  },
+  {
+    title: "Emotional Intelligence",
+    author: "Daniel Goleman",
+    description: "Learn how emotional intelligence impacts success and relationships.",
+    link: "https://www.amazon.com/Emotional-Intelligence-Matter-More-Than/dp/055338371X"
+  }
+];

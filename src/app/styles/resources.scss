@@ -1,4 +1,4 @@
-@use "variables.scss";
+@import "variables";
 
 .page-content {
   padding: 2rem;
@@ -8,7 +8,7 @@
     padding: 1rem 2rem 1rem 2rem;
     margin: 0 auto;
     max-width: 1200px;
-    background: linear-gradient(135deg, variables.$dark-teal, variables.$teal);
+    background: linear-gradient(135deg, $dark-teal, $teal);
     z-index: 1;
 
     &::before {
@@ -21,17 +21,17 @@
       height: 100%;
       background: linear-gradient(
         to right,
-        rgba(variables.$dark-teal, 0) 0%,
-        rgba(variables.$dark-teal, 1) 20%,
-        rgba(variables.$teal, 1) 80%,
-        rgba(variables.$teal, 0) 100%
+        rgba($dark-teal, 0) 0%,
+        rgba($dark-teal, 1) 20%,
+        rgba($teal, 1) 80%,
+        rgba($teal, 0) 100%
       );
       z-index: -1;
     }
 
     h1 {
       color: white;
-      font-family: variables.$sub2-font;
+      font-family: $sub2-font;
     }
   }
 
@@ -40,7 +40,7 @@
     flex-direction: column;
 
     a {
-      color: variables.$teal;
+      color: $teal;
     }
     .resource-card {
       display: flex;
@@ -51,7 +51,7 @@
       border-radius: 12px;
       box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
 
-      @include variables.xs {
+      @include xs {
         flex-direction: column;
         align-items: center;
       }
@@ -63,7 +63,7 @@
         font-size: 1.8rem;
         font-weight: bold;
         color: var(--dark-teal);
-        font-family: variables.$sub2-font;
+        font-family: $sub2-font;
       }
 
       .card-img {
@@ -72,7 +72,7 @@
         aspect-ratio: 1;
         border-radius: 10px;
 
-        @include variables.xs {
+        @include xs {
           width: 90%;
         }
       }
@@ -80,6 +80,259 @@
       .card-content {
         font-size: 1rem;
         color: #555;
+      }
+    }
+  }
+}
+
+.articles-section {
+  padding: $spacing-xl 0;
+  background-color: $text-light;
+
+  .articles-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 $spacing-lg;
+
+    h2 {
+      text-align: center;
+      font-family: $font-secondary;
+      color: $primary-green;
+      margin-bottom: $spacing-xl;
+    }
+
+    .articles-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: $spacing-lg;
+
+      .article-card {
+        background-color: $background-light;
+        padding: $spacing-lg;
+        border-radius: $border-radius-md;
+        box-shadow: $shadow-md;
+        transition: transform $transition-normal;
+
+        &:hover {
+          transform: translateY(-5px);
+        }
+
+        h3 {
+          color: $secondary-green;
+          margin-bottom: $spacing-md;
+        }
+
+        p {
+          color: $text-dark;
+          line-height: 1.6;
+          margin-bottom: $spacing-lg;
+        }
+
+        .read-more {
+          display: inline-flex;
+          align-items: center;
+          color: $primary-green;
+          text-decoration: none;
+          font-weight: 600;
+          
+          .icon {
+            margin-left: $spacing-sm;
+          }
+
+          &:hover {
+            color: $secondary-green;
+          }
+        }
+      }
+    }
+  }
+}
+
+.downloads-section {
+  padding: $spacing-xl 0;
+  background-color: $background-light;
+
+  .downloads-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 $spacing-lg;
+
+    h2 {
+      text-align: center;
+      font-family: $font-secondary;
+      color: $primary-green;
+      margin-bottom: $spacing-xl;
+    }
+
+    .downloads-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: $spacing-lg;
+
+      .download-card {
+        background-color: $text-light;
+        padding: $spacing-lg;
+        border-radius: $border-radius-md;
+        box-shadow: $shadow-md;
+
+        h3 {
+          color: $secondary-green;
+          margin-bottom: $spacing-md;
+        }
+
+        p {
+          color: $text-dark;
+          line-height: 1.6;
+          margin-bottom: $spacing-lg;
+        }
+
+        .download-button {
+          display: inline-flex;
+          align-items: center;
+          padding: $spacing-sm $spacing-md;
+          background-color: $primary-green;
+          color: $text-light;
+          border: none;
+          border-radius: $border-radius-sm;
+          cursor: pointer;
+          transition: background-color $transition-normal;
+
+          .icon {
+            margin-left: $spacing-sm;
+          }
+
+          &:hover {
+            background-color: $secondary-green;
+          }
+        }
+      }
+    }
+  }
+}
+
+.reading-section {
+  padding: $spacing-xl 0;
+  background-color: $text-light;
+
+  .reading-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 $spacing-lg;
+
+    h2 {
+      text-align: center;
+      font-family: $font-secondary;
+      color: $primary-green;
+      margin-bottom: $spacing-xl;
+    }
+
+    .reading-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: $spacing-lg;
+
+      .book-card {
+        background-color: $background-light;
+        padding: $spacing-lg;
+        border-radius: $border-radius-md;
+        box-shadow: $shadow-md;
+
+        .book-info {
+          margin-bottom: $spacing-lg;
+
+          h3 {
+            color: $secondary-green;
+            margin-bottom: $spacing-sm;
+          }
+
+          .author {
+            color: $text-muted;
+            margin-bottom: $spacing-md;
+            font-style: italic;
+          }
+
+          .description {
+            color: $text-dark;
+            line-height: 1.6;
+          }
+        }
+
+        .book-link {
+          display: inline-flex;
+          align-items: center;
+          color: $primary-green;
+          text-decoration: none;
+          font-weight: 600;
+
+          .icon {
+            margin-left: $spacing-sm;
+          }
+
+          &:hover {
+            color: $secondary-green;
+          }
+        }
+      }
+    }
+  }
+}
+
+.newsletter-section {
+  padding: $spacing-xl 0;
+  background: linear-gradient(to bottom, $primary-green, $background-dark);
+  color: $text-light;
+
+  .newsletter-content {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 0 $spacing-lg;
+    text-align: center;
+
+    h2 {
+      font-family: $font-secondary;
+      margin-bottom: $spacing-md;
+    }
+
+    p {
+      margin-bottom: $spacing-lg;
+    }
+
+    .newsletter-form {
+      display: flex;
+      gap: $spacing-md;
+      max-width: 500px;
+      margin: 0 auto;
+
+      @media (max-width: $breakpoint-sm) {
+        flex-direction: column;
+      }
+
+      input[type="email"] {
+        flex: 1;
+        padding: $spacing-sm $spacing-md;
+        border: 2px solid transparent;
+        border-radius: $border-radius-sm;
+        font-size: 1rem;
+
+        &:focus {
+          outline: none;
+          border-color: $accent-gold;
+        }
+      }
+
+      .cta-button {
+        padding: $spacing-sm $spacing-lg;
+        background-color: $accent-gold;
+        color: $text-dark;
+        border: none;
+        border-radius: $border-radius-sm;
+        font-weight: 600;
+        cursor: pointer;
+        transition: transform $transition-normal;
+
+        &:hover {
+          transform: translateY(-2px);
+        }
       }
     }
   }

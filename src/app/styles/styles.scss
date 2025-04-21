@@ -1,460 +1,526 @@
-@use "variables.scss";
+@import 'variables';
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap');
 
-.nav-custom {
-  font-family: variables.$header-font;
-
-  .navbar-brand-link-logo-container {
-    @include variables.xs {
-      span {
-        display: none;
-      }
-    }
-  }
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.nav-logo {
-  margin-right: 1.3rem;
-  width: 3rem;
-  opacity: 0.7;
-  border-radius: 50%;
-  box-shadow: 2px 2px 3px variables.$dark-teal;
-
-  &:hover {
-    box-shadow: 2px 2px 8px variables.$med-blue;
-  }
-
-  @include variables.xs {
-    width: 3.3rem;
-    height: 3.3rem;
-  }
+body {
+  font-family: $font-primary;
+  color: $text-dark;
+  line-height: 1.6;
+  background-color: $background-light;
 }
 
-.navbar-link {
-  color: variables.$very-light-teal;
-
-  &:hover {
-    text-decoration: underline;
-  }
-
-  &.client-portal-link {
-    border: 1px solid variables.$very-light-teal !important;
-    border-radius: 6px;
-
-    span {
-      @include variables.md {
-        display: none;
-      }
-    }
-
-    &:hover {
-      border: none;
-      background-color: variables.$very-light-teal;
-      color: black;
-    }
-  }
-
-  &:visited,
-  :focus,
-  :active {
-    color: variables.$very-light-teal !important;
-  }
+.home {
+  width: 100%;
+  overflow-x: hidden;
 }
 
-.page-content {
-  @include variables.centered;
-  flex-direction: column;
-  gap: 1rem;
-}
-
-main {
-  @include variables.centered;
-  display: flex;
-  flex-direction: column;
-
-  h1 {
-    font-family: variables.$sub2-font;
-    color: white;
-    font-weight: 600;
-  }
-
-  h2,
-  h3,
-  h4,
-  h5 {
-    font-family: variables.$sub-font;
-    color: variables.$dark-blue;
-  }
-
-  iframe {
-    display: flex;
-    justify-content: center;
-    outline: none;
-    border: none;
-    width: 10rem;
-    height: 4rem;
-  }
-}
-
-.quote-banner {
+// Hero Section
+.hero {
+  background: linear-gradient(to bottom, $primary-green, $secondary-green);
+  min-height: 100vh;
   display: flex;
   align-items: center;
-  justify-content: center;
-  padding: 2rem;
-  background: linear-gradient(to right, variables.$dark-teal, variables.$teal);
-  color: #ffffff;
-  text-align: center;
-
-  .quotation-container {
-    max-width: 1000px;
-    padding: 1rem;
-    background: rgba(255, 255, 255, 0.1);
-    border-radius: 12px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  }
-
-  .quotation {
-    font-family: variables.$sub2-font;
-    font-style: italic;
-    font-size: 1.3rem;
-    line-height: 1.1;
-    color: #f1f1f1;
-
-    @include variables.xs {
-      font-size: 1.1rem;
-      line-height: 1.3rem;
-    }
-  }
-
-  .quotation-author {
-    margin-top: 0.5rem;
-    font-size: 1.2rem;
-    font-weight: 500;
-    color: #e0e0e0;
-  }
-
-  .talk-btn {
-    margin-top: 0.5rem;
-    padding: 0.5rem 1rem;
-    background-color: #ffffff;
-    color: variables.$very-dark-blue;
-    border: none;
-    border-radius: 8px;
-    font-size: 1rem;
-    font-weight: 600;
-    cursor: pointer;
-    transition: all 0.3s ease-in-out;
-
-    &:hover {
-      background-color: variables.$very-dark-blue;
-      color: #ffffff;
-      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
-    }
-  }
-}
-
-.about-me {
-  margin-top: 1rem;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 2rem;
-  padding: 3rem;
-  background: #f8f9fa;
-  border-radius: 12px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: $spacing-xl;
+  position: relative;
   overflow: hidden;
 
-  @media (max-width: 768px) {
-    flex-direction: column;
-    text-align: center;
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('/images/forest-bg.jpg') center/cover;
+    opacity: 0.2;
+    z-index: 1;
   }
 
-  @include variables.xs {
-    padding: 0.5rem;
+  .hero-content {
+    max-width: 600px;
+    color: $text-light;
+    position: relative;
+    z-index: 2;
+
+    h1 {
+      font-family: $font-secondary;
+      font-size: 3.5rem;
+      line-height: 1.2;
+      margin-bottom: $spacing-lg;
+
+      .subtitle {
+        display: block;
+        font-size: 2.5rem;
+        color: rgba($text-light, 0.9);
+      }
+
+      .emphasis {
+        display: block;
+        font-size: 3rem;
+        color: $accent-gold;
+      }
+    }
+
+    .hero-text {
+      font-size: 1.2rem;
+      margin-bottom: $spacing-lg;
+    }
+  }
+
+  .hero-image-container {
+    position: relative;
+    z-index: 2;
+    margin-left: $spacing-xl;
+
+    .hero-image {
+      border-radius: $border-radius-lg;
+      box-shadow: $shadow-lg;
+    }
   }
 }
 
-.about-me-text {
-  @include variables.xs {
-    max-width: 80%;
-  }
+// Why Section
+.why-section {
+  background-color: $background-dark;
+  color: $text-light;
+  padding: $spacing-xl 0;
+  position: relative;
 
-  @include variables.sm {
-    max-width: 250px;
-  }
-  @include variables.md {
-    max-width: 400px;
-  }
-
-  @include variables.lg {
-    max-width: 600px;
-  }
-
-  @include variables.xl {
-    max-width: 1000px;
+  .forest-overlay {
+    background: url('/images/forest-path.jpg') center/cover;
+    padding: $spacing-xl;
+    position: relative;
+    
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: linear-gradient(to bottom, rgba($background-dark, 0.8), rgba($background-dark, 0.9));
+    }
   }
 
   h2 {
-    font-size: 2rem;
-    margin-bottom: 0.5rem;
-    color: #333333;
+    font-family: $font-secondary;
+    font-size: 2.5rem;
+    margin-bottom: $spacing-lg;
+    position: relative;
+    z-index: 1;
   }
 
-  h3 {
-    font-size: 1.5rem;
-    margin-bottom: 0.5rem;
-    color: #555555;
-    font-weight: 600;
-  }
-
-  h4 {
+  .why-content {
+    position: relative;
+    z-index: 1;
+    max-width: 800px;
+    margin: 0 auto;
     font-size: 1.2rem;
-    margin-bottom: 1rem;
-    color: #777777;
-    font-weight: 500;
-  }
-
-  p {
-    font-size: 1rem;
-    line-height: 1.6;
-    color: #555555;
-    margin-bottom: 1rem;
-
-    &:last-child {
-      font-weight: bold;
-      color: #333333;
-    }
+    line-height: 1.8;
   }
 }
 
-.about-me-image {
-  width: 344px;
-  border-width: 1rem;
-  border-radius: 10px;
+// Specialties Section
+.specialties {
+  padding: $spacing-xl;
+  background-color: $background-light;
 
-  @include variables.xs {
-    width: 140px;
-  }
-
-  @include variables.sm {
-    width: 210px;
-  }
-
-  .profile-image {
-    border-radius: 50%;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  }
-}
-
-.homepage-contact {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  padding: 2rem;
-  margin-top: 2rem;
-  background: linear-gradient(135deg, variables.$dark-teal, variables.$teal);
-  color: #ffffff;
-  border-radius: 12px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-
-  .contact-content {
-    max-width: 600px;
-
-    .contact-text {
-      font-size: 1.25rem;
-      line-height: 1.6;
-      margin-bottom: 1.5rem;
-      color: #ffffff;
-    }
-
-    .contact-btn {
-      padding: 0.75rem 1.5rem;
-      font-size: 1rem;
-      font-weight: bold;
-      background-color: #ffffff;
-      color: variables.$very-dark-blue;
-      border: none;
-      border-radius: 8px;
-      cursor: pointer;
-      transition: all 0.3s ease-in-out;
-
-      &:hover {
-        background-color: variables.$very-dark-blue;
-        color: #ffffff;
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
-      }
-    }
-  }
-}
-
-.psychology-today-verification {
-  flex-direction: column;
-  @include variables.centered;
-
-  p {
-    font-family: variables.$body-font;
-    font-size: 1rem;
-  }
-}
-
-.submit-modal-box {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 20rem;
-  height: 20rem;
-  background: linear-gradient(135deg, variables.$dark-teal, variables.$teal);
-  box-shadow: 1px 1px 5px variables.$teal;
-  padding: 4rem;
-  @include variables.centered;
-  flex-direction: column;
-  text-align: center;
-
-  @include variables.xs {
-    width: 10rem;
-    height: 10rem;
-  }
-
-  @include variables.lg {
-    width: 30rem;
-    height: 30rem;
-    padding: 5rem;
-  }
-
-  .submit-modal-title {
-    font-size: 1.8rem;
-    font-family: variables.$sub-font;
-    color: white;
-
-    @include variables.xs {
-      font-size: 1.1rem;
-    }
-
-    @include variables.lg {
-      font-size: 2.3rem;
-    }
-  }
-
-  .submit-modal-subtitle {
-    margin-top: -1rem;
-    font-family: variables.$sub-font;
-    font-size: 1rem;
-    color: white;
-
-    @include variables.xs {
-      font-size: 1rem;
-    }
-
-    @include variables.lg {
-      font-size: 1.7rem;
-    }
-  }
-
-  .submit-modal-content {
+  h2 {
     text-align: center;
-    font-family: variables.$body-font;
-    line-height: 1.1rem;
-    color: white;
-
-    @include variables.xs {
-      font-size: 1rem;
-      line-height: 1rem;
-    }
-
-    @include variables.lg {
-      font-size: 1.5rem;
-      line-height: 1.5rem;
-    }
+    font-family: $font-secondary;
+    color: $primary-green;
+    margin-bottom: $spacing-xl;
   }
 
-  .btn-holder {
-    .close-btn {
-      padding: 0.75rem 1.5rem;
-      font-size: 1rem;
-      font-weight: bold;
-      background-color: #ffffff;
-      color: variables.$very-dark-blue;
-      border: none;
-      border-radius: 8px;
-      cursor: pointer;
-      transition: all 0.3s ease-in-out;
+  .specialties-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: $spacing-lg;
+    max-width: 1200px;
+    margin: 0 auto;
+
+    .specialty-item {
+      background: $text-light;
+      padding: $spacing-lg;
+      border-radius: $border-radius-md;
+      box-shadow: $shadow-md;
+      transition: transform $transition-normal;
 
       &:hover {
-        background-color: variables.$very-dark-blue;
-        color: #ffffff;
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+        transform: translateY(-5px);
+      }
+
+      h3 {
+        color: $secondary-green;
+        margin-bottom: $spacing-sm;
       }
     }
   }
 }
 
-.modal-box {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 50%;
-  background-color: #a2cdf2;
-  background-image: url("../../../public/images/fresh-snow.webp");
-  border: 2px solid variables.$dark-teal;
-  box-shadow: 1px 1px 5px variables.$teal;
-  padding: 1rem;
-  text-align: center;
+// Approach Section
+.approach {
+  padding: $spacing-xl;
+  background-color: $text-light;
 
-  @include variables.xs {
-    width: 80%;
-  }
-
-  .btn-holder {
-    display: flex;
-    justify-content: flex-end;
-
-    .close-btn {
-      @include variables.blue-btn;
-    }
-  }
-}
-
-.footer {
-  width: 100%;
-  height: auto;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  @include variables.glassbg;
-
-  .footer-title {
+  .approach-content {
     display: flex;
     align-items: center;
-    margin-top: 0.3rem;
-    font-family: variables.$header-font;
-    font-size: 1.4rem;
-    color: variables.$very-dark-blue;
-  }
+    gap: $spacing-xl;
+    max-width: 1200px;
+    margin: 0 auto;
 
-  .office-hours {
-    display: flex;
-    justify-content: center;
+    .approach-text {
+      flex: 1;
 
-    .schedule-line {
-      margin: 0.5rem;
-      padding: 1rem;
-      border-radius: 10px;
-      background-color: variables.$light-teal;
-      text-align: center;
-
-      .schedule-dates {
-        font-family: variables.$sub-font;
-        font-size: 1.2rem;
-        color: variables.$dark-teal;
+      h2 {
+        font-family: $font-secondary;
+        color: $primary-green;
+        margin-bottom: $spacing-lg;
       }
 
-      .schedule-times {
-        font-family: variables.$body-font;
-        font-size: 1rem;
-        color: variables.$dark-teal;
+      p {
+        margin-bottom: $spacing-lg;
+      }
+    }
+
+    .approach-image {
+      flex: 1;
+
+      img {
+        border-radius: $border-radius-lg;
+        box-shadow: $shadow-lg;
+      }
+    }
+  }
+}
+
+// Statistics Section
+.statistics {
+  padding: $spacing-xl;
+  background-color: $background-light;
+
+  h2 {
+    text-align: center;
+    font-family: $font-secondary;
+    color: $primary-green;
+    margin-bottom: $spacing-xl;
+  }
+
+  .stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: $spacing-lg;
+    max-width: 1200px;
+    margin: 0 auto;
+
+    .stat-item {
+      text-align: center;
+      padding: $spacing-lg;
+
+      h3 {
+        font-size: 2.5rem;
+        color: $accent-gold;
+        margin-bottom: $spacing-sm;
+      }
+
+      p {
+        color: $text-dark;
+      }
+    }
+  }
+}
+
+// Services Section
+.services {
+  padding: $spacing-xl;
+  background-color: $text-light;
+
+  h2 {
+    text-align: center;
+    font-family: $font-secondary;
+    color: $primary-green;
+    margin-bottom: $spacing-xl;
+  }
+
+  .services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: $spacing-xl;
+    max-width: 1200px;
+    margin: 0 auto;
+
+    .service-card {
+      background: $background-light;
+      padding: $spacing-xl;
+      border-radius: $border-radius-lg;
+      box-shadow: $shadow-md;
+      text-align: center;
+
+      h3 {
+        color: $secondary-green;
+        margin-bottom: $spacing-lg;
+      }
+
+      p {
+        margin-bottom: $spacing-lg;
+      }
+    }
+  }
+}
+
+// Testimonials Section
+.testimonials {
+  padding: $spacing-xl;
+  background-color: $background-light;
+
+  h2 {
+    text-align: center;
+    font-family: $font-secondary;
+    color: $primary-green;
+    margin-bottom: $spacing-xl;
+  }
+
+  .testimonials-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: $spacing-lg;
+    max-width: 1200px;
+    margin: 0 auto;
+
+    .testimonial-card {
+      background: $text-light;
+      padding: $spacing-xl;
+      border-radius: $border-radius-md;
+      box-shadow: $shadow-md;
+
+      .rating {
+        color: $accent-gold;
+        margin-bottom: $spacing-md;
+      }
+
+      p {
+        margin-bottom: $spacing-md;
+        font-style: italic;
+      }
+
+      .client-name {
+        color: $secondary-green;
+        font-weight: 600;
+      }
+    }
+  }
+}
+
+// Contact Section
+.contact {
+  background: linear-gradient(to bottom, $primary-green, $background-dark);
+  color: $text-light;
+  padding: $spacing-xl;
+  text-align: center;
+
+  h2 {
+    font-family: $font-secondary;
+    margin-bottom: $spacing-lg;
+  }
+
+  .contact-info {
+    max-width: 600px;
+    margin: 0 auto;
+
+    p {
+      margin-bottom: $spacing-lg;
+    }
+  }
+}
+
+// Buttons
+.cta-button {
+  background-color: $accent-gold;
+  color: $text-dark;
+  padding: $spacing-md $spacing-lg;
+  border: none;
+  border-radius: $border-radius-sm;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform $transition-normal, box-shadow $transition-normal;
+
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: $shadow-md;
+  }
+}
+
+.secondary-button {
+  background-color: transparent;
+  color: $accent-gold;
+  padding: $spacing-md $spacing-lg;
+  border: 2px solid $accent-gold;
+  border-radius: $border-radius-sm;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color $transition-normal, color $transition-normal;
+
+  &:hover {
+    background-color: $accent-gold;
+    color: $text-dark;
+  }
+}
+
+// Responsive Design
+@media (max-width: $breakpoint-lg) {
+  .hero {
+    flex-direction: column;
+    text-align: center;
+    padding: $spacing-lg;
+
+    .hero-content {
+      margin-bottom: $spacing-xl;
+    }
+
+    .hero-image-container {
+      margin-left: 0;
+    }
+  }
+
+  .approach {
+    .approach-content {
+      flex-direction: column;
+      text-align: center;
+    }
+  }
+}
+
+@media (max-width: $breakpoint-md) {
+  .hero {
+    h1 {
+      font-size: 2.5rem;
+
+      .subtitle {
+        font-size: 2rem;
+      }
+
+      .emphasis {
+        font-size: 2.2rem;
+      }
+    }
+  }
+
+  .specialties-grid,
+  .stats-grid,
+  .services-grid,
+  .testimonials-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+// Navbar
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  padding: $spacing-md;
+  transition: background-color $transition-normal;
+  background-color: transparent;
+
+  &.scrolled {
+    background-color: rgba($background-dark, 0.95);
+    backdrop-filter: blur(8px);
+    box-shadow: $shadow-md;
+  }
+
+  .navbar-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .navbar-logo {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: $text-light;
+
+    .logo-image {
+      border-radius: 50%;
+      margin-right: $spacing-md;
+    }
+
+    .logo-text {
+      font-family: $font-secondary;
+      font-size: 1.2rem;
+      font-weight: 500;
+    }
+  }
+
+  .mobile-menu-button {
+    display: none;
+    background: none;
+    border: none;
+    color: $text-light;
+    font-size: 1.5rem;
+    cursor: pointer;
+    padding: $spacing-sm;
+
+    @media (max-width: $breakpoint-md) {
+      display: block;
+    }
+  }
+
+  .navbar-links {
+    display: flex;
+    align-items: center;
+    gap: $spacing-lg;
+
+    @media (max-width: $breakpoint-md) {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      right: 0;
+      flex-direction: column;
+      background-color: rgba($background-dark, 0.95);
+      padding: $spacing-lg;
+      backdrop-filter: blur(8px);
+
+      &.active {
+        display: flex;
+      }
+    }
+
+    .nav-link {
+      color: $text-light;
+      text-decoration: none;
+      font-weight: 500;
+      transition: color $transition-normal;
+
+      &:hover {
+        color: $accent-gold;
+      }
+
+      &.consultation-button {
+        background-color: $accent-gold;
+        color: $text-dark;
+        padding: $spacing-sm $spacing-md;
+        border-radius: $border-radius-sm;
+        transition: transform $transition-normal, box-shadow $transition-normal;
+
+        &:hover {
+          transform: translateY(-2px);
+          box-shadow: $shadow-md;
+          color: $text-dark;
+        }
       }
     }
   }

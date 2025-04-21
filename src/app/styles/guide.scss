@@ -1,98 +1,179 @@
-@use "variables.scss";
+@import "variables";
 
 .page-content {
   padding: 2rem;
+}
 
-  .guide-title-holder {
-    position: relative;
+.guide-title-holder {
+  position: relative;
+  text-align: center;
+  padding: 1rem 2rem 1rem 2rem;
+  margin: 0 auto;
+  max-width: 1200px;
+  background: linear-gradient(135deg, $primary-green, $secondary-green);
+  z-index: 1;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 180%;
+    height: 100%;
+    background: linear-gradient(
+      to right,
+      rgba($primary-green, 0) 0%,
+      rgba($primary-green, 1) 20%,
+      rgba($secondary-green, 1) 80%,
+      rgba($secondary-green, 0) 100%
+    );
+    z-index: -1;
+  }
+
+  .guide-title {
+    color: $text-light;
+    font-family: $font-secondary;
+    margin: 0;
+    font-size: 2.5rem;
+  }
+}
+
+.guide-intro {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background-color: $background-light;
+  border-radius: $border-radius-md;
+  box-shadow: $shadow-md;
+  transition: transform $transition-normal;
+
+  &:hover {
+    transform: translateY(-5px);
+  }
+
+  .intro-title {
+    font-family: $font-secondary;
+    color: $primary-green;
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
     text-align: center;
-    padding: 1rem 2rem 1rem 2rem;
-    margin: 0 auto;
-    max-width: 1200px;
-    background: linear-gradient(135deg, variables.$dark-teal, variables.$teal);
-    z-index: 1;
+  }
 
-    .guide-title {
-      &::before {
-        content: "";
-        position: absolute;
-        top: 0;
-        left: 50%;
-        transform: translateX(-50%);
-        width: 180%;
-        height: 100%;
-        background: linear-gradient(
-          to right,
-          rgba(variables.$dark-teal, 0) 0%,
-          rgba(variables.$dark-teal, 1) 20%,
-          rgba(variables.$teal, 1) 80%,
-          rgba(variables.$teal, 0) 100%
-        );
-        z-index: -1;
-      }
+  p {
+    color: $text-dark;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+  }
+}
 
-      h1 {
-        color: white;
-        font-family: variables.$sub2-font;
-      }
+.section {
+  max-width: 1000px;
+  margin: 2rem auto;
+  background-color: $background-light;
+  border-radius: $border-radius-md;
+  box-shadow: $shadow-md;
+  overflow: hidden;
+  transition: transform $transition-normal;
+
+  &:hover {
+    transform: translateY(-5px);
+  }
+
+  .section-label {
+    background: linear-gradient(135deg, $primary-green, $secondary-green);
+    padding: 1rem 2rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+
+    .label-title {
+      color: $text-light;
+      font-family: $font-secondary;
+      font-weight: 600;
+      margin: 0;
+    }
+
+    .label-subtitle {
+      color: $text-light;
+      font-family: $font-secondary;
+      margin: 0;
     }
   }
 
-  .guide-intro {
-    margin: 1rem;
+  .section-content {
     padding: 2rem;
-    width: 80%;
-    text-align: center;
-    background: linear-gradient(135deg, variables.$dark-teal, variables.$teal);
-    border-radius: 12px;
 
-    .intro-title {
-      font-size: 2rem;
+    .bolded-text {
+      font-weight: 600;
+      color: $primary-green;
       margin-bottom: 1rem;
-      color: white;
-      font-family: variables.$sub2-font;
     }
 
     p {
-      font-size: 1.2rem;
-      margin-bottom: 1rem;
-      color: white;
+      color: $text-dark;
+      line-height: 1.6;
+      margin-bottom: 1.5rem;
     }
-  }
 
-  .section {
-    margin: 1rem 0;
-    padding: 1rem;
-    background: rgba(255, 255, 255, 0.8);
-    border-radius: 12px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    .subtitle {
+      font-weight: 600;
+      color: $secondary-green;
+      margin: 1.5rem 0 1rem;
+    }
 
-    .section-label {
-      margin-bottom: 1rem;
+    ul, ol {
+      margin-bottom: 1.5rem;
+      padding-left: 1.5rem;
 
-      .label-title {
-        font-size: 1.8rem;
-        font-weight: bold;
-        color: var(--dark-teal);
-      }
-
-      .label-subtitle {
-        font-size: 1.2rem;
-        color: var(--teal);
+      li {
+        color: $text-dark;
+        line-height: 1.6;
+        margin-bottom: 0.5rem;
       }
     }
 
-    .section-content {
-      font-size: 1rem;
-      color: #555;
+    .single-column {
+      list-style-type: disc;
+      margin-left: 1.5rem;
+      margin-bottom: 1.5rem;
 
-      ul {
-        padding-left: 1.5rem;
+      li {
+        margin-bottom: 0.75rem;
+      }
+    }
 
-        li {
-          margin-bottom: 0.5rem;
+    ol {
+      counter-reset: item;
+      list-style-type: none;
+      padding-left: 0;
+
+      li {
+        counter-increment: item;
+        margin-bottom: 1.5rem;
+        position: relative;
+        padding-left: 2rem;
+
+        &::before {
+          content: counter(item) ".";
+          position: absolute;
+          left: 0;
+          color: $primary-green;
+          font-weight: 600;
         }
       }
+    }
+  }
+}
+
+@media (max-width: $breakpoint-md) {
+  .section {
+    margin: 1rem;
+    
+    .section-label {
+      flex-direction: column;
+      gap: 0.5rem;
+      text-align: center;
     }
   }
 }

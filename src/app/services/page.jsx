@@ -10,20 +10,18 @@ import { faCheck } from "@fortawesome/free-solid-svg-icons";
 export default function Services() {
   return (
     <main className="page-content">
-      {/* Hero Section */}
       <section className="page-hero">
         <div className="hero-content">
           <h1>
-            Our Services
-            <span className="subtitle">Personalized Care for Your Journey</span>
+            Available Services
+            <span className="subtitle">
+              Comprehensive mental health services designed to support your
+              growth and well-being.
+            </span>
           </h1>
-          <p className="hero-text">
-            Comprehensive mental health services designed to support your growth and well-being.
-          </p>
         </div>
       </section>
 
-      {/* Main Services Section */}
       <section className="main-services">
         <div className="services-content">
           <div className="service-card featured">
@@ -35,10 +33,17 @@ export default function Services() {
               />
             </div>
             <div className="service-details">
-              <h2>Individual Therapy</h2>
+              <h2>Psychotherapy Session (Individual)</h2>
               <p>
-                One-on-one sessions tailored to your unique needs and goals. We work together
-                to address your challenges and develop effective coping strategies.
+                In these sessions, you are the expert of your own life. There
+                are no judgments or assumptions made during our time; the focus
+                is on collaborating with you to create a space where your voice,
+                your wants, and your unique perspectives are not only heard but
+                supported and advocated for. In these sessions, you are the
+                expert of your own life. There are no judgments or assumptions
+                made during our time; the focus is on collaborating with you to
+                create a space where your voice, your wants, and your unique
+                perspectives are not only heard but supported and advocated for.
               </p>
               <ul className="service-features">
                 {individualTherapyFeatures.map((feature, index) => (
@@ -61,75 +66,78 @@ export default function Services() {
               />
             </div>
             <div className="service-details">
-              <h2>Men's Group Therapy</h2>
+              <h2>Art Psychotherapy</h2>
               <p>
-                A supportive environment where men can connect, share experiences, and work
-                through challenges together under professional guidance.
+                Using creative practices as a way to help reframe and
+                (re)examine how we look at ourselves, our relationships, and the
+                world. Art psychotherapy isn't about the end goal of creating
+                'Art,' but about the process. This process means tapping into
+                parts of the brain that often get overlooked or underused but
+                actually provide a wealth of knowledge about how we each
+                uniquely experience and perceive the world.
               </p>
               <ul className="service-features">
-                {groupTherapyFeatures.map((feature, index) => (
+                {artTherapyFeatures.map((feature, index) => (
                   <li key={index}>
                     <FontAwesomeIcon icon={faCheck} className="check-icon" />
                     {feature}
                   </li>
                 ))}
               </ul>
-              <button className="cta-button">Join Group</button>
+              <button className="cta-button">Get Started</button>
+            </div>
+          </div>
+
+          <div className="service-card featured">
+            <div className="service-image">
+              <ImagePlaceholder
+                width="100%"
+                height={300}
+                text="Reduced Rate & Sliding Scale"
+              />
+            </div>
+            <div className="service-details">
+              <h2>Reduced Rate & Sliding Scale</h2>
+              <p>
+                Sliding scale options are available to those individuals
+                demonstrating special need on a case-by-case basis. Please
+                inquire for further details.
+              </p>
+              <p>Sliding scale rates are subject to availability.</p>
+              <ul className="service-features">
+                {reducedRateFeatures.map((feature, index) => (
+                  <li key={index}>
+                    <FontAwesomeIcon icon={faCheck} className="check-icon" />
+                    {feature}
+                  </li>
+                ))}
+              </ul>
+              <button className="cta-button">Inquire</button>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Specializations Section */}
-      <section className="specializations">
-        <div className="specializations-content">
-          <h2>Areas of Specialization</h2>
-          <div className="specializations-grid">
-            {specializations.map((spec, index) => (
-              <div key={index} className="specialization-card">
-                <h3>{spec.title}</h3>
-                <p>{spec.description}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Pricing Section */}
       <section className="pricing">
         <div className="pricing-content">
-          <h2>Transparent Pricing</h2>
+          <h2>Pricing Plans</h2>
           <div className="pricing-grid">
             {pricingPlans.map((plan, index) => (
-              <div key={index} className="pricing-card">
+              <div className="pricing-card" key={index}>
                 <h3>{plan.title}</h3>
-                <div className="price">${plan.price}</div>
+                <p className="price">{plan.price}</p>
                 <p className="duration">{plan.duration}</p>
                 <ul className="features">
-                  {plan.features.map((feature, featureIndex) => (
-                    <li key={featureIndex}>
+                  {plan.features.map((feature, index) => (
+                    <li key={index}>
                       <FontAwesomeIcon icon={faCheck} className="check-icon" />
                       {feature}
                     </li>
                   ))}
                 </ul>
-                <button className="secondary-button">Book Now</button>
+                <button className="cta-button">Book Now</button>
               </div>
             ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Insurance Section */}
-      <section className="insurance">
-        <div className="insurance-content">
-          <h2>Insurance & Payment</h2>
-          <div className="insurance-info">
-            <p>
-              We accept various insurance plans and offer flexible payment options to ensure
-              you can access the care you need. Contact us to verify your coverage.
-            </p>
-            <button className="cta-button">Verify Insurance</button>
           </div>
         </div>
       </section>
@@ -139,99 +147,66 @@ export default function Services() {
   );
 }
 
-const ServiceSection = ({
-  title,
-  subtitle,
-  image,
-  description,
-  pricing,
-  format,
-}) => {
-  return (
-    <section className="service-section defined-section">
-      <div className="section-label">
-        <h4 className="label-title">{title}</h4>
-        {subtitle && <p className="label-subtitle">{subtitle}</p>}
-        <div className="section-image-holder">
-          <img className="section-image" src={image} alt={`${title} Image`} />
-        </div>
-      </div>
-      <div className="section-content">
-        {description.map((text, index) => (
-          <p key={index}>{text}</p>
-        ))}
-        <p className="pricing">{pricing}</p>
-        <p className="format">{format}</p>
-      </div>
-    </section>
-  );
-};
-
 const individualTherapyFeatures = [
-  "Personalized treatment plans",
   "Flexible scheduling options",
-  "Safe and confidential environment",
+  "Safe and confidential virtual environment",
   "Evidence-based approaches",
-  "Progress tracking and adjustment"
+  "Progress tracking and adjustment",
+  "Video and telephone sessions available",
 ];
 
-const groupTherapyFeatures = [
-  "Weekly group sessions",
-  "Peer support and connection",
-  "Structured discussion topics",
-  "Skill-building exercises",
-  "Affordable group rates"
+const artTherapyFeatures = [
+  "Explore creativity as a therapeutic tool",
+  "Safe and supportive environment",
+  "Focus on the process, not the product",
+  "Access deeper emotional insights",
+  "Enhance self-expression and self-awareness",
 ];
 
-const specializations = [
-  {
-    title: "Anxiety Management",
-    description: "Learn effective strategies to manage anxiety and stress in daily life."
-  },
-  {
-    title: "Depression Treatment",
-    description: "Develop coping skills and work through depressive symptoms."
-  },
-  {
-    title: "Addiction Recovery",
-    description: "Support for overcoming substance abuse and behavioral addictions."
-  },
-  {
-    title: "Relationship Counseling",
-    description: "Improve communication and strengthen personal relationships."
-  },
-  {
-    title: "Trauma Processing",
-    description: "Safe processing of past trauma using evidence-based techniques."
-  },
-  {
-    title: "Career Guidance",
-    description: "Navigate work-related stress and career transitions."
-  }
+const reducedRateFeatures = [
+  "Mindfulness-focused approach",
+  "Open and accessible care options",
+  "Tailored to individual financial needs",
+  "Supportive and inclusive environment",
+  "Limited availability for qualifying individuals",
 ];
 
 const pricingPlans = [
   {
-    title: "Individual Session",
+    title: "Psychotherapy  (Individual)",
     price: "150",
     duration: "50 minutes",
     features: [
-      "One-on-one attention",
-      "Personalized approach",
+      "One-on-one care",
+      "Personalized plan",
+      "Evidence-based techniques",
       "Flexible scheduling",
-      "Online or in-person"
-    ]
+      "Video or phone sessions",
+    ],
   },
   {
-    title: "Group Session",
-    price: "60",
-    duration: "90 minutes",
+    title: "Art Psychotherapy",
+    price: "150",
+    duration: "50 minutes",
     features: [
-      "Peer support",
-      "Structured program",
-      "Weekly meetings",
-      "Affordable care"
-    ]
+      "Creative sessions",
+      "Supportive space",
+      "Process-focused",
+      "Boost self-expression",
+      "Flexible scheduling",
+    ],
+  },
+  {
+    title: "Reduced Rate & Sliding Scale",
+    price: "90-140",
+    duration: "50 minutes",
+    features: [
+      "Limited availability",
+      "One-on-one care",
+      "Evidence-based techniques",
+      "Flexible scheduling",
+      "Video or phone sessions",
+    ],
   },
   {
     title: "Initial Consultation",
@@ -239,9 +214,10 @@ const pricingPlans = [
     duration: "15 minutes",
     features: [
       "Meet your therapist",
-      "Discuss your needs",
+      "Discuss your unique needs",
+      "Explore therapy options",
       "Learn about approaches",
-      "Get recommendations"
-    ]
-  }
+      "Discuss next steps",
+    ],
+  },
 ];

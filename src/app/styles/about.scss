@@ -121,36 +121,6 @@
   }
 }
 
-.page-hero {
-  background: linear-gradient(to bottom, $primary-green, $secondary-green);
-  padding: $spacing-xl 0;
-  color: $text-light;
-  text-align: center;
-
-  .hero-content {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 0 $spacing-lg;
-
-    h1 {
-      font-family: $sub-font;
-      font-size: 3rem;
-      margin-bottom: $spacing-lg;
-
-      .subtitle {
-        display: block;
-        font-size: 1.8rem;
-        color: rgba($text-light, 0.9);
-      }
-    }
-
-    .hero-text {
-      font-size: 1.2rem;
-      line-height: 1.6;
-    }
-  }
-}
-
 .profile-section {
   padding: $spacing-xl 0;
   background-color: $text-light;

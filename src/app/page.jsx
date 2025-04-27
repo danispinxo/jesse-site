@@ -5,7 +5,6 @@ import Link from "next/link";
 import { Image } from "react-bootstrap";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPaperPlane, faArrowRight } from "@fortawesome/free-solid-svg-icons";
-import ImagePlaceholder from "./components/ImagePlaceholder";
 
 export default function HomePage() {
   return (
@@ -36,7 +35,7 @@ export default function HomePage() {
           <Image
             className="hero-image"
             src="/images/JessePajuaar.webp"
-            alt="Headshot of Jesse Pajuaar"
+            alt="Professional headshot of Jesse Pajuäär, a registered psychotherapist"
           />
         </div>
       </section>
@@ -89,10 +88,9 @@ export default function HomePage() {
             </a>
           </div>
           <div className="approach-image">
-            <ImagePlaceholder
-              width={600}
-              height={400}
-              text="Serene Mountain Landscape"
+            <Image
+              src="/images/Mountains.webp"
+              alt="A serene mountain landscape symbolizing peace and clarity"
             />
           </div>
         </div>

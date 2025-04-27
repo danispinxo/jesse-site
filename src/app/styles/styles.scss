@@ -215,10 +215,9 @@ body {
     }
 
     .approach-image {
-      flex: 1;
-
       img {
-        border-radius: $border-radius-lg;
+        width: 500px;
+        border-radius: $border-radius-md;
         box-shadow: $shadow-lg;
       }
     }

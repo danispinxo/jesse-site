@@ -64,7 +64,10 @@ export default function HomePage() {
 
       {/* Specialties Section */}
       <section className="specialties">
-        <h2>Specializing in Art Therapy & Mindfulness</h2>
+        <h2>
+          Specializing in Art Therapy, Anxiety, Self-Esteem, and Relationship
+          Issues
+        </h2>
         <div className="specialties-grid">
           {specialties.map((specialty, index) => (
             <div key={index} className="specialty-item">

@@ -150,18 +150,6 @@ export default function AboutPage() {
           </div>
         </div>
       </section>
-      <section className="values-section">
-        <div className="values-content">
-          <h2>Client Focus</h2>
-          <div className="values-grid">
-            {values.map((value, index) => (
-              <div key={index} className="value-card">
-                <h3>{value}</h3>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
 
       <section className="profile-section">
         <div className="profile-content">
@@ -217,6 +205,19 @@ export default function AboutPage() {
         </div>
       </section>
 
+      <section className="values-section">
+        <div className="values-content">
+          <h2>Areas of Focus</h2>
+          <div className="values-grid">
+            {values.map((value, index) => (
+              <div key={index} className="value-card">
+                <h3>{value}</h3>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       <section className="cta-section">
         <div className="cta-content">
           <h2>Ready to Take the First Step?</h2>
@@ -243,6 +244,7 @@ const values = [
   "Burnout/Stress",
   "Codependence",
   "Coping Skills",
+  "Creativity",
   "Divorce & Break-ups",
   "Eating Issues",
   "Elders/Seniors",

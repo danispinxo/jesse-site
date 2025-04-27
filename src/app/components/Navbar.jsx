@@ -34,9 +34,7 @@ const Navbar = () => {
             height={50}
             className="logo-image"
           />
-          <span className="logo-text nav-link">
-            JESSE PAJUÄÄR THERAPY STUDIOS
-          </span>
+          <span className="logo-text">JESSE PAJUÄÄR THERAPY STUDIOS</span>
         </Link>
 
         <button

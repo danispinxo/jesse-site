@@ -40,9 +40,11 @@ export default function Contact() {
               therapist.
             </p>
 
-            <Link href="/guide">
-              Read more about how to choose the right therapist for you!
-            </Link>
+            <p className="guide-link">
+              <Link href="/guide">
+                Read more about how to choose the right therapist for you!
+              </Link>
+            </p>
 
             <p>
               To contact me for a no-fee 15 minute phone consultation simply
@@ -86,9 +88,11 @@ export default function Contact() {
             therapist.
           </p>
 
-          <Link href="/guide">
-            Read more about how to choose the right therapist for you!
-          </Link>
+          <p className="guide-link">
+            <Link href="/guide">
+              Read more about how to choose the right therapist for you!
+            </Link>
+          </p>
 
           <p className="border-bottom-text">
             To contact me for a no-fee 15 minute phone consultation simply fill

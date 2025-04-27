@@ -101,9 +101,9 @@ const articles = [
     link: "https://www.hopeforwellness.ca/",
   },
   {
-    title: "Improving Communication in Relationships",
+    title: "Rainbow Health Ontario (RHO)",
     description:
-      "Rainbow Health Ontario (RHO) is a province-wide program of Sherbourne Health that works to promote the health of Ontario's LGBT2SQ communities and improve their access to services. RHO creates resources, provides information and consultation services, delivers education and training, and supports research to develop evidence-based practice and informed public policy.",
+      "Rainbow Health Ontario is a province-wide program of Sherbourne Health that works to promote the health of Ontario's LGBT2SQ communities and improve their access to services. RHO creates resources, provides information and consultation services, delivers education and training, and supports research to develop evidence-based practice and informed public policy.",
     link: "https://www.rainbowhealthontario.ca/",
   },
   {

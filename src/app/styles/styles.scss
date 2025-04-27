@@ -150,7 +150,6 @@ body {
   }
 }
 
-// Specialties Section
 .specialties {
   padding: $spacing-xl;
   background-color: $background-light;
@@ -188,7 +187,6 @@ body {
   }
 }
 
-// Approach Section
 .approach {
   padding: $spacing-xl;
   background-color: $text-light;
@@ -224,7 +222,6 @@ body {
   }
 }
 
-// Services Section
 .services {
   padding: $spacing-xl;
   background-color: $text-light;
@@ -317,7 +314,6 @@ body {
   }
 }
 
-// Responsive Design
 @media (max-width: $breakpoint-lg) {
   .hero {
     flex-direction: column;
@@ -396,7 +392,11 @@ body {
     .logo-text {
       margin-right: 1rem;
       font-family: $font-secondary;
-      font-size: 1.2rem;
+      font-size: 1.5rem;
+
+      &:hover {
+        color: $accent-gold;
+      }
     }
   }
 
@@ -504,5 +504,12 @@ body {
       font-size: 1.2rem;
       line-height: 1.6;
     }
+  }
+}
+
+@media (min-width: $breakpoint-xl) {
+  .hero-image-accent {
+    width: 100px;
+    height: 500px;
   }
 }

@@ -1,9 +1,5 @@
 @import "variables";
 
-.page-content {
-  padding: 2rem;
-}
-
 .guide-title-holder {
   position: relative;
   text-align: center;
@@ -122,7 +118,8 @@
       margin: 1.5rem 0 1rem;
     }
 
-    ul, ol {
+    ul,
+    ol {
       margin-bottom: 1.5rem;
       padding-left: 1.5rem;
 
@@ -169,7 +166,7 @@
 @media (max-width: $breakpoint-md) {
   .section {
     margin: 1rem;
-    
+
     .section-label {
       flex-direction: column;
       gap: 0.5rem;

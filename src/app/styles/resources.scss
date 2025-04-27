@@ -1,7 +1,6 @@
 @import "variables";
 
 .page-content {
-  padding: 2rem;
   .resources-title-holder {
     position: relative;
     text-align: center;
@@ -134,7 +133,7 @@
           color: $primary-green;
           text-decoration: none;
           font-weight: 600;
-          
+
           .icon {
             margin-left: $spacing-sm;
           }

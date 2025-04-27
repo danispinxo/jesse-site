@@ -62,42 +62,24 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Specialties Section */}
-      <section className="specialties">
-        <h2>
-          Specializing in Art Therapy, Anxiety, Self-Esteem, and Relationship
-          Issues
-        </h2>
-        <div className="specialties-grid">
-          {specialties.map((specialty, index) => (
-            <div key={index} className="specialty-item">
-              <h3>{specialty}</h3>
-            </div>
-          ))}
-        </div>
-      </section>
-
-      {/* Approach Section */}
       <section className="approach">
         <div className="approach-content">
           <div className="approach-text">
-            <h2>Types of Therapy</h2>
+            <h2>Therapy can help you take charge</h2>
             <ul>
-              <li> Art Therapy</li>
-              <li> Attachment-based</li>
-              <li> Cognitive Behavioural Therapy (CBT)</li>
-              <li> Dialectical Behaviour Therapy (DBT)</li>
-              <li> Compassion Focused</li>
-              <li> Culturally Sensitive</li>
-              <li> Experiential Therapy</li>
-              <li> Family Systems</li>
-              <li> Feminist</li>
-              <li> Interpersonal</li>
-              <li> Narrative</li>
-              <li> Person-Centered</li>
-              <li> Trauma Focused</li>
-              <li> Strength-Based </li>
-              <li> Psychodynamic</li>
+              <li>Do you feel distant or disconnected from your partner?</li>
+              <li>Are you facing separation or divorce?</li>
+              <li>
+                Are you negotiating a difficult personal decision or challenge?
+              </li>
+              <li>Do you struggle with parenting?</li>
+              <li>
+                Are you overcome by negative thought patterns or cruel
+                self-talk?
+              </li>
+              <li>Do you feel stuck, burned-out, or overwhelmed?</li>
+              <li>Are you frustrated by self-sabotaging behavior?</li>
+              <li>Do you feel unhappy or dissatisfied in your own skin?</li>
             </ul>
             <a href="/about">
               <button className="secondary-button">
@@ -112,6 +94,20 @@ export default function HomePage() {
               text="Serene Mountain Landscape"
             />
           </div>
+        </div>
+      </section>
+
+      <section className="specialties">
+        <h2>
+          Specializing in Art Therapy, Anxiety, Self-Esteem, and Relationship
+          Issues
+        </h2>
+        <div className="specialties-grid">
+          {specialties.map((specialty, index) => (
+            <div key={index} className="specialty-item">
+              <h3>{specialty}</h3>
+            </div>
+          ))}
         </div>
       </section>
 

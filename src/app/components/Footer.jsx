@@ -1,4 +1,5 @@
 import "../styles/styles.scss";
+import "../styles/footer.scss";
 
 export default function Footer() {
   return (
@@ -27,7 +28,7 @@ export default function Footer() {
           title="Psychology Today Verified -- Jesse Pajuaar"
           src="https://www-jptherapystudios-com.filesusr.com/html/900dd1_259a81179feffed44176301ed25faa6a.html"
         />
-        <p>&copy; 2022, Jesse Pajuäär Therapy Studios</p>
+        <h6>&copy; 2025 Jesse Pajuäär Therapy Studios</h6>
       </div>
     </div>
   );

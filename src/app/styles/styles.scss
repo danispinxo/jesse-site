@@ -71,17 +71,37 @@ body {
     }
   }
 
-  .hero-image-container {
+  .hero-image-wrapper {
     position: relative;
-    z-index: 2;
-    margin-left: $spacing-xl;
+    display: inline-block;
+    z-index: 1;
+    margin: 0 auto;
+
+    .hero-image-accent {
+      position: absolute;
+      bottom: -20px;
+      right: -20px;
+      width: 410px;
+      height: 410px;
+      background: $accent-gold;
+      border-radius: $border-radius-md;
+      z-index: 0;
+      filter: blur(0.5px);
+      opacity: 0.85;
+      transition: box-shadow 0.3s;
+      box-shadow: 0 10px 32px rgba($accent-gold, 0.2);
+      transform: rotate(2deg);
+    }
 
     .hero-image {
+      position: relative;
+      z-index: 1;
+      border-radius: $border-radius-md;
+      box-shadow: $shadow-md;
+      display: block;
       width: 400px;
       height: 400px;
       object-fit: cover;
-      border-radius: $border-radius-lg;
-      box-shadow: $shadow-lg;
     }
   }
 }
@@ -243,7 +263,6 @@ body {
   }
 }
 
-// Contact Section
 .contact {
   background: linear-gradient(to bottom, $primary-green, $background-dark);
   color: $text-light;
@@ -265,7 +284,6 @@ body {
   }
 }
 
-// Buttons
 .cta-button {
   background-color: $accent-gold;
   color: $text-dark;
@@ -347,7 +365,6 @@ body {
   }
 }
 
-// Navbar
 .navbar {
   position: fixed;
   top: 0;
@@ -356,13 +373,7 @@ body {
   z-index: 1000;
   padding: $spacing-md;
   transition: background-color $transition-normal;
-  background-color: transparent;
-
-  &.scrolled {
-    background-color: rgba($background-dark, 0.95);
-    backdrop-filter: blur(8px);
-    box-shadow: $shadow-md;
-  }
+  background-color: rgba($background-dark, 0.95);
 
   .navbar-container {
     max-width: 1200px;

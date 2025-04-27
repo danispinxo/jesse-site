@@ -7,7 +7,7 @@
   .services-content {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 0 $spacing-lg;
+    padding: 0 2rem;
     display: flex;
     flex-direction: column;
     gap: $spacing-xl;
@@ -25,8 +25,12 @@
       }
 
       .service-image {
-        flex: 1;
-        min-width: 300px;
+        width: 300px;
+        border-radius: $border-radius-lg;
+
+        img {
+          margin: 4rem 3rem;
+        }
       }
 
       .service-details {

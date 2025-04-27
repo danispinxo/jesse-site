@@ -1,7 +1,7 @@
 @import "variables";
 
 .page-content {
-  padding-top: 78px;
+  padding-top: 80px;
 
   .about-title-holder {
     position: relative;
@@ -139,7 +139,15 @@
     }
 
     .profile-image {
-      flex: 1;
+      width: 400px;
+      border-radius: 10%;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+      &:hover {
+        transform: scale(1.05);
+        box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+      }
     }
 
     .profile-text {

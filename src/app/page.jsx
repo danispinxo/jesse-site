@@ -31,7 +31,8 @@ export default function HomePage() {
             </button>
           </Link>
         </div>
-        <div className="hero-image-container">
+        <div className="hero-image-wrapper">
+          <span className="hero-image-accent" />
           <Image
             className="hero-image"
             src="/images/JessePajuaar.webp"

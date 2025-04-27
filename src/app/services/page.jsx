@@ -3,7 +3,7 @@ import "../styles/styles.scss";
 import "../styles/services.scss";
 import Link from "next/link";
 import Footer from "../components/Footer";
-import ImagePlaceholder from "../components/ImagePlaceholder";
+import { Image } from "react-bootstrap";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCheck } from "@fortawesome/free-solid-svg-icons";
 
@@ -26,10 +26,10 @@ export default function Services() {
         <div className="services-content">
           <div className="service-card featured">
             <div className="service-image">
-              <ImagePlaceholder
-                width="100%"
-                height={300}
-                text="Individual Therapy"
+              <Image
+                className="service-image"
+                src="/images/Psychotherapy.webp"
+                alt="A serene therapy session setup with a comfortable chair and calming decor."
               />
             </div>
             <div className="service-details">
@@ -59,10 +59,10 @@ export default function Services() {
 
           <div className="service-card featured">
             <div className="service-image">
-              <ImagePlaceholder
-                width="100%"
-                height={300}
-                text="Group Therapy"
+              <Image
+                className="service-image"
+                src="/images/ArtTherapy.webp"
+                alt="Art supplies including paints, brushes, and paper used in art therapy sessions."
               />
             </div>
             <div className="service-details">
@@ -90,10 +90,10 @@ export default function Services() {
 
           <div className="service-card featured">
             <div className="service-image">
-              <ImagePlaceholder
-                width="100%"
-                height={300}
-                text="Reduced Rate & Sliding Scale"
+              <Image
+                className="service-image"
+                src="/images/LowIncome.webp"
+                alt="A welcoming office space with a desk and chair, symbolizing accessibility and affordability."
               />
             </div>
             <div className="service-details">
@@ -179,7 +179,7 @@ const pricingPlans = [
     features: [
       "One-on-one care",
       "Personalized plan",
-      "Evidence-based techniques",
+      "Evidence-based",
       "Flexible scheduling",
       "Video or phone sessions",
     ],
@@ -203,7 +203,7 @@ const pricingPlans = [
     features: [
       "Limited availability",
       "One-on-one care",
-      "Evidence-based techniques",
+      "Evidence-based",
       "Flexible scheduling",
       "Video or phone sessions",
     ],

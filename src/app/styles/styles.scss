@@ -1,5 +1,5 @@
-@import 'variables';
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap');
+@import "variables";
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap");
 
 * {
   margin: 0;
@@ -19,7 +19,6 @@ body {
   overflow-x: hidden;
 }
 
-// Hero Section
 .hero {
   background: linear-gradient(to bottom, $primary-green, $secondary-green);
   min-height: 100vh;
@@ -30,13 +29,13 @@ body {
   overflow: hidden;
 
   &::before {
-    content: '';
+    content: "";
     position: absolute;
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
-    background: url('/images/forest-bg.jpg') center/cover;
+    background: url("/images/forest-bg.jpg") center/cover;
     opacity: 0.2;
     z-index: 1;
   }
@@ -78,13 +77,15 @@ body {
     margin-left: $spacing-xl;
 
     .hero-image {
+      width: 400px;
+      height: 400px;
+      object-fit: cover;
       border-radius: $border-radius-lg;
       box-shadow: $shadow-lg;
     }
   }
 }
 
-// Why Section
 .why-section {
   background-color: $background-dark;
   color: $text-light;
@@ -92,18 +93,22 @@ body {
   position: relative;
 
   .forest-overlay {
-    background: url('/images/forest-path.jpg') center/cover;
+    background: url("/images/forest-path.jpg") center/cover;
     padding: $spacing-xl;
     position: relative;
-    
+
     &::before {
-      content: '';
+      content: "";
       position: absolute;
       top: 0;
       left: 0;
       right: 0;
       bottom: 0;
-      background: linear-gradient(to bottom, rgba($background-dark, 0.8), rgba($background-dark, 0.9));
+      background: linear-gradient(
+        to bottom,
+        rgba($background-dark, 0.8),
+        rgba($background-dark, 0.9)
+      );
     }
   }
 
@@ -200,42 +205,6 @@ body {
   }
 }
 
-// Statistics Section
-.statistics {
-  padding: $spacing-xl;
-  background-color: $background-light;
-
-  h2 {
-    text-align: center;
-    font-family: $font-secondary;
-    color: $primary-green;
-    margin-bottom: $spacing-xl;
-  }
-
-  .stats-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: $spacing-lg;
-    max-width: 1200px;
-    margin: 0 auto;
-
-    .stat-item {
-      text-align: center;
-      padding: $spacing-lg;
-
-      h3 {
-        font-size: 2.5rem;
-        color: $accent-gold;
-        margin-bottom: $spacing-sm;
-      }
-
-      p {
-        color: $text-dark;
-      }
-    }
-  }
-}
-
 // Services Section
 .services {
   padding: $spacing-xl;
@@ -269,49 +238,6 @@ body {
 
       p {
         margin-bottom: $spacing-lg;
-      }
-    }
-  }
-}
-
-// Testimonials Section
-.testimonials {
-  padding: $spacing-xl;
-  background-color: $background-light;
-
-  h2 {
-    text-align: center;
-    font-family: $font-secondary;
-    color: $primary-green;
-    margin-bottom: $spacing-xl;
-  }
-
-  .testimonials-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: $spacing-lg;
-    max-width: 1200px;
-    margin: 0 auto;
-
-    .testimonial-card {
-      background: $text-light;
-      padding: $spacing-xl;
-      border-radius: $border-radius-md;
-      box-shadow: $shadow-md;
-
-      .rating {
-        color: $accent-gold;
-        margin-bottom: $spacing-md;
-      }
-
-      p {
-        margin-bottom: $spacing-md;
-        font-style: italic;
-      }
-
-      .client-name {
-        color: $secondary-green;
-        font-weight: 600;
       }
     }
   }
@@ -458,9 +384,9 @@ body {
     }
 
     .logo-text {
+      margin-right: 1rem;
       font-family: $font-secondary;
       font-size: 1.2rem;
-      font-weight: 500;
     }
   }
 

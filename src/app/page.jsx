@@ -10,12 +10,11 @@ import ImagePlaceholder from "./components/ImagePlaceholder";
 export default function HomePage() {
   return (
     <main className="home">
-      {/* Hero Section */}
       <section className="hero">
         <div className="hero-content">
           <h1>
-            “Experience is not what happens to you. It is what you do with what
-            happens to you.”
+            Experience is not what happens to you. It is what you do with what
+            happens to you.
             <span className="emphasis">Aldous Huxley</span>
           </h1>
           <p className="hero-text">
@@ -34,7 +33,7 @@ export default function HomePage() {
         </div>
         <div className="hero-image-container">
           <Image
-            className="about-me-image"
+            className="hero-image"
             src="/images/JessePajuaar.webp"
             alt="Headshot of Jesse Pajuaar"
           />
@@ -45,9 +44,9 @@ export default function HomePage() {
         <div className="forest-overlay">
           <h2>About Me: Jesse Pajuäär</h2>
           <div className="why-content">
+            <p>Registered Psychotherapist, RCAT, DTATI, HBA. </p>
             <p>
-              Registered Psychotherapist, RCAT, DTATI, HBA. Ontario therapist
-              offering psychotherapy and art therapy sessions.
+              Ontario therapist offering psychotherapy and art therapy sessions.
             </p>
             <p>
               I approach each session with the belief that you are the expert of
@@ -65,7 +64,7 @@ export default function HomePage() {
 
       {/* Specialties Section */}
       <section className="specialties">
-        <h2>Specializing in Men's Issues, Anxiety, Addiction & Mindfulness</h2>
+        <h2>Specializing in Art Therapy & Mindfulness</h2>
         <div className="specialties-grid">
           {specialties.map((specialty, index) => (
             <div key={index} className="specialty-item">
@@ -113,13 +112,14 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Contact Section */}
       <section className="contact">
         <div className="contact-content">
-          <h2>I look forward to hearing from you</h2>
+          <h2>You are not the problem, the problem is the problem.</h2>
           <div className="contact-info">
             <p>Schedule your consultation today</p>
-            <button className="cta-button">Get Started</button>
+            <a href="/contact">
+              <button className="cta-button">Get Started</button>
+            </a>
           </div>
         </div>
       </section>

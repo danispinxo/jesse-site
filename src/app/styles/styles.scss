@@ -461,7 +461,22 @@ body {
     }
   }
 }
+@media (max-width: $breakpoint-lg) {
+  .nous-talk-text {
+    display: none !important;
+  }
+}
 
+@media (max-width: $breakpoint-md) {
+  .consultation-button {
+    p {
+      display: none !important;
+    }
+  }
+  .nous-talk-text {
+    display: none !important;
+  }
+}
 .page-hero {
   background: linear-gradient(to bottom, $primary-green, $secondary-green);
   padding: $spacing-xl 0;

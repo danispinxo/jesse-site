@@ -34,7 +34,9 @@ const Navbar = () => {
             height={50}
             className="logo-image"
           />
-          <span className="logo-text">JESSE PAJUÄÄR THERAPY STUDIOS</span>
+          <span className="logo-text nav-link">
+            JESSE PAJUÄÄR THERAPY STUDIOS
+          </span>
         </Link>
 
         <button
@@ -64,7 +66,7 @@ const Navbar = () => {
             target="_blank"
             rel="noreferrer"
           >
-            <span>NousTalk </span> Client Portal{" "}
+            <span className="nous-talk-text">NousTalk </span> Client Portal{" "}
             <FontAwesomeIcon icon={faArrowsTurnRight} />
           </Link>
         </div>

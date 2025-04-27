@@ -126,16 +126,14 @@ export default function HomePage() {
 }
 
 const specialties = [
-  "Anxiety",
-  "Self Esteem",
-  "Relationship Issues",
-  "Men's Issues",
   "Addiction",
   "Anger Management",
+  "Anxiety",
   "Bisexuality",
   "Body Positivity",
   "Codependency",
   "Coping Skills",
+  "Creativity",
   "Depression",
   "Family Conflict",
   "Grief",
@@ -148,9 +146,12 @@ const specialties = [
   "Narcissistic Personality (NPD)",
   "Peer Relationships",
   "Racial Identity",
+  "Relationship Issues",
+  "Self Esteem",
   "Sex-Positive, Kink Allied",
   "Stress",
   "Transgender",
   "Trauma and PTSD",
   "Women's Issues",
+  "Work-Life Balance",
 ];

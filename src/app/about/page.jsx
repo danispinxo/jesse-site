@@ -4,7 +4,6 @@ import "../styles/about.scss";
 import Link from "next/link";
 import { Image } from "react-bootstrap";
 import Footer from "../components/Footer";
-import ImagePlaceholder from "../components/ImagePlaceholder";
 
 export default function AboutPage() {
   return (

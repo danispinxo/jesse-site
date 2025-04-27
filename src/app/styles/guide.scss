@@ -1,5 +1,9 @@
 @import "variables";
 
+.page-content {
+  margin-top: 80px;
+}
+
 .guide-title-holder {
   position: relative;
   text-align: center;
@@ -87,12 +91,14 @@
       color: $text-light;
       font-family: $font-secondary;
       font-weight: 600;
+      font-size: 1.8rem;
       margin: 0;
     }
 
     .label-subtitle {
       color: $text-light;
       font-family: $font-secondary;
+      font-size: 1.8rem;
       margin: 0;
     }
   }

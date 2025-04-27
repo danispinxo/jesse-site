@@ -4,27 +4,28 @@ import "../styles/guide.scss";
 export default function Guide() {
   return (
     <main className="page-content">
-      <div className="guide-title-holder">
-        <h1 className="guide-title">Finding Your Therapist</h1>
-      </div>
+      <section className="page-hero">
+        <div className="hero-content">
+          <h1>
+            Finding Your Therapist
+            <span className="subtitle">
+              A 4-Step Guide to Finding the Right Therapist for You
+            </span>
+          </h1>
+        </div>
+      </section>
 
       <div className="guide-intro">
-        <div className="intro-title">
-          A 4-Step Guide to Finding the Right Therapist for You
-        </div>
-        <p>
-          If you search “therapist Toronto” the Internet will give you millions
-          of search results. Literally. Finding the right therapist can feel
-          hopeless and exhausting. And if you&apos;re searching for a therapist,
-          you&apos;re probably already under a certain amount of stress as it
-          is. Don&apos;t despair! Streamline your search by working through the
-          FOUR following steps:
-        </p>
+        If you search “therapist Toronto” the Internet will give you millions of
+        search results. Literally. Finding the right therapist can feel hopeless
+        and exhausting. And if you're searching for a therapist, you're probably
+        already under a certain amount of stress as it is. Don't despair!
+        Streamline your search by working through the FOUR following steps:
       </div>
 
       <div className="section">
         <div className="section-label">
-          <p className="label-title">STEP ONE: </p>{" "}
+          <p className="label-title">STEP ONE: </p>
           <p className="label-subtitle">Decide on Your Needs</p>
         </div>
 
@@ -33,8 +34,8 @@ export default function Guide() {
             Decide what kind of mental health care practitioner you need.
           </p>
           <p>
-            Psychiatrist, psychologist, psychotherapist—are you confused about
-            the differences? You&apos;re definitely not alone, but the key
+            Psychiatrist, psychologist, psychotherapist ... are you confused
+            about the differences? You're definitely not alone, but the key
             distinctions are worth knowing and could make all the difference in
             your search.
           </p>
@@ -170,25 +171,24 @@ export default function Guide() {
               relational, transpersonal, CBT, EFT, EMDR? What does it all mean?
               Does this even matter?
               <br /> <br />
-              Your therapist&apos;s approach is important because it speaks to
-              how they will help you bring about change. It reflects the
-              framework they will use to read and understand your history and
-              your experiences, and the tools they&apos;ll call on to help you
-              cultivate your own awareness, understanding, and ultimately,
-              transformation.
+              Your therapist's approach is important because it speaks to how
+              they will help you bring about change. It reflects the framework
+              they will use to read and understand your history and your
+              experiences, and the tools they'll call on to help you cultivate
+              your own awareness, understanding, and ultimately, transformation.
               <br /> <br />
-              It&apos;s not a bad idea to conduct a little research at this
-              stage and there are lots of resources available on the Internet
-              (i.e., this directory from Good Therapy), but it is a bad idea to
-              get stuck here or hung up on jargon. Once you come up with your
-              short list of candidates, it&apos;s perfectly legitimate to ask
-              her to explain her approach in lay-terms. <br /> <br />
+              It's not a bad idea to conduct a little research at this stage and
+              there are lots of resources available on the Internet (i.e., this
+              directory from Good Therapy), but it is a bad idea to get stuck
+              here or hung up on jargon. Once you come up with your short list
+              of candidates, it's perfectly legitimate to ask her to explain her
+              approach in lay-terms. <br /> <br />
             </li>
             <li>
               Ask yourself which practical considerations are important to you -
               These factors often determine whether or not you actually make it
-              to therapy. And therapy won&apos;t work if you don&apos;t go. Do
-              give these considerations just weight.
+              to therapy. And therapy won't work if you don't go. Do give these
+              considerations just weight.
               <ul className="single-column">
                 <li>
                   <span>Cost</span>: How much will sessions cost, do you have

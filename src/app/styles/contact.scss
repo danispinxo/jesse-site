@@ -1,5 +1,8 @@
 @import "variables";
 
+.page-content {
+  margin-top: 80px;
+}
 .contact-title-holder {
   position: relative;
   text-align: center;
@@ -103,8 +106,9 @@
   .affiliation-images {
     display: flex;
     flex-wrap: wrap;
-    gap: 1.5rem;
-    justify-content: center;
+    gap: 0.5rem;
+    justify-content: space-around;
+    align-items: center;
     margin-top: 1.5rem;
 
     .affiliation-img {

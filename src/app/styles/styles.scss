@@ -21,10 +21,10 @@ body {
 
 .hero {
   background: linear-gradient(to bottom, $primary-green, $secondary-green);
-  min-height: 100vh;
+  min-height: 80vh;
   display: flex;
   align-items: center;
-  padding: $spacing-xl;
+  padding: $spacing-lg;
   position: relative;
   overflow: hidden;
 
@@ -36,26 +36,26 @@ body {
 
     h1 {
       font-family: $font-secondary;
-      font-size: 3.5rem;
+      font-size: 2.8rem;
       line-height: 1.2;
-      margin-bottom: $spacing-lg;
+      margin-bottom: $spacing-md;
 
       .subtitle {
         display: block;
-        font-size: 2.5rem;
+        font-size: 2rem;
         color: rgba($text-light, 0.9);
       }
 
       .emphasis {
         display: block;
-        font-size: 3rem;
+        font-size: 2.4rem;
         color: $accent-gold;
       }
     }
 
     .hero-text {
-      font-size: 1.2rem;
-      margin-bottom: $spacing-lg;
+      font-size: 1.1rem;
+      margin-bottom: $spacing-md;
     }
   }
 
@@ -67,10 +67,10 @@ body {
 
     .hero-image-accent {
       position: absolute;
-      bottom: -20px;
-      right: -20px;
-      width: 410px;
-      height: 410px;
+      bottom: -15px;
+      right: -15px;
+      width: 350px;
+      height: 350px;
       background: $accent-gold;
       border-radius: $border-radius-md;
       z-index: 0;
@@ -87,8 +87,8 @@ body {
       border-radius: $border-radius-md;
       box-shadow: $shadow-md;
       display: block;
-      width: 400px;
-      height: 400px;
+      width: 340px;
+      height: 340px;
       object-fit: cover;
     }
   }
@@ -499,5 +499,58 @@ body {
   .hero-image-accent {
     width: 100px;
     height: 500px;
+  }
+}
+
+.approach-list-section {
+  padding: $spacing-xl 0;
+  background: $background-light;
+  h2 {
+    text-align: center;
+    font-family: $font-secondary;
+    color: $primary-green;
+    margin-bottom: $spacing-lg;
+  }
+  .approach-list-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: $spacing-md $spacing-xl;
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+  .approach-list-item {
+    display: flex;
+    align-items: flex-start;
+    gap: $spacing-md;
+    padding: $spacing-sm 0;
+    background: none;
+    border: none;
+    box-shadow: none;
+  }
+  .approach-list-icon {
+    color: $accent-gold;
+    font-size: 1.5rem;
+    flex-shrink: 0;
+    margin-top: 0.2em;
+  }
+  .approach-list-title {
+    font-weight: 600;
+    color: $primary-green;
+    font-size: 1.1rem;
+    display: block;
+  }
+  .approach-list-desc {
+    color: $text-dark;
+    font-size: 1rem;
+    display: block;
+    margin-top: 0.1em;
+  }
+}
+
+@media (max-width: $breakpoint-md) {
+  .approach-list-section {
+    .approach-list-grid {
+      grid-template-columns: 1fr;
+    }
   }
 }

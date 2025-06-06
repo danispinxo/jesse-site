@@ -62,37 +62,20 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="approach">
-        <div className="approach-content">
-          <div className="approach-text">
-            <h2>Therapy can help you take charge</h2>
-            <ul>
-              <li>Do you feel distant or disconnected from your partner?</li>
-              <li>Are you facing separation or divorce?</li>
-              <li>
-                Are you negotiating a difficult personal decision or challenge?
-              </li>
-              <li>Do you struggle with parenting?</li>
-              <li>
-                Are you overcome by negative thought patterns or cruel
-                self-talk?
-              </li>
-              <li>Do you feel stuck, burned-out, or overwhelmed?</li>
-              <li>Are you frustrated by self-sabotaging behavior?</li>
-              <li>Do you feel unhappy or dissatisfied in your own skin?</li>
-            </ul>
-            <a href="/about">
-              <button className="secondary-button">
-                Learn More <FontAwesomeIcon icon={faArrowRight} />
-              </button>
-            </a>
-          </div>
-          <div className="approach-image">
-            <Image
-              src="/images/Mountains.webp"
-              alt="A serene mountain landscape symbolizing peace and clarity"
-            />
-          </div>
+      <section className="approach-list-section">
+        <h2>My Approach to Therapy</h2>
+        <div className="approach-list-grid">
+          {approaches.map((item, idx) => (
+            <div className="approach-list-item" key={idx}>
+              <span className="approach-list-icon">
+                <FontAwesomeIcon icon={faArrowRight} />
+              </span>
+              <div>
+                <span className="approach-list-title">{item.title}</span>
+                <span className="approach-list-desc">{item.desc}</span>
+              </div>
+            </div>
+          ))}
         </div>
       </section>
 
@@ -154,4 +137,55 @@ const specialties = [
   "Trauma and PTSD",
   "Women's Issues",
   "Work-Life Balance",
+];
+
+const approaches = [
+  {
+    title: "Anti-Oppressive",
+    desc: "Acknowledge and address systemic barriers to mental health care.",
+  },
+  {
+    title: "Art Therapy",
+    desc: "Use creative expression as a tool for self-discovery and healing.",
+  },
+  {
+    title: "Attachment Focused",
+    desc: "Understand how early relationships shape current experiences and behaviors.",
+  },
+  {
+    title: "Existential",
+    desc: "Explore the meaning of life and personal values in the therapeutic process.",
+  },
+  {
+    title: "Expressive Arts",
+    desc: "Integrate various art forms to facilitate emotional expression and healing.",
+  },
+  {
+    title: "Mindfulness",
+    desc: "Cultivate present-moment awareness to reduce stress and enhance well-being.",
+  },
+  {
+    title: "Narrative",
+    desc: "Reframe personal stories to empower and create new perspectives.",
+  },
+  {
+    title: "Relational",
+    desc: "Emphasize the importance of relationships in shaping emotional health.",
+  },
+  {
+    title: "Somatic",
+    desc: "Address the connection between the body and mind in the healing process.",
+  },
+  {
+    title: "Strengths Based",
+    desc: "Focus on individual strengths to foster resilience and growth.",
+  },
+  {
+    title: "Trauma Informed",
+    desc: "Create a safe space that acknowledges and respects the impact of trauma.",
+  },
+  {
+    title: "Compassionate Inquiry",
+    desc: "Gently uncover underlying emotional and psychological patterns.",
+  },
 ];

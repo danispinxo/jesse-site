@@ -40,9 +40,11 @@ export default function Contact() {
               therapist.
             </p>
 
-            <Link href="/guide">
-              Read more about how to choose the right therapist for you!
-            </Link>
+            <p className="guide-link">
+              <Link href="/guide">
+                Read more about how to choose the right therapist for you!
+              </Link>
+            </p>
 
             <p>
               To contact me for a no-fee 15 minute phone consultation simply
@@ -58,15 +60,23 @@ export default function Contact() {
 
   return (
     <main className="page-content">
-      <div className="contact-title-holder">
-        <h1 className="contact-title">Get In Touch</h1>
-      </div>
+      <section className="page-hero">
+        <div className="hero-content">
+          <h1>
+            Contact Me
+            <span className="subtitle">
+              Let's work together to find the right path for you.
+            </span>
+          </h1>
+        </div>
+      </section>
 
       <div className="covid-note">
         <p>
-          My practice has been moved online for the foreseeable future. <br />{" "}
-          Therapy sessions will therefore be limited to <br /> secure video or
-          telephone sessions. <br /> Get in touch for more information.
+          My practice has been moved online for the foreseeable future.
+          <br /> Therapy sessions will therefore be limited to secure video or
+          telephone sessions. <br />
+          Get in touch for more information.
         </p>
       </div>
 
@@ -78,9 +88,11 @@ export default function Contact() {
             therapist.
           </p>
 
-          <Link href="/guide">
-            Read more about how to choose the right therapist for you!
-          </Link>
+          <p className="guide-link">
+            <Link href="/guide">
+              Read more about how to choose the right therapist for you!
+            </Link>
+          </p>
 
           <p className="border-bottom-text">
             To contact me for a no-fee 15 minute phone consultation simply fill

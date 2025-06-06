@@ -278,39 +278,61 @@
 }
 
 .cta-section {
-  padding: $spacing-xl 0;
-  background: linear-gradient(to bottom, $primary-green, $background-dark);
-  color: $text-light;
+  padding: $spacing-lg 0 $spacing-md 0;
+  background: $background-light;
+  color: $primary-green;
   text-align: center;
-
+  border-top: 1px solid rgba($primary-green, 0.08);
   .cta-content {
-    max-width: 600px;
+    max-width: 500px;
     margin: 0 auto;
-    padding: 0 $spacing-lg;
-
+    padding: 0 $spacing-md;
     h2 {
-      font-family: $font-secondary;
-      margin-bottom: $spacing-md;
+      font-family: $header-font;
+      font-size: 1.5rem;
+      font-weight: 700;
+      margin-bottom: 0.5rem;
+      color: $primary-green;
+      letter-spacing: 0.01em;
+      position: relative;
+      display: inline-block;
+      &::after {
+        content: "";
+        display: block;
+        width: 40px;
+        height: 3px;
+        background: linear-gradient(
+          90deg,
+          $primary-green 60%,
+          $secondary-green 100%
+        );
+        border-radius: 2px;
+        margin: 0.4rem auto 0 auto;
+        opacity: 0.25;
+      }
     }
-
     p {
-      margin-bottom: $spacing-lg;
+      margin-bottom: $spacing-md;
+      font-size: 1rem;
+      color: $secondary-green;
     }
-
     .cta-button {
-      background-color: $accent-gold;
-      color: $text-dark;
-      padding: $spacing-md $spacing-lg;
+      background-color: $primary-green;
+      color: $text-light;
+      padding: $spacing-sm $spacing-lg;
       border: none;
-      border-radius: $border-radius-sm;
-      font-size: 1.1rem;
-      font-weight: 600;
+      border-radius: 6px;
+      font-size: 1rem;
+      font-weight: 700;
       cursor: pointer;
-      transition: transform $transition-normal, box-shadow $transition-normal;
-
+      letter-spacing: 0.01em;
+      box-shadow: none;
+      transition: background $transition-normal, color $transition-normal,
+        transform $transition-normal;
       &:hover {
+        background: $secondary-green;
+        color: $accent-gold;
         transform: translateY(-2px);
-        box-shadow: $shadow-md;
       }
     }
   }
@@ -405,9 +427,6 @@
     border: none;
     box-shadow: none;
     border-bottom: 1px solid rgba($primary-green, 0.08);
-    &:last-child {
-      border-bottom: none;
-    }
   }
   .values-list-icon {
     background: $secondary-green;

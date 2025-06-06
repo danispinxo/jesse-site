@@ -53,7 +53,9 @@ export default function Services() {
                   </li>
                 ))}
               </ul>
-              <button className="cta-button">Schedule Session</button>
+              <Link href="/contact">
+                <button className="cta-button">Schedule Session</button>
+              </Link>
             </div>
           </div>
 
@@ -84,7 +86,9 @@ export default function Services() {
                   </li>
                 ))}
               </ul>
-              <button className="cta-button">Get Started</button>
+              <Link href="/contact">
+                <button className="cta-button">Get Started</button>
+              </Link>
             </div>
           </div>
 
@@ -112,7 +116,9 @@ export default function Services() {
                   </li>
                 ))}
               </ul>
-              <button className="cta-button">Inquire</button>
+              <Link href="/contact">
+                <button className="cta-button">Inquire</button>
+              </Link>
             </div>
           </div>
         </div>
@@ -135,7 +141,9 @@ export default function Services() {
                     </li>
                   ))}
                 </ul>
-                <button className="cta-button">Book Now</button>
+                <Link href="/contact">
+                  <button className="cta-button">Book Now</button>
+                </Link>
               </div>
             ))}
           </div>

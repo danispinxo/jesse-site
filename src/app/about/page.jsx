@@ -1,16 +1,9 @@
 "use client";
 import "../styles/styles.scss";
 import "../styles/about.scss";
-import Link from "next/link";
 import { Image } from "react-bootstrap";
 import Footer from "../components/Footer";
-import {
-  faLeaf,
-  faTree,
-  faMountain,
-  faMountains,
-  faSeedling,
-} from "@fortawesome/free-solid-svg-icons";
+import { faLeaf, faSeedling } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 export default function AboutPage() {

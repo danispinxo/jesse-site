@@ -466,31 +466,49 @@ body {
   }
 }
 .page-hero {
-  background: linear-gradient(to bottom, $primary-green, $secondary-green);
-  padding: $spacing-xl 0;
-  color: $text-light;
+  background: $background-light;
+  padding: $spacing-lg 0 $spacing-md 0;
+  color: $primary-green;
   text-align: center;
+  border-bottom: 1px solid rgba($primary-green, 0.08);
+  position: relative;
 
   .hero-content {
-    max-width: 800px;
+    max-width: 700px;
     margin: 0 auto;
-    padding: 0 $spacing-lg;
+    padding: 0 $spacing-md;
 
     h1 {
-      font-family: $sub-font;
-      font-size: 3rem;
-      margin-bottom: $spacing-lg;
-
-      .subtitle {
+      font-family: $header-font;
+      font-size: 2.1rem;
+      font-weight: 700;
+      margin-bottom: 0.5rem;
+      color: $primary-green;
+      letter-spacing: 0.01em;
+      position: relative;
+      display: inline-block;
+      &::after {
+        content: "";
         display: block;
-        font-size: 1.8rem;
-        color: rgba($text-light, 0.9);
+        width: 60px;
+        height: 4px;
+        background: linear-gradient(
+          90deg,
+          $primary-green 60%,
+          $secondary-green 100%
+        );
+        border-radius: 2px;
+        margin: 0.5rem auto 0 auto;
+        opacity: 0.25;
       }
     }
-
-    .hero-text {
-      font-size: 1.2rem;
-      line-height: 1.6;
+    .subtitle {
+      display: block;
+      font-size: 1.05rem;
+      color: $secondary-green;
+      font-weight: 500;
+      margin-top: 0.2rem;
+      letter-spacing: 0.01em;
     }
   }
 }

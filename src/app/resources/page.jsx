@@ -4,7 +4,7 @@ import "../styles/resources.scss";
 import Link from "next/link";
 import Footer from "../components/Footer";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faDownload, faBook, faLink } from "@fortawesome/free-solid-svg-icons";
+import { faBook, faSeedling } from "@fortawesome/free-solid-svg-icons";
 
 export default function Resources() {
   return (
@@ -20,48 +20,56 @@ export default function Resources() {
         </div>
       </section>
 
-      <section className="articles-section">
-        <div className="articles-content">
-          <div className="articles-grid">
-            {articles.map((article, index) => (
-              <div key={index} className="article-card">
-                <h3>
-                  {article.title}{" "}
+      <section className="resources-list-section">
+        <h2>Helpful Resources</h2>
+        <div className="resources-list-grid">
+          {articles.map((article, index) => (
+            <div key={index} className="resources-list-item">
+              <span className="resources-list-icon">
+                <FontAwesomeIcon icon={faSeedling} />
+              </span>
+              <div className="resources-list-content">
+                <span className="resources-list-title">
                   <Link
                     href={article.link}
-                    className="read-more"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    <FontAwesomeIcon icon={faLink} className="icon" />
+                    {article.title}
                   </Link>
-                </h3>
-                <p>{article.description}</p>
+                </span>
+                <span className="resources-list-desc">
+                  {article.description}
+                </span>
               </div>
-            ))}
-          </div>
+            </div>
+          ))}
         </div>
       </section>
 
-      {/* Reading List */}
-      <section className="reading-section">
-        <div className="reading-content">
-          <h2>Recommended Reading</h2>
-          <div className="reading-grid">
-            {recommendedBooks.map((book, index) => (
-              <div key={index} className="book-card">
-                <div className="book-info">
-                  <h3>{book.title}</h3>
-                  <p className="author">by {book.author}</p>
-                  <p className="description">{book.description}</p>
-                </div>
-                <Link href={book.link} className="book-link" target="_blank">
-                  Find Book
-                  <FontAwesomeIcon icon={faBook} className="icon" />
-                </Link>
+      <section className="books-list-section">
+        <h2>Recommended Reading</h2>
+        <div className="books-list-grid">
+          {recommendedBooks.map((book, index) => (
+            <div key={index} className="books-list-item">
+              <span className="books-list-icon">
+                <FontAwesomeIcon icon={faBook} />
+              </span>
+              <div className="books-list-content">
+                <span className="books-list-title">
+                  <Link
+                    href={book.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    {book.title}
+                  </Link>
+                </span>
+                <span className="books-list-author">by {book.author}</span>
+                <span className="books-list-desc">{book.description}</span>
               </div>
-            ))}
-          </div>
+            </div>
+          ))}
         </div>
       </section>
 
@@ -123,6 +131,18 @@ const articles = [
     description:
       "The Red Door Family Shelter provides emergency shelter and support for women and children affected by domestic abuse, families experiencing a housing crisis, and refugee claimants with nowhere else to turn. If you or a family you know requires shelter call Central Family Intake at 416-397-5637.If you are a woman seeking shelter from situations of violence or intimate partner violence call their Crisis Line at 416-423-0310 (press 0), or the Assaulted Women's Helpline at 1-866-863-0511.",
     link: "https://www.reddoorshelter.ca/",
+  },
+  {
+    title: "Get Help Here: Mental health support (Government of Canada)",
+    description:
+      "This official Government of Canada portal provides a comprehensive directory of mental health resources, crisis lines, and support services available across the country. The site offers information for people in crisis, youth, Indigenous Peoples, veterans, and those seeking help with substance use or family violence. It also connects users to national organizations, suicide prevention resources, and local supports, ensuring that everyone in Canada can find the help they need, when they need it.",
+    link: "https://www.canada.ca/en/public-health/campaigns/get-help-here.html",
+  },
+  {
+    title: "Canadian Mental Health Association (CMHA) National",
+    description:
+      "The Canadian Mental Health Association (CMHA) provides information, resources, and support for mental health and well-being across Canada, including education, advocacy, and local services for individuals and families.",
+    link: "https://cmha.ca/",
   },
 ];
 

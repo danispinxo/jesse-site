@@ -1,4 +1,4 @@
-@import "variables";
+@use "variables" as *;
 
 .page-content {
   margin-top: 80px;
@@ -6,58 +6,60 @@
 .contact-title-holder {
   position: relative;
   text-align: center;
-  padding: 1rem 2rem 1rem 2rem;
+  padding: $spacing-lg 0 $spacing-md 0;
   margin: 0 auto;
-  max-width: 1200px;
-  background: linear-gradient(135deg, $primary-green, $secondary-green);
+  max-width: 900px;
+  background: $background-light;
+  border-bottom: 1px solid rgba($primary-green, 0.08);
   z-index: 1;
 
-  &::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 180%;
-    height: 100%;
-    background: linear-gradient(
-      to right,
-      rgba($primary-green, 0) 0%,
-      rgba($primary-green, 1) 20%,
-      rgba($secondary-green, 1) 80%,
-      rgba($secondary-green, 0) 100%
-    );
-    z-index: -1;
-  }
-
   .contact-title {
-    color: $text-light;
-    font-family: $font-secondary;
+    color: $primary-green;
+    font-family: $header-font;
+    font-size: 2rem;
+    font-weight: 700;
     margin: 0;
-    font-size: 2.5rem;
+    letter-spacing: 0.01em;
+    position: relative;
+    display: inline-block;
+    &::after {
+      content: "";
+      display: block;
+      width: 50px;
+      height: 3px;
+      background: linear-gradient(
+        90deg,
+        $primary-green 60%,
+        $secondary-green 100%
+      );
+      border-radius: 2px;
+      margin: 0.4rem auto 0 auto;
+      opacity: 0.25;
+    }
   }
 }
 
 .covid-note {
-  max-width: 800px;
+  max-width: 700px;
   margin: 2rem auto;
-  padding: 1.5rem;
-  background-color: rgba($accent-gold, 0.1);
-  border-left: 4px solid $accent-gold;
-  border-radius: 0 $border-radius-md $border-radius-md 0;
+  padding: 1.2rem;
+  background-color: rgba($primary-green, 0.06);
+  border-left: 4px solid $primary-green;
+  border-radius: 0 12px 12px 0;
   text-align: center;
 
   p {
-    color: $text-dark;
-    line-height: 1.6;
+    color: $primary-green;
+    line-height: 1.5;
     margin: 0;
+    font-size: 1rem;
   }
 }
 
 .contact-body {
   display: flex;
   flex-wrap: wrap;
-  max-width: 1200px;
+  max-width: 1100px;
   margin: 2rem auto;
   gap: 2rem;
   padding: 0 1rem;
@@ -71,25 +73,30 @@
   flex: 1;
   min-width: 300px;
   padding: 2rem;
-  background-color: $background-light;
-  border-radius: $border-radius-md;
+  background-color: #fff;
+  border-radius: 12px;
   box-shadow: $shadow-md;
+  border: 1px solid rgba($primary-green, 0.08);
 
   .guide-link {
-    color: $accent-gold;
+    color: $secondary-green;
 
     a {
-      color: $accent-gold;
+      color: $secondary-green;
     }
   }
 
   .logo {
     display: block;
-    max-width: 200px;
-    margin: 0 auto 2rem;
+    max-width: 160px;
+    margin: 0 auto 1.5rem;
   }
 
   p {
+    color: $primary-green;
+    line-height: 1.5;
+    margin-bottom: 1.2rem;
+    font-size: 1rem;
     color: $text-dark;
     line-height: 1.6;
     margin-bottom: 1.5rem;

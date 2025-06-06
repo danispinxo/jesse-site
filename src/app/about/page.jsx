@@ -4,6 +4,14 @@ import "../styles/about.scss";
 import Link from "next/link";
 import { Image } from "react-bootstrap";
 import Footer from "../components/Footer";
+import {
+  faLeaf,
+  faTree,
+  faMountain,
+  faMountains,
+  faSeedling,
+} from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 export default function AboutPage() {
   return (
@@ -59,102 +67,26 @@ export default function AboutPage() {
         </div>
       </section>
 
-      <section className="philosophy-section">
-        <div className="philosophy-content">
-          <h2>My Approach to Therapy</h2>
-          <div className="philosophy-grid">
-            <div className="philosophy-item">
-              <h3>Anti-Oppressive</h3>
-              <p>
-                Acknowledging and addressing systemic barriers to mental health
-                care.
-              </p>
+      <section className="philosophy-list-section">
+        <h2>My Approach to Therapy</h2>
+        <div className="philosophy-list-grid">
+          {approaches.map((item, idx) => (
+            <div className="philosophy-list-item" key={idx}>
+              <span className="philosophy-list-icon">
+                <FontAwesomeIcon icon={faLeaf} />
+              </span>
+              <div>
+                <span className="philosophy-list-title">{item.title}</span>
+                <span className="philosophy-list-desc">{item.desc}</span>
+              </div>
             </div>
-            <div className="philosophy-item">
-              <h3>Art Therapy</h3>
-              <p>
-                Using creative expression as a tool for self-discovery and
-                healing.
-              </p>
-            </div>
-            <div className="philosophy-item">
-              <h3>Attachment Focused</h3>
-              <p>
-                Understanding how early relationships shape our current
-                experiences and behaviors.
-              </p>
-            </div>
-            <div className="philosophy-item">
-              <h3>Existential</h3>
-              <p>
-                Exploring the meaning of life and personal values in the
-                therapeutic process.
-              </p>
-            </div>
-            <div className="philosophy-item">
-              <h3>Expressive Arts</h3>
-              <p>
-                Integrating various art forms to facilitate emotional expression
-                and healing.
-              </p>
-            </div>
-            <div className="philosophy-item">
-              <h3>Mindfulness</h3>
-              <p>
-                Cultivating present-moment awareness to reduce stress and
-                enhance well-being.
-              </p>
-            </div>
-            <div className="philosophy-item">
-              <h3>Narrative</h3>
-              <p>
-                Reframing personal stories to empower and create new
-                perspectives.
-              </p>
-            </div>
-            <div className="philosophy-item">
-              <h3>Relational</h3>
-              <p>
-                Emphasizing the importance of relationships in shaping emotional
-                health.
-              </p>
-            </div>
-            <div className="philosophy-item">
-              <h3>Somatic</h3>
-              <p>
-                Addressing the connection between the body and mind in the
-                healing process.
-              </p>
-            </div>
-            <div className="philosophy-item">
-              <h3>Strengths Based</h3>
-              <p>
-                Focusing on individual strengths to foster resilience and
-                growth.
-              </p>
-            </div>
-            <div className="philosophy-item">
-              <h3>Trauma Informed</h3>
-              <p>
-                Creating a safe space that acknowledges and respects the impact
-                of trauma.
-              </p>
-            </div>
-            <div className="philosophy-item">
-              <h3>Compassionate Inquiry</h3>
-              <p>
-                Gently uncovering underlying emotional and psychological
-                patterns.
-              </p>
-            </div>
-          </div>
+          ))}
         </div>
       </section>
 
       <section className="profile-section">
         <div className="profile-content">
           <div className="profile-text">
-            <h2>Personal Statement</h2>
             <div className="credentials">
               <h4>How I Can Help </h4>
               <p>
@@ -188,7 +120,7 @@ export default function AboutPage() {
                 practice. I focus on using creative practices as a way to help
                 reframe and (re)examine how we look at ourselves, our
                 relationships, and the world. Art therapy isn't about the end
-                goal of creating “Art,” but about the process. This process
+                goal of creating "Art," but about the process. This process
                 means tapping into parts of the brain that often get overlooked
                 or underused, but actually provide a wealth of knowledge about
                 how we each uniquely experience and perceive the world. Through
@@ -205,16 +137,17 @@ export default function AboutPage() {
         </div>
       </section>
 
-      <section className="values-section">
-        <div className="values-content">
-          <h2>Areas of Focus</h2>
-          <div className="values-grid">
-            {values.map((value, index) => (
-              <div key={index} className="value-card">
-                <h3>{value}</h3>
-              </div>
-            ))}
-          </div>
+      <section className="values-list-section">
+        <h2>Areas of Focus</h2>
+        <div className="values-list-grid">
+          {values.map((value, index) => (
+            <div key={index} className="values-list-item">
+              <span className="values-list-icon">
+                <FontAwesomeIcon icon={faSeedling} />
+              </span>
+              <span className="values-list-text">{value}</span>
+            </div>
+          ))}
         </div>
       </section>
 
@@ -254,7 +187,6 @@ const values = [
   "Intimacy & Sex",
   "Men's Issues",
   "Non-Binary",
-  "Parents",
   "Power Relations",
   "Relationship Difficulties",
   "Self Esteem & Confidence",
@@ -264,4 +196,55 @@ const values = [
   "Trans-Specific",
   "Trauma",
   "Women's Issues",
+];
+
+const approaches = [
+  {
+    title: "Anti-Oppressive",
+    desc: "Acknowledge and address systemic barriers to mental health care.",
+  },
+  {
+    title: "Art Therapy",
+    desc: "Use creative expression as a tool for self-discovery and healing.",
+  },
+  {
+    title: "Attachment Focused",
+    desc: "Understand how early relationships shape current experiences and behaviors.",
+  },
+  {
+    title: "Existential",
+    desc: "Explore the meaning of life and personal values in the therapeutic process.",
+  },
+  {
+    title: "Expressive Arts",
+    desc: "Integrate various art forms to facilitate emotional expression and healing.",
+  },
+  {
+    title: "Mindfulness",
+    desc: "Cultivate present-moment awareness to reduce stress and enhance well-being.",
+  },
+  {
+    title: "Narrative",
+    desc: "Reframe personal stories to empower and create new perspectives.",
+  },
+  {
+    title: "Relational",
+    desc: "Emphasize the importance of relationships in shaping emotional health.",
+  },
+  {
+    title: "Somatic",
+    desc: "Address the connection between the body and mind in the healing process.",
+  },
+  {
+    title: "Strengths Based",
+    desc: "Focus on individual strengths to foster resilience and growth.",
+  },
+  {
+    title: "Trauma Informed",
+    desc: "Create a safe space that acknowledges and respects the impact of trauma.",
+  },
+  {
+    title: "Compassionate Inquiry",
+    desc: "Gently uncover underlying emotional and psychological patterns.",
+  },
 ];

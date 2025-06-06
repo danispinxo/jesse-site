@@ -599,6 +599,11 @@ body {
     background: none;
     border: none;
     box-shadow: none;
+    border-bottom: 1px solid rgba($primary-green, 0.15);
+  }
+  .specialties-list-item:last-child,
+  .specialties-list-item:nth-last-child(-n + 4) {
+    border-bottom: none;
   }
   .specialties-list-icon {
     background: $primary-green;

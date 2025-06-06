@@ -4,7 +4,11 @@ import "./styles/styles.scss";
 import Link from "next/link";
 import { Image } from "react-bootstrap";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faPaperPlane, faArrowRight } from "@fortawesome/free-solid-svg-icons";
+import {
+  faPaperPlane,
+  faArrowRight,
+  faLeaf,
+} from "@fortawesome/free-solid-svg-icons";
 
 export default function HomePage() {
   return (
@@ -79,15 +83,18 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="specialties">
+      <section className="specialties-list-section">
         <h2>
           Specializing in Art Therapy, Anxiety, Self-Esteem, and Relationship
           Issues
         </h2>
-        <div className="specialties-grid">
+        <div className="specialties-list-grid">
           {specialties.map((specialty, index) => (
-            <div key={index} className="specialty-item">
-              <h3>{specialty}</h3>
+            <div key={index} className="specialties-list-item">
+              <span className="specialties-list-icon">
+                <FontAwesomeIcon icon={faLeaf} />
+              </span>
+              <span className="specialties-list-text">{specialty}</span>
             </div>
           ))}
         </div>
@@ -121,7 +128,6 @@ const specialties = [
   "Family Conflict",
   "Grief",
   "Infidelity",
-  "Lesbian",
   "LGBTQ+",
   "Life Coaching",
   "Life Transitions",

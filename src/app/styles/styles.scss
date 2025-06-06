@@ -554,3 +554,58 @@ body {
     }
   }
 }
+
+.specialties-list-section {
+  padding: $spacing-xl 0;
+  background: $background-light;
+  h2 {
+    text-align: center;
+    font-family: $font-secondary;
+    color: $primary-green;
+    margin-bottom: $spacing-lg;
+    font-size: 2rem;
+    font-weight: 700;
+  }
+  .specialties-list-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: $spacing-md $spacing-xl;
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+  .specialties-list-item {
+    display: flex;
+    align-items: center;
+    gap: $spacing-md;
+    padding: $spacing-sm 0;
+    background: none;
+    border: none;
+    box-shadow: none;
+  }
+  .specialties-list-icon {
+    background: $primary-green;
+    color: $text-light;
+    border-radius: 50%;
+    width: 2rem;
+    height: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.1rem;
+    flex-shrink: 0;
+  }
+  .specialties-list-text {
+    font-weight: 600;
+    color: $primary-green;
+    font-size: 1.15rem;
+    letter-spacing: 0.01em;
+  }
+}
+
+@media (max-width: $breakpoint-md) {
+  .specialties-list-section {
+    .specialties-list-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+}

@@ -338,16 +338,22 @@
 
 .resources-list-section {
   padding: $spacing-xl 0;
-  background: #fff;
+  background: $background-light;
+  position: relative;
+  overflow: hidden;
+
   h2 {
     text-align: center;
     font-family: $font-secondary;
     color: $primary-green;
     margin-bottom: $spacing-lg;
-    font-size: 2rem;
-    font-weight: 700;
+    position: relative;
+    z-index: 1;
   }
+
   .resources-list-grid {
+    position: relative;
+    z-index: 1;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
     gap: $spacing-md $spacing-xl;
@@ -400,16 +406,22 @@
 
 .books-list-section {
   padding: $spacing-xl 0;
-  background: #fff;
+  background: $background-light;
+  position: relative;
+  overflow: hidden;
+
   h2 {
     text-align: center;
     font-family: $font-secondary;
     color: $primary-green;
     margin-bottom: $spacing-lg;
-    font-size: 2rem;
-    font-weight: 700;
+    position: relative;
+    z-index: 1;
   }
+
   .books-list-grid {
+    position: relative;
+    z-index: 1;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
     gap: $spacing-md $spacing-xl;
@@ -464,6 +476,30 @@
     font-size: 1rem;
     display: block;
     margin-top: 0.1em;
+  }
+}
+
+.landscape-divider {
+  width: 100%;
+  height: 200px;
+  background: url("/images/forest-path.jpg") center/cover;
+  position: relative;
+  margin: $spacing-xl 0;
+  border-radius: $border-radius-lg;
+  overflow: hidden;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(
+      to bottom,
+      rgba($background-dark, 0.7),
+      rgba($background-dark, 0.8)
+    );
   }
 }
 

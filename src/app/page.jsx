@@ -46,7 +46,8 @@ export default function HomePage() {
 
       <section className="why-section">
         <div className="forest-overlay">
-          <h2>About Me: Jesse Pajuäär</h2>
+          <h3>About Me</h3>
+          <h1>Jesse Pajuäär</h1>
           <div className="why-content">
             <p>Registered Psychotherapist, RCAT, DTATI, HBA. </p>
             <p>

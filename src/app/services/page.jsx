@@ -189,11 +189,11 @@ const pricingPlans = [
       "Personalized plan",
       "Evidence-based",
       "Flexible scheduling",
-      "Video or phone sessions",
+      "Video or phone",
     ],
   },
   {
-    title: "Art Psychotherapy",
+    title: "Art Psychotherapy (Individual)",
     price: "150",
     duration: "50 minutes",
     features: [
@@ -213,16 +213,16 @@ const pricingPlans = [
       "One-on-one care",
       "Evidence-based",
       "Flexible scheduling",
-      "Video or phone sessions",
+      "Video or phone",
     ],
   },
   {
-    title: "Initial Consultation",
+    title: "Initial Consultation (Phone Only)",
     price: "0",
     duration: "15 minutes",
     features: [
       "Meet your therapist",
-      "Discuss your unique needs",
+      "Discuss your needs",
       "Explore therapy options",
       "Learn about approaches",
       "Discuss next steps",

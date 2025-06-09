@@ -37,6 +37,7 @@
   .resource-cards {
     display: flex;
     flex-direction: column;
+    align-items: center;
 
     a {
       color: $teal;
@@ -49,14 +50,21 @@
       background: rgba(255, 255, 255, 0.8);
       border-radius: 12px;
       box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+      gap: 2rem;
 
       @include xs {
         flex-direction: column;
         align-items: center;
+        width: 90%;
+        gap: 1rem;
+        padding: 1.5rem 0;
       }
+
       .resource-content {
-        padding-left: 1rem;
+        flex: 1;
+        padding: 0;
       }
+
       .card-label {
         margin-bottom: 1rem;
         font-size: 1.8rem;
@@ -66,13 +74,17 @@
       }
 
       .card-img {
-        width: 25%;
-        height: 25%;
-        aspect-ratio: 1;
+        width: 200px;
+        height: 200px;
+        object-fit: cover;
         border-radius: 10px;
+        flex-shrink: 0;
 
         @include xs {
-          width: 90%;
+          width: 100%;
+          max-width: 300px;
+          margin-bottom: 1rem;
+          padding: 0;
         }
       }
 
@@ -503,12 +515,50 @@
   }
 }
 
+.section-divider {
+  width: 100%;
+  height: 180px;
+  margin: $spacing-xl 0;
+  position: relative;
+  overflow: hidden;
+  background: $background-light;
+
+  .forest-scene {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    .mountain {
+      fill: rgba($primary-green, 0.1);
+    }
+
+    .trees-back {
+      fill: rgba($primary-green, 0.15);
+    }
+
+    .trees-middle {
+      fill: rgba($secondary-green, 0.2);
+    }
+
+    .trees-front {
+      fill: rgba($primary-green, 0.25);
+    }
+
+    .sun {
+      fill: rgba($accent-gold, 0.15);
+    }
+  }
+}
+
 @media (max-width: $breakpoint-md) {
   .resources-list-section,
   .books-list-section {
     .resources-list-grid,
     .books-list-grid {
       grid-template-columns: 1fr;
+      padding: 1.5rem 0;
     }
   }
 }

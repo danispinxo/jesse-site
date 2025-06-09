@@ -7,10 +7,14 @@
   .services-content {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 0 2rem;
+    padding: 0 $spacing-lg;
     display: flex;
     flex-direction: column;
     gap: $spacing-xl;
+
+    @media (max-width: $breakpoint-md) {
+      padding: 0 $spacing-sm;
+    }
 
     .service-card {
       display: flex;
@@ -22,14 +26,32 @@
 
       @media (max-width: $breakpoint-lg) {
         flex-direction: column;
+        gap: $spacing-md;
       }
 
       .service-image {
         width: 300px;
         border-radius: $border-radius-lg;
 
+        @media (max-width: $breakpoint-lg) {
+          width: 100%;
+          max-width: 400px;
+          margin: 0 auto;
+        }
+
         img {
           margin: 4rem 3rem;
+          width: 100%;
+          height: auto;
+          object-fit: cover;
+
+          @media (max-width: $breakpoint-lg) {
+            margin: 2rem;
+          }
+
+          @media (max-width: $breakpoint-md) {
+            margin: 1.5rem 0;
+          }
         }
       }
 
@@ -37,15 +59,31 @@
         flex: 2;
         padding: $spacing-xl;
 
+        @media (max-width: $breakpoint-md) {
+          padding: $spacing-lg;
+        }
+
         h2 {
           font-family: $font-secondary;
           color: $primary-green;
           margin-bottom: $spacing-lg;
+          font-size: 1.8rem;
+
+          @media (max-width: $breakpoint-md) {
+            font-size: 1.5rem;
+            margin-bottom: $spacing-md;
+          }
         }
 
         p {
           margin-bottom: $spacing-lg;
           line-height: 1.6;
+          font-size: 1.1rem;
+
+          @media (max-width: $breakpoint-md) {
+            font-size: 1rem;
+            margin-bottom: $spacing-md;
+          }
         }
 
         .service-features {
@@ -53,15 +91,32 @@
           padding: 0;
           margin-bottom: $spacing-lg;
 
+          @media (max-width: $breakpoint-md) {
+            margin-bottom: $spacing-md;
+          }
+
           li {
             display: flex;
             align-items: center;
             margin-bottom: $spacing-sm;
+            font-size: 1.1rem;
+
+            @media (max-width: $breakpoint-md) {
+              font-size: 1rem;
+            }
 
             .check-icon {
               color: $accent-gold;
               margin-right: $spacing-sm;
+              flex-shrink: 0;
             }
+          }
+        }
+
+        .cta-button {
+          @media (max-width: $breakpoint-md) {
+            width: 100%;
+            padding: $spacing-sm;
           }
         }
       }
@@ -124,17 +179,31 @@
     margin: 0 auto;
     padding: 0 $spacing-lg;
 
+    @media (max-width: $breakpoint-md) {
+      padding: 0 $spacing-sm;
+    }
+
     h2 {
       text-align: center;
       font-family: $font-secondary;
       color: $primary-green;
       margin-bottom: $spacing-xl;
+      font-size: 2rem;
+
+      @media (max-width: $breakpoint-md) {
+        font-size: 1.8rem;
+        margin-bottom: $spacing-lg;
+      }
     }
 
     .pricing-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
       gap: $spacing-md;
+
+      @media (max-width: $breakpoint-md) {
+        gap: $spacing-sm;
+      }
 
       .pricing-card {
         background-color: $background-light;
@@ -144,6 +213,10 @@
         box-shadow: $shadow-md;
         transition: transform $transition-normal;
 
+        @media (max-width: $breakpoint-md) {
+          padding: $spacing-md;
+        }
+
         &:hover {
           transform: translateY(-5px);
         }
@@ -151,6 +224,12 @@
         h3 {
           color: $secondary-green;
           margin-bottom: $spacing-md;
+          font-size: 1.5rem;
+
+          @media (max-width: $breakpoint-md) {
+            font-size: 1.3rem;
+            margin-bottom: $spacing-sm;
+          }
         }
 
         .price {
@@ -159,16 +238,30 @@
           color: $primary-green;
           margin-bottom: $spacing-sm;
 
+          @media (max-width: $breakpoint-md) {
+            font-size: 2rem;
+          }
+
           &::before {
             content: "$";
             font-size: 1.5rem;
             vertical-align: super;
+
+            @media (max-width: $breakpoint-md) {
+              font-size: 1.2rem;
+            }
           }
         }
 
         .duration {
           color: $text-dark;
           margin-bottom: $spacing-lg;
+          font-size: 1.1rem;
+
+          @media (max-width: $breakpoint-md) {
+            font-size: 1rem;
+            margin-bottom: $spacing-md;
+          }
         }
 
         .features {
@@ -177,15 +270,32 @@
           margin-bottom: $spacing-lg;
           text-align: left;
 
+          @media (max-width: $breakpoint-md) {
+            margin-bottom: $spacing-md;
+          }
+
           li {
             display: flex;
             align-items: center;
             margin-bottom: $spacing-sm;
+            font-size: 1.1rem;
+
+            @media (max-width: $breakpoint-md) {
+              font-size: 1rem;
+            }
 
             .check-icon {
               color: $accent-gold;
               margin-right: $spacing-sm;
+              flex-shrink: 0;
             }
+          }
+        }
+
+        .cta-button {
+          @media (max-width: $breakpoint-md) {
+            width: 100%;
+            padding: $spacing-sm;
           }
         }
       }

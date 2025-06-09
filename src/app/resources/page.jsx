@@ -47,8 +47,6 @@ export default function Resources() {
         </div>
       </section>
 
-      <div className="landscape-divider" />
-
       <section className="books-list-section">
         <h2>Recommended Reading</h2>
         <div className="books-list-grid">

@@ -2,7 +2,14 @@ import "@fortawesome/fontawesome-svg-core/styles.css";
 import { config } from "@fortawesome/fontawesome-svg-core";
 import Navbar from "./components/Navbar";
 import { ServerStyleSheets } from "@mui/styles";
-import { Bellota_Text, Gabarito, Harmattan, Inter, Poppins, Playfair_Display } from "next/font/google";
+import {
+  Bellota_Text,
+  Gabarito,
+  Harmattan,
+  Inter,
+  Poppins,
+  Playfair_Display,
+} from "next/font/google";
 
 config.autoAddCss = false;
 
@@ -20,22 +27,23 @@ const harmattan = Harmattan({
 });
 
 const poppins = Poppins({
-  subsets: ['latin'],
-  weight: ['400', '500', '600', '700'],
-  variable: '--font-poppins',
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700"],
+  variable: "--font-poppins",
 });
 
 const playfair = Playfair_Display({
-  subsets: ['latin'],
-  weight: ['400', '500', '600', '700'],
-  variable: '--font-playfair',
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700"],
+  variable: "--font-playfair",
 });
 
 export const metadata = {
   title: "Jesse Pajuaar Therapy Studios",
   siteUrl: "https://jptherapystudios.com/",
   image: "../../public/images/Logo.webp",
-  description: 'Professional therapy and counseling services focused on men\'s mental health, anxiety, addiction, and mindfulness.',
+  description:
+    "Professional therapy and counseling services focused on men's mental health, anxiety, addiction, and mindfulness.",
 };
 
 export default function RootLayout({ children }) {

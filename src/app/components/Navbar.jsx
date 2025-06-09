@@ -23,10 +23,14 @@ const Navbar = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  const handleLinkClick = () => {
+    setIsMenuOpen(false);
+  };
+
   return (
     <nav className={`navbar ${isScrolled ? "scrolled" : ""}`}>
       <div className="navbar-container">
-        <Link href="/" className="navbar-logo">
+        <Link href="/" className="navbar-logo" onClick={handleLinkClick}>
           <Image
             src="/images/Logo.webp"
             alt="Therapy Logo"
@@ -34,7 +38,10 @@ const Navbar = () => {
             height={50}
             className="logo-image"
           />
-          <span className="logo-text">JESSE PAJUÄÄR THERAPY STUDIOS</span>
+          <span className="logo-text">
+            <span className="name">JESSE PAJUÄÄR</span>
+            <span className="studio">THERAPY STUDIOS</span>
+          </span>
         </Link>
 
         <button
@@ -46,16 +53,20 @@ const Navbar = () => {
         </button>
 
         <div className={`navbar-links ${isMenuOpen ? "active" : ""}`}>
-          <Link href="/about" className="nav-link">
+          <Link href="/about" className="nav-link" onClick={handleLinkClick}>
             About
           </Link>
-          <Link href="/services" className="nav-link">
+          <Link href="/services" className="nav-link" onClick={handleLinkClick}>
             Services
           </Link>
-          <Link href="/resources" className="nav-link">
+          <Link
+            href="/resources"
+            className="nav-link"
+            onClick={handleLinkClick}
+          >
             Resources
           </Link>
-          <Link href="/contact" className="nav-link">
+          <Link href="/contact" className="nav-link" onClick={handleLinkClick}>
             Contact
           </Link>
           <Link
@@ -63,8 +74,10 @@ const Navbar = () => {
             href="https://jpts.noustalk.com/login"
             target="_blank"
             rel="noreferrer"
+            onClick={handleLinkClick}
           >
-            <span className="nous-talk-text">NousTalk </span> Client Portal{" "}
+            <span className="nous-talk-text">NousTalk </span>{" "}
+            <span className="client-portal-text">Client Portal </span>
             <FontAwesomeIcon icon={faArrowsTurnRight} />
           </Link>
         </div>

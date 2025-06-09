@@ -17,18 +17,73 @@ body {
 .home {
   width: 100%;
   overflow-x: hidden;
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(
+        circle at 10% 20%,
+        rgba($primary-green, 0.08) 0%,
+        transparent 50%
+      ),
+      radial-gradient(
+        circle at 90% 80%,
+        rgba($secondary-green, 0.08) 0%,
+        transparent 50%
+      );
+    pointer-events: none;
+    z-index: 0;
+  }
 }
 
 .hero {
-  background: linear-gradient(to bottom, $primary-green, $secondary-green);
-  min-height: 80vh;
+  background: linear-gradient(135deg, $primary-green, $secondary-green);
+  min-height: 70vh;
   display: flex;
   align-items: center;
-  padding: $spacing-lg;
+  padding: $spacing-md;
   position: relative;
   overflow: hidden;
 
+  &::before {
+    content: "";
+    position: absolute;
+    top: -30%;
+    right: -10%;
+    width: 100%;
+    height: 200%;
+    background: linear-gradient(
+      45deg,
+      rgba($primary-green, 0.25) 0%,
+      transparent 50%
+    );
+    transform: rotate(-15deg);
+    pointer-events: none;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: -20%;
+    left: -5%;
+    width: 80%;
+    height: 160%;
+    background: linear-gradient(
+      -45deg,
+      rgba($secondary-green, 0.25) 0%,
+      transparent 50%
+    );
+    transform: rotate(15deg);
+    pointer-events: none;
+  }
+
   .hero-content {
+    margin-left: 8%;
     max-width: 600px;
     color: $text-light;
     position: relative;
@@ -37,25 +92,29 @@ body {
     h1 {
       font-family: $font-secondary;
       font-size: 2.8rem;
-      line-height: 1.2;
-      margin-bottom: $spacing-md;
+      line-height: 1.1;
+      margin-bottom: $spacing-sm;
+      text-shadow: 2px 2px 4px rgba($background-dark, 0.3);
 
       .subtitle {
         display: block;
         font-size: 2rem;
         color: rgba($text-light, 0.9);
+        margin-bottom: 0.5rem;
       }
 
       .emphasis {
         display: block;
         font-size: 2.4rem;
         color: $accent-gold;
+        text-shadow: 2px 2px 4px rgba($background-dark, 0.4);
       }
     }
 
     .hero-text {
       font-size: 1.1rem;
-      margin-bottom: $spacing-md;
+      margin-bottom: $spacing-sm;
+      text-shadow: 1px 1px 2px rgba($background-dark, 0.2);
     }
   }
 
@@ -64,20 +123,22 @@ body {
     display: inline-block;
     z-index: 1;
     margin: 0 auto;
+    transform: scale(0.95);
 
     .hero-image-accent {
       position: absolute;
-      bottom: -15px;
-      right: -15px;
-      width: 350px;
-      height: 350px;
+      bottom: -12px;
+      right: -12px;
+      width: 330px;
+      height: 330px;
       background: $accent-gold;
       border-radius: $border-radius-md;
       z-index: 0;
       filter: blur(0.5px);
       opacity: 0.85;
       transition: box-shadow 0.3s;
-      box-shadow: 0 10px 32px rgba($accent-gold, 0.2);
+      box-shadow: 0 10px 32px rgba($accent-gold, 0.2),
+        0 0 0 1px rgba($accent-gold, 0.1);
       transform: rotate(2deg);
     }
 
@@ -85,25 +146,66 @@ body {
       position: relative;
       z-index: 1;
       border-radius: $border-radius-md;
-      box-shadow: $shadow-md;
+      box-shadow: $shadow-md, 0 0 0 1px rgba($primary-green, 0.1);
       display: block;
-      width: 340px;
-      height: 340px;
+      width: 320px;
+      height: 320px;
       object-fit: cover;
     }
   }
 }
 
 .why-section {
-  background-color: $background-dark;
-  color: $text-light;
+  background-color: $background-light;
+  color: $text-dark;
   padding: $spacing-xl 0;
   position: relative;
+  overflow: hidden;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(
+        circle at 20% 30%,
+        rgba($primary-green, 0.08) 0%,
+        transparent 40%
+      ),
+      radial-gradient(
+        circle at 80% 70%,
+        rgba($secondary-green, 0.08) 0%,
+        transparent 40%
+      );
+    pointer-events: none;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        45deg,
+        rgba($primary-green, 0.05) 0%,
+        transparent 50%
+      ),
+      linear-gradient(-45deg, rgba($secondary-green, 0.05) 0%, transparent 50%);
+    pointer-events: none;
+  }
 
   .forest-overlay {
     background: url("/images/forest-path.jpg") center/cover;
     padding: $spacing-xl;
     position: relative;
+    border-radius: $border-radius-lg;
+    margin: 0 auto;
+    max-width: 1000px;
+    box-shadow: $shadow-lg, 0 0 0 1px rgba($accent-gold, 0.1);
 
     &::before {
       content: "";
@@ -114,18 +216,35 @@ body {
       bottom: 0;
       background: linear-gradient(
         to bottom,
-        rgba($background-dark, 0.8),
-        rgba($background-dark, 0.9)
+        rgba($background-dark, 0.85),
+        rgba($background-dark, 0.95)
       );
+      border-radius: $border-radius-lg;
     }
   }
 
-  h2 {
+  h1,
+  h3 {
     font-family: $font-secondary;
-    font-size: 2.5rem;
     margin-bottom: $spacing-lg;
     position: relative;
     z-index: 1;
+    text-shadow: 2px 2px 4px rgba($background-dark, 0.3);
+    text-align: center;
+    color: $text-light;
+  }
+
+  h1 {
+    font-size: 2.5rem;
+    &::after {
+      content: "";
+      display: block;
+      width: 80px;
+      height: 3px;
+      background: linear-gradient(90deg, $accent-gold, transparent);
+      margin: $spacing-sm auto 0;
+      border-radius: 2px;
+    }
   }
 
   .why-content {
@@ -135,6 +254,36 @@ body {
     margin: 0 auto;
     font-size: 1.2rem;
     line-height: 1.8;
+    text-shadow: 1px 1px 2px rgba($background-dark, 0.2);
+    padding: 0 $spacing-lg;
+    color: $text-light;
+
+    p {
+      margin-bottom: $spacing-md;
+      position: relative;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+}
+
+@media (max-width: $breakpoint-md) {
+  .why-section {
+    .forest-overlay {
+      margin: 0 $spacing-sm;
+      padding: $spacing-lg;
+    }
+
+    h2 {
+      font-size: 2rem;
+    }
+
+    .why-content {
+      font-size: 1.1rem;
+      padding: 0 $spacing-sm;
+    }
   }
 }
 
@@ -232,8 +381,30 @@ body {
       background: $background-light;
       padding: $spacing-xl;
       border-radius: $border-radius-lg;
-      box-shadow: $shadow-md;
+      box-shadow: $shadow-md, 0 0 0 1px rgba($primary-green, 0.1);
       text-align: center;
+      position: relative;
+      overflow: hidden;
+
+      &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(
+          135deg,
+          rgba($primary-green, 0.08) 0%,
+          transparent 50%
+        );
+        pointer-events: none;
+      }
+
+      &:hover {
+        transform: translateY(-5px);
+        box-shadow: $shadow-lg, 0 0 0 1px rgba($primary-green, 0.15);
+      }
 
       h3 {
         color: $secondary-green;
@@ -306,10 +477,11 @@ body {
   .hero {
     flex-direction: column;
     text-align: center;
-    padding: $spacing-lg;
+    padding: $spacing-md;
 
     .hero-content {
-      margin-bottom: $spacing-xl;
+      margin-bottom: $spacing-lg;
+      margin-left: 0;
     }
 
     .hero-image-container {
@@ -467,7 +639,7 @@ body {
 }
 .page-hero {
   background: $background-light;
-  padding: $spacing-lg 0 $spacing-md 0;
+  padding: calc($spacing-xl + 60px) 0 $spacing-md 0;
   color: $primary-green;
   text-align: center;
   border-bottom: 1px solid rgba($primary-green, 0.08);
@@ -523,6 +695,7 @@ body {
 .approach-list-section {
   padding: $spacing-xl 0;
   background: $background-light;
+
   h2 {
     text-align: center;
     font-family: $font-secondary;
@@ -575,6 +748,7 @@ body {
 
 .specialties-list-section {
   padding: $spacing-xl 0;
+  margin-top: 2rem;
   background: $background-light;
   h2 {
     text-align: center;

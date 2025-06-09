@@ -199,7 +199,6 @@ body {
   }
 
   .forest-overlay {
-    background: url("/images/forest-path.jpg") center/cover;
     padding: $spacing-xl;
     position: relative;
     border-radius: $border-radius-lg;
@@ -773,6 +772,8 @@ body {
     font-family: $font-secondary;
     color: $primary-green;
     margin-bottom: $spacing-lg;
+    font-size: 2rem;
+    font-weight: 700;
   }
   .approach-list-grid {
     display: grid;
@@ -810,10 +811,43 @@ body {
   }
 }
 
+@media (min-width: 770px) and (max-width: 1180px) {
+  .approach-list-section,
+  .specialties-list-section {
+    h2 {
+      padding-left: 10%;
+    }
+    .approach-list-grid,
+    .specialties-list-grid {
+      padding-left: 10%;
+    }
+  }
+}
+
 @media (max-width: $breakpoint-md) {
   .approach-list-section {
+    h2 {
+      width: 80%;
+      margin-left: auto;
+      margin-right: auto;
+    }
     .approach-list-grid {
       grid-template-columns: 1fr;
+      width: 80%;
+      margin: 0 auto;
+    }
+    .approach-list-item {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      padding: $spacing-md 0;
+    }
+    .approach-list-icon {
+      transform: rotate(90deg);
+      margin-bottom: 0.5rem;
+    }
+    .approach-list-title {
+      margin-bottom: $spacing-xs;
     }
   }
 }
@@ -845,36 +879,42 @@ body {
     background: none;
     border: none;
     box-shadow: none;
-    border-bottom: 1px solid rgba($primary-green, 0.15);
-  }
-  .specialties-list-item:last-child,
-  .specialties-list-item:nth-last-child(-n + 4) {
-    border-bottom: none;
+    border-bottom: 1px solid rgba($primary-green, 0.08);
   }
   .specialties-list-icon {
-    background: $primary-green;
-    color: $text-light;
+    color: $primary-green;
+    background: $light-green;
     border-radius: 50%;
     width: 2rem;
     height: 2rem;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 1.1rem;
+    font-size: 1.2rem;
     flex-shrink: 0;
   }
   .specialties-list-text {
     font-weight: 600;
     color: $primary-green;
-    font-size: 1.15rem;
+    font-size: 1.1rem;
     letter-spacing: 0.01em;
   }
 }
 
 @media (max-width: $breakpoint-md) {
   .specialties-list-section {
+    h2 {
+      width: 80%;
+      margin-left: auto;
+      margin-right: auto;
+    }
     .specialties-list-grid {
       grid-template-columns: 1fr;
+      width: 80%;
+      margin: 0 auto;
+    }
+    .specialties-list-item {
+      justify-content: flex-start;
     }
   }
 }

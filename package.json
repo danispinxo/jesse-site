@@ -2,6 +2,7 @@
   "name": "jesse-site",
   "version": "0.1.0",
   "private": true,
+  "type": "module",
   "scripts": {
     "dev": "next dev --turbopack",
     "build": "next build",
@@ -27,8 +28,10 @@
     "sass": "^1.82.0"
   },
   "devDependencies": {
-    "@eslint/eslintrc": "^3",
-    "eslint": "^9",
-    "eslint-config-next": "15.3.3"
+    "@next/eslint-plugin-next": "^15.3.3",
+    "eslint": "^9.28.0",
+    "eslint-config-next": "^15.3.3",
+    "eslint-plugin-react": "^7.37.5",
+    "eslint-plugin-react-hooks": "^5.2.0"
   }
 }

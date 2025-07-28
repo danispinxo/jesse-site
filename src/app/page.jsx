@@ -2,7 +2,7 @@
 import "normalize.css";
 import "./styles/styles.scss";
 import Link from "next/link";
-import { Image } from "react-bootstrap";
+import Image from "next/image";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faPaperPlane,
@@ -40,6 +40,8 @@ export default function HomePage() {
             className="hero-image"
             src="/images/JessePajuaar.webp"
             alt="Professional headshot of Jesse Pajuäär, a registered psychotherapist"
+            width={500}
+            height={500}
           />
         </div>
       </section>

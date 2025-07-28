@@ -3,7 +3,7 @@ import "../styles/styles.scss";
 import "../styles/services.scss";
 import Link from "next/link";
 import Footer from "../components/Footer";
-import { Image } from "react-bootstrap";
+import Image from "next/image";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCheck } from "@fortawesome/free-solid-svg-icons";
 
@@ -30,6 +30,8 @@ export default function Services() {
                 className="service-image"
                 src="/images/Psychotherapy.webp"
                 alt="A serene therapy session setup with a comfortable chair and calming decor."
+                width={400}
+                height={300}
               />
             </div>
             <div className="service-details">
@@ -65,6 +67,8 @@ export default function Services() {
                 className="service-image"
                 src="/images/ArtTherapy.webp"
                 alt="Art supplies including paints, brushes, and paper used in art therapy sessions."
+                width={400}
+                height={300}
               />
             </div>
             <div className="service-details">
@@ -98,6 +102,8 @@ export default function Services() {
                 className="service-image"
                 src="/images/LowIncome.webp"
                 alt="A welcoming office space with a desk and chair, symbolizing accessibility and affordability."
+                width={400}
+                height={300}
               />
             </div>
             <div className="service-details">

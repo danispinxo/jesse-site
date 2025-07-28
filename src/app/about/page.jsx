@@ -1,7 +1,7 @@
 "use client";
 import "../styles/styles.scss";
 import "../styles/about.scss";
-import { Image } from "react-bootstrap";
+import Image from "next/image";
 import Footer from "../components/Footer";
 import { faLeaf, faSeedling } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -27,6 +27,10 @@ export default function AboutPage() {
               className="profile-image"
               src="/images/JessePajuaar.webp"
               alt="Headshot of Jesse Pajuaar"
+              width={400}
+              height={0}
+              sizes="400px"
+              style={{ height: "auto" }}
             />
           </div>
           <div className="profile-text">

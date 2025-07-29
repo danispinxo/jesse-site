@@ -68,6 +68,12 @@ export default function RootLayout({ children }) {
         />
         <meta name="author" content="Jesse Pajuaar" />
         <link rel="icon" type="image/png" href="/images/Logo.webp" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link
+          rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossOrigin="anonymous"
+        />
         <title>Jesse Pajuäär Therapy Studios</title>
       </head>
       <body>

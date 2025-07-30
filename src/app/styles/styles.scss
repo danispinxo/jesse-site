@@ -755,13 +755,16 @@ body {
           box-shadow: $shadow-md;
           color: $text-dark;
         }
+
+        span {
+          margin-right: 0.5rem;
+        }
       }
     }
   }
 }
 @media (min-width: $breakpoint-md) and (max-width: $breakpoint-lg) {
-  .client-portal-text,
-  .nous-talk-text {
+  .client-portal-text {
     display: none !important;
   }
 }

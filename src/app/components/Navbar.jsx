@@ -76,8 +76,7 @@ const Navbar = () => {
             rel="noreferrer"
             onClick={handleLinkClick}
           >
-            <span className="nous-talk-text">NousTalk </span>{" "}
-            <span className="client-portal-text">Client Portal </span>
+            <span className="client-portal-text">Client Portal</span>
             <FontAwesomeIcon icon={faArrowsTurnRight} />
           </Link>
         </div>

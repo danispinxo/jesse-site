@@ -47,17 +47,19 @@ export default function AboutPage() {
             <div className="credentials">
               <h3>Credentials & Education</h3>
               <ul>
-                <li>In Practice for 5 years</li>
+                <li>7 years of experience</li>
                 <li>Registered Psychotherapist (RP)</li>
                 <li>Registered Art Therapist (RCAT)</li>
                 <li>Diploma in Art Therapy (DTATI)</li>
-                <li>Honours Bachelor of Arts (HBA)</li>
+                <li>Honours Bachelor of Arts (HBA) in Psychotherapy</li>
                 <li>
-                  Member of the College of Registered Psychotherapists of
-                  Ontario
+                  Licensed Member of the College of Registered Psychotherapists
+                  of Ontario
                 </li>
-                <li>Member of the Canadian Art Therapy Association</li>
-                <li>Attended Toronto Art Therapy Institute (2020)</li>
+                <li>
+                  Professional Member of the Canadian Art Therapy Association
+                </li>
+                <li>Graduate of the Toronto Art Therapy Institute</li>
               </ul>
             </div>
           </div>
@@ -209,6 +211,10 @@ const approaches = [
     desc: "Understand how early relationships shape current experiences and behaviors.",
   },
   {
+    title: "Compassionate Inquiry",
+    desc: "Gently uncover underlying emotional and psychological patterns.",
+  },
+  {
     title: "Existential",
     desc: "Explore the meaning of life and personal values in the therapeutic process.",
   },
@@ -239,9 +245,5 @@ const approaches = [
   {
     title: "Trauma Informed",
     desc: "Create a safe space that acknowledges and respects the impact of trauma.",
-  },
-  {
-    title: "Compassionate Inquiry",
-    desc: "Gently uncover underlying emotional and psychological patterns.",
   },
 ];

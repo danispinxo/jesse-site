@@ -25,11 +25,8 @@ export default function HomePage() {
             how to begin?
           </p>
           <Link href="/contact">
-            <button className="cta-button">
-              <FontAwesomeIcon
-                icon={faPaperPlane}
-                style={{ marginRight: "0.5rem" }}
-              />
+            <button className="cta-button home-contact-button">
+              <FontAwesomeIcon icon={faPaperPlane} />
               Contact me now for a no-fee 15-minute consultation
             </button>
           </Link>

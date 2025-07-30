@@ -264,14 +264,16 @@ body {
     }
   }
 }
+
 .about-me-section {
   color: $text-light;
   overflow: hidden;
   padding: $spacing-xl;
+  padding-top: 0;
   position: relative;
   margin: 0 auto;
   background-color: $background-dark;
-  margin-top: -10px;
+  margin-top: -90px;
 
   h2,
   h3 {
@@ -380,6 +382,7 @@ body {
 
 .specialties {
   padding: $spacing-xl;
+  padding-top: 0;
   background-color: $background-light;
 
   h2 {
@@ -540,10 +543,17 @@ body {
   font-weight: 600;
   cursor: pointer;
   transition: transform $transition-normal, box-shadow $transition-normal;
+  opacity: 0.8;
 
   &:hover {
     transform: translateY(-2px);
     box-shadow: $shadow-md;
+  }
+
+  &.home-contact-button {
+    svg {
+      margin-right: 0.5rem;
+    }
   }
 }
 

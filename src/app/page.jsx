@@ -46,7 +46,7 @@ export default function HomePage() {
       <section className="treeline-divider">
         <div className="treeline-element">
           <img
-            src="/images/Treeline.png"
+            src="/images/Treeline.webp"
             alt="Forest treeline silhouette"
             className="treeline-image"
           />

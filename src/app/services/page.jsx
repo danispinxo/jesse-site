@@ -127,6 +127,42 @@ export default function Services() {
               </Link>
             </div>
           </div>
+
+          <div className="service-card featured">
+            <div className="service-image">
+              <Image
+                className="service-image"
+                src="/images/Waterfall.webp"
+                alt="A serene waterfall in a forest."
+                width={400}
+                height={300}
+              />
+            </div>
+            <div className="service-details">
+              <h2>Clinical Supervision</h2>
+              <p>
+                Professional clinical supervision designed to support therapists
+                in their practice and professional development. Whether you're
+                working toward CRPO licensure or seeking ongoing support in your
+                therapeutic work, supervision provides a collaborative space to
+                reflect on cases, develop skills, and maintain ethical practice.
+                Specializing in art therapy supervision with additional
+                expertise in trauma-informed care and anti-oppressive
+                approaches.
+              </p>
+              <ul className="service-features">
+                {supervisionFeatures.map((feature, index) => (
+                  <li key={index}>
+                    <FontAwesomeIcon icon={faCheck} className="check-icon" />
+                    {feature}
+                  </li>
+                ))}
+              </ul>
+              <Link href="/contact">
+                <button className="cta-button">Get Started</button>
+              </Link>
+            </div>
+          </div>
         </div>
       </section>
 
@@ -185,9 +221,17 @@ const reducedRateFeatures = [
   "Limited availability for qualifying individuals",
 ];
 
+const supervisionFeatures = [
+  "Focused and tailored clinical support",
+  "Art therapy supervision",
+  "CRPO Licensure preparation",
+  "Private practice expertise",
+  "Professional development guidance",
+];
+
 const pricingPlans = [
   {
-    title: "Psychotherapy  (Individual)",
+    title: "Psychotherapy",
     price: "150",
     duration: "50 minutes",
     features: [
@@ -199,7 +243,7 @@ const pricingPlans = [
     ],
   },
   {
-    title: "Art Psychotherapy (Individual)",
+    title: "Art Psychotherapy",
     price: "150",
     duration: "50 minutes",
     features: [
@@ -207,23 +251,35 @@ const pricingPlans = [
       "Supportive space",
       "Process-focused",
       "Boost self-expression",
-      "Flexible scheduling",
+      "Video or phone",
     ],
   },
   {
-    title: "Reduced Rate & Sliding Scale",
+    title: "Reduced Rate",
     price: "90-140",
     duration: "50 minutes",
     features: [
       "Limited availability",
-      "One-on-one care",
+      "Sliding scale options",
       "Evidence-based",
       "Flexible scheduling",
       "Video or phone",
     ],
   },
   {
-    title: "Initial Consultation (Phone Only)",
+    title: "Clinical Supervision",
+    price: "140-150",
+    duration: "50 minutes",
+    features: [
+      "Focused and tailored",
+      "Clinical support",
+      "Art therapy supervision",
+      "CRPO Licensure",
+      "Video or phone",
+    ],
+  },
+  {
+    title: "Initial Consultation",
     price: "0",
     duration: "15 minutes",
     features: [
@@ -231,7 +287,7 @@ const pricingPlans = [
       "Discuss your needs",
       "Explore therapy options",
       "Learn about approaches",
-      "Discuss next steps",
+      "Phone only",
     ],
   },
 ];

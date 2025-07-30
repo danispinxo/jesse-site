@@ -16,9 +16,9 @@ export default function HomePage() {
       <section className="hero">
         <div className="hero-content">
           <h1>
-            Experience is not what happens to you. It is what you do with what
-            happens to you.
-            <span className="emphasis">Aldous Huxley</span>
+            "Experience is not what happens to you. It is what you do with what
+            happens to you."
+            <span className="emphasis">- Aldous Huxley</span>
           </h1>
           <p className="hero-text">
             Do you feel you need to make some changes but don't know where or
@@ -166,6 +166,10 @@ const approaches = [
     desc: "Understand how early relationships shape current experiences and behaviors.",
   },
   {
+    title: "Compassionate Inquiry",
+    desc: "Gently uncover underlying emotional and psychological patterns.",
+  },
+  {
     title: "Existential",
     desc: "Explore the meaning of life and personal values in the therapeutic process.",
   },
@@ -196,9 +200,5 @@ const approaches = [
   {
     title: "Trauma Informed",
     desc: "Create a safe space that acknowledges and respects the impact of trauma.",
-  },
-  {
-    title: "Compassionate Inquiry",
-    desc: "Gently uncover underlying emotional and psychological patterns.",
   },
 ];

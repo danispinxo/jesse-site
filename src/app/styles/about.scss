@@ -68,6 +68,18 @@
         transform: scale(1.05);
         box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
       }
+
+      @media (max-width: $breakpoint-md) {
+        width: 250px;
+      }
+
+      @media (max-width: $breakpoint-sm) {
+        width: 250px;
+      }
+
+      @media (max-width: 480px) {
+        width: 250px;
+      }
     }
 
     .profile-text {
@@ -113,6 +125,10 @@
               left: 0;
             }
           }
+        }
+
+        @media (max-width: 480px) {
+          text-align: left;
         }
       }
     }

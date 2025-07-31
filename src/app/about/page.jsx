@@ -29,7 +29,7 @@ export default function AboutPage() {
               alt="Headshot of Jesse Pajuaar"
               width={400}
               height={0}
-              sizes="400px"
+              sizes="(max-width: 480px) 150px, (max-width: 640px) 180px, (max-width: 768px) 250px, 400px"
               style={{ height: "auto" }}
             />
           </div>

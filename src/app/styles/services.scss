@@ -39,6 +39,10 @@
           margin: 0 auto;
         }
 
+        @media (max-width: 480px) {
+          width: 80%;
+        }
+
         img {
           margin: 4rem 3rem;
           width: 100%;
@@ -124,52 +128,6 @@
   }
 }
 
-.specializations {
-  padding: $spacing-xl 0;
-  background-color: $background-light;
-
-  .specializations-content {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 $spacing-lg;
-
-    h2 {
-      text-align: center;
-      font-family: $font-secondary;
-      color: $primary-green;
-      margin-bottom: $spacing-xl;
-    }
-
-    .specializations-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: $spacing-lg;
-
-      .specialization-card {
-        background-color: $text-light;
-        padding: $spacing-lg;
-        border-radius: $border-radius-md;
-        box-shadow: $shadow-md;
-        transition: transform $transition-normal;
-
-        &:hover {
-          transform: translateY(-5px);
-        }
-
-        h3 {
-          color: $secondary-green;
-          margin-bottom: $spacing-md;
-        }
-
-        p {
-          color: $text-dark;
-          line-height: 1.6;
-        }
-      }
-    }
-  }
-}
-
 .pricing {
   padding: $spacing-xl 0;
   background-color: $text-light;
@@ -181,6 +139,10 @@
 
     @media (max-width: $breakpoint-md) {
       padding: 0 $spacing-sm;
+    }
+
+    @media (max-width: 480px) {
+      width: 90%;
     }
 
     h2 {

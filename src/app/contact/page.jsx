@@ -57,7 +57,8 @@ export default function Contact() {
 
           <p className="guide-link">
             <Link href="/guide">
-              Read more about how to choose the right therapist for you!
+              Read this helpful guide about how to choose the right therapist
+              for you!
             </Link>
           </p>
 

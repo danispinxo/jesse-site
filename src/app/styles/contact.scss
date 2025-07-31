@@ -77,12 +77,10 @@
 
   .guide-link {
     margin: 1.5rem 0;
-    
+
     a {
       color: $primary-green;
-      text-decoration: underline;
-      text-decoration-color: $accent-gold;
-      text-underline-offset: 3px;
+      font-size: 1.1rem;
       font-weight: 600;
       padding: 0.5rem 1rem;
       border-radius: $border-radius-sm;
@@ -98,11 +96,6 @@
         text-decoration-color: $primary-green;
         transform: translateY(-2px);
         box-shadow: 0 4px 12px rgba($accent-gold, 0.2);
-      }
-
-      &:before {
-        content: "📖";
-        margin-right: 0.5rem;
       }
     }
   }

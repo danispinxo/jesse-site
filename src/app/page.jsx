@@ -139,7 +139,7 @@ const specialties = [
   "Life Coaching",
   "Life Transitions",
   "Men's Issues",
-  "Narcissistic Personality (NPD)",
+  "Narcissistic Personality",
   "Peer Relationships",
   "Racial Identity",
   "Relationship Issues",

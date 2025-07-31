@@ -211,7 +211,7 @@ body {
   .hero-image-wrapper {
     position: relative;
     display: inline-block;
-    z-index: 1;
+    z-index: 15;
     margin: 0 auto;
     transform: scale(0.95);
 
@@ -275,7 +275,6 @@ body {
   margin: 0 auto;
   background-color: $background-dark;
   z-index: 10;
-  // margin-top: -90px;
 
   h2,
   h3 {
@@ -603,6 +602,12 @@ body {
 
 @media (max-width: $breakpoint-md) {
   .hero {
+    width: 90%;
+
+    .hero-content {
+      width: 100%;
+    }
+
     h1 {
       font-size: 2.5rem;
 
@@ -613,6 +618,18 @@ body {
       .emphasis {
         font-size: 2rem;
       }
+    }
+  }
+
+  .about-me-section {
+    margin-top: 0;
+    padding: $spacing-md;
+    padding-top: 100px;
+    padding-bottom: 50px;
+
+    .why-content {
+      font-size: 1.1rem;
+      text-align: center;
     }
   }
 

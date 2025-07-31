@@ -228,3 +228,30 @@
     }
   }
 }
+
+@media (max-width: 480px) {
+  .covid-note {
+    margin: 1rem;
+  }
+
+  .contact-body {
+    margin: 1rem;
+  }
+
+  .contact-form {
+    min-width: 200px;
+    width: 90%;
+  }
+
+  .contact-info {
+    text-align: center;
+  }
+
+  .contact-form {
+    width: 100%;
+  }
+
+  .name {
+    font-size: 1.4rem;
+  }
+}

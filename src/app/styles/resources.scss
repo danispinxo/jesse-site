@@ -63,68 +63,6 @@
   }
 }
 
-.downloads-section {
-  padding: $spacing-xl 0;
-  background-color: $background-light;
-
-  .downloads-content {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 $spacing-lg;
-
-    h2 {
-      text-align: center;
-      font-family: $font-secondary;
-      color: $primary-green;
-      margin-bottom: $spacing-xl;
-    }
-
-    .downloads-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: $spacing-lg;
-
-      .download-card {
-        background-color: $text-light;
-        padding: $spacing-lg;
-        border-radius: $border-radius-md;
-        box-shadow: $shadow-md;
-
-        h3 {
-          color: $secondary-green;
-          margin-bottom: $spacing-md;
-        }
-
-        p {
-          color: $text-dark;
-          line-height: 1.6;
-          margin-bottom: $spacing-lg;
-        }
-
-        .download-button {
-          display: inline-flex;
-          align-items: center;
-          padding: $spacing-sm $spacing-md;
-          background-color: $primary-green;
-          color: $text-light;
-          border: none;
-          border-radius: $border-radius-sm;
-          cursor: pointer;
-          transition: background-color $transition-normal;
-
-          .icon {
-            margin-left: $spacing-sm;
-          }
-
-          &:hover {
-            background-color: $secondary-green;
-          }
-        }
-      }
-    }
-  }
-}
-
 .reading-section {
   padding: $spacing-xl 0;
   background-color: $text-light;
@@ -395,29 +333,6 @@
   }
 }
 
-.landscape-divider {
-  width: 100%;
-  height: 200px;
-  position: relative;
-  margin: $spacing-xl 0;
-  border-radius: $border-radius-lg;
-  overflow: hidden;
-
-  &::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: linear-gradient(
-      to bottom,
-      rgba($background-dark, 0.7),
-      rgba($background-dark, 0.8)
-    );
-  }
-}
-
 .section-divider {
   width: 100%;
   height: 180px;
@@ -463,5 +378,19 @@
       grid-template-columns: 1fr;
       padding: 1.5rem 0;
     }
+  }
+}
+
+@media (max-width: 480px) {
+  .articles-section,
+  .resources-list-section,
+  .books-list-section {
+    width: 80%;
+    max-width: 400px;
+    margin-left: 1.5rem;
+  }
+
+  h2 {
+    font-size: 2rem;
   }
 }

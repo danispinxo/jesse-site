@@ -73,7 +73,6 @@ export default function Resources() {
         </div>
       </section>
 
-      {/* Newsletter Section */}
       <section className="newsletter-section">
         <div className="newsletter-content">
           <h2>Get In Touch</h2>

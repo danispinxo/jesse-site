@@ -76,10 +76,34 @@
   border: 1px solid rgba($primary-green, 0.08);
 
   .guide-link {
-    color: $secondary-green;
-
+    margin: 1.5rem 0;
+    
     a {
-      color: $secondary-green;
+      color: $primary-green;
+      text-decoration: underline;
+      text-decoration-color: $accent-gold;
+      text-underline-offset: 3px;
+      font-weight: 600;
+      padding: 0.5rem 1rem;
+      border-radius: $border-radius-sm;
+      background-color: rgba($accent-gold, 0.1);
+      border: 1px solid rgba($accent-gold, 0.3);
+      display: inline-block;
+      transition: all $transition-normal;
+      position: relative;
+
+      &:hover {
+        background-color: rgba($accent-gold, 0.2);
+        border-color: $accent-gold;
+        text-decoration-color: $primary-green;
+        transform: translateY(-2px);
+        box-shadow: 0 4px 12px rgba($accent-gold, 0.2);
+      }
+
+      &:before {
+        content: "📖";
+        margin-right: 0.5rem;
+      }
     }
   }
 
@@ -253,5 +277,110 @@
 
   .name {
     font-size: 1.4rem;
+  }
+}
+
+.submit-modal-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(4px);
+  z-index: 1300;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+}
+
+.submit-modal-box {
+  background-color: $background-light;
+  border-radius: $border-radius-lg;
+  padding: $spacing-xl;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.25);
+  max-width: 500px;
+  width: 100%;
+  text-align: center;
+  border: 1px solid rgba($primary-green, 0.1);
+  position: relative;
+
+  .submit-modal-title {
+    font-family: $font-secondary;
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: $primary-green;
+    margin-bottom: $spacing-md;
+    margin-top: 0;
+  }
+
+  .submit-modal-subtitle {
+    font-size: 1.2rem;
+    color: $secondary-green;
+    margin-bottom: $spacing-lg;
+    font-weight: 600;
+  }
+
+  .submit-modal-content {
+    font-size: 1rem;
+    color: $text-dark;
+    line-height: 1.6;
+    margin-bottom: $spacing-md;
+
+    &:last-of-type {
+      font-style: italic;
+      color: $secondary-green;
+      font-size: 0.9rem;
+    }
+  }
+
+  .btn-holder {
+    margin-top: $spacing-lg;
+
+    .close-btn {
+      background-color: $primary-green;
+      color: $text-light;
+      border: none;
+      padding: $spacing-sm $spacing-xl;
+      border-radius: $border-radius-md;
+      font-size: 1.1rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all $transition-normal;
+      box-shadow: 0 4px 12px rgba($primary-green, 0.2);
+
+      &:hover {
+        background-color: $secondary-green;
+        transform: translateY(-2px);
+        box-shadow: 0 6px 16px rgba($primary-green, 0.3);
+      }
+
+      &:active {
+        transform: translateY(0);
+      }
+    }
+  }
+}
+
+@media (max-width: $breakpoint-sm) {
+  .submit-modal-backdrop {
+    padding: 0.5rem;
+  }
+
+  .submit-modal-box {
+    padding: $spacing-lg;
+
+    .submit-modal-title {
+      font-size: 1.5rem;
+    }
+
+    .submit-modal-subtitle {
+      font-size: 1.1rem;
+    }
+
+    .submit-modal-content {
+      font-size: 0.95rem;
+    }
   }
 }

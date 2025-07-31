@@ -23,41 +23,6 @@ export default function Contact() {
     setIsClient(true);
   }, []);
 
-  if (state.succeeded) {
-    return (
-      <main className="page-content">
-        <div className="contact-title-holder">
-          <h1 className="contact-title">Get In Touch</h1>
-        </div>
-
-        <SubmitModal />
-
-        <div className="submit-contact-body">
-          <div className="contact-info">
-            <img className="logo" src="/images/Logo.webp" alt="JPTS Logo" />
-            <p>
-              The right fit is the most important part of finding the right
-              therapist.
-            </p>
-
-            <p className="guide-link">
-              <Link href="/guide">
-                Read more about how to choose the right therapist for you!
-              </Link>
-            </p>
-
-            <p>
-              To contact me for a no-fee 15 minute phone consultation simply
-              fill out the form to the right.
-            </p>
-          </div>
-        </div>
-
-        <Footer />
-      </main>
-    );
-  }
-
   return (
     <main className="page-content">
       <section className="page-hero">
@@ -79,6 +44,8 @@ export default function Contact() {
           Get in touch for more information.
         </p>
       </div>
+
+      {state.succeeded && <SubmitModal />}
 
       <div className="contact-body">
         <div className="contact-info">

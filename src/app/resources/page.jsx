@@ -151,41 +151,41 @@ const recommendedBooks = [
     author: "Bessel van der Kolk",
     description:
       "Understanding trauma and healing through the lens of mind-body connection.",
-    link: "https://www.chapters.indigo.ca/en-ca/books/the-body-keeps-the-score/9780143127741-item.html",
+    link: "https://booklore.ca/item/rBSsMLeAZlZgLaHbv2BzYg",
   },
   {
     title: "Daring Greatly",
     author: "Brené Brown",
     description:
       "How the courage to be vulnerable transforms the way we live, love, parent, and lead.",
-    link: "https://www.chapters.indigo.ca/en-ca/books/daring-greatly/9781592408412-item.html",
+    link: "https://booklore.ca/item/dKry7NBeUZDe_6cSSiigGQ",
   },
   {
     title: "The Art Therapy Sourcebook",
     author: "Cathy Malchiodi",
     description:
       "A comprehensive guide to the healing power of art in therapy and self-expression.",
-    link: "https://www.chapters.indigo.ca/en-ca/books/the-art-therapy-sourcebook/9780071468275-item.html",
+    link: "https://booklore.ca/item/ZsXI6jTLnOnCaOE10SZDnw",
   },
   {
     title: "Mindfulness for Beginners",
     author: "Jon Kabat-Zinn",
     description:
       "Reclaiming the present moment and your life through mindfulness practices.",
-    link: "https://www.indigo.ca/en-ca/mindfulness-for-beginners-reclaiming-the-present-momentand-your-life/9781622036677.html",
+    link: "https://booklore.ca/item/sU74UxwKi18oapnZPwAC0Q",
   },
   {
     title: "The Mindful Way Workbook",
     author: "John Teasdale, Mark Williams, Zindel Segal",
     description:
       "An 8-week program to free yourself from depression and emotional distress through mindfulness.",
-    link: "https://www.chapters.indigo.ca/en-ca/books/the-mindful-way-workbook/9781462508143-item.html",
+    link: "https://booklore.ca/item/0-WUlnSYpN90VMdMq9paDA",
   },
   {
     title: "Art as Therapy",
     author: "Alain de Botton, John Armstrong",
     description:
       "Exploring how art can help us understand ourselves and improve our emotional well-being.",
-    link: "https://www.chapters.indigo.ca/en-ca/books/art-as-therapy/9780714872780-item.html",
+    link: "https://booklore.ca/item/BwcNDtmBUlYMdbEW99xYVg",
   },
 ];

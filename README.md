@@ -5,7 +5,6 @@
 - React 18
 - Next.js
 - ESlint
-- Axios
 
 ## Libraries
 

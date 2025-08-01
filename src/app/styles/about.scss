@@ -1,41 +1,6 @@
-@use "variables.scss";
+@use "variables" as *;
 
 .page-content {
-  padding: 2rem;
-
-  .about-title-holder {
-    position: relative;
-    text-align: center;
-    padding: 1rem 2rem 1rem 2rem;
-    margin: 0 auto;
-    max-width: 1200px;
-    background: linear-gradient(135deg, variables.$dark-teal, variables.$teal);
-    z-index: 1;
-
-    &::before {
-      content: "";
-      position: absolute;
-      top: 0;
-      left: 50%;
-      transform: translateX(-50%);
-      width: 180%;
-      height: 100%;
-      background: linear-gradient(
-        to right,
-        rgba(variables.$dark-teal, 0) 0%,
-        rgba(variables.$dark-teal, 1) 20%,
-        rgba(variables.$teal, 1) 80%,
-        rgba(variables.$teal, 0) 100%
-      );
-      z-index: -1;
-    }
-
-    h1 {
-      color: white;
-      font-family: variables.$sub2-font;
-    }
-  }
-
   .defined-section {
     margin: 2rem 0;
     padding: 2rem;
@@ -55,17 +20,6 @@
 
     .section-label {
       margin-bottom: 1rem;
-
-      .label-title {
-        font-size: 1.8rem;
-        font-weight: bold;
-        color: var(--dark-teal);
-      }
-
-      .label-subtitle {
-        font-size: 1.2rem;
-        color: var(--teal);
-      }
     }
 
     .section-content {
@@ -85,38 +39,357 @@
       }
     }
   }
+}
 
-  .about-expectations {
-    padding: 1rem 1rem 0rem 1rem;
-    text-align: center;
-    border-radius: 16px;
-    background: linear-gradient(135deg, variables.$dark-teal, variables.$teal);
-    font-size: 1.8rem;
-    color: white;
-    font-family: variables.$sub-font;
-  }
+.profile-section {
+  padding: $spacing-xl 0;
+  background-color: $text-light;
 
-  .consult-box {
-    text-align: center;
-    background: linear-gradient(135deg, variables.$dark-teal, variables.$teal);
+  .profile-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 $spacing-lg;
+    display: flex;
+    gap: $spacing-xl;
+    align-items: center;
 
-    .consult-text {
-      font-size: 1.2rem;
-      margin-bottom: 1rem;
-      color: white;
+    @media (max-width: $breakpoint-lg) {
+      flex-direction: column;
+      text-align: center;
     }
-    .consult-btn {
-      padding: 0.75rem 1.5rem;
-      background: white;
-      color: variables.$very-dark-blue;
-      border: none;
-      border-radius: 8px;
-      cursor: pointer;
-      transition: all 0.3s ease;
+
+    .profile-image {
+      width: 400px;
+      border-radius: 10%;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+
       &:hover {
-        background: variables.$very-dark-blue;
-        color: white;
+        transform: scale(1.05);
+        box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
       }
+
+      @media (max-width: $breakpoint-md) {
+        width: 250px;
+      }
+
+      @media (max-width: $breakpoint-sm) {
+        width: 250px;
+      }
+
+      @media (max-width: 480px) {
+        width: 250px;
+      }
+    }
+
+    .profile-text {
+      flex: 2;
+
+      h2 {
+        font-family: $font-secondary;
+        color: $primary-green;
+        margin-bottom: $spacing-lg;
+      }
+
+      p {
+        margin-bottom: $spacing-lg;
+        line-height: 1.8;
+      }
+
+      .credentials {
+        background-color: $background-light;
+        padding: $spacing-lg;
+        border-radius: $border-radius-md;
+        margin-top: $spacing-xl;
+
+        h3 {
+          color: $secondary-green;
+          margin-bottom: $spacing-md;
+        }
+
+        ul {
+          list-style: none;
+          padding: 0;
+          display: grid;
+          grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+          gap: $spacing-md;
+
+          li {
+            padding-left: $spacing-md;
+            position: relative;
+
+            &::before {
+              content: "•";
+              color: $accent-gold;
+              position: absolute;
+              left: 0;
+            }
+          }
+        }
+
+        @media (max-width: 480px) {
+          text-align: left;
+        }
+      }
+    }
+  }
+}
+
+.philosophy-section {
+  padding: $spacing-xl 0;
+  background-color: $background-light;
+
+  .philosophy-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 $spacing-lg;
+
+    h2 {
+      text-align: center;
+      font-family: $font-secondary;
+      color: $primary-green;
+      margin-bottom: $spacing-xl;
+    }
+
+    .philosophy-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: $spacing-lg;
+
+      .philosophy-item {
+        background-color: $text-light;
+        padding: $spacing-lg;
+        border-radius: $border-radius-md;
+        box-shadow: $shadow-md;
+        transition: transform $transition-normal;
+
+        &:hover {
+          transform: translateY(-5px);
+        }
+
+        h3 {
+          color: $secondary-green;
+          margin-bottom: $spacing-md;
+        }
+
+        p {
+          color: $text-dark;
+          line-height: 1.6;
+        }
+      }
+    }
+  }
+}
+
+.values-section {
+  padding: $spacing-xl 0;
+  background-color: $text-light;
+
+  .values-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 $spacing-lg;
+
+    h2 {
+      text-align: center;
+      font-family: $font-secondary;
+      color: $primary-green;
+      margin-bottom: $spacing-xl;
+    }
+
+    .values-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: $spacing-sm;
+
+      .value-card {
+        text-align: center;
+
+        h3 {
+          color: $accent-gold;
+          margin-bottom: $spacing-md;
+          font-size: 1.5rem;
+        }
+      }
+    }
+  }
+}
+
+.cta-section {
+  padding: $spacing-lg 0 $spacing-md 0;
+  background: $background-light;
+  color: $primary-green;
+  text-align: center;
+  border-top: 1px solid rgba($primary-green, 0.08);
+  .cta-content {
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 0 $spacing-md;
+    h2 {
+      font-family: $header-font;
+      font-size: 1.5rem;
+      font-weight: 700;
+      margin-bottom: 0.5rem;
+      color: $primary-green;
+      letter-spacing: 0.01em;
+      position: relative;
+      display: inline-block;
+      &::after {
+        content: "";
+        display: block;
+        width: 40px;
+        height: 3px;
+        background: linear-gradient(
+          90deg,
+          $primary-green 60%,
+          $secondary-green 100%
+        );
+        border-radius: 2px;
+        margin: 0.4rem auto 0 auto;
+        opacity: 0.25;
+      }
+    }
+    p {
+      margin-bottom: $spacing-md;
+      font-size: 1rem;
+      color: $secondary-green;
+    }
+    .cta-button {
+      background-color: $primary-green;
+      color: $text-light;
+      padding: $spacing-sm $spacing-lg;
+      border: none;
+      border-radius: 6px;
+      font-size: 1rem;
+      font-weight: 700;
+      cursor: pointer;
+      letter-spacing: 0.01em;
+      box-shadow: none;
+      transition: background $transition-normal, color $transition-normal,
+        transform $transition-normal;
+      &:hover {
+        background: $secondary-green;
+        color: $accent-gold;
+        transform: translateY(-2px);
+      }
+    }
+  }
+}
+
+.philosophy-list-section {
+  padding: $spacing-xl 0;
+  background: $background-light;
+  h2 {
+    text-align: center;
+    font-family: $font-secondary;
+    color: $primary-green;
+    margin-bottom: $spacing-lg;
+    font-size: 2rem;
+    font-weight: 700;
+  }
+  .philosophy-list-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: $spacing-md $spacing-xl;
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+  .philosophy-list-item {
+    display: flex;
+    align-items: flex-start;
+    gap: $spacing-md;
+    padding: $spacing-sm 0;
+    background: none;
+    border: none;
+    box-shadow: none;
+  }
+  .philosophy-list-icon {
+    color: $primary-green;
+    background: $light-green;
+    border-radius: 50%;
+    width: 2rem;
+    height: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    flex-shrink: 0;
+    margin-top: 0.2em;
+  }
+  .philosophy-list-title {
+    font-weight: 600;
+    color: $primary-green;
+    font-size: 1.1rem;
+    display: block;
+  }
+  .philosophy-list-desc {
+    color: $text-dark;
+    font-size: 1rem;
+    display: block;
+    margin-top: 0.1em;
+  }
+}
+
+@media (max-width: $breakpoint-md) {
+  .philosophy-list-section {
+    .philosophy-list-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+}
+
+.values-list-section {
+  padding: $spacing-xl 0;
+  background: $text-light;
+  h2 {
+    text-align: center;
+    font-family: $font-secondary;
+    color: $primary-green;
+    margin-bottom: $spacing-lg;
+    font-size: 2rem;
+    font-weight: 700;
+  }
+  .values-list-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: $spacing-md $spacing-xl;
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+  .values-list-item {
+    display: flex;
+    align-items: center;
+    gap: $spacing-md;
+    padding: $spacing-sm 0;
+    background: none;
+    border: none;
+    box-shadow: none;
+    border-bottom: 1px solid rgba($primary-green, 0.08);
+  }
+  .values-list-icon {
+    background: $secondary-green;
+    color: $text-light;
+    border-radius: 50%;
+    width: 2rem;
+    height: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.1rem;
+    flex-shrink: 0;
+  }
+  .values-list-text {
+    font-weight: 600;
+    color: $primary-green;
+    font-size: 1.1rem;
+    letter-spacing: 0.01em;
+  }
+}
+
+@media (max-width: $breakpoint-md) {
+  .values-list-section {
+    .values-list-grid {
+      grid-template-columns: 1fr;
     }
   }
 }

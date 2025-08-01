@@ -2,6 +2,7 @@
   "name": "jesse-site",
   "version": "0.1.0",
   "private": true,
+  "type": "module",
   "scripts": {
     "dev": "next dev --turbopack",
     "build": "next build",
@@ -10,25 +11,25 @@
   },
   "dependencies": {
     "@emotion/react": "^11.14.0",
-    "@emotion/styled": "^11.14.0",
+    "@emotion/styled": "^11.14.1",
     "@formspree/react": "^3.0.0",
     "@fortawesome/free-solid-svg-icons": "^7.0.0",
     "@fortawesome/react-fontawesome": "^0.2.2",
     "@mui/icons-material": "^7.0.1",
     "@mui/material": "^7.0.1",
-    "@mui/styles": "^6.4.8",
     "bootstrap": "^5.3.4",
     "next": "15.4.4",
     "normalize.css": "^8.0.1",
     "react": "^18.0.0",
-    "react-bootstrap": "^2.10.9",
     "react-dom": "^18.0.0",
-    "react-recaptcha": "^2.3.10",
     "sass": "^1.82.0"
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3",
+    "@next/eslint-plugin-next": "^15.3.3",
     "eslint": "^9",
-    "eslint-config-next": "15.4.4"
+    "eslint-config-next": "15.4.4",
+    "eslint-plugin-react": "^7.37.5",
+    "eslint-plugin-react-hooks": "^5.2.0"
   }
 }

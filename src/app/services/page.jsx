@@ -1,94 +1,195 @@
+"use client";
 import "../styles/styles.scss";
 import "../styles/services.scss";
 import Link from "next/link";
 import Footer from "../components/Footer";
+import Image from "next/image";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faCheck } from "@fortawesome/free-solid-svg-icons";
 
 export default function Services() {
   return (
     <main className="page-content">
-      <section className="services-header">
-        <h1 className="services-title">Available Services</h1>
+      <section className="page-hero">
+        <div className="hero-content">
+          <h1>
+            Available Services
+            <span className="subtitle">
+              Comprehensive mental health services designed to support your
+              growth and well-being.
+            </span>
+          </h1>
+        </div>
       </section>
 
-      <section className="help-list defined-section">
-        <h3 className="help-title">Therapy can help you take charge.</h3>
-        <ul className="help-items">
-          <li>Do you feel distant or disconnected from your partner?</li>
-          <li>Are you facing separation or divorce?</li>
-          <li>
-            Are you negotiating a difficult personal decision or challenge?
-          </li>
-          <li>Do you struggle with parenting?</li>
-          <li>
-            Are you overcome by negative thought patterns or cruel self-talk?
-          </li>
-          <li>Do you feel stuck, burned-out, or overwhelmed?</li>
-          <li>Are you frustrated by self-sabotaging behavior?</li>
-          <li>Do you feel unhappy or dissatisfied in your own skin?</li>
-        </ul>
+      <section className="main-services">
+        <div className="services-content">
+          <div className="service-card featured">
+            <div className="service-image">
+              <Image
+                className="service-image"
+                src="/images/Psychotherapy.webp"
+                alt="A serene therapy session setup with a comfortable chair and calming decor."
+                width={400}
+                height={300}
+              />
+            </div>
+            <div className="service-details">
+              <h2>Psychotherapy Session (Individual)</h2>
+              <p>
+                In these sessions, you are the expert of your own life. There
+                are no judgments or assumptions made during our time; the focus
+                is on collaborating with you to create a space where your voice,
+                your wants, and your unique perspectives are not only heard but
+                supported and advocated for. In these sessions, you are the
+                expert of your own life. There are no judgments or assumptions
+                made during our time; the focus is on collaborating with you to
+                create a space where your voice, your wants, and your unique
+                perspectives are not only heard but supported and advocated for.
+              </p>
+              <ul className="service-features">
+                {individualTherapyFeatures.map((feature, index) => (
+                  <li key={index}>
+                    <FontAwesomeIcon icon={faCheck} className="check-icon" />
+                    {feature}
+                  </li>
+                ))}
+              </ul>
+              <Link href="/contact">
+                <button className="cta-button">Schedule Session</button>
+              </Link>
+            </div>
+          </div>
+
+          <div className="service-card featured">
+            <div className="service-image">
+              <Image
+                className="service-image"
+                src="/images/ArtTherapy.webp"
+                alt="Art supplies including paints, brushes, and paper used in art therapy sessions."
+                width={400}
+                height={300}
+              />
+            </div>
+            <div className="service-details">
+              <h2>Art Psychotherapy</h2>
+              <p>
+                Using creative practices as a way to help reframe and
+                (re)examine how we look at ourselves, our relationships, and the
+                world. Art psychotherapy isn't about the end goal of creating
+                'Art,' but about the process. This process means tapping into
+                parts of the brain that often get overlooked or underused but
+                actually provide a wealth of knowledge about how we each
+                uniquely experience and perceive the world.
+              </p>
+              <ul className="service-features">
+                {artTherapyFeatures.map((feature, index) => (
+                  <li key={index}>
+                    <FontAwesomeIcon icon={faCheck} className="check-icon" />
+                    {feature}
+                  </li>
+                ))}
+              </ul>
+              <Link href="/contact">
+                <button className="cta-button">Get Started</button>
+              </Link>
+            </div>
+          </div>
+
+          <div className="service-card featured">
+            <div className="service-image">
+              <Image
+                className="service-image"
+                src="/images/LowIncome.webp"
+                alt="A welcoming office space with a desk and chair, symbolizing accessibility and affordability."
+                width={400}
+                height={300}
+              />
+            </div>
+            <div className="service-details">
+              <h2>Reduced Rate & Sliding Scale</h2>
+              <p>
+                Sliding scale options are available to those individuals
+                demonstrating special need on a case-by-case basis. Please
+                inquire for further details.
+              </p>
+              <p>Sliding scale rates are subject to availability.</p>
+              <ul className="service-features">
+                {reducedRateFeatures.map((feature, index) => (
+                  <li key={index}>
+                    <FontAwesomeIcon icon={faCheck} className="check-icon" />
+                    {feature}
+                  </li>
+                ))}
+              </ul>
+              <Link href="/contact">
+                <button className="cta-button">Inquire</button>
+              </Link>
+            </div>
+          </div>
+
+          <div className="service-card featured">
+            <div className="service-image">
+              <Image
+                className="service-image"
+                src="/images/Waterfall.webp"
+                alt="A serene waterfall in a forest."
+                width={400}
+                height={300}
+              />
+            </div>
+            <div className="service-details">
+              <h2>Clinical Supervision</h2>
+              <p>
+                Professional clinical supervision designed to support therapists
+                in their practice and professional development. Whether you're
+                working toward CRPO licensure or seeking ongoing support in your
+                therapeutic work, supervision provides a collaborative space to
+                reflect on cases, develop skills, and maintain ethical practice.
+                Specializing in art therapy supervision with additional
+                expertise in trauma-informed care and anti-oppressive
+                approaches.
+              </p>
+              <ul className="service-features">
+                {supervisionFeatures.map((feature, index) => (
+                  <li key={index}>
+                    <FontAwesomeIcon icon={faCheck} className="check-icon" />
+                    {feature}
+                  </li>
+                ))}
+              </ul>
+              <Link href="/contact">
+                <button className="cta-button">Get Started</button>
+              </Link>
+            </div>
+          </div>
+        </div>
       </section>
 
-      <section className="session-format defined-section">
-        <h3 className="section-title">Session Formats</h3>
-        <p className="session-info">
-          I am currently taking on new clients in a limited capacity. <br />I am
-          able to meet with you via the following teletherapy options:
-        </p>
-        <ul className="session-options">
-          <li>Video sessions</li>
-          <li>Telephone consultations and sessions</li>
-        </ul>
-        <p className="contact-info">
-          Please contact me using the form found on the{" "}
-          <Link href="/contact" className="contact-link">
-            Contact
-          </Link>{" "}
-          page for more information.
-        </p>
-      </section>
-
-      <ServiceSection
-        title="Psychotherapy Session"
-        subtitle="Individual"
-        image="/images/Psychotherapy.webp"
-        description={[
-          "Psychotherapy for individuals specializing in anxiety and stress, self-esteem, relationship difficulties, and personal development.",
-          "Build upon what was discussed in previous weeks, or explore new topics or concerns that have taken precedence in your life.",
-          "In these sessions, you are the expert of your own life. There are no judgments or assumptions made during our time; the focus is on collaborating with you to create a space where your voice, your wants, and your unique perspectives are not only heard but supported and advocated for.",
-        ]}
-        pricing="Pricing: $150 / 50 mins."
-        format="Format: Video and telephone sessions"
-      />
-
-      <ServiceSection
-        title="Art Psychotherapy"
-        image="/images/ArtTherapy.webp"
-        description={[
-          "Using creative practices as a way to help reframe and (re)examine how we look at ourselves, our relationships, and the world.",
-          "Art psychotherapy isn't about the end goal of creating 'Art,' but about the process.",
-          "This process means tapping into parts of the brain that often get overlooked or underused but actually provide a wealth of knowledge about how we each uniquely experience and perceive the world.",
-        ]}
-        pricing="Pricing: $150 / 50 mins."
-        format="Format: Video and telephone sessions"
-      />
-
-      <ServiceSection
-        title="Reduced Rate & Sliding Scale"
-        subtitle="Low-income & Students"
-        image="/images/LowIncome.webp"
-        description={[
-          "Sliding scale options are available* to those individuals demonstrating special need on a case-by-case basis. Please inquire for further details.",
-          "*Sliding scale rates are subject to availability.",
-        ]}
-        pricing="Pricing: $90-140 / 50 mins."
-        format="Format: Video and telephone sessions"
-      />
-
-      <section className="consult-box defined-section">
-        <p className="consult-text">No Fee Telephone Consultation - 15 min.</p>
-        <Link href="/contact">
-          <button className="consult-btn">Book Now</button>
-        </Link>
+      <section className="pricing">
+        <div className="pricing-content">
+          <h2>Pricing Plans</h2>
+          <div className="pricing-grid">
+            {pricingPlans.map((plan, index) => (
+              <div className="pricing-card" key={index}>
+                <h3>{plan.title}</h3>
+                <p className="price">{plan.price}</p>
+                <p className="duration">{plan.duration}</p>
+                <ul className="features">
+                  {plan.features.map((feature, index) => (
+                    <li key={index}>
+                      <FontAwesomeIcon icon={faCheck} className="check-icon" />
+                      {feature}
+                    </li>
+                  ))}
+                </ul>
+                <Link href="/contact">
+                  <button className="cta-button">Book Now</button>
+                </Link>
+              </div>
+            ))}
+          </div>
+        </div>
       </section>
 
       <Footer />
@@ -96,30 +197,97 @@ export default function Services() {
   );
 }
 
-const ServiceSection = ({
-  title,
-  subtitle,
-  image,
-  description,
-  pricing,
-  format,
-}) => {
-  return (
-    <section className="service-section defined-section">
-      <div className="section-label">
-        <h4 className="label-title">{title}</h4>
-        {subtitle && <p className="label-subtitle">{subtitle}</p>}
-        <div className="section-image-holder">
-          <img className="section-image" src={image} alt={`${title} Image`} />
-        </div>
-      </div>
-      <div className="section-content">
-        {description.map((text, index) => (
-          <p key={index}>{text}</p>
-        ))}
-        <p className="pricing">{pricing}</p>
-        <p className="format">{format}</p>
-      </div>
-    </section>
-  );
-};
+const individualTherapyFeatures = [
+  "Flexible scheduling options",
+  "Safe and confidential virtual environment",
+  "Evidence-based approaches",
+  "Progress tracking and adjustment",
+  "Video and telephone sessions available",
+];
+
+const artTherapyFeatures = [
+  "Explore creativity as a therapeutic tool",
+  "Safe and supportive environment",
+  "Focus on the process, not the product",
+  "Access deeper emotional insights",
+  "Enhance self-expression and self-awareness",
+];
+
+const reducedRateFeatures = [
+  "Mindfulness-focused approach",
+  "Open and accessible care options",
+  "Tailored to individual financial needs",
+  "Supportive and inclusive environment",
+  "Limited availability for qualifying individuals",
+];
+
+const supervisionFeatures = [
+  "Focused and tailored clinical support",
+  "Art therapy supervision",
+  "CRPO Licensure preparation",
+  "Private practice expertise",
+  "Professional development guidance",
+];
+
+const pricingPlans = [
+  {
+    title: "Psychotherapy",
+    price: "150",
+    duration: "50 minutes",
+    features: [
+      "One-on-one care",
+      "Personalized plan",
+      "Evidence-based",
+      "Flexible scheduling",
+      "Video or phone",
+    ],
+  },
+  {
+    title: "Art Psychotherapy",
+    price: "150",
+    duration: "50 minutes",
+    features: [
+      "Creative sessions",
+      "Supportive space",
+      "Process-focused",
+      "Boost self-expression",
+      "Video or phone",
+    ],
+  },
+  {
+    title: "Reduced Rate",
+    price: "90-140",
+    duration: "50 minutes",
+    features: [
+      "Limited availability",
+      "Sliding scale options",
+      "Evidence-based",
+      "Flexible scheduling",
+      "Video or phone",
+    ],
+  },
+  {
+    title: "Clinical Supervision",
+    price: "140-150",
+    duration: "50 minutes",
+    features: [
+      "Focused and tailored",
+      "Clinical support",
+      "Art therapy supervision",
+      "CRPO Licensure",
+      "Video or phone",
+    ],
+  },
+  {
+    title: "Initial Consultation",
+    price: "0",
+    duration: "15 minutes",
+    features: [
+      "Meet your therapist",
+      "Discuss your needs",
+      "Explore therapy options",
+      "Learn about approaches",
+      "Phone only",
+    ],
+  },
+];

@@ -1,86 +1,396 @@
-@use "variables.scss";
+@use "variables" as *;
 
-.page-content {
-  padding: 2rem;
-  .resources-title-holder {
-    position: relative;
-    text-align: center;
-    padding: 1rem 2rem 1rem 2rem;
-    margin: 0 auto;
+.articles-section {
+  padding: $spacing-xl 0;
+  background-color: $text-light;
+
+  .articles-content {
     max-width: 1200px;
-    background: linear-gradient(135deg, variables.$dark-teal, variables.$teal);
-    z-index: 1;
+    margin: 0 auto;
+    padding: 0 $spacing-lg;
 
-    &::before {
-      content: "";
-      position: absolute;
-      top: 0;
-      left: 50%;
-      transform: translateX(-50%);
-      width: 180%;
-      height: 100%;
-      background: linear-gradient(
-        to right,
-        rgba(variables.$dark-teal, 0) 0%,
-        rgba(variables.$dark-teal, 1) 20%,
-        rgba(variables.$teal, 1) 80%,
-        rgba(variables.$teal, 0) 100%
-      );
-      z-index: -1;
+    h2 {
+      text-align: center;
+      font-family: $font-secondary;
+      color: $primary-green;
+      margin-bottom: $spacing-xl;
     }
 
-    h1 {
-      color: white;
-      font-family: variables.$sub2-font;
-    }
-  }
+    .articles-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: $spacing-lg;
 
-  .resource-cards {
-    display: flex;
-    flex-direction: column;
+      .article-card {
+        background-color: $background-light;
+        padding: $spacing-lg;
+        border-radius: $border-radius-md;
+        box-shadow: $shadow-md;
+        transition: transform $transition-normal;
 
-    a {
-      color: variables.$teal;
-    }
-    .resource-card {
-      display: flex;
-      margin: 1rem 0;
-      padding: 1.5rem;
-      width: 80%;
-      background: rgba(255, 255, 255, 0.8);
-      border-radius: 12px;
-      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        &:hover {
+          transform: translateY(-5px);
+        }
 
-      @include variables.xs {
-        flex-direction: column;
-        align-items: center;
-      }
-      .resource-content {
-        padding-left: 1rem;
-      }
-      .card-label {
-        margin-bottom: 1rem;
-        font-size: 1.8rem;
-        font-weight: bold;
-        color: var(--dark-teal);
-        font-family: variables.$sub2-font;
-      }
+        h3 {
+          color: $secondary-green;
+          margin-bottom: $spacing-md;
+        }
 
-      .card-img {
-        width: 25%;
-        height: 25%;
-        aspect-ratio: 1;
-        border-radius: 10px;
+        p {
+          color: $text-dark;
+          line-height: 1.6;
+          margin-bottom: $spacing-lg;
+        }
 
-        @include variables.xs {
-          width: 90%;
+        .read-more {
+          display: inline-flex;
+          align-items: center;
+          color: $primary-green;
+          text-decoration: none;
+          font-weight: 600;
+
+          .icon {
+            margin-left: $spacing-sm;
+          }
+
+          &:hover {
+            color: $secondary-green;
+          }
         }
       }
+    }
+  }
+}
 
-      .card-content {
-        font-size: 1rem;
-        color: #555;
+.reading-section {
+  padding: $spacing-xl 0;
+  background-color: $text-light;
+
+  .reading-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 $spacing-lg;
+
+    h2 {
+      text-align: center;
+      font-family: $font-secondary;
+      color: $primary-green;
+      margin-bottom: $spacing-xl;
+    }
+
+    .reading-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: $spacing-lg;
+
+      .book-card {
+        background-color: $background-light;
+        padding: $spacing-lg;
+        border-radius: $border-radius-md;
+        box-shadow: $shadow-md;
+
+        .book-info {
+          margin-bottom: $spacing-lg;
+
+          h3 {
+            color: $secondary-green;
+            margin-bottom: $spacing-sm;
+          }
+
+          .author {
+            color: $text-muted;
+            margin-bottom: $spacing-md;
+            font-style: italic;
+          }
+
+          .description {
+            color: $text-dark;
+            line-height: 1.6;
+          }
+        }
+
+        .book-link {
+          display: inline-flex;
+          align-items: center;
+          color: $primary-green;
+          text-decoration: none;
+          font-weight: 600;
+
+          .icon {
+            margin-left: $spacing-sm;
+          }
+
+          &:hover {
+            color: $secondary-green;
+          }
+        }
       }
     }
+  }
+}
+
+.newsletter-section {
+  padding: $spacing-lg 0 $spacing-md 0;
+  background: $background-light;
+  color: $primary-green;
+  .newsletter-content {
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 0 $spacing-md;
+    text-align: center;
+    h2 {
+      font-family: $header-font;
+      font-size: 1.5rem;
+      font-weight: 700;
+      margin-bottom: 0.5rem;
+      color: $primary-green;
+      letter-spacing: 0.01em;
+      position: relative;
+      display: inline-block;
+      &::after {
+        content: "";
+        display: block;
+        width: 40px;
+        height: 3px;
+        background: linear-gradient(
+          90deg,
+          $primary-green 60%,
+          $secondary-green 100%
+        );
+        border-radius: 2px;
+        margin: 0.4rem auto 0 auto;
+        opacity: 0.25;
+      }
+    }
+    p {
+      margin-bottom: $spacing-md;
+      font-size: 1rem;
+      color: $secondary-green;
+    }
+    .cta-button {
+      background-color: $primary-green;
+      color: $text-light;
+      padding: $spacing-sm $spacing-lg;
+      border: none;
+      border-radius: 6px;
+      font-size: 1rem;
+      font-weight: 700;
+      cursor: pointer;
+      letter-spacing: 0.01em;
+      box-shadow: none;
+      transition: background $transition-normal, color $transition-normal,
+        transform $transition-normal;
+      &:hover {
+        background: $secondary-green;
+        color: $accent-gold;
+        transform: translateY(-2px);
+      }
+    }
+  }
+}
+
+.resources-list-section {
+  padding: $spacing-xl 0;
+  background: $background-light;
+  position: relative;
+  overflow: hidden;
+
+  h2 {
+    text-align: center;
+    font-family: $font-secondary;
+    color: $primary-green;
+    margin-bottom: $spacing-lg;
+    position: relative;
+    z-index: 1;
+  }
+
+  .resources-list-grid {
+    position: relative;
+    z-index: 1;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: $spacing-md $spacing-xl;
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+  .resources-list-item {
+    display: flex;
+    align-items: flex-start;
+    gap: $spacing-md;
+    padding: $spacing-sm 0;
+    background: none;
+    border: none;
+    box-shadow: none;
+    border-bottom: 1px solid rgba($primary-green, 0.08);
+  }
+  .resources-list-icon {
+    color: $primary-green;
+    background: $light-green;
+    border-radius: 50%;
+    width: 2rem;
+    height: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    flex-shrink: 0;
+    margin-top: 0.2em;
+  }
+  .resources-list-title {
+    font-weight: 600;
+    color: $primary-green;
+    font-size: 1.1rem;
+    display: block;
+    a {
+      color: $primary-green;
+      text-decoration: underline;
+      &:hover {
+        color: $secondary-green;
+      }
+    }
+  }
+  .resources-list-desc {
+    color: $text-dark;
+    font-size: 1rem;
+    display: block;
+    margin-top: 0.1em;
+  }
+}
+
+.books-list-section {
+  padding: $spacing-xl 0;
+  background: $background-light;
+  position: relative;
+  overflow: hidden;
+
+  h2 {
+    text-align: center;
+    font-family: $font-secondary;
+    color: $primary-green;
+    margin-bottom: $spacing-lg;
+    position: relative;
+    z-index: 1;
+  }
+
+  .books-list-grid {
+    position: relative;
+    z-index: 1;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: $spacing-md $spacing-xl;
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+  .books-list-item {
+    display: flex;
+    align-items: flex-start;
+    gap: $spacing-md;
+    padding: $spacing-sm 0;
+    background: none;
+    border: none;
+    box-shadow: none;
+    border-bottom: 1px solid rgba($primary-green, 0.08);
+  }
+  .books-list-icon {
+    color: $secondary-green;
+    background: $light-green;
+    border-radius: 50%;
+    width: 2rem;
+    height: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    flex-shrink: 0;
+    margin-top: 0.2em;
+  }
+  .books-list-title {
+    font-weight: 600;
+    color: $primary-green;
+    font-size: 1.1rem;
+    display: block;
+    a {
+      color: $primary-green;
+      text-decoration: underline;
+      &:hover {
+        color: $secondary-green;
+      }
+    }
+  }
+  .books-list-author {
+    color: $secondary-green;
+    font-size: 1rem;
+    font-style: italic;
+    display: block;
+    margin-bottom: 0.1em;
+  }
+  .books-list-desc {
+    color: $text-dark;
+    font-size: 1rem;
+    display: block;
+    margin-top: 0.1em;
+  }
+}
+
+.section-divider {
+  width: 100%;
+  height: 180px;
+  margin: $spacing-xl 0;
+  position: relative;
+  overflow: hidden;
+  background: $background-light;
+
+  .forest-scene {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    .mountain {
+      fill: rgba($primary-green, 0.1);
+    }
+
+    .trees-back {
+      fill: rgba($primary-green, 0.15);
+    }
+
+    .trees-middle {
+      fill: rgba($secondary-green, 0.2);
+    }
+
+    .trees-front {
+      fill: rgba($primary-green, 0.25);
+    }
+
+    .sun {
+      fill: rgba($accent-gold, 0.15);
+    }
+  }
+}
+
+@media (max-width: $breakpoint-md) {
+  .resources-list-section,
+  .books-list-section {
+    .resources-list-grid,
+    .books-list-grid {
+      grid-template-columns: 1fr;
+      padding: 1.5rem 0;
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .articles-section,
+  .resources-list-section,
+  .books-list-section {
+    width: 80%;
+    max-width: 400px;
+    margin-left: 1.5rem;
+  }
+
+  h2 {
+    font-size: 2rem;
   }
 }

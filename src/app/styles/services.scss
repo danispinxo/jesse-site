@@ -1,178 +1,301 @@
-@use "variables.scss";
+@use "variables" as *;
 
-.page-content {
-  padding: 2rem;
+.main-services {
+  padding: $spacing-xl 0;
+  background-color: $text-light;
 
-  .services-header {
-    position: relative;
-    text-align: center;
-    padding: 1rem 2rem 1rem 2rem;
-    margin: 0 auto;
+  .services-content {
     max-width: 1200px;
-    background: linear-gradient(135deg, variables.$dark-teal, variables.$teal);
-    z-index: 1;
-
-    &::before {
-      content: "";
-      position: absolute;
-      top: 0;
-      left: 50%;
-      transform: translateX(-50%);
-      width: 180%;
-      height: 100%;
-      background: linear-gradient(
-        to right,
-        rgba(variables.$dark-teal, 0) 0%,
-        rgba(variables.$dark-teal, 1) 20%,
-        rgba(variables.$teal, 1) 80%,
-        rgba(variables.$teal, 0) 100%
-      );
-      z-index: -1;
-    }
-
-    h1 {
-      color: white;
-      font-family: variables.$sub2-font;
-    }
-  }
-
-  .defined-section {
-    margin: 2rem 0;
-    padding: 2rem;
-    background-color: #f8f9fa;
-    border: 1px solid #e0e0e0;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  }
-
-  .help-list {
-    .help-title {
-      font-size: 1.5rem;
-      margin-bottom: 1rem;
-    }
-    .help-items {
-      list-style-type: disc;
-      padding-left: 2rem;
-      li {
-        margin-bottom: 0.5rem;
-        font-size: 1rem;
-        line-height: 1.5;
-      }
-    }
-  }
-
-  .session-format {
-    .section-title {
-      font-size: 1.5rem;
-      margin-bottom: 1rem;
-    }
-    .session-info,
-    .contact-info {
-      margin-bottom: 1rem;
-    }
-    .session-options {
-      list-style: none;
-      padding: 0;
-      li {
-        margin-bottom: 0.5rem;
-      }
-    }
-  }
-
-  .service-section {
+    margin: 0 auto;
+    padding: 0 $spacing-lg;
     display: flex;
-    flex-wrap: wrap;
-    gap: 1.5rem;
+    flex-direction: column;
+    gap: $spacing-xl;
 
-    .section-label {
-      flex: 1;
+    @media (max-width: $breakpoint-md) {
+      padding: 0 $spacing-sm;
+    }
+
+    .service-card {
+      display: flex;
+      gap: $spacing-xl;
+      background-color: $background-light;
+      border-radius: $border-radius-lg;
+      overflow: hidden;
+      box-shadow: $shadow-md;
+
+      @media (max-width: $breakpoint-lg) {
+        flex-direction: column;
+        gap: $spacing-md;
+      }
+
+      .service-image {
+        width: 300px;
+        border-radius: $border-radius-lg;
+
+        @media (max-width: $breakpoint-lg) {
+          width: 100%;
+          max-width: 400px;
+          margin: 0 auto;
+        }
+
+        @media (max-width: 480px) {
+          width: 80%;
+        }
+
+        img {
+          margin: 4rem 3rem;
+          width: 100%;
+          height: auto;
+          object-fit: cover;
+
+          @media (max-width: $breakpoint-lg) {
+            margin: 2rem;
+          }
+
+          @media (max-width: $breakpoint-md) {
+            margin: 1.5rem 0;
+          }
+        }
+      }
+
+      .service-details {
+        flex: 2;
+        padding: $spacing-xl;
+
+        @media (max-width: $breakpoint-md) {
+          padding: $spacing-lg;
+        }
+
+        h2 {
+          font-family: $font-secondary;
+          color: $primary-green;
+          margin-bottom: $spacing-lg;
+          font-size: 1.8rem;
+
+          @media (max-width: $breakpoint-md) {
+            font-size: 1.5rem;
+            margin-bottom: $spacing-md;
+          }
+        }
+
+        p {
+          margin-bottom: $spacing-lg;
+          line-height: 1.6;
+          font-size: 1.1rem;
+
+          @media (max-width: $breakpoint-md) {
+            font-size: 1rem;
+            margin-bottom: $spacing-md;
+          }
+        }
+
+        .service-features {
+          list-style: none;
+          padding: 0;
+          margin-bottom: $spacing-lg;
+
+          @media (max-width: $breakpoint-md) {
+            margin-bottom: $spacing-md;
+          }
+
+          li {
+            display: flex;
+            align-items: center;
+            margin-bottom: $spacing-sm;
+            font-size: 1.1rem;
+
+            @media (max-width: $breakpoint-md) {
+              font-size: 1rem;
+            }
+
+            .check-icon {
+              color: $accent-gold;
+              margin-right: $spacing-sm;
+              flex-shrink: 0;
+            }
+          }
+        }
+
+        .cta-button {
+          @media (max-width: $breakpoint-md) {
+            width: 100%;
+            padding: $spacing-sm;
+          }
+        }
+      }
+    }
+  }
+}
+
+.pricing {
+  padding: $spacing-xl 0;
+  background-color: $text-light;
+
+  .pricing-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 $spacing-lg;
+
+    @media (max-width: $breakpoint-md) {
+      padding: 0 $spacing-sm;
+    }
+
+    @media (max-width: 480px) {
+      width: 90%;
+    }
+
+    h2 {
       text-align: center;
-      .label-title {
-        font-size: 1.5rem;
-        font-weight: bold;
-      }
-      .label-subtitle {
-        font-size: 1rem;
-        color: gray;
-      }
-      .section-image-holder {
-        margin-top: 1rem;
-        .section-image {
-          width: 50%;
-          border-radius: 8px;
-          box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        }
-      }
-    }
+      font-family: $font-secondary;
+      color: $primary-green;
+      margin-bottom: $spacing-xl;
+      font-size: 2rem;
 
-    .section-content {
-      flex: 2;
-      p {
-        margin-bottom: 1rem;
-      }
-      .pricing,
-      .format {
-        font-weight: bold;
-      }
-    }
-  }
-
-  .section {
-    margin: 2rem 0;
-    padding: 1.5rem;
-    background: rgba(255, 255, 255, 0.8);
-    border-radius: 12px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-
-    .section-label {
-      margin-bottom: 1rem;
-
-      .label-title {
+      @media (max-width: $breakpoint-md) {
         font-size: 1.8rem;
-        font-weight: bold;
-        color: var(--dark-teal);
-      }
-
-      .label-subtitle {
-        font-size: 1.2rem;
-        color: var(--teal);
+        margin-bottom: $spacing-lg;
       }
     }
 
-    .section-content {
-      font-size: 1rem;
-      color: #555;
+    .pricing-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: $spacing-md;
 
-      ul {
-        padding-left: 1.5rem;
+      @media (max-width: 1200px) {
+        grid-template-columns: repeat(2, 1fr);
+      }
 
-        li {
-          margin-bottom: 0.5rem;
+      @media (max-width: 900px) {
+        grid-template-columns: 1fr;
+        max-width: 500px;
+        margin: 0 auto;
+      }
+
+      @media (max-width: $breakpoint-md) {
+        gap: $spacing-sm;
+      }
+
+      .pricing-card {
+        background-color: $background-light;
+        padding: $spacing-lg;
+        border-radius: $border-radius-md;
+        text-align: center;
+        box-shadow: $shadow-md;
+        transition: transform $transition-normal;
+
+        @media (max-width: $breakpoint-md) {
+          padding: $spacing-md;
+        }
+
+        &:hover {
+          transform: translateY(-5px);
+        }
+
+        h3 {
+          color: $secondary-green;
+          margin-bottom: $spacing-md;
+          font-size: 1.5rem;
+
+          @media (max-width: $breakpoint-md) {
+            font-size: 1.3rem;
+            margin-bottom: $spacing-sm;
+          }
+        }
+
+        .price {
+          font-size: 2.5rem;
+          font-weight: 700;
+          color: $primary-green;
+          margin-bottom: $spacing-sm;
+
+          @media (max-width: $breakpoint-md) {
+            font-size: 2rem;
+          }
+
+          &::before {
+            content: "$";
+            font-size: 1.5rem;
+            vertical-align: super;
+
+            @media (max-width: $breakpoint-md) {
+              font-size: 1.2rem;
+            }
+          }
+        }
+
+        .duration {
+          color: $text-dark;
+          margin-bottom: $spacing-lg;
+          font-size: 1.1rem;
+
+          @media (max-width: $breakpoint-md) {
+            font-size: 1rem;
+            margin-bottom: $spacing-md;
+          }
+        }
+
+        .features {
+          list-style: none;
+          padding: 0;
+          margin-bottom: $spacing-lg;
+          text-align: left;
+
+          @media (max-width: $breakpoint-md) {
+            margin-bottom: $spacing-md;
+          }
+
+          li {
+            display: flex;
+            align-items: center;
+            margin-bottom: $spacing-sm;
+            font-size: 1.1rem;
+
+            @media (max-width: $breakpoint-md) {
+              font-size: 1rem;
+            }
+
+            .check-icon {
+              color: $accent-gold;
+              margin-right: $spacing-sm;
+              flex-shrink: 0;
+            }
+          }
+        }
+
+        .cta-button {
+          @media (max-width: $breakpoint-md) {
+            width: 100%;
+            padding: $spacing-sm;
+          }
         }
       }
     }
   }
+}
 
-  .consult-box {
+.insurance {
+  padding: $spacing-xl 0;
+  background: linear-gradient(to bottom, $primary-green, $background-dark);
+  color: $text-light;
+
+  .insurance-content {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 $spacing-lg;
     text-align: center;
-    background: linear-gradient(135deg, variables.$dark-teal, variables.$teal);
 
-    .consult-text {
-      font-size: 1.2rem;
-      margin-bottom: 1rem;
-      color: white;
+    h2 {
+      font-family: $font-secondary;
+      margin-bottom: $spacing-lg;
     }
-    .consult-btn {
-      padding: 0.75rem 1.5rem;
-      background: white;
-      color: variables.$very-dark-blue;
-      border: none;
-      border-radius: 8px;
-      cursor: pointer;
-      transition: all 0.3s ease;
-      &:hover {
-        background: variables.$very-dark-blue;
-        color: white;
+
+    .insurance-info {
+      p {
+        margin-bottom: $spacing-lg;
+        font-size: 1.1rem;
+        line-height: 1.6;
       }
     }
   }

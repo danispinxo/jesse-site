@@ -168,7 +168,7 @@ export default function AboutPage() {
 }
 
 const values = [
-  "2SLGBTQA+",
+  "2SLGBTQIA+",
   "Addiction",
   "Anger",
   "Anxiety",

@@ -156,7 +156,7 @@ body {
   display: flex;
   align-items: center;
   position: relative;
-  padding-top: 120px;
+  padding-top: 180px;
   margin-left: 5%;
   width: 80%;
 
@@ -268,13 +268,20 @@ body {
 
 .about-me-section {
   color: $text-light;
-  overflow: hidden;
+  overflow: visible;
   padding: $spacing-xl;
-  padding-top: 0;
+  padding-top: 120px;
+  padding-bottom: -30px;
   position: relative;
   margin: 0 auto;
   background-color: $background-dark;
-  z-index: 10;
+  z-index: 1;
+
+  .about-me-content {
+    transform: translateY(-180px);
+    position: relative;
+    z-index: 5;
+  }
 
   h2,
   h3 {
@@ -282,7 +289,7 @@ body {
     margin-bottom: $spacing-lg;
     position: relative;
     z-index: 1;
-    text-shadow: 2px 2px 4px rgba($background-dark, 0.3);
+    text-shadow: 2px 2px 4px rgba($background-dark, 0.5);
     text-align: center;
     color: $text-light;
   }
@@ -307,7 +314,7 @@ body {
     margin: 0 auto;
     font-size: 1.2rem;
     line-height: 1.8;
-    text-shadow: 1px 1px 2px rgba($background-dark, 0.2);
+    text-shadow: 2px 2px 4px rgba($background-dark, 0.5);
     padding: 0 $spacing-lg;
     color: $text-light;
 
@@ -624,8 +631,12 @@ body {
   .about-me-section {
     margin-top: 0;
     padding: $spacing-md;
-    padding-top: 100px;
-    padding-bottom: 50px;
+    padding-top: 80px;
+    padding-bottom: 0.5rem;
+
+    .about-me-content {
+      transform: translateY(-120px); // Even more overlap on mobile
+    }
 
     .why-content {
       font-size: 1.1rem;
@@ -671,7 +682,7 @@ body {
     }
 
     .logo-text {
-      margin-right: 3rem;
+      margin-right: 4rem;
       font-family: $font-secondary;
       font-size: 1.5rem;
       display: flex;
@@ -701,6 +712,19 @@ body {
         .studio {
           font-size: 1.5rem;
           display: inline;
+        }
+      }
+
+      @media (max-width: 865px) {
+        .studio {
+          display: none;
+        }
+      }
+
+      @media (max-width: 765px) {
+        .name,
+        .studio {
+          display: block;
         }
       }
     }

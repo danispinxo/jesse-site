@@ -53,23 +53,25 @@ export default function HomePage() {
         </div>
       </section>
       <section className="about-me-section">
-        <h2>About Me</h2>
-        <h3>Jesse Pajuäär</h3>
-        <div className="why-content">
-          <p>Registered Psychotherapist, RCAT, DTATI, HBA. </p>
-          <p>
-            Ontario therapist offering psychotherapy and art therapy sessions.
-          </p>
-          <p>
-            I approach each session with the belief that you are the expert of
-            your own life. There are no judgements or assumptions made during
-            our time.
-          </p>
-          <p>
-            My focus is on collaborating with you to create a space where your
-            voice, your wants, and your unique perspective can not only be
-            heard, but supported and advocated for.
-          </p>
+        <div className="about-me-content">
+          <h2>About Me</h2>
+          <h3>Jesse Pajuäär</h3>
+          <div className="why-content">
+            <p>Registered Psychotherapist, RCAT, DTATI, HBA. </p>
+            <p>
+              Ontario therapist offering psychotherapy and art therapy sessions.
+            </p>
+            <p>
+              I approach each session with the belief that you are the expert of
+              your own life. There are no judgements or assumptions made during
+              our time.
+            </p>
+            <p>
+              My focus is on collaborating with you to create a space where your
+              voice, your wants, and your unique perspective can not only be
+              heard, but supported and advocated for.
+            </p>
+          </div>
         </div>
       </section>
 
@@ -123,6 +125,7 @@ export default function HomePage() {
 }
 
 const specialties = [
+  "2SLGBTQIA+",
   "Addiction",
   "Anger Management",
   "Anxiety",
@@ -135,7 +138,6 @@ const specialties = [
   "Family Conflict",
   "Grief",
   "Infidelity",
-  "LGBTQ+",
   "Life Coaching",
   "Life Transitions",
   "Men's Issues",

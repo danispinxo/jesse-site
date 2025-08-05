@@ -42,11 +42,32 @@ const playfair = Playfair_Display({
 });
 
 export const metadata = {
-  title: "Jesse Pajuaar Therapy Studios",
-  siteUrl: "https://jptherapystudios.com/",
-  image: "../../public/images/Logo.webp",
+  title:
+    "Jesse Pajuäär Therapy Studios - Registered Psychotherapist & Art Therapist",
   description:
-    "Professional therapy and counseling services focused on men's mental health, anxiety, addiction, and mindfulness.",
+    "Professional therapy and counseling services in Ontario. Registered psychotherapist and art therapist offering online therapy for anxiety, depression, and personal growth.",
+  metadataBase: new URL("https://jptherapystudios.com"),
+  alternates: {
+    canonical: "https://jptherapystudios.com",
+  },
+  openGraph: {
+    title:
+      "Jesse Pajuäär Therapy Studios - Registered Psychotherapist & Art Therapist",
+    description:
+      "Professional therapy and counseling services in Ontario. Registered psychotherapist and art therapist offering online therapy.",
+    url: "https://jptherapystudios.com",
+    siteName: "Jesse Pajuäär Therapy Studios",
+    locale: "en_CA",
+    type: "website",
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+    },
+  },
 };
 
 export default function RootLayout({ children }) {
@@ -67,7 +88,15 @@ export default function RootLayout({ children }) {
           content="art therapy, psychotherapy, psychotherapist, Toronto psychotherapist, Toronto art therapist, remote therapy, online therapy, online art therapy, therapist"
         />
         <meta name="author" content="Jesse Pajuaar" />
+        <meta name="theme-color" content="#2d5a3d" />
+        <meta name="msapplication-TileColor" content="#2d5a3d" />
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+        <meta name="apple-mobile-web-app-title" content="JPTS" />
+        <link rel="apple-touch-icon" href="/images/Logo.webp" />
+        <link rel="canonical" href="https://jptherapystudios.com" />
         <link rel="icon" type="image/png" href="/images/Logo.webp" />
+        <link rel="manifest" href="/manifest.json" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link
           rel="preconnect"

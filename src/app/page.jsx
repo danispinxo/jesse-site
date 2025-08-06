@@ -51,8 +51,6 @@ export default function HomePage() {
             sizes="100vw"
             alt="Forest treeline silhouette"
             className="treeline-image"
-            width="1536"
-            height="300"
             loading="lazy"
             decoding="async"
           />

@@ -1,6 +1,4 @@
 "use client";
-
-import "../styles/styles.scss";
 import "../styles/contact.scss";
 import { useEffect, useState } from "react";
 import { useForm, ValidationError } from "@formspree/react";

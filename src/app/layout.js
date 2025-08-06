@@ -1,3 +1,6 @@
+import "normalize.css";
+import "bootstrap/dist/css/bootstrap.min.css";
+import "./styles/styles.scss";
 import "@fortawesome/fontawesome-svg-core/styles.css";
 import { config } from "@fortawesome/fontawesome-svg-core";
 import Navbar from "./components/Navbar";
@@ -89,7 +92,7 @@ export default function RootLayout({ children }) {
         <meta name="author" content="Jesse Pajuaar" />
         <meta name="theme-color" content="#2d5a3d" />
         <meta name="msapplication-TileColor" content="#2d5a3d" />
-        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="mobile-web-app-capable" content="yes" />
         <meta name="apple-mobile-web-app-status-bar-style" content="default" />
         <meta name="apple-mobile-web-app-title" content="JPTS" />
         <link rel="apple-touch-icon" href="/images/Logo.webp" />

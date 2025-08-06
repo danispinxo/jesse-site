@@ -1,5 +1,4 @@
 "use client";
-import "../styles/styles.scss";
 import "../styles/services.scss";
 import Link from "next/link";
 import Footer from "../components/Footer";

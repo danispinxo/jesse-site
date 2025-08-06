@@ -1,4 +1,4 @@
-import "./styles/styles.scss";
+
 import Link from "next/link";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faHome, faLeaf } from "@fortawesome/free-solid-svg-icons";

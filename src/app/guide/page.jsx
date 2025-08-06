@@ -1,4 +1,3 @@
-import "../styles/styles.scss";
 import "../styles/guide.scss";
 
 export default function Guide() {

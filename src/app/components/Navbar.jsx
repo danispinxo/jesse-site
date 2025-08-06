@@ -9,9 +9,6 @@ import {
   faArrowsTurnRight,
 } from "@fortawesome/free-solid-svg-icons";
 
-import "bootstrap/dist/css/bootstrap.min.css";
-import "../styles/styles.scss";
-
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);

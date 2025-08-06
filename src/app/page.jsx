@@ -1,6 +1,4 @@
 "use client";
-import "normalize.css";
-import "./styles/styles.scss";
 import Link from "next/link";
 import Image from "next/image";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";

@@ -46,9 +46,13 @@ export default function HomePage() {
       <section className="treeline-divider">
         <div className="treeline-element">
           <img
-            src="/images/Treeline.webp"
+            src="/images/Treeline-800.webp"
+            srcSet="/images/Treeline-600.webp 600w, /images/Treeline-800.webp 800w, /images/Treeline-1200.webp 1200w, /images/Treeline.webp 1536w"
+            sizes="100vw"
             alt="Forest treeline silhouette"
             className="treeline-image"
+            loading="lazy"
+            decoding="async"
           />
         </div>
       </section>

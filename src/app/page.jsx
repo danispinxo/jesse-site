@@ -35,9 +35,10 @@ export default function HomePage() {
             className="hero-image"
             src="/images/JessePajuaar.webp"
             alt="Professional headshot of Jesse Pajuäär, a registered psychotherapist"
-            width={500}
-            height={500}
+            width={320}
+            height={320}
             priority
+            sizes="(max-width: 768px) 250px, 320px"
           />
         </div>
       </section>
@@ -50,6 +51,8 @@ export default function HomePage() {
             sizes="100vw"
             alt="Forest treeline silhouette"
             className="treeline-image"
+            width="1536"
+            height="300"
             loading="lazy"
             decoding="async"
           />

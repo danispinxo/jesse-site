@@ -37,6 +37,7 @@ export default function HomePage() {
             alt="Professional headshot of Jesse Pajuäär, a registered psychotherapist"
             width={500}
             height={500}
+            priority
           />
         </div>
       </section>

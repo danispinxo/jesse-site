@@ -27,9 +27,10 @@ export default function AboutPage() {
               src="/images/JessePajuaar.webp"
               alt="Headshot of Jesse Pajuaar"
               width={400}
-              height={0}
+              height={400}
               sizes="(max-width: 480px) 150px, (max-width: 640px) 180px, (max-width: 768px) 250px, 400px"
               style={{ height: "auto" }}
+              priority
             />
           </div>
           <div className="profile-text">

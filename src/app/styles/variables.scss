@@ -14,9 +14,10 @@ $text-muted: #666666;
 $background-light: #f5f5f0;
 $background-dark: #214d2d;
 
-// Typography
-$font-primary: "Gabarito", sans-serif;
-$font-secondary: "Harmattan", sans-serif;
+$font-primary: "Gabarito", "system-ui", "-apple-system", "BlinkMacSystemFont",
+  sans-serif;
+$font-secondary: "Harmattan", "Arial", "Helvetica", "Liberation Sans",
+  sans-serif;
 
 // Spacing
 $spacing-xs: 0.25rem;

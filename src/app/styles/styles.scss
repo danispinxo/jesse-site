@@ -1,5 +1,9 @@
 @use "variables" as *;
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap");
+
+:root {
+  --font-harmattan-fallback: "Harmattan", "Arial", "Helvetica", sans-serif;
+  --font-gabarito-fallback: "Gabarito", "system-ui", "-apple-system", sans-serif;
+}
 
 * {
   margin: 0;
@@ -184,6 +188,11 @@ body {
       line-height: 1.1;
       margin-bottom: $spacing-sm;
       text-shadow: 2px 2px 4px rgba($background-dark, 0.3);
+      font-display: swap;
+      text-rendering: optimizeLegibility;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      will-change: auto;
 
       .subtitle {
         display: block;

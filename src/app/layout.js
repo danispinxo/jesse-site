@@ -2,7 +2,6 @@ import "@fortawesome/fontawesome-svg-core/styles.css";
 import { config } from "@fortawesome/fontawesome-svg-core";
 import Navbar from "./components/Navbar";
 import {
-  Bellota_Text,
   Gabarito,
   Harmattan,
   Poppins,
@@ -11,20 +10,18 @@ import {
 
 config.autoAddCss = false;
 
-const bellota = Bellota_Text({
-  subsets: ["latin"],
-  weight: ["400", "700"],
-  display: "swap",
-});
-const gabarito = Gabarito({
-  subsets: ["latin"],
-  weight: ["400", "600", "700"],
-  display: "swap",
-});
 const harmattan = Harmattan({
   subsets: ["latin"],
   weight: ["400", "600"],
   display: "swap",
+  preload: true,
+});
+
+const gabarito = Gabarito({
+  subsets: ["latin"],
+  weight: ["400", "600", "700"],
+  display: "swap",
+  preload: true,
 });
 
 const poppins = Poppins({
@@ -32,6 +29,7 @@ const poppins = Poppins({
   weight: ["400", "600"],
   variable: "--font-poppins",
   display: "swap",
+  fallback: ["system-ui", "Arial", "sans-serif"],
 });
 
 const playfair = Playfair_Display({
@@ -39,6 +37,7 @@ const playfair = Playfair_Display({
   weight: ["400", "600"],
   variable: "--font-playfair",
   display: "swap",
+  fallback: ["Georgia", "serif"],
 });
 
 export const metadata = {
@@ -74,7 +73,7 @@ export default function RootLayout({ children }) {
   return (
     <html
       lang="en"
-      className={`${bellota.className} ${gabarito.className} ${harmattan.className} ${poppins.variable} ${playfair.variable}`}
+      className={`${gabarito.className} ${harmattan.className} ${poppins.variable} ${playfair.variable}`}
     >
       <head>
         <meta name="viewport" content="width=device-width, initial-scale=1" />

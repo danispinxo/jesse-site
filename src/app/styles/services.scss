@@ -274,29 +274,3 @@
     }
   }
 }
-
-.insurance {
-  padding: $spacing-xl 0;
-  background: linear-gradient(to bottom, $primary-green, $background-dark);
-  color: $text-light;
-
-  .insurance-content {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 0 $spacing-lg;
-    text-align: center;
-
-    h2 {
-      font-family: $font-secondary;
-      margin-bottom: $spacing-lg;
-    }
-
-    .insurance-info {
-      p {
-        margin-bottom: $spacing-lg;
-        font-size: 1.1rem;
-        line-height: 1.6;
-      }
-    }
-  }
-}

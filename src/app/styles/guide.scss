@@ -4,41 +4,6 @@
   margin-top: 80px;
 }
 
-.guide-title-holder {
-  position: relative;
-  text-align: center;
-  padding: 1rem 2rem 1rem 2rem;
-  margin: 0 auto;
-  max-width: 1200px;
-  background: linear-gradient(135deg, $primary-green, $secondary-green);
-  z-index: 1;
-
-  &::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 180%;
-    height: 100%;
-    background: linear-gradient(
-      to right,
-      rgba($primary-green, 0) 0%,
-      rgba($primary-green, 1) 20%,
-      rgba($secondary-green, 1) 80%,
-      rgba($secondary-green, 0) 100%
-    );
-    z-index: -1;
-  }
-
-  .guide-title {
-    color: $text-light;
-    font-family: $font-secondary;
-    margin: 0;
-    font-size: 2.5rem;
-  }
-}
-
 .guide-intro {
   max-width: 800px;
   margin: 2rem auto;

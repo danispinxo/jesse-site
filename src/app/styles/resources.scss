@@ -1,135 +1,5 @@
 @use "variables" as *;
 
-.articles-section {
-  padding: $spacing-xl 0;
-  background-color: $text-light;
-
-  .articles-content {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 $spacing-lg;
-
-    h2 {
-      text-align: center;
-      font-family: $font-secondary;
-      color: $primary-green;
-      margin-bottom: $spacing-xl;
-    }
-
-    .articles-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: $spacing-lg;
-
-      .article-card {
-        background-color: $background-light;
-        padding: $spacing-lg;
-        border-radius: $border-radius-md;
-        box-shadow: $shadow-md;
-        transition: transform $transition-normal;
-
-        &:hover {
-          transform: translateY(-5px);
-        }
-
-        h3 {
-          color: $secondary-green;
-          margin-bottom: $spacing-md;
-        }
-
-        p {
-          color: $text-dark;
-          line-height: 1.6;
-          margin-bottom: $spacing-lg;
-        }
-
-        .read-more {
-          display: inline-flex;
-          align-items: center;
-          color: $primary-green;
-          text-decoration: none;
-          font-weight: 600;
-
-          .icon {
-            margin-left: $spacing-sm;
-          }
-
-          &:hover {
-            color: $secondary-green;
-          }
-        }
-      }
-    }
-  }
-}
-
-.reading-section {
-  padding: $spacing-xl 0;
-  background-color: $text-light;
-
-  .reading-content {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 $spacing-lg;
-
-    h2 {
-      text-align: center;
-      font-family: $font-secondary;
-      color: $primary-green;
-      margin-bottom: $spacing-xl;
-    }
-
-    .reading-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: $spacing-lg;
-
-      .book-card {
-        background-color: $background-light;
-        padding: $spacing-lg;
-        border-radius: $border-radius-md;
-        box-shadow: $shadow-md;
-
-        .book-info {
-          margin-bottom: $spacing-lg;
-
-          h3 {
-            color: $secondary-green;
-            margin-bottom: $spacing-sm;
-          }
-
-          .author {
-            color: $text-muted;
-            margin-bottom: $spacing-md;
-            font-style: italic;
-          }
-
-          .description {
-            color: $text-dark;
-            line-height: 1.6;
-          }
-        }
-
-        .book-link {
-          display: inline-flex;
-          align-items: center;
-          color: $primary-green;
-          text-decoration: none;
-          font-weight: 600;
-
-          .icon {
-            margin-left: $spacing-sm;
-          }
-
-          &:hover {
-            color: $secondary-green;
-          }
-        }
-      }
-    }
-  }
-}
-
 .newsletter-section {
   padding: $spacing-lg 0 $spacing-md 0;
   background: $background-light;
@@ -333,43 +203,6 @@
   }
 }
 
-.section-divider {
-  width: 100%;
-  height: 180px;
-  margin: $spacing-xl 0;
-  position: relative;
-  overflow: hidden;
-  background: $background-light;
-
-  .forest-scene {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-
-    .mountain {
-      fill: rgba($primary-green, 0.1);
-    }
-
-    .trees-back {
-      fill: rgba($primary-green, 0.15);
-    }
-
-    .trees-middle {
-      fill: rgba($secondary-green, 0.2);
-    }
-
-    .trees-front {
-      fill: rgba($primary-green, 0.25);
-    }
-
-    .sun {
-      fill: rgba($accent-gold, 0.15);
-    }
-  }
-}
-
 @media (max-width: $breakpoint-md) {
   .resources-list-section,
   .books-list-section {
@@ -382,7 +215,6 @@
 }
 
 @media (max-width: 480px) {
-  .articles-section,
   .resources-list-section,
   .books-list-section {
     width: 80%;

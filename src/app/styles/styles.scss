@@ -549,7 +549,7 @@ body {
     padding-bottom: 0.5rem;
 
     .about-me-content {
-      transform: translateY(-120px); // Even more overlap on mobile
+      transform: translateY(-120px);
     }
 
     .why-content {
@@ -563,6 +563,12 @@ body {
   .services-grid,
   .testimonials-grid {
     grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 890px) {
+  .hero {
+    padding-top: 50px;
   }
 }
 

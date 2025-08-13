@@ -566,9 +566,23 @@ body {
   }
 }
 
-@media (max-width: 890px) {
+@media (max-width: 600px) {
   .hero {
     padding-top: 50px;
+  }
+
+  .about-me-section {
+    margin-top: 0;
+    padding: $spacing-sm;
+    padding-top: 80px;
+
+    .about-me-content {
+      transform: translateY(-20px);
+    }
+
+    .why-content {
+      font-size: 0.9rem;
+    }
   }
 }
 
@@ -725,11 +739,6 @@ body {
     }
   }
 }
-@media (min-width: $breakpoint-md) and (max-width: $breakpoint-lg) {
-  .client-portal-text {
-    display: none !important;
-  }
-}
 
 .page-hero {
   background: $background-light;
@@ -738,10 +747,6 @@ body {
   text-align: center;
   border-bottom: 1px solid rgba($primary-green, 0.08);
   position: relative;
-
-  @media (max-width: $breakpoint-md) {
-    padding: calc($spacing-md) 0 $spacing-md 0;
-  }
 
   .hero-content {
     max-width: 700px;
@@ -780,13 +785,6 @@ body {
       margin-top: 0.2rem;
       letter-spacing: 0.01em;
     }
-  }
-}
-
-@media (min-width: $breakpoint-xl) {
-  .hero-image-accent {
-    width: 100px;
-    height: 500px;
   }
 }
 
@@ -835,47 +833,6 @@ body {
     font-size: 1rem;
     display: block;
     margin-top: 0.1em;
-  }
-}
-
-@media (min-width: 770px) and (max-width: 1180px) {
-  .approach-list-section,
-  .specialties-list-section {
-    h2 {
-      padding-left: 10%;
-    }
-    .approach-list-grid,
-    .specialties-list-grid {
-      padding-left: 10%;
-    }
-  }
-}
-
-@media (max-width: $breakpoint-md) {
-  .approach-list-section {
-    h2 {
-      width: 80%;
-      margin-left: auto;
-      margin-right: auto;
-    }
-    .approach-list-grid {
-      grid-template-columns: 1fr;
-      width: 80%;
-      margin: 0 auto;
-    }
-    .approach-list-item {
-      flex-direction: column;
-      align-items: center;
-      text-align: center;
-      padding: $spacing-sm 0;
-    }
-    .approach-list-icon {
-      transform: rotate(90deg);
-      margin-bottom: 0.25rem;
-    }
-    .approach-list-title {
-      margin-bottom: $spacing-xs;
-    }
   }
 }
 
@@ -928,7 +885,49 @@ body {
   }
 }
 
+@media (min-width: $breakpoint-xl) {
+  .hero-image-accent {
+    width: 100px;
+    height: 500px;
+  }
+}
+
 @media (max-width: $breakpoint-md) {
+  .hero {
+    padding-top: $spacing-xl;
+  }
+
+  .page-hero {
+    padding: calc($spacing-md) 0 $spacing-md 0;
+    padding-top: 400px;
+  }
+
+  .approach-list-section {
+    h2 {
+      width: 80%;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .approach-list-grid {
+      grid-template-columns: 1fr;
+      width: 80%;
+      margin: 0 auto;
+    }
+    .approach-list-item {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      padding: $spacing-sm 0;
+    }
+    .approach-list-icon {
+      transform: rotate(90deg);
+      margin-bottom: 0.25rem;
+    }
+    .approach-list-title {
+      margin-bottom: $spacing-xs;
+    }
+  }
+
   .specialties-list-section {
     h2 {
       width: 70%;
@@ -944,9 +943,7 @@ body {
       justify-content: flex-start;
     }
   }
-}
 
-@media (max-width: $breakpoint-md) {
   .philosophy-list-section,
   .values-list-section {
     h2 {
@@ -959,6 +956,41 @@ body {
       grid-template-columns: 1fr;
       width: 80%;
       margin: 0 auto;
+    }
+  }
+}
+
+@media (max-width: $breakpoint-lg) {
+  .hero {
+    padding-top: $spacing-xl;
+  }
+
+  .about-me-section {
+    margin-top: -5px;
+  }
+
+  .approach-list-section,
+  .specialties-list-section {
+    width: 100%;
+    padding-left: 0;
+  }
+}
+
+@media (min-width: $breakpoint-md) and (max-width: $breakpoint-lg) {
+  .client-portal-text {
+    display: none !important;
+  }
+}
+
+@media (min-width: 770px) and (max-width: 1180px) {
+  .approach-list-section,
+  .specialties-list-section {
+    h2 {
+      padding-left: 5%;
+    }
+    .approach-list-grid,
+    .specialties-list-grid {
+      padding-left: 5%;
     }
   }
 }

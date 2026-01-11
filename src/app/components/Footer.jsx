@@ -23,7 +23,7 @@ export default function Footer() {
       </div>
 
       <div className="psychology-today-verification">
-        <h6>&copy; 2025 Jesse Pajuäär Therapy Studios</h6>
+        <h6>&copy; 2026 Jesse Pajuäär Therapy Studios</h6>
         <iframe
           title="Psychology Today Verified -- Jesse Pajuaar"
           src="https://www-jptherapystudios-com.filesusr.com/html/900dd1_259a81179feffed44176301ed25faa6a.html"

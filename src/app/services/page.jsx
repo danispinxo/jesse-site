@@ -21,6 +21,32 @@ export default function Services() {
         </div>
       </section>
 
+      <section className="pricing">
+        <div className="pricing-content">
+          <h2>Pricing Plans</h2>
+          <div className="pricing-grid">
+            {pricingPlans.map((plan, index) => (
+              <div className="pricing-card" key={index}>
+                <h3>{plan.title}</h3>
+                <p className="price">{plan.price}</p>
+                <p className="duration">{plan.duration}</p>
+                <ul className="features">
+                  {plan.features.map((feature, index) => (
+                    <li key={index}>
+                      <FontAwesomeIcon icon={faCheck} className="check-icon" />
+                      {feature}
+                    </li>
+                  ))}
+                </ul>
+                <Link href="/contact">
+                  <button className="cta-button">Book Now</button>
+                </Link>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       <section className="main-services">
         <div className="services-content">
           <div className="service-card featured">
@@ -165,32 +191,6 @@ export default function Services() {
         </div>
       </section>
 
-      <section className="pricing">
-        <div className="pricing-content">
-          <h2>Pricing Plans</h2>
-          <div className="pricing-grid">
-            {pricingPlans.map((plan, index) => (
-              <div className="pricing-card" key={index}>
-                <h3>{plan.title}</h3>
-                <p className="price">{plan.price}</p>
-                <p className="duration">{plan.duration}</p>
-                <ul className="features">
-                  {plan.features.map((feature, index) => (
-                    <li key={index}>
-                      <FontAwesomeIcon icon={faCheck} className="check-icon" />
-                      {feature}
-                    </li>
-                  ))}
-                </ul>
-                <Link href="/contact">
-                  <button className="cta-button">Book Now</button>
-                </Link>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
       <Footer />
     </main>
   );
@@ -230,8 +230,20 @@ const supervisionFeatures = [
 
 const pricingPlans = [
   {
+    title: "Initial Consultation",
+    price: "0",
+    duration: "15 minutes",
+    features: [
+      "Meet your therapist",
+      "Discuss your needs",
+      "Explore therapy options",
+      "Learn about approaches",
+      "Phone only",
+    ],
+  },
+  {
     title: "Psychotherapy",
-    price: "150",
+    price: "140",
     duration: "50 minutes",
     features: [
       "One-on-one care",
@@ -243,7 +255,7 @@ const pricingPlans = [
   },
   {
     title: "Art Psychotherapy",
-    price: "150",
+    price: "140",
     duration: "50 minutes",
     features: [
       "Creative sessions",
@@ -255,11 +267,11 @@ const pricingPlans = [
   },
   {
     title: "Reduced Rate",
-    price: "90-140",
+    price: "90-130",
     duration: "50 minutes",
     features: [
-      "Limited availability",
       "Sliding scale options",
+      "Limited availability",
       "Evidence-based",
       "Flexible scheduling",
       "Video or phone",
@@ -267,26 +279,14 @@ const pricingPlans = [
   },
   {
     title: "Clinical Supervision",
-    price: "140-150",
+    price: "100-160",
     duration: "50 minutes",
     features: [
-      "Focused and tailored",
+      "Student sliding scale options",
       "Clinical support",
       "Art therapy supervision",
       "CRPO Licensure",
       "Video or phone",
-    ],
-  },
-  {
-    title: "Initial Consultation",
-    price: "0",
-    duration: "15 minutes",
-    features: [
-      "Meet your therapist",
-      "Discuss your needs",
-      "Explore therapy options",
-      "Learn about approaches",
-      "Phone only",
     ],
   },
 ];

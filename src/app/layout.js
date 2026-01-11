@@ -4,6 +4,7 @@ import "./styles/styles.scss";
 import "@fortawesome/fontawesome-svg-core/styles.css";
 import { config } from "@fortawesome/fontawesome-svg-core";
 import Navbar from "./components/Navbar";
+import StructuredData from "./components/StructuredData";
 import {
   Gabarito,
   Harmattan,
@@ -61,6 +62,22 @@ export const metadata = {
     siteName: "Jesse Pajuäär Therapy Studios",
     locale: "en_CA",
     type: "website",
+    images: [
+      {
+        url: "https://jptherapystudios.com/images/JessePajuaar.webp",
+        width: 400,
+        height: 400,
+        alt: "Jesse Pajuäär - Registered Psychotherapist and Art Therapist",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title:
+      "Jesse Pajuäär Therapy Studios - Registered Psychotherapist & Art Therapist",
+    description:
+      "Professional therapy and counseling services in Ontario. Registered psychotherapist and art therapist offering online therapy.",
+    images: ["https://jptherapystudios.com/images/JessePajuaar.webp"],
   },
   robots: {
     index: true,
@@ -68,6 +85,9 @@ export const metadata = {
     googleBot: {
       index: true,
       follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
     },
   },
 };
@@ -82,14 +102,13 @@ export default function RootLayout({ children }) {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta charSet="UTF-8" />
         <meta
-          name="description"
-          content="Toronto-based art therapist and psychotherapist available for teletherapy and remote therapy, phone and video sessions. Servicing the Toronto area and nearby (Barrie, York Region, Caledon, Mississauga, Brampton, Scarborough, Kitchener-Waterloo, Hamilton, Niagara, St. Catharines, Georgian Bay). Offering psychotherapy and art therapy for teens and adults."
-        />
-        <meta
           name="keywords"
-          content="art therapy, psychotherapy, psychotherapist, Toronto psychotherapist, Toronto art therapist, remote therapy, online therapy, online art therapy, therapist"
+          content="art therapy, psychotherapy, psychotherapist, Toronto psychotherapist, Toronto art therapist, remote therapy, online therapy, online art therapy, therapist, Ontario therapy, mental health counseling, anxiety therapy, depression therapy, LGBTQ+ therapy, trauma therapy"
         />
         <meta name="author" content="Jesse Pajuaar" />
+        <meta name="language" content="en-CA" />
+        <meta name="geo.region" content="CA-ON" />
+        <meta name="geo.placename" content="Ontario, Canada" />
         <meta name="theme-color" content="#2d5a3d" />
         <meta name="msapplication-TileColor" content="#2d5a3d" />
         <meta name="mobile-web-app-capable" content="yes" />
@@ -106,6 +125,7 @@ export default function RootLayout({ children }) {
           crossOrigin="anonymous"
         />
         <title>Jesse Pajuäär Therapy Studios</title>
+        <StructuredData />
       </head>
       <body>
         <Navbar />

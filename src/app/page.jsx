@@ -56,12 +56,12 @@ export default function HomePage() {
           />
         </div>
       </section>
-      <section className="about-me-section">
+      <section className="about-me-section" aria-labelledby="about-heading">
         <div className="about-me-content">
-          <h2>About Me</h2>
+          <h2 id="about-heading">About Me</h2>
           <h3>Jesse Pajuäär</h3>
           <div className="why-content">
-            <p>Registered Psychotherapist, RCAT, DTATI, HBA. </p>
+            <p><strong>Registered Psychotherapist, RCAT, DTATI, HBA.</strong></p>
             <p>
               Ontario therapist offering psychotherapy and art therapy sessions.
             </p>
@@ -79,32 +79,32 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="approach-list-section">
-        <h2>My Approach to Therapy</h2>
-        <div className="approach-list-grid">
+      <section className="approach-list-section" aria-labelledby="approach-heading">
+        <h2 id="approach-heading">My Approach to Therapy</h2>
+        <div className="approach-list-grid" role="list">
           {approaches.map((item, idx) => (
-            <div className="approach-list-item" key={idx}>
-              <span className="approach-list-icon">
+            <div className="approach-list-item" key={idx} role="listitem">
+              <span className="approach-list-icon" aria-hidden="true">
                 <FontAwesomeIcon icon={faArrowRight} />
               </span>
               <div>
-                <span className="approach-list-title">{item.title}</span>
-                <span className="approach-list-desc">{item.desc}</span>
+                <h3 className="approach-list-title">{item.title}</h3>
+                <p className="approach-list-desc">{item.desc}</p>
               </div>
             </div>
           ))}
         </div>
       </section>
 
-      <section className="specialties-list-section">
-        <h2>
+      <section className="specialties-list-section" aria-labelledby="specialties-heading">
+        <h2 id="specialties-heading">
           Specializing in Art Therapy, Anxiety, Self-Esteem, and Relationship
           Issues
         </h2>
-        <div className="specialties-list-grid">
+        <div className="specialties-list-grid" role="list">
           {specialties.map((specialty, index) => (
-            <div key={index} className="specialties-list-item">
-              <span className="specialties-list-icon">
+            <div key={index} className="specialties-list-item" role="listitem">
+              <span className="specialties-list-icon" aria-hidden="true">
                 <FontAwesomeIcon icon={faLeaf} />
               </span>
               <span className="specialties-list-text">{specialty}</span>

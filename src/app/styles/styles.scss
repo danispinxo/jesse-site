@@ -10,6 +10,14 @@
   box-sizing: border-box;
 }
 
+html {
+  scroll-padding-top: 100px;
+
+  @media (max-width: $breakpoint-md) {
+    scroll-padding-top: 90px;
+  }
+}
+
 body {
   font-family: $font-primary;
   color: $text-dark;

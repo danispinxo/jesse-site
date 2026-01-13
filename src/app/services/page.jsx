@@ -27,7 +27,18 @@ export default function Services() {
           <div className="pricing-grid">
             {pricingPlans.map((plan, index) => (
               <div className="pricing-card" key={index}>
-                <h3>{plan.title}</h3>
+                <h3>
+                  {plan.sectionId ? (
+                    <a
+                      href={`#${plan.sectionId}`}
+                      className="pricing-card-link"
+                    >
+                      {plan.title}
+                    </a>
+                  ) : (
+                    plan.title
+                  )}
+                </h3>
                 <p className="price">{plan.price}</p>
                 <p className="duration">{plan.duration}</p>
                 <ul className="features">
@@ -60,7 +71,7 @@ export default function Services() {
               />
             </div>
             <div className="service-details">
-              <h2>Psychotherapy Session (Individual)</h2>
+              <h2 id="psychotherapy">Psychotherapy Session (Individual)</h2>
               <p>
                 In these sessions, you are the expert of your own life. There
                 are no judgments or assumptions made during our time; the focus
@@ -97,7 +108,7 @@ export default function Services() {
               />
             </div>
             <div className="service-details">
-              <h2>Art Psychotherapy</h2>
+              <h2 id="art-psychotherapy">Art Psychotherapy</h2>
               <p>
                 Using creative practices as a way to help reframe and
                 (re)examine how we look at ourselves, our relationships, and the
@@ -132,7 +143,7 @@ export default function Services() {
               />
             </div>
             <div className="service-details">
-              <h2>Reduced Rate & Sliding Scale</h2>
+              <h2 id="reduced-rate">Reduced Rate & Sliding Scale</h2>
               <p>
                 Sliding scale options are available to those individuals
                 demonstrating special need on a case-by-case basis. Please
@@ -164,7 +175,7 @@ export default function Services() {
               />
             </div>
             <div className="service-details">
-              <h2>Clinical Supervision</h2>
+              <h2 id="clinical-supervision">Clinical Supervision</h2>
               <p>
                 Professional clinical supervision designed to support therapists
                 in their practice and professional development. Whether you're
@@ -233,6 +244,7 @@ const pricingPlans = [
     title: "Initial Consultation",
     price: "0",
     duration: "15 minutes",
+    sectionId: null,
     features: [
       "Meet your therapist",
       "Discuss your needs",
@@ -245,6 +257,7 @@ const pricingPlans = [
     title: "Psychotherapy",
     price: "140",
     duration: "50 minutes",
+    sectionId: "psychotherapy",
     features: [
       "One-on-one care",
       "Personalized plan",
@@ -257,6 +270,7 @@ const pricingPlans = [
     title: "Art Psychotherapy",
     price: "140",
     duration: "50 minutes",
+    sectionId: "art-psychotherapy",
     features: [
       "Creative sessions",
       "Supportive space",
@@ -269,6 +283,7 @@ const pricingPlans = [
     title: "Reduced Rate",
     price: "90-130",
     duration: "50 minutes",
+    sectionId: "reduced-rate",
     features: [
       "Sliding scale options",
       "Limited availability",
@@ -281,6 +296,7 @@ const pricingPlans = [
     title: "Clinical Supervision",
     price: "100-160",
     duration: "50 minutes",
+    sectionId: "clinical-supervision",
     features: [
       "Student sliding scale options",
       "Clinical support",

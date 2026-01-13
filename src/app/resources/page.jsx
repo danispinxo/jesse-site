@@ -75,7 +75,10 @@ export default function Resources() {
       <section className="newsletter-section">
         <div className="newsletter-content">
           <h2>Get In Touch</h2>
-          <p>Fill out the contact page to start the conversation </p>
+          <p>
+            Fill out the <a href="/contact">contact page</a> to start the
+            conversation{" "}
+          </p>
           <a href="/contact">
             <button className="cta-button">Let's Talk</button>
           </a>

@@ -42,16 +42,16 @@ export default function AboutPage() {
               Therapy Institute (TATI). I am a fully qualified Registered
               Psychotherapist with the College of Registered Psychotherapists of
               Ontario (CRPO), a Professional member of the Canadian Art Therapy
-              Association (CATA), and a member of the Society of Estonian
-              Artists in Toronto (EKKT).
+              Association (CATA), a Registered Canadian Art Therapist (RCAT),
+              and a member of the Society of Estonian Artists in Toronto (EKKT).
             </p>
             <div className="credentials">
               <h3>Credentials & Education</h3>
               <ul>
-                <li>7 years of experience</li>
+                <li>8 years of experience</li>
                 <li>Registered Psychotherapist (RP)</li>
-                <li>Registered Art Therapist (RCAT)</li>
-                <li>Diploma in Art Therapy (DTATI)</li>
+                <li>Registered Canadian Art Therapist (RCAT)</li>
+                <li>Master's level Diploma in Art Therapy (DTATI)</li>
                 <li>Honours Bachelor of Arts (HBA) in Psychotherapy</li>
                 <li>
                   Licensed Member of the College of Registered Psychotherapists
@@ -60,7 +60,16 @@ export default function AboutPage() {
                 <li>
                   Professional Member of the Canadian Art Therapy Association
                 </li>
-                <li>Graduate of the Toronto Art Therapy Institute</li>
+                <li>
+                  Verified on{" "}
+                  <a
+                    href="https://www.psychologytoday.com/ca/therapists/jesse-pajuaar-toronto-on/818157"
+                    target="_blank"
+                    rel="noopener noreferer"
+                  >
+                    Psychology Today
+                  </a>
+                </li>
               </ul>
             </div>
           </div>

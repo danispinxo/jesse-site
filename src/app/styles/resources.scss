@@ -38,6 +38,14 @@
       font-size: 1rem;
       color: $secondary-green;
     }
+
+    a {
+      color: $primary-green;
+      text-decoration: underline;
+      &:hover {
+        color: $secondary-green;
+      }
+    }
     .cta-button {
       background-color: $primary-green;
       color: $text-light;

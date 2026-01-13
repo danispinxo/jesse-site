@@ -137,9 +137,13 @@ export default function HomePage() {
 
       <section className="contact">
         <div className="contact-content">
-          <h2>You are not the problem, the problem is the problem.</h2>
+          <h2>
+            You are not the problem, the problem is the problem;
+            <br />
+            you need not limit yourself or your life to it.
+          </h2>
           <div className="contact-info">
-            <p>Schedule your consultation today</p>
+            <p>Take your first step in scheduleing your consultation today!</p>
             <a href="/contact">
               <button className="cta-button">Get Started</button>
             </a>

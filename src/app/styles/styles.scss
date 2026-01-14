@@ -985,7 +985,7 @@ body {
   }
 }
 
-@media (min-width: $breakpoint-md) and (max-width: $breakpoint-lg) {
+@media (min-width: $breakpoint-md) and (max-width: $breakpoint-xl) {
   .client-portal-text {
     display: none !important;
   }

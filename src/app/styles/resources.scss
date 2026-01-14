@@ -211,6 +211,14 @@
   }
 }
 
+@media (max-width: $breakpoint-xl) {
+  .resources-list-section,
+  .books-list-section {
+    padding: $spacing-lg;
+    margin: auto 1rem;
+  }
+}
+
 @media (max-width: $breakpoint-md) {
   .resources-list-section,
   .books-list-section {
@@ -222,7 +230,7 @@
   }
 }
 
-@media (max-width: 480px) {
+@media (max-width: $breakpoint-sm) {
   .resources-list-section,
   .books-list-section {
     width: 80%;

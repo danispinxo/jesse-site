@@ -205,7 +205,7 @@ export default function Contact() {
                 label="Message"
                 multiline
                 rows={4}
-                helperText="What's on your mind? Share as much or as little as you'd like—I'm all ears! 👂"
+                helperText="What's on your mind? Share as much or as little as you'd like!"
                 fullWidth
               />
               <br />

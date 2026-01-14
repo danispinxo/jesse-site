@@ -901,6 +901,41 @@ body {
   }
 }
 
+@media (max-width: $breakpoint-xl) {
+  .hero {
+    padding-top: 140px;
+    width: 90%;
+    margin-left: 0;
+
+    .hero-content {
+      margin-right: 5%;
+
+      .hero-text {
+        margin-top: 1.5rem;
+        margin-bottom: 1.5rem;
+      }
+
+      .cta-button {
+        font-size: 1.5rem;
+      }
+      .cta-button svg {
+        font-size: 1.3rem;
+      }
+    }
+  }
+
+  .about-me-section {
+    margin-top: -10px;
+    padding: 0 $spacing-lg;
+  }
+
+  .approach-list-section,
+  .specialties-list-section {
+    padding: $spacing-lg;
+    margin: auto 1rem;
+  }
+}
+
 @media (max-width: $breakpoint-md) {
   .hero {
     padding-top: $spacing-xl;

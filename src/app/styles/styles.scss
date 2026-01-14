@@ -409,12 +409,24 @@ body {
   padding: $spacing-xl;
   padding-top: 0;
   background-color: $background-light;
+  text-align: center;
 
   h2 {
     text-align: center;
     font-family: $font-secondary;
     color: $primary-green;
     margin-bottom: $spacing-xl;
+    position: relative;
+    display: inline-block;
+    &::after {
+      content: "";
+      display: block;
+      width: 80px;
+      height: 3px;
+      background: linear-gradient(90deg, $accent-gold, transparent);
+      margin: $spacing-sm auto 0;
+      border-radius: 2px;
+    }
   }
 
   .specialties-grid {
@@ -452,6 +464,18 @@ body {
   h2 {
     font-family: $font-secondary;
     margin-bottom: $spacing-lg;
+    position: relative;
+    display: inline-block;
+    text-align: center;
+    &::after {
+      content: "";
+      display: block;
+      width: 80px;
+      height: 3px;
+      background: linear-gradient(90deg, $accent-gold, transparent);
+      margin: $spacing-sm auto 0;
+      border-radius: 2px;
+    }
   }
 
   .contact-info {
@@ -800,14 +824,25 @@ body {
 .approach-list-section {
   padding: $spacing-xl 0;
   background: $background-light;
+  text-align: center;
 
   h2 {
-    text-align: center;
     font-family: $font-secondary;
     color: $primary-green;
     margin-bottom: $spacing-lg;
     font-size: 2rem;
     font-weight: 700;
+    position: relative;
+    display: inline-block;
+    &::after {
+      content: "";
+      display: block;
+      width: 80px;
+      height: 3px;
+      background: linear-gradient(90deg, $accent-gold, transparent);
+      margin: $spacing-sm auto 0;
+      border-radius: 2px;
+    }
   }
   .approach-list-grid {
     display: grid;
@@ -815,7 +850,9 @@ body {
     gap: $spacing-md $spacing-xl;
     max-width: 1100px;
     margin: 0 auto;
+    text-align: left;
   }
+
   .approach-list-item {
     display: flex;
     align-items: flex-start;
@@ -849,6 +886,7 @@ body {
   padding: $spacing-xl 0;
   margin-top: 2rem;
   background: $background-light;
+  text-align: center;
   h2 {
     text-align: center;
     font-family: $font-secondary;
@@ -856,6 +894,17 @@ body {
     margin-bottom: $spacing-lg;
     font-size: 2rem;
     font-weight: 700;
+    position: relative;
+    display: inline-block;
+    &::after {
+      content: "";
+      display: block;
+      width: 80px;
+      height: 3px;
+      background: linear-gradient(90deg, $accent-gold, transparent);
+      margin: $spacing-sm auto 0;
+      border-radius: 2px;
+    }
   }
   .specialties-list-grid {
     display: grid;

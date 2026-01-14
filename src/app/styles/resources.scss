@@ -21,16 +21,11 @@
       &::after {
         content: "";
         display: block;
-        width: 40px;
+        width: 80px;
         height: 3px;
-        background: linear-gradient(
-          90deg,
-          $primary-green 60%,
-          $secondary-green 100%
-        );
+        background: linear-gradient(90deg, $accent-gold, transparent);
         border-radius: 2px;
-        margin: 0.4rem auto 0 auto;
-        opacity: 0.25;
+        margin: $spacing-sm auto 0 auto;
       }
     }
     p {
@@ -73,6 +68,7 @@
   background: $background-light;
   position: relative;
   overflow: hidden;
+  text-align: center;
 
   h2 {
     text-align: center;
@@ -81,6 +77,16 @@
     margin-bottom: $spacing-lg;
     position: relative;
     z-index: 1;
+    display: inline-block;
+    &::after {
+      content: "";
+      display: block;
+      width: 80px;
+      height: 3px;
+      background: linear-gradient(90deg, $accent-gold, transparent);
+      margin: $spacing-sm auto 0;
+      border-radius: 2px;
+    }
   }
 
   .resources-list-grid {
@@ -141,6 +147,7 @@
   background: $background-light;
   position: relative;
   overflow: hidden;
+  text-align: center;
 
   h2 {
     text-align: center;
@@ -149,6 +156,16 @@
     margin-bottom: $spacing-lg;
     position: relative;
     z-index: 1;
+    display: inline-block;
+    &::after {
+      content: "";
+      display: block;
+      width: 80px;
+      height: 3px;
+      background: linear-gradient(90deg, $accent-gold, transparent);
+      margin: $spacing-sm auto 0;
+      border-radius: 2px;
+    }
   }
 
   .books-list-grid {

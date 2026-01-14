@@ -43,11 +43,27 @@
 
     .profile-text {
       flex: 2;
+      text-align: left;
+
+      @media (max-width: $breakpoint-lg) {
+        text-align: center;
+      }
 
       h2 {
         font-family: $font-secondary;
         color: $primary-green;
         margin-bottom: $spacing-lg;
+        position: relative;
+        display: inline-block;
+        &::after {
+          content: "";
+          display: block;
+          width: 80px;
+          height: 3px;
+          background: linear-gradient(90deg, $accent-gold, transparent);
+          margin: $spacing-sm auto 0;
+          border-radius: 2px;
+        }
       }
 
       p {
@@ -116,16 +132,11 @@
       &::after {
         content: "";
         display: block;
-        width: 40px;
+        width: 80px;
         height: 3px;
-        background: linear-gradient(
-          90deg,
-          $primary-green 60%,
-          $secondary-green 100%
-        );
+        background: linear-gradient(90deg, $accent-gold, transparent);
         border-radius: 2px;
-        margin: 0.4rem auto 0 auto;
-        opacity: 0.25;
+        margin: $spacing-sm auto 0 auto;
       }
     }
     p {
@@ -158,6 +169,7 @@
 .philosophy-list-section {
   padding: $spacing-xl 0;
   background: $background-light;
+  text-align: center;
   h2 {
     text-align: center;
     font-family: $font-secondary;
@@ -165,6 +177,17 @@
     margin-bottom: $spacing-lg;
     font-size: 2rem;
     font-weight: 700;
+    position: relative;
+    display: inline-block;
+    &::after {
+      content: "";
+      display: block;
+      width: 80px;
+      height: 3px;
+      background: linear-gradient(90deg, $accent-gold, transparent);
+      margin: $spacing-sm auto 0;
+      border-radius: 2px;
+    }
   }
   .philosophy-list-grid {
     display: grid;
@@ -172,6 +195,7 @@
     gap: $spacing-md $spacing-xl;
     max-width: 1100px;
     margin: 0 auto;
+    text-align: left;
   }
   .philosophy-list-item {
     display: flex;
@@ -225,8 +249,10 @@
 }
 
 .values-list-section {
-  padding: $spacing-xl 0;
+  padding: $spacing-xl;
   background: $text-light;
+  text-align: center;
+
   h2 {
     text-align: center;
     font-family: $font-secondary;
@@ -234,6 +260,17 @@
     margin-bottom: $spacing-lg;
     font-size: 2rem;
     font-weight: 700;
+    position: relative;
+    display: inline-block;
+    &::after {
+      content: "";
+      display: block;
+      width: 80px;
+      height: 3px;
+      background: linear-gradient(90deg, $accent-gold, transparent);
+      margin: $spacing-sm auto 0;
+      border-radius: 2px;
+    }
   }
   .values-list-grid {
     display: grid;

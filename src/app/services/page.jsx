@@ -26,7 +26,12 @@ export default function Services() {
           <h2>Pricing Plans</h2>
           <div className="pricing-grid">
             {pricingPlans.map((plan, index) => (
-              <div className="pricing-card" key={index}>
+              <div
+                className={`pricing-card ${
+                  index === 0 ? "consultation-card" : ""
+                }`}
+                key={index}
+              >
                 <h3>
                   {plan.sectionId ? (
                     <a
@@ -241,7 +246,7 @@ const supervisionFeatures = [
 
 const pricingPlans = [
   {
-    title: "Initial Consultation",
+    title: "Initial Consultation (Phone)",
     price: "0",
     duration: "15 minutes",
     sectionId: null,
@@ -250,7 +255,6 @@ const pricingPlans = [
       "Discuss your needs",
       "Explore therapy options",
       "Learn about approaches",
-      "Phone only",
     ],
   },
   {

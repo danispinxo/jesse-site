@@ -189,18 +189,23 @@
       grid-template-columns: repeat(3, 1fr);
       gap: $spacing-md;
 
-      @media (max-width: 1200px) {
+      @media (min-width: $breakpoint-md) and (max-width: $breakpoint-xl) {
         grid-template-columns: repeat(2, 1fr);
-      }
 
-      @media (max-width: 900px) {
-        grid-template-columns: 1fr;
-        max-width: 500px;
-        margin: 0 auto;
+        .consultation-card {
+          grid-column: 1 / -1;
+        }
       }
 
       @media (max-width: $breakpoint-md) {
+        grid-template-columns: 1fr;
+        max-width: 500px;
+        margin: 0 auto;
         gap: $spacing-sm;
+
+        .consultation-card {
+          grid-column: 1;
+        }
       }
 
       .pricing-card {
@@ -324,6 +329,20 @@
               color: $accent-gold;
               margin-right: $spacing-sm;
               flex-shrink: 0;
+            }
+          }
+        }
+
+        &.consultation-card {
+          @media (min-width: $breakpoint-md) and (max-width: $breakpoint-xl) {
+            .features {
+              display: grid;
+              grid-template-columns: repeat(2, 1fr);
+              gap: 0 $spacing-md;
+
+              li {
+                margin-bottom: $spacing-sm;
+              }
             }
           }
         }

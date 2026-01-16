@@ -4,7 +4,7 @@ import Image from "next/image";
 import Footer from "../components/Footer";
 import { faLeaf, faSeedling } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { approaches } from "../scripts/constants";
+import { approaches, specialties } from "../scripts/constants";
 
 export default function AboutPage() {
   return (
@@ -149,12 +149,12 @@ export default function AboutPage() {
       <section className="values-list-section">
         <h2>Areas of Focus</h2>
         <div className="values-list-grid">
-          {values.map((value, index) => (
+          {specialties.map((specialty, index) => (
             <div key={index} className="values-list-item">
               <span className="values-list-icon">
                 <FontAwesomeIcon icon={faSeedling} />
               </span>
-              <span className="values-list-text">{value}</span>
+              <span className="values-list-text">{specialty}</span>
             </div>
           ))}
         </div>
@@ -176,33 +176,3 @@ export default function AboutPage() {
     </main>
   );
 }
-
-const values = [
-  "2SLGBTQIA+",
-  "Addiction",
-  "Anger",
-  "Anxiety",
-  "Body Image",
-  "Burnout/Stress",
-  "Codependence",
-  "Coping Skills",
-  "Creativity",
-  "Divorce & Break-ups",
-  "Eating Issues",
-  "Elders/Seniors",
-  "Family Conflict",
-  "Grief & Loss",
-  "Identity Exploration",
-  "Intimacy & Sex",
-  "Men's Issues",
-  "Non-Binary",
-  "Power Relations",
-  "Relationship Difficulties",
-  "Self Esteem & Confidence",
-  "Sex Work Positive",
-  "Shame",
-  "Spiritual",
-  "Trans-Specific",
-  "Trauma",
-  "Women's Issues",
-];

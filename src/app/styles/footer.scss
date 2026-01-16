@@ -74,13 +74,11 @@
 }
 
 @media (max-width: $breakpoint-md) {
-
   .footer {
     margin: 1rem;
     padding: 1.5rem;
 
     .office-hours {
-
       .schedule-line {
         flex-direction: column;
         text-align: center;

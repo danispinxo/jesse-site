@@ -251,7 +251,6 @@
 }
 
 @media (max-width: $breakpoint-xl) {
-
   .resources-list-section,
   .books-list-section {
     padding: $spacing-lg;
@@ -260,10 +259,8 @@
 }
 
 @media (max-width: $breakpoint-md) {
-
   .resources-list-section,
   .books-list-section {
-
     .resources-list-grid,
     .books-list-grid {
       grid-template-columns: 1fr;
@@ -273,7 +270,6 @@
 }
 
 @media (max-width: $breakpoint-sm) {
-
   .resources-list-section,
   .books-list-section {
     width: 80%;

@@ -363,7 +363,7 @@
           @media (min-width: $breakpoint-md) and (max-width: $breakpoint-xl) {
             .features {
               display: grid;
-              grid-template-columns: repeat(2, 1fr);
+              grid-template-columns: repeat(4, 1fr);
               gap: 0 $spacing-md;
 
               li {

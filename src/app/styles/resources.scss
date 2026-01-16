@@ -4,11 +4,13 @@
   padding: $spacing-lg 0 $spacing-md 0;
   background: $background-light;
   color: $primary-green;
+
   .newsletter-content {
     max-width: 500px;
     margin: 0 auto;
     padding: 0 $spacing-md;
     text-align: center;
+
     h2 {
       font-family: $header-font;
       font-size: 1.5rem;
@@ -18,6 +20,7 @@
       letter-spacing: 0.01em;
       position: relative;
       display: inline-block;
+
       &::after {
         content: "";
         display: block;
@@ -28,6 +31,7 @@
         margin: $spacing-sm auto 0 auto;
       }
     }
+
     p {
       margin-bottom: $spacing-md;
       font-size: 1rem;
@@ -37,10 +41,12 @@
     a {
       color: $primary-green;
       text-decoration: underline;
+
       &:hover {
         color: $secondary-green;
       }
     }
+
     .cta-button {
       background-color: $primary-green;
       color: $text-light;
@@ -54,6 +60,7 @@
       box-shadow: none;
       transition: background $transition-normal, color $transition-normal,
         transform $transition-normal;
+
       &:hover {
         background: $secondary-green;
         color: $accent-gold;
@@ -78,6 +85,7 @@
     position: relative;
     z-index: 1;
     display: inline-block;
+
     &::after {
       content: "";
       display: block;
@@ -98,6 +106,7 @@
     max-width: 1100px;
     margin: 0 auto;
   }
+
   .resources-list-item {
     display: flex;
     align-items: flex-start;
@@ -108,6 +117,7 @@
     box-shadow: none;
     border-bottom: 1px solid rgba($primary-green, 0.08);
   }
+
   .resources-list-icon {
     color: $primary-green;
     background: $light-green;
@@ -121,19 +131,23 @@
     flex-shrink: 0;
     margin-top: 0.2em;
   }
+
   .resources-list-title {
     font-weight: 600;
     color: $primary-green;
     font-size: 1.1rem;
     display: block;
+
     a {
       color: $primary-green;
       text-decoration: underline;
+
       &:hover {
         color: $secondary-green;
       }
     }
   }
+
   .resources-list-desc {
     color: $text-dark;
     font-size: 1rem;
@@ -157,6 +171,7 @@
     position: relative;
     z-index: 1;
     display: inline-block;
+
     &::after {
       content: "";
       display: block;
@@ -177,6 +192,7 @@
     max-width: 1100px;
     margin: 0 auto;
   }
+
   .books-list-item {
     display: flex;
     align-items: flex-start;
@@ -187,6 +203,7 @@
     box-shadow: none;
     border-bottom: 1px solid rgba($primary-green, 0.08);
   }
+
   .books-list-icon {
     color: $secondary-green;
     background: $light-green;
@@ -200,19 +217,23 @@
     flex-shrink: 0;
     margin-top: 0.2em;
   }
+
   .books-list-title {
     font-weight: 600;
     color: $primary-green;
     font-size: 1.1rem;
     display: block;
+
     a {
       color: $primary-green;
       text-decoration: underline;
+
       &:hover {
         color: $secondary-green;
       }
     }
   }
+
   .books-list-author {
     color: $secondary-green;
     font-size: 1rem;
@@ -220,6 +241,7 @@
     display: block;
     margin-bottom: 0.1em;
   }
+
   .books-list-desc {
     color: $text-dark;
     font-size: 1rem;
@@ -229,6 +251,7 @@
 }
 
 @media (max-width: $breakpoint-xl) {
+
   .resources-list-section,
   .books-list-section {
     padding: $spacing-lg;
@@ -237,8 +260,10 @@
 }
 
 @media (max-width: $breakpoint-md) {
+
   .resources-list-section,
   .books-list-section {
+
     .resources-list-grid,
     .books-list-grid {
       grid-template-columns: 1fr;
@@ -248,6 +273,7 @@
 }
 
 @media (max-width: $breakpoint-sm) {
+
   .resources-list-section,
   .books-list-section {
     width: 80%;

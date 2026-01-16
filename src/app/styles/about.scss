@@ -20,12 +20,12 @@
     .profile-image {
       width: 400px;
       border-radius: 10%;
-      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+      box-shadow: 0 4px 15px rgb(0 0 0 / 20%);
       transition: transform 0.3s ease, box-shadow 0.3s ease;
 
       &:hover {
         transform: scale(1.05);
-        box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+        box-shadow: 0 6px 20px rgb(0 0 0 / 30%);
       }
 
       @media (max-width: $breakpoint-md) {
@@ -36,7 +36,7 @@
         width: 250px;
       }
 
-      @media (max-width: 480px) {
+      @media (width <= 480px) {
         width: 250px;
       }
     }
@@ -55,6 +55,7 @@
         margin-bottom: $spacing-lg;
         position: relative;
         display: inline-block;
+
         &::after {
           content: "";
           display: block;
@@ -102,7 +103,7 @@
           }
         }
 
-        @media (max-width: 480px) {
+        @media (width <= 480px) {
           text-align: left;
         }
       }
@@ -116,10 +117,12 @@
   color: $primary-green;
   text-align: center;
   border-top: 1px solid rgba($primary-green, 0.08);
+
   .cta-content {
     max-width: 500px;
     margin: 0 auto;
     padding: 0 $spacing-md;
+
     h2 {
       font-family: $header-font;
       font-size: 1.5rem;
@@ -129,6 +132,7 @@
       letter-spacing: 0.01em;
       position: relative;
       display: inline-block;
+
       &::after {
         content: "";
         display: block;
@@ -139,11 +143,13 @@
         margin: $spacing-sm auto 0 auto;
       }
     }
+
     p {
       margin-bottom: $spacing-md;
       font-size: 1rem;
       color: $secondary-green;
     }
+
     .cta-button {
       background-color: $primary-green;
       color: $text-light;
@@ -157,6 +163,7 @@
       box-shadow: none;
       transition: background $transition-normal, color $transition-normal,
         transform $transition-normal;
+
       &:hover {
         background: $secondary-green;
         color: $accent-gold;
@@ -170,6 +177,7 @@
   padding: $spacing-xl 0;
   background: $background-light;
   text-align: center;
+
   h2 {
     text-align: center;
     font-family: $font-secondary;
@@ -179,6 +187,7 @@
     font-weight: 700;
     position: relative;
     display: inline-block;
+
     &::after {
       content: "";
       display: block;
@@ -189,6 +198,7 @@
       border-radius: 2px;
     }
   }
+
   .philosophy-list-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
@@ -197,6 +207,7 @@
     margin: 0 auto;
     text-align: left;
   }
+
   .philosophy-list-item {
     display: flex;
     align-items: flex-start;
@@ -206,6 +217,7 @@
     border: none;
     box-shadow: none;
   }
+
   .philosophy-list-icon {
     color: $primary-green;
     background: $light-green;
@@ -219,12 +231,14 @@
     flex-shrink: 0;
     margin-top: 0.2em;
   }
+
   .philosophy-list-title {
     font-weight: 600;
     color: $primary-green;
     font-size: 1.1rem;
     display: block;
   }
+
   .philosophy-list-desc {
     color: $text-dark;
     font-size: 1rem;
@@ -234,6 +248,7 @@
 }
 
 @media (max-width: $breakpoint-xl) {
+
   .philosophy-list-section {
     padding: $spacing-lg;
     margin: auto 1rem;
@@ -241,7 +256,9 @@
 }
 
 @media (max-width: $breakpoint-md) {
+
   .philosophy-list-section {
+
     .philosophy-list-grid {
       grid-template-columns: 1fr;
     }
@@ -262,6 +279,7 @@
     font-weight: 700;
     position: relative;
     display: inline-block;
+
     &::after {
       content: "";
       display: block;
@@ -272,6 +290,7 @@
       border-radius: 2px;
     }
   }
+
   .values-list-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
@@ -279,6 +298,7 @@
     max-width: 1100px;
     margin: 0 auto;
   }
+
   .values-list-item {
     display: flex;
     align-items: center;
@@ -289,6 +309,7 @@
     box-shadow: none;
     border-bottom: 1px solid rgba($primary-green, 0.08);
   }
+
   .values-list-icon {
     background: $secondary-green;
     color: $text-light;
@@ -301,6 +322,7 @@
     font-size: 1.1rem;
     flex-shrink: 0;
   }
+
   .values-list-text {
     font-weight: 600;
     color: $primary-green;
@@ -310,7 +332,9 @@
 }
 
 @media (max-width: $breakpoint-md) {
+
   .values-list-section {
+
     .values-list-grid {
       grid-template-columns: 1fr;
     }

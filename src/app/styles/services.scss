@@ -39,7 +39,7 @@
           margin: 0 auto;
         }
 
-        @media (max-width: 480px) {
+        @media (width <= 480px) {
           width: 80%;
         }
 
@@ -74,6 +74,7 @@
           font-size: 1.8rem;
           position: relative;
           display: inline-block;
+
           &::after {
             content: "";
             display: block;
@@ -147,19 +148,24 @@
   }
 }
 
-@keyframes drawOutline {
+@keyframes draw-outline {
+
   0% {
     clip-path: polygon(0 0, 0 0, 0 0, 0 0);
   }
+
   25% {
     clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
   }
+
   50% {
     clip-path: polygon(0 0, 100% 0, 100% 100%, 100% 100%);
   }
+
   75% {
     clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
   }
+
   100% {
     clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
   }
@@ -179,7 +185,7 @@
       padding: 0 $spacing-sm;
     }
 
-    @media (max-width: 480px) {
+    @media (width <= 480px) {
       width: 90%;
     }
 
@@ -191,6 +197,7 @@
       font-size: 2rem;
       position: relative;
       display: inline-block;
+
       &::after {
         content: "";
         display: block;
@@ -247,8 +254,9 @@
           transform: translateY(-5px);
 
           h3 .pricing-card-link {
+
             &::before {
-              animation: drawOutline 0.6s ease forwards;
+              animation: draw-outline 0.6s ease forwards;
             }
           }
         }
@@ -275,10 +283,7 @@
             &::before {
               content: "";
               position: absolute;
-              top: 0;
-              left: 0;
-              right: 0;
-              bottom: 0;
+              inset: 0;
               border: 2px solid $primary-green;
               border-radius: $border-radius-sm;
               clip-path: polygon(0 0, 0 0, 0 0, 0 0);
@@ -358,6 +363,7 @@
 
         &.consultation-card {
           @media (min-width: $breakpoint-md) and (max-width: $breakpoint-xl) {
+
             .features {
               display: grid;
               grid-template-columns: repeat(2, 1fr);
@@ -381,19 +387,24 @@
   }
 }
 
-@keyframes drawOutline {
+@keyframes draw-outline {
+
   0% {
     clip-path: polygon(0 0, 0 0, 0 0, 0 0);
   }
+
   25% {
     clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
   }
+
   50% {
     clip-path: polygon(0 0, 100% 0, 100% 100%, 100% 100%);
   }
+
   75% {
     clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
   }
+
   100% {
     clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
   }

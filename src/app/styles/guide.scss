@@ -35,7 +35,7 @@
 .section {
   max-width: 1000px;
   margin: 2rem auto;
-  background-color: #fff;
+  background-color: #ffffff;
   border-radius: $border-radius-md;
   box-shadow: $shadow-md;
   overflow: hidden;
@@ -129,7 +129,9 @@
           color: $primary-green;
           font-weight: 600;
         }
+
         // Style nested ol/ul as lower-alpha
+
         ol,
         ul {
           margin-top: 1rem;
@@ -138,11 +140,13 @@
           padding-left: 2rem;
           list-style-type: lower-alpha;
           counter-reset: subitem;
+
           li {
             counter-increment: subitem;
             margin-bottom: 0.5rem;
             padding-left: 1.5rem;
             position: relative;
+
             &::before {
               content: counter(subitem, lower-alpha) ".";
               position: absolute;
@@ -158,6 +162,7 @@
 }
 
 @media (max-width: $breakpoint-md) {
+
   .section {
     margin: 1rem;
 

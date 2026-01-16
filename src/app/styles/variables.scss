@@ -3,7 +3,6 @@ $sub2-font: "Bellota Text", sans-serif;
 $body-font: "Host Grotesk", sans-serif;
 $sub-font: "Harmattan", sans-serif;
 $header-font: "Gabarito", sans-serif;
-
 $light-green: #b7bf98;
 $primary-green: #1a4d2e;
 $secondary-green: #2d6a4f;
@@ -13,7 +12,6 @@ $text-light: #ffffff;
 $text-muted: #666666;
 $background-light: #f5f5f0;
 $background-dark: #214d2d;
-
 $font-primary: "Gabarito", "system-ui", "-apple-system", "BlinkMacSystemFont",
   sans-serif;
 $font-secondary: "Harmattan", "Arial", "Helvetica", "Liberation Sans",
@@ -38,9 +36,9 @@ $breakpoint-lg: 992px;
 $breakpoint-xl: 1225px;
 
 // Shadows
-$shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.1);
-$shadow-md: 0 4px 6px rgba(0, 0, 0, 0.1);
-$shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.1);
+$shadow-sm: 0 2px 4px rgb(0 0 0 / 10%);
+$shadow-md: 0 4px 6px rgb(0 0 0 / 10%);
+$shadow-lg: 0 10px 15px rgb(0 0 0 / 10%);
 
 // Transitions
 $transition-fast: 0.2s ease;

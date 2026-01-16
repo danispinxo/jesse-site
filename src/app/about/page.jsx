@@ -1,12 +1,41 @@
 "use client";
+import { useState } from "react";
 import "../styles/about.scss";
 import Image from "next/image";
 import Footer from "../components/Footer";
-import { faLeaf, faSeedling } from "@fortawesome/free-solid-svg-icons";
+import {
+  faLeaf,
+  faSeedling,
+  faChevronLeft,
+  faChevronRight,
+} from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { approaches, specialties } from "../scripts/constants";
 
 export default function AboutPage() {
+  const [currentApproachIndex, setCurrentApproachIndex] = useState(0);
+  const [currentSpecialtyIndex, setCurrentSpecialtyIndex] = useState(0);
+
+  const nextApproach = () => {
+    setCurrentApproachIndex((prev) => (prev + 1) % approaches.length);
+  };
+
+  const prevApproach = () => {
+    setCurrentApproachIndex(
+      (prev) => (prev - 1 + approaches.length) % approaches.length
+    );
+  };
+
+  const nextSpecialty = () => {
+    setCurrentSpecialtyIndex((prev) => (prev + 1) % specialties.length);
+  };
+
+  const prevSpecialty = () => {
+    setCurrentSpecialtyIndex(
+      (prev) => (prev - 1 + specialties.length) % specialties.length
+    );
+  };
+
   return (
     <main className="page-content">
       <section className="page-hero">
@@ -80,7 +109,12 @@ export default function AboutPage() {
         <h2>My Approach to Therapy</h2>
         <div className="philosophy-list-grid">
           {approaches.map((item, idx) => (
-            <div className="philosophy-list-item" key={idx}>
+            <div
+              className="philosophy-list-item"
+              key={idx}
+              data-index={idx}
+              data-active={idx === currentApproachIndex}
+            >
               <span className="philosophy-list-icon">
                 <FontAwesomeIcon icon={faLeaf} />
               </span>
@@ -90,6 +124,22 @@ export default function AboutPage() {
               </div>
             </div>
           ))}
+        </div>
+        <div className="philosophy-carousel-controls">
+          <button
+            className="philosophy-carousel-button philosophy-carousel-button-prev"
+            onClick={prevApproach}
+            aria-label="Previous approach"
+          >
+            <FontAwesomeIcon icon={faChevronLeft} />
+          </button>
+          <button
+            className="philosophy-carousel-button philosophy-carousel-button-next"
+            onClick={nextApproach}
+            aria-label="Next approach"
+          >
+            <FontAwesomeIcon icon={faChevronRight} />
+          </button>
         </div>
       </section>
 
@@ -150,13 +200,34 @@ export default function AboutPage() {
         <h2>Areas of Focus</h2>
         <div className="values-list-grid">
           {specialties.map((specialty, index) => (
-            <div key={index} className="values-list-item">
+            <div
+              key={index}
+              className="values-list-item"
+              data-index={index}
+              data-active={index === currentSpecialtyIndex}
+            >
               <span className="values-list-icon">
                 <FontAwesomeIcon icon={faSeedling} />
               </span>
               <span className="values-list-text">{specialty}</span>
             </div>
           ))}
+        </div>
+        <div className="values-carousel-controls">
+          <button
+            className="values-carousel-button values-carousel-button-prev"
+            onClick={prevSpecialty}
+            aria-label="Previous specialty"
+          >
+            <FontAwesomeIcon icon={faChevronLeft} />
+          </button>
+          <button
+            className="values-carousel-button values-carousel-button-next"
+            onClick={nextSpecialty}
+            aria-label="Next specialty"
+          >
+            <FontAwesomeIcon icon={faChevronRight} />
+          </button>
         </div>
       </section>
 

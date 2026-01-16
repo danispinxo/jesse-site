@@ -291,6 +291,7 @@
             &:hover {
               color: $primary-green;
               transform: translateY(-1px);
+              box-shadow: $shadow-lg;
             }
 
             &:active {

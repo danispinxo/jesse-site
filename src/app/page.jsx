@@ -79,12 +79,11 @@ export default function HomePage() {
           <div className="why-content">
             <p>
               <strong>
-                Registered Psychotherapist, RCAT, DTATI, HBA, Clinical
-                Supervisor.
+                Registered Psychotherapist, RCAT, DTATI, HBA.
               </strong>
             </p>
             <p>
-              Ontario therapist offering psychotherapy and art therapy sessions.
+              Ontario therapist offering psychotherapy and art therapy sessions, and clinical supervision.
             </p>
             <p>
               We all want a better life and we're doing the best we can with

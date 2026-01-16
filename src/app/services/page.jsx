@@ -204,6 +204,40 @@ export default function Services() {
               </Link>
             </div>
           </div>
+
+          <div className="service-card featured">
+            <div className="service-image">
+              <Image
+                className="service-image"
+                src="/images/Psychotherapy.webp"
+                alt="A phone on a desk, representing a consultation call."
+                width={400}
+                height={300}
+              />
+            </div>
+            <div className="service-details">
+              <h2 id="initial-consultation">Initial Consultation</h2>
+              <p>
+                The initial consultation is a no-fee, 15-minute phone call
+                designed to help you get to know me and determine if we're a good
+                fit for working together. This is your opportunity to ask
+                questions, share what brings you to therapy, and learn more about
+                my approach. We'll discuss your goals, my methods, and practical
+                details like scheduling and session format.
+              </p>
+              <ul className="service-features">
+                {consultationFeatures.map((feature, index) => (
+                  <li key={index}>
+                    <FontAwesomeIcon icon={faCheck} className="check-icon" />
+                    {feature}
+                  </li>
+                ))}
+              </ul>
+              <Link href="/contact">
+                <button className="cta-button">Book Consultation</button>
+              </Link>
+            </div>
+          </div>
         </div>
       </section>
 
@@ -244,12 +278,21 @@ const supervisionFeatures = [
   "Professional development guidance",
 ];
 
+const consultationFeatures = [
+  "No fee, no obligation",
+  "15-minute phone call",
+  "Discuss your goals and needs",
+  "Learn about my approach",
+  "Ask any questions you have",
+  "Determine if we're a good fit",
+];
+
 const pricingPlans = [
   {
     title: "Initial Consultation (Phone)",
     price: "0",
     duration: "15 minutes",
-    sectionId: null,
+    sectionId: "initial-consultation",
     features: [
       "Meet your therapist",
       "Discuss your needs",

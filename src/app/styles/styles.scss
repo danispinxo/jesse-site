@@ -522,7 +522,7 @@ body {
         transition: color $transition-normal;
       }
 
-      @media (width >= 825px) {
+      @media (width >= $breakpoint-xl) {
         flex-direction: row;
         align-items: center;
         gap: 0.5rem;

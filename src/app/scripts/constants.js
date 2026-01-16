@@ -35,7 +35,7 @@ export const approaches = [
   },
   {
     title: "Art Therapy",
-    desc: "Use creative expression as a tool for self-discovery and healing.",
+    desc: "Use various forms creative expression as a tool for self-discovery and healing.",
   },
   {
     title: "Attachment Focused",
@@ -67,7 +67,7 @@ export const approaches = [
   },
   {
     title: "Performance & Masculinity",
-    desc: "Examine how we perform gender roles, particularly masculinity, and their impact on emotional expression and relationships.",
+    desc: "Examine how gender roles, particularly masculinity, impact  expression and relationships.",
   },
   {
     title: "Political & Social Justice",
@@ -83,7 +83,7 @@ export const approaches = [
   },
   {
     title: "Strengths Based",
-    desc: "Focus on individual strengths to foster resilience and growth.",
+    desc: "Focus on individual strengths in order to foster resilience and growth.",
   },
   {
     title: "Trauma Informed",

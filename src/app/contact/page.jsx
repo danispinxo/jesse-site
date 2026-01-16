@@ -58,7 +58,9 @@ export default function Contact() {
             <p>Not sure where to start?</p>
             <p className="guide-link">
               <Link href="/guide">
-                Check out my guide on choosing the right therapist!
+                Check out my guide on choosing 
+                <br />
+                the right therapist!
               </Link>
             </p>
 

@@ -78,6 +78,7 @@
 
   .guide-link {
     margin: 1.5rem 0;
+    text-align: center;
 
     a {
       color: $text-light;
@@ -91,19 +92,19 @@
       transition: all $transition-normal;
       position: relative;
       text-decoration: none;
-      box-shadow: $shadow-sm;
+      box-shadow: 0 6px 20px rgb(0 0 0 / 25%), 0 16px 48px rgb(0 0 0 / 20%);
 
       &:hover {
         background-color: $secondary-green;
         border-color: $secondary-green;
         transform: translateY(-2px);
-        box-shadow: $shadow-md;
+        box-shadow: 0 10px 28px rgb(0 0 0 / 30%), 0 24px 64px rgb(0 0 0 / 25%);
         color: $text-light;
       }
 
       &:active {
         transform: translateY(0);
-        box-shadow: $shadow-sm;
+        box-shadow: 0 4px 16px rgb(0 0 0 / 25%);
       }
     }
   }
@@ -152,10 +153,14 @@
       max-width: 180px;
       height: auto;
       transition: transform $transition-normal;
-
+      
       &:hover {
         transform: scale(1.05);
       }
+    }
+
+    .tati-logo {
+      padding: 3rem;
     }
   }
 }

@@ -18,7 +18,7 @@ export const specialties = [
   "Narcissistic Personality",
   "Peer Relationships",
   "Racial Identity",
-  "Relationship Issues",
+  "Relationships",
   "Self Esteem",
   "Sex-Positive, Kink Allied",
   "Stress",

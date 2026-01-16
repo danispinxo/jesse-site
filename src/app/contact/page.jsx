@@ -91,14 +91,6 @@ export default function Contact() {
                 />
               </a>
 
-              <a href="http://www.tati.on.ca" target="_blank" rel="noreferrer">
-                <img
-                  className="affiliation-img"
-                  src="/images/TATI.webp"
-                  alt="TATI Logo"
-                />
-              </a>
-
               <a
                 href="http://www.estonianartiststoronto.com"
                 target="_blank"
@@ -108,6 +100,14 @@ export default function Contact() {
                   className="affiliation-img"
                   src="/images/EKKT.webp"
                   alt="EKKT Logo"
+                />
+              </a>
+
+              <a href="http://www.tati.on.ca" target="_blank" rel="noreferrer">
+                <img
+                  className="affiliation-img tati-logo"
+                  src="/images/TATI.webp"
+                  alt="TATI Logo"
                 />
               </a>
             </div>

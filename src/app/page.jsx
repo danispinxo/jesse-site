@@ -1,15 +1,30 @@
 "use client";
 import Link from "next/link";
 import Image from "next/image";
+import { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faPaperPlane,
   faArrowRight,
   faLeaf,
+  faChevronLeft,
+  faChevronRight,
 } from "@fortawesome/free-solid-svg-icons";
 import { approaches, specialties } from "./scripts/constants";
 
 export default function HomePage() {
+  const [currentSpecialtyIndex, setCurrentSpecialtyIndex] = useState(0);
+
+  const nextSpecialty = () => {
+    setCurrentSpecialtyIndex((prev) => (prev + 1) % specialties.length);
+  };
+
+  const prevSpecialty = () => {
+    setCurrentSpecialtyIndex(
+      (prev) => (prev - 1 + specialties.length) % specialties.length
+    );
+  };
+
   return (
     <main className="home">
       <section className="hero">
@@ -120,18 +135,39 @@ export default function HomePage() {
         aria-labelledby="specialties-heading"
       >
         <h2 id="specialties-heading">
-          Specializing in Art Therapy, Anxiety, Self-Esteem, and Relationship
-          Issues
+          Specializing in...
         </h2>
         <div className="specialties-list-grid" role="list">
           {specialties.map((specialty, index) => (
-            <div key={index} className="specialties-list-item" role="listitem">
+            <div
+              key={index}
+              className="specialties-list-item"
+              role="listitem"
+              data-index={index}
+              data-active={index === currentSpecialtyIndex}
+            >
               <span className="specialties-list-icon" aria-hidden="true">
                 <FontAwesomeIcon icon={faLeaf} />
               </span>
               <span className="specialties-list-text">{specialty}</span>
             </div>
           ))}
+        </div>
+        <div className="specialties-carousel-controls">
+          <button
+            className="specialties-carousel-button specialties-carousel-button-prev"
+            onClick={prevSpecialty}
+            aria-label="Previous specialty"
+          >
+            <FontAwesomeIcon icon={faChevronLeft} />
+          </button>
+          <button
+            className="specialties-carousel-button specialties-carousel-button-next"
+            onClick={nextSpecialty}
+            aria-label="Next specialty"
+          >
+            <FontAwesomeIcon icon={faChevronRight} />
+          </button>
         </div>
       </section>
 
@@ -143,7 +179,7 @@ export default function HomePage() {
             you need not limit yourself or your life to it.
           </h2>
           <div className="contact-info">
-            <p>Take your first step in scheduleing your consultation today!</p>
+            <p>Take your first step in scheduling your consultation today!</p>
             <a href="/contact">
               <button className="cta-button">Get Started</button>
             </a>

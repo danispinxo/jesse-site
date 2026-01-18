@@ -70,7 +70,7 @@ export default function Services() {
               <Image
                 className="service-image"
                 src="/images/Psychotherapy.webp"
-                alt="A serene therapy session setup with a comfortable chair and calming decor."
+                alt="An image of two sets of hands, one gesturing in speach and the other taking notes."
                 width={400}
                 height={300}
               />
@@ -107,7 +107,7 @@ export default function Services() {
               <Image
                 className="service-image"
                 src="/images/ArtTherapy.webp"
-                alt="Art supplies including paints, brushes, and paper used in art therapy sessions."
+                alt="An image of a woman laying on her side in a right angle in white lines painted on pavement."
                 width={400}
                 height={300}
               />
@@ -142,7 +142,7 @@ export default function Services() {
               <Image
                 className="service-image"
                 src="/images/LowIncome.webp"
-                alt="A welcoming office space with a desk and chair, symbolizing accessibility and affordability."
+                alt="An image of a small man in a hat sitting on a ledge of a white geometic shape, nearby there is a ladder."
                 width={400}
                 height={300}
               />
@@ -209,8 +209,8 @@ export default function Services() {
             <div className="service-image">
               <Image
                 className="service-image"
-                src="/images/Psychotherapy.webp"
-                alt="A phone on a desk, representing a consultation call."
+                src="/images/TreeDoor.webp"
+                alt="An illustration of an open door revealing a large tree with orange autumn leaves."
                 width={400}
                 height={300}
               />

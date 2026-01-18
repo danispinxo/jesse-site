@@ -39,7 +39,7 @@
           margin: 0 auto;
         }
 
-        @media (max-width: 480px) {
+        @media (width <= 480px) {
           width: 80%;
         }
 
@@ -72,10 +72,30 @@
           color: $primary-green;
           margin-bottom: $spacing-lg;
           font-size: 1.8rem;
+          position: relative;
+          display: inline-block;
+
+          &::after {
+            content: "";
+            display: block;
+            width: 80px;
+            height: 3px;
+            background: linear-gradient(90deg, $accent-gold, transparent);
+            margin: $spacing-sm auto 0;
+            border-radius: 2px;
+          }
 
           @media (max-width: $breakpoint-md) {
             font-size: 1.5rem;
             margin-bottom: $spacing-md;
+          }
+
+          &[id] {
+            scroll-margin-top: 100px;
+
+            @media (max-width: $breakpoint-md) {
+              scroll-margin-top: 90px;
+            }
           }
         }
 
@@ -128,6 +148,28 @@
   }
 }
 
+@keyframes draw-outline {
+  0% {
+    clip-path: polygon(0 0, 0 0, 0 0, 0 0);
+  }
+
+  25% {
+    clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+  }
+
+  50% {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 100% 100%);
+  }
+
+  75% {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  }
+
+  100% {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  }
+}
+
 .pricing {
   padding: $spacing-xl 0;
   background-color: $text-light;
@@ -136,12 +178,13 @@
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 $spacing-lg;
+    text-align: center;
 
     @media (max-width: $breakpoint-md) {
       padding: 0 $spacing-sm;
     }
 
-    @media (max-width: 480px) {
+    @media (width <= 480px) {
       width: 90%;
     }
 
@@ -151,6 +194,18 @@
       color: $primary-green;
       margin-bottom: $spacing-xl;
       font-size: 2rem;
+      position: relative;
+      display: inline-block;
+
+      &::after {
+        content: "";
+        display: block;
+        width: 80px;
+        height: 3px;
+        background: linear-gradient(90deg, $accent-gold, transparent);
+        margin: $spacing-sm auto 0;
+        border-radius: 2px;
+      }
 
       @media (max-width: $breakpoint-md) {
         font-size: 1.8rem;
@@ -163,18 +218,23 @@
       grid-template-columns: repeat(3, 1fr);
       gap: $spacing-md;
 
-      @media (max-width: 1200px) {
+      @media (min-width: $breakpoint-md) and (max-width: $breakpoint-xl) {
         grid-template-columns: repeat(2, 1fr);
-      }
 
-      @media (max-width: 900px) {
-        grid-template-columns: 1fr;
-        max-width: 500px;
-        margin: 0 auto;
+        .consultation-card {
+          grid-column: 1 / -1;
+        }
       }
 
       @media (max-width: $breakpoint-md) {
+        grid-template-columns: 1fr;
+        max-width: 500px;
+        margin: 0 auto;
         gap: $spacing-sm;
+
+        .consultation-card {
+          grid-column: 1;
+        }
       }
 
       .pricing-card {
@@ -191,6 +251,12 @@
 
         &:hover {
           transform: translateY(-5px);
+
+          h3 .pricing-card-link {
+            &::before {
+              animation: draw-outline 0.6s ease forwards;
+            }
+          }
         }
 
         h3 {
@@ -201,6 +267,36 @@
           @media (max-width: $breakpoint-md) {
             font-size: 1.3rem;
             margin-bottom: $spacing-sm;
+          }
+
+          .pricing-card-link {
+            color: $secondary-green;
+            text-decoration: none;
+            transition: all $transition-normal;
+            position: relative;
+            display: inline-block;
+            padding: 4px 8px;
+            margin: -4px -8px;
+
+            &::before {
+              content: "";
+              position: absolute;
+              inset: 0;
+              border: 2px solid $primary-green;
+              border-radius: $border-radius-sm;
+              clip-path: polygon(0 0, 0 0, 0 0, 0 0);
+              pointer-events: none;
+            }
+
+            &:hover {
+              color: $primary-green;
+              transform: translateY(-1px);
+              box-shadow: $shadow-lg;
+            }
+
+            &:active {
+              transform: translateY(0);
+            }
           }
         }
 
@@ -264,6 +360,20 @@
           }
         }
 
+        &.consultation-card {
+          @media (min-width: $breakpoint-md) and (max-width: $breakpoint-xl) {
+            .features {
+              display: grid;
+              grid-template-columns: repeat(4, 1fr);
+              gap: 0 $spacing-md;
+
+              li {
+                margin-bottom: $spacing-sm;
+              }
+            }
+          }
+        }
+
         .cta-button {
           @media (max-width: $breakpoint-md) {
             width: 100%;
@@ -272,5 +382,27 @@
         }
       }
     }
+  }
+}
+
+@keyframes draw-outline {
+  0% {
+    clip-path: polygon(0 0, 0 0, 0 0, 0 0);
+  }
+
+  25% {
+    clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+  }
+
+  50% {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 100% 100%);
+  }
+
+  75% {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  }
+
+  100% {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
   }
 }

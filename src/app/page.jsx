@@ -1,14 +1,30 @@
 "use client";
 import Link from "next/link";
 import Image from "next/image";
+import { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faPaperPlane,
   faArrowRight,
   faLeaf,
+  faChevronLeft,
+  faChevronRight,
 } from "@fortawesome/free-solid-svg-icons";
+import { approaches, specialties } from "./scripts/constants";
 
 export default function HomePage() {
+  const [currentSpecialtyIndex, setCurrentSpecialtyIndex] = useState(0);
+
+  const nextSpecialty = () => {
+    setCurrentSpecialtyIndex((prev) => (prev + 1) % specialties.length);
+  };
+
+  const prevSpecialty = () => {
+    setCurrentSpecialtyIndex(
+      (prev) => (prev - 1 + specialties.length) % specialties.length
+    );
+  };
+
   return (
     <main className="home">
       <section className="hero">
@@ -61,25 +77,42 @@ export default function HomePage() {
           <h2 id="about-heading">About Me</h2>
           <h3>Jesse Pajuäär</h3>
           <div className="why-content">
-            <p><strong>Registered Psychotherapist, RCAT, DTATI, HBA.</strong></p>
             <p>
-              Ontario therapist offering psychotherapy and art therapy sessions.
+              <strong>
+                Registered Psychotherapist, RCAT, DTATI, HBA.
+              </strong>
+            </p>
+            <p>
+              Ontario therapist offering psychotherapy and art therapy sessions, and clinical supervision.
+            </p>
+            <p>
+              We all want a better life and we're doing the best we can with
+              what we have. But we get stuck sometimes, caught in routines,
+              unsure how to create the change we long for. Even asking “What do
+              I want?” can feel overwhelming, pushing us to live for others
+              while sensing something is missing. Everything we do meets some
+              need, or we wouldn't do it. Therapy needn't be about “fixing
+              people.” It can be a space of liberation, resistance, and
+              transformation. Getting to the heart of what we truly need or want
+              can be the beginning of the shift that empowers us. That clarity
+              becomes the opening chapter to a story centered on your voice, not
+              others.
             </p>
             <p>
               I approach each session with the belief that you are the expert of
               your own life. There are no judgements or assumptions made during
-              our time.
-            </p>
-            <p>
-              My focus is on collaborating with you to create a space where your
-              voice, your wants, and your unique perspective can not only be
-              heard, but supported and advocated for.
+              our time; my focus is on collaborating with you to create a space
+              where your voice, your wants, and your unique perspectives are not
+              only heard, but supported and advocated for.
             </p>
           </div>
         </div>
       </section>
 
-      <section className="approach-list-section" aria-labelledby="approach-heading">
+      <section
+        className="approach-list-section"
+        aria-labelledby="approach-heading"
+      >
         <h2 id="approach-heading">My Approach to Therapy</h2>
         <div className="approach-list-grid" role="list">
           {approaches.map((item, idx) => (
@@ -96,14 +129,22 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="specialties-list-section" aria-labelledby="specialties-heading">
+      <section
+        className="specialties-list-section"
+        aria-labelledby="specialties-heading"
+      >
         <h2 id="specialties-heading">
-          Specializing in Art Therapy, Anxiety, Self-Esteem, and Relationship
-          Issues
+          Specializing in...
         </h2>
         <div className="specialties-list-grid" role="list">
           {specialties.map((specialty, index) => (
-            <div key={index} className="specialties-list-item" role="listitem">
+            <div
+              key={index}
+              className="specialties-list-item"
+              role="listitem"
+              data-index={index}
+              data-active={index === currentSpecialtyIndex}
+            >
               <span className="specialties-list-icon" aria-hidden="true">
                 <FontAwesomeIcon icon={faLeaf} />
               </span>
@@ -111,13 +152,33 @@ export default function HomePage() {
             </div>
           ))}
         </div>
+        <div className="specialties-carousel-controls">
+          <button
+            className="specialties-carousel-button specialties-carousel-button-prev"
+            onClick={prevSpecialty}
+            aria-label="Previous specialty"
+          >
+            <FontAwesomeIcon icon={faChevronLeft} />
+          </button>
+          <button
+            className="specialties-carousel-button specialties-carousel-button-next"
+            onClick={nextSpecialty}
+            aria-label="Next specialty"
+          >
+            <FontAwesomeIcon icon={faChevronRight} />
+          </button>
+        </div>
       </section>
 
       <section className="contact">
         <div className="contact-content">
-          <h2>You are not the problem, the problem is the problem.</h2>
+          <h2>
+            You are not the problem, the problem is the problem;
+            <br />
+            you need not limit yourself or your life to it.
+          </h2>
           <div className="contact-info">
-            <p>Schedule your consultation today</p>
+            <p>Take your first step in scheduling your consultation today!</p>
             <a href="/contact">
               <button className="cta-button">Get Started</button>
             </a>
@@ -127,84 +188,3 @@ export default function HomePage() {
     </main>
   );
 }
-
-const specialties = [
-  "2SLGBTQIA+",
-  "Addiction",
-  "Anger Management",
-  "Anxiety",
-  "Bisexuality",
-  "Body Positivity",
-  "Codependency",
-  "Coping Skills",
-  "Creativity",
-  "Depression",
-  "Family Conflict",
-  "Grief",
-  "Infidelity",
-  "Life Coaching",
-  "Life Transitions",
-  "Men's Issues",
-  "Narcissistic Personality",
-  "Peer Relationships",
-  "Racial Identity",
-  "Relationship Issues",
-  "Self Esteem",
-  "Sex-Positive, Kink Allied",
-  "Stress",
-  "Transgender",
-  "Trauma and PTSD",
-  "Women's Issues",
-  "Work-Life Balance",
-];
-
-const approaches = [
-  {
-    title: "Anti-Oppressive",
-    desc: "Acknowledge and address systemic barriers to mental health care.",
-  },
-  {
-    title: "Art Therapy",
-    desc: "Use creative expression as a tool for self-discovery and healing.",
-  },
-  {
-    title: "Attachment Focused",
-    desc: "Understand how early relationships shape current experiences and behaviors.",
-  },
-  {
-    title: "Compassionate Inquiry",
-    desc: "Gently uncover underlying emotional and psychological patterns.",
-  },
-  {
-    title: "Existential",
-    desc: "Explore the meaning of life and personal values in the therapeutic process.",
-  },
-  {
-    title: "Expressive Arts",
-    desc: "Integrate various art forms to facilitate emotional expression and healing.",
-  },
-  {
-    title: "Mindfulness",
-    desc: "Cultivate present-moment awareness to reduce stress and enhance well-being.",
-  },
-  {
-    title: "Narrative",
-    desc: "Reframe personal stories to empower and create new perspectives.",
-  },
-  {
-    title: "Relational",
-    desc: "Emphasize the importance of relationships in shaping emotional health.",
-  },
-  {
-    title: "Somatic",
-    desc: "Address the connection between the body and mind in the healing process.",
-  },
-  {
-    title: "Strengths Based",
-    desc: "Focus on individual strengths to foster resilience and growth.",
-  },
-  {
-    title: "Trauma Informed",
-    desc: "Create a safe space that acknowledges and respects the impact of trauma.",
-  },
-];

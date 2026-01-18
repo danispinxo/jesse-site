@@ -1,4 +1,5 @@
 @use "variables" as *;
+
 :root {
   --font-harmattan-fallback: "Harmattan", "Arial", "Helvetica", sans-serif;
   --font-gabarito-fallback: "Gabarito", "system-ui", "-apple-system", sans-serif;
@@ -8,6 +9,14 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+html {
+  scroll-padding-top: 100px;
+
+  @media (max-width: $breakpoint-md) {
+    scroll-padding-top: 90px;
+  }
 }
 
 body {
@@ -46,10 +55,7 @@ body {
   &::before {
     content: "";
     position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
+    inset: 0;
     background: linear-gradient(
       135deg,
       rgba($primary-green, 0.02) 0%,
@@ -188,7 +194,7 @@ body {
       margin-bottom: $spacing-sm;
       text-shadow: 2px 2px 4px rgba($background-dark, 0.3);
       font-display: swap;
-      text-rendering: optimizeLegibility;
+      text-rendering: optimizelegibility;
       -webkit-font-smoothing: antialiased;
       -moz-osx-font-smoothing: grayscale;
       will-change: auto;
@@ -294,7 +300,7 @@ body {
   h2,
   h3 {
     font-family: $font-secondary;
-    margin-bottom: $spacing-lg;
+    margin-bottom: $spacing-md;
     position: relative;
     z-index: 1;
     text-shadow: 2px 2px 4px rgba($background-dark, 0.5);
@@ -304,6 +310,7 @@ body {
 
   h3 {
     font-size: 2.5rem;
+
     &::after {
       content: "";
       display: block;
@@ -318,11 +325,12 @@ body {
   .why-content {
     position: relative;
     z-index: 1;
-    max-width: 800px;
+    max-width: 1100px;
     margin: 0 auto;
     font-size: 1.2rem;
-    line-height: 1.8;
-    text-shadow: 2px 2px 4px rgba($background-dark, 0.5);
+    line-height: 1.6;
+    font-weight: 00;
+    text-align: justify;
     padding: 0 $spacing-lg;
     color: $text-light;
 
@@ -337,75 +345,29 @@ body {
   }
 }
 
-@media (max-width: $breakpoint-md) {
-  .hero {
-    h1 {
-      font-size: 2.5rem;
-      text-align: center;
-
-      .subtitle {
-        font-size: 2rem;
-      }
-
-      .emphasis {
-        font-size: 2rem;
-      }
-    }
-
-    .hero-text {
-      text-align: center;
-    }
-  }
-
-  .why-section {
-    .forest-overlay {
-      margin: 0 $spacing-sm;
-      padding: $spacing-lg;
-      text-align: center;
-    }
-
-    h2 {
-      font-size: 2rem;
-    }
-
-    .why-content {
-      font-size: 1.1rem;
-      padding: 0 $spacing-sm;
-      text-align: center;
-    }
-  }
-
-  .specialties-list-section {
-    text-align: center;
-
-    .specialties-list-item {
-      justify-content: center;
-    }
-  }
-
-  .approach-list-section {
-    text-align: center;
-
-    .approach-list-item {
-      justify-content: center;
-    }
-  }
-
-  .contact {
-    text-align: center;
-  }
-}
-
 .specialties {
   padding: $spacing-xl;
   padding-top: 0;
   background-color: $background-light;
+  text-align: center;
 
   h2 {
     text-align: center;
     font-family: $font-secondary;
     color: $primary-green;
     margin-bottom: $spacing-xl;
+    position: relative;
+    display: inline-block;
+
+    &::after {
+      content: "";
+      display: block;
+      width: 80px;
+      height: 3px;
+      background: linear-gradient(90deg, $accent-gold, transparent);
+      margin: $spacing-sm auto 0;
+      border-radius: 2px;
+    }
   }
 
   .specialties-grid {
@@ -443,6 +405,19 @@ body {
   h2 {
     font-family: $font-secondary;
     margin-bottom: $spacing-lg;
+    position: relative;
+    display: inline-block;
+    text-align: center;
+
+    &::after {
+      content: "";
+      display: block;
+      width: 80px;
+      height: 3px;
+      background: linear-gradient(90deg, $accent-gold, transparent);
+      margin: $spacing-sm auto 0;
+      border-radius: 2px;
+    }
   }
 
   .contact-info {
@@ -496,96 +471,6 @@ body {
   }
 }
 
-@media (max-width: $breakpoint-lg) {
-  .hero {
-    flex-direction: column;
-    text-align: center;
-    padding: $spacing-md;
-
-    .hero-content {
-      margin-bottom: $spacing-lg;
-      margin-left: 0;
-      margin-top: 3.5rem;
-    }
-
-    .hero-image-container {
-      margin-left: 0;
-    }
-  }
-
-  .approach {
-    .approach-content {
-      flex-direction: column;
-      text-align: center;
-    }
-  }
-}
-
-@media (max-width: $breakpoint-md) {
-  .hero {
-    width: 90%;
-
-    .hero-content {
-      width: 100%;
-    }
-
-    h1 {
-      font-size: 2.5rem;
-
-      .subtitle {
-        font-size: 2rem;
-      }
-
-      .emphasis {
-        font-size: 2rem;
-      }
-    }
-  }
-
-  .about-me-section {
-    margin-top: 0;
-    padding: $spacing-md;
-    padding-top: 80px;
-    padding-bottom: 0.5rem;
-
-    .about-me-content {
-      transform: translateY(-120px);
-    }
-
-    .why-content {
-      font-size: 1.1rem;
-      text-align: center;
-    }
-  }
-
-  .specialties-grid,
-  .stats-grid,
-  .services-grid,
-  .testimonials-grid {
-    grid-template-columns: 1fr;
-  }
-}
-
-@media (max-width: 600px) {
-  .hero {
-    padding-top: 50px;
-  }
-
-  .about-me-section {
-    margin-top: 0;
-    padding: $spacing-sm;
-    padding-top: 80px;
-
-    .about-me-content {
-      transform: translateY(-20px);
-    }
-
-    .why-content {
-      font-size: 0.9rem;
-    }
-  }
-}
-
 .navbar {
   position: fixed;
   top: 0;
@@ -597,8 +482,8 @@ body {
   background-color: rgba($background-dark, 0.95);
 
   .navbar-container {
-    max-width: 1200px;
-    margin: 0 auto;
+    max-width: 1400px;
+    margin: 0 12%;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -625,7 +510,7 @@ body {
       line-height: 1.2;
 
       .name {
-        font-size: 1.2rem;
+        font-size: 1.1rem;
         display: block;
         transition: color $transition-normal;
       }
@@ -637,7 +522,7 @@ body {
         transition: color $transition-normal;
       }
 
-      @media (min-width: 825px) {
+      @media (width >= $breakpoint-xl) {
         flex-direction: row;
         align-items: center;
         gap: 0.5rem;
@@ -649,16 +534,23 @@ body {
         }
       }
 
-      @media (max-width: 865px) {
+      @media (width <= 865px) {
         .studio {
           display: none;
         }
       }
 
-      @media (max-width: 765px) {
+      @media (width <= 765px) {
         .name,
         .studio {
           display: block;
+        }
+      }
+
+      @media (width <=3955px) {
+        .name,
+        .studio {
+          font-size: 0.8rem;
         }
       }
     }
@@ -742,7 +634,7 @@ body {
 
 .page-hero {
   background: $background-light;
-  padding: calc($spacing-md) 0 $spacing-md 0;
+  padding: calc($spacing-md) 0 $spacing-md;
   color: $primary-green;
   text-align: center;
   border-bottom: 1px solid rgba($primary-green, 0.08);
@@ -762,6 +654,7 @@ body {
       letter-spacing: 0.01em;
       position: relative;
       display: inline-block;
+
       &::after {
         content: "";
         display: block;
@@ -773,10 +666,11 @@ body {
           $secondary-green 100%
         );
         border-radius: 2px;
-        margin: 0.5rem auto 0 auto;
+        margin: 0.5rem auto 0;
         opacity: 0.25;
       }
     }
+
     .subtitle {
       display: block;
       font-size: 1.05rem;
@@ -791,22 +685,37 @@ body {
 .approach-list-section {
   padding: $spacing-xl 0;
   background: $background-light;
+  text-align: center;
 
   h2 {
-    text-align: center;
     font-family: $font-secondary;
     color: $primary-green;
     margin-bottom: $spacing-lg;
     font-size: 2rem;
     font-weight: 700;
+    position: relative;
+    display: inline-block;
+
+    &::after {
+      content: "";
+      display: block;
+      width: 80px;
+      height: 3px;
+      background: linear-gradient(90deg, $accent-gold, transparent);
+      margin: $spacing-sm auto 0;
+      border-radius: 2px;
+    }
   }
+
   .approach-list-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
     gap: $spacing-md $spacing-xl;
     max-width: 1100px;
     margin: 0 auto;
+    text-align: left;
   }
+
   .approach-list-item {
     display: flex;
     align-items: flex-start;
@@ -816,18 +725,21 @@ body {
     border: none;
     box-shadow: none;
   }
+
   .approach-list-icon {
     color: $accent-gold;
     font-size: 1.5rem;
     flex-shrink: 0;
     margin-top: 0.2em;
   }
+
   .approach-list-title {
     font-weight: 600;
     color: $primary-green;
     font-size: 1.1rem;
     display: block;
   }
+
   .approach-list-desc {
     color: $text-dark;
     font-size: 1rem;
@@ -840,6 +752,8 @@ body {
   padding: $spacing-xl 0;
   margin-top: 2rem;
   background: $background-light;
+  text-align: center;
+
   h2 {
     text-align: center;
     font-family: $font-secondary;
@@ -847,7 +761,20 @@ body {
     margin-bottom: $spacing-lg;
     font-size: 2rem;
     font-weight: 700;
+    position: relative;
+    display: inline-block;
+
+    &::after {
+      content: "";
+      display: block;
+      width: 80px;
+      height: 3px;
+      background: linear-gradient(90deg, $accent-gold, transparent);
+      margin: $spacing-sm auto 0;
+      border-radius: 2px;
+    }
   }
+
   .specialties-list-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
@@ -855,6 +782,7 @@ body {
     max-width: 1100px;
     margin: 0 auto;
   }
+
   .specialties-list-item {
     display: flex;
     align-items: center;
@@ -865,6 +793,7 @@ body {
     box-shadow: none;
     border-bottom: 1px solid rgba($primary-green, 0.08);
   }
+
   .specialties-list-icon {
     color: $primary-green;
     background: $light-green;
@@ -877,28 +806,24 @@ body {
     font-size: 1.2rem;
     flex-shrink: 0;
   }
+
   .specialties-list-text {
     font-weight: 600;
     color: $primary-green;
     font-size: 1.1rem;
     letter-spacing: 0.01em;
   }
-}
 
-@media (min-width: $breakpoint-xl) {
-  .hero-image-accent {
-    width: 100px;
-    height: 500px;
+  .specialties-carousel-controls {
+    display: none;
   }
-}
 
-@media (max-width: $breakpoint-md) {
   .hero {
     padding-top: $spacing-xl;
   }
 
   .page-hero {
-    padding: calc($spacing-md) 0 $spacing-md 0;
+    padding: calc($spacing-md) 0 $spacing-md;
     padding-top: 400px;
   }
 
@@ -908,21 +833,25 @@ body {
       margin-left: auto;
       margin-right: auto;
     }
+
     .approach-list-grid {
       grid-template-columns: 1fr;
       width: 80%;
       margin: 0 auto;
     }
+
     .approach-list-item {
       flex-direction: column;
       align-items: center;
       text-align: center;
       padding: $spacing-sm 0;
     }
+
     .approach-list-icon {
       transform: rotate(90deg);
       margin-bottom: 0.25rem;
     }
+
     .approach-list-title {
       margin-bottom: $spacing-xs;
     }
@@ -934,11 +863,13 @@ body {
       margin-left: auto;
       margin-right: auto;
     }
+
     .specialties-list-grid {
       grid-template-columns: 1fr;
       width: 70%;
       margin: 0 auto;
     }
+
     .specialties-list-item {
       justify-content: flex-start;
     }
@@ -951,6 +882,7 @@ body {
       margin-left: auto;
       margin-right: auto;
     }
+
     .philosophy-list-grid,
     .values-list-grid {
       grid-template-columns: 1fr;
@@ -960,9 +892,65 @@ body {
   }
 }
 
+@media (max-width: $breakpoint-xl) {
+  .hero {
+    padding-top: 140px;
+    width: 90%;
+    margin-left: 0;
+
+    .hero-content {
+      margin-right: 5%;
+
+      .hero-text {
+        margin-top: 1.5rem;
+        margin-bottom: 1.5rem;
+      }
+
+      .cta-button {
+        font-size: 1.5rem;
+      }
+
+      .cta-button svg {
+        font-size: 1.3rem;
+      }
+    }
+  }
+
+  .about-me-section {
+    margin-top: -10px;
+    padding: 0 $spacing-lg;
+  }
+
+  .approach-list-section,
+  .specialties-list-section {
+    padding: $spacing-lg;
+    margin: auto 1rem;
+  }
+}
+
 @media (max-width: $breakpoint-lg) {
   .hero {
+    flex-direction: column;
+    text-align: center;
+    padding: $spacing-md;
     padding-top: $spacing-xl;
+
+    .hero-content {
+      margin-bottom: $spacing-lg;
+      margin-left: 0;
+      margin-top: 3.5rem;
+    }
+
+    .hero-image-container {
+      margin-left: 0;
+    }
+  }
+
+  .approach {
+    .approach-content {
+      flex-direction: column;
+      text-align: center;
+    }
   }
 
   .about-me-section {
@@ -976,18 +964,300 @@ body {
   }
 }
 
-@media (min-width: $breakpoint-md) and (max-width: $breakpoint-lg) {
-  .client-portal-text {
-    display: none !important;
+@media (max-width: $breakpoint-md) {
+  .why-section {
+    .forest-overlay {
+      margin: 0 $spacing-sm;
+      padding: $spacing-lg;
+      text-align: center;
+    }
+
+    h2 {
+      font-size: 2rem;
+    }
+
+    .why-content {
+      font-size: 1.1rem;
+      padding: 0 $spacing-sm;
+      text-align: center;
+    }
+  }
+
+  .contact {
+    text-align: center;
+  }
+
+  .hero {
+    width: 90%;
+    padding-top: $spacing-xl;
+
+    .hero-content {
+      width: 100%;
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      text-align: center;
+
+      .subtitle {
+        font-size: 2rem;
+      }
+
+      .emphasis {
+        font-size: 2rem;
+      }
+    }
+
+    .hero-text {
+      text-align: center;
+    }
+  }
+
+  .about-me-section {
+    margin-top: 0;
+    padding: $spacing-md;
+    padding-top: 80px;
+    padding-bottom: 0.5rem;
+
+    .about-me-content {
+      transform: translateY(-120px);
+    }
+
+    .why-content {
+      font-size: 1.1rem;
+      text-align: center;
+    }
+  }
+
+  .specialties-grid,
+  .stats-grid,
+  .services-grid,
+  .testimonials-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .page-hero {
+    padding: calc($spacing-md) 0 $spacing-md;
+  }
+
+  .approach-list-section {
+    text-align: center;
+
+    .approach-list-item {
+      justify-content: center;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      padding: 0;
+      gap: 0;
+    }
+
+    h2 {
+      width: 80%;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .approach-list-grid {
+      grid-template-columns: 1fr;
+      width: 80%;
+      margin: 0 auto;
+      gap: 0;
+    }
+
+    .approach-list-icon {
+      transform: rotate(90deg);
+      margin-bottom: 0.25rem;
+    }
+
+    .approach-list-title {
+      margin-bottom: $spacing-xs;
+    }
+
+    .approach-list-desc {
+      margin-bottom: 0;
+    }
+  }
+
+  .specialties-list-section {
+    text-align: center;
+
+    h2 {
+      width: 70%;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .specialties-list-grid {
+      grid-template-columns: 1fr;
+      width: 70%;
+      margin: 0 auto;
+    }
+
+    .specialties-list-item {
+      justify-content: flex-start;
+      display: flex;
+    }
+
+    .specialties-carousel-controls {
+      display: none;
+    }
+  }
+
+  .philosophy-list-section,
+  .values-list-section {
+    h2 {
+      width: 80%;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .philosophy-list-grid,
+    .values-list-grid {
+      grid-template-columns: 1fr;
+      width: 80%;
+      margin: 0 auto;
+    }
   }
 }
 
-@media (min-width: 770px) and (max-width: 1180px) {
+@media (max-width: $breakpoint-sm) {
+  .hero {
+    padding-top: 3.8rem;
+    width: 100%;
+
+    .hero-content {
+      width: 100%;
+      margin-left: 1.2rem;
+
+      h1 {
+        font-size: 2.3rem;
+        line-height: 1;
+      }
+    }
+
+    .hero-image-wrapper {
+      .hero-image,
+      .hero-image-accent {
+        width: 280px;
+        height: 280px;
+      }
+    }
+  }
+
+  .about-me-section {
+    margin-top: -5px;
+    padding: $spacing-sm;
+    padding-top: 80px;
+
+    .about-me-content {
+      transform: translateY(-20px);
+    }
+
+    .why-content {
+      font-size: 0.9rem;
+    }
+  }
+
+  .specialties-list-section {
+    position: relative;
+    margin-bottom: 0.7rem;
+    width: 93%;
+
+    h2 {
+      font-size: 1.8rem;
+    }
+
+    .specialties-list-grid {
+      position: relative;
+      overflow: hidden;
+    }
+
+    .specialties-list-item {
+      display: none;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: $spacing-md;
+      padding: $spacing-lg 0;
+      border-bottom: none;
+
+      &[data-active="true"] {
+        display: flex;
+      }
+
+      .specialties-list-icon {
+        width: 4rem;
+        height: 4rem;
+        font-size: 2.5rem;
+        margin-bottom: $spacing-sm;
+      }
+
+      .specialties-list-text {
+        font-size: 1.3rem;
+        text-align: center;
+      }
+    }
+
+    .specialties-carousel-controls {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: absolute;
+      top: 70%;
+      left: 0;
+      right: 0;
+      transform: translateY(-50%);
+      padding: 0 $spacing-md;
+      pointer-events: none;
+    }
+
+    .specialties-carousel-button {
+      background: none;
+      color: $primary-green;
+      border: none;
+      width: auto;
+      height: auto;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      font-size: 1.2rem;
+      padding: $spacing-sm;
+      transition: color $transition-normal, transform $transition-normal;
+      pointer-events: auto;
+
+      &:hover {
+        color: $secondary-green;
+        transform: scale(1.2);
+      }
+
+      &:active {
+        transform: scale(0.9);
+      }
+    }
+  }
+
+}
+
+@media (min-width: $breakpoint-xl) {
+  .hero-image-accent {
+    width: 100px;
+    height: 500px;
+  }
+}
+
+@media (min-width: $breakpoint-md) and (max-width: $breakpoint-xl) {
+  .client-portal-text {
+    display: none !important;
+  }
+
   .approach-list-section,
   .specialties-list-section {
     h2 {
       padding-left: 5%;
     }
+
     .approach-list-grid,
     .specialties-list-grid {
       padding-left: 5%;

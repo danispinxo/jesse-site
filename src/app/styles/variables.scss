@@ -3,7 +3,6 @@ $sub2-font: "Bellota Text", sans-serif;
 $body-font: "Host Grotesk", sans-serif;
 $sub-font: "Harmattan", sans-serif;
 $header-font: "Gabarito", sans-serif;
-
 $light-green: #b7bf98;
 $primary-green: #1a4d2e;
 $secondary-green: #2d6a4f;
@@ -13,7 +12,6 @@ $text-light: #ffffff;
 $text-muted: #666666;
 $background-light: #f5f5f0;
 $background-dark: #214d2d;
-
 $font-primary: "Gabarito", "system-ui", "-apple-system", "BlinkMacSystemFont",
   sans-serif;
 $font-secondary: "Harmattan", "Arial", "Helvetica", "Liberation Sans",
@@ -35,69 +33,14 @@ $border-radius-lg: 24px;
 $breakpoint-sm: 576px;
 $breakpoint-md: 768px;
 $breakpoint-lg: 992px;
-$breakpoint-xl: 1200px;
+$breakpoint-xl: 1225px;
 
 // Shadows
-$shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.1);
-$shadow-md: 0 4px 6px rgba(0, 0, 0, 0.1);
-$shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.1);
+$shadow-sm: 0 2px 4px rgb(0 0 0 / 10%);
+$shadow-md: 0 4px 6px rgb(0 0 0 / 10%);
+$shadow-lg: 0 10px 15px rgb(0 0 0 / 10%);
 
 // Transitions
 $transition-fast: 0.2s ease;
 $transition-normal: 0.3s ease;
 $transition-slow: 0.5s ease;
-
-//mixins
-@mixin glassbg {
-  backdrop-filter: blur(25px) saturate(144%);
-  -webkit-backdrop-filter: blur(25px) saturate(144%);
-  background-color: rgba(207, 215, 207, 0.52);
-}
-
-@mixin centered {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  align-content: center;
-}
-
-$screen-sm-min: 600px;
-$screen-md-min: 960px;
-$screen-lg-min: 1280px;
-$screen-xl-min: 1920px;
-
-$screen-xs-max: 599px;
-$screen-sm-max: 959px;
-$screen-md-max: 1279px;
-$screen-lg-max: 1919px;
-$screen-xl-max: 5000px;
-
-@mixin xs {
-  @media screen and (max-width: #{$screen-xs-max}) {
-    @content;
-  }
-}
-
-@mixin sm {
-  @media screen and (min-width: #{$screen-sm-min}) and (max-width: #{$screen-sm-max}) {
-    @content;
-  }
-}
-
-@mixin md {
-  @media screen and (min-width: #{$screen-md-min}) and (max-width: #{$screen-md-max}) {
-    @content;
-  }
-}
-
-@mixin lg {
-  @media screen and (min-width: #{$screen-lg-min}) and (max-width: #{$screen-lg-max}) {
-    @content;
-  }
-}
-
-@mixin xl {
-  @media screen and (min-width: #{$screen-xl-min}) and (max-width: #{$screen-xl-max}) {
-    @content;
-  }
-}

@@ -28,7 +28,7 @@ export default function Contact() {
           <h1>
             Contact Me
             <span className="subtitle">
-              Let's work together to find the right path for you.
+              Ready to start your journey? Let's chat!
             </span>
           </h1>
         </div>
@@ -36,10 +36,11 @@ export default function Contact() {
 
       <div className="covid-note">
         <p>
-          My practice has been moved online for the foreseeable future.
-          <br /> Therapy sessions will therefore be limited to secure video or
-          telephone sessions. <br />
-          Get in touch for more information.
+          Online therapy from the comfort of your own space!
+          <br />
+          All sessions are currently conducted via secure video or phone calls.
+          <br />
+          Same great support, just a different (and cozy!) setting.
         </p>
       </div>
 
@@ -50,20 +51,23 @@ export default function Contact() {
           <div className="contact-info">
             <img className="logo" src="/images/Logo.webp" alt="JPTS Logo" />
             <p>
-              The right fit is the most important part of finding the right
-              therapist.
+              Finding the right therapist is like finding the perfect pair of
+              shoes ... the fit has to be just right! That connection matters,
+              and I'm here to help you find that match.
             </p>
-
+            <p>Not sure where to start?</p>
             <p className="guide-link">
               <Link href="/guide">
-                Read this helpful guide about how to choose the right therapist
-                for you!
+                Check out my guide on choosing 
+                <br />
+                the right therapist!
               </Link>
             </p>
 
             <p className="border-bottom-text">
-              To contact me for a no-fee 15 minute phone consultation simply
-              fill out the form to the right.
+              Curious to see if we're a good fit? Let's have a no-pressure,
+              no-fee 15-minute chat! Just fill out the form to the right and
+              I'll get back to you soon.
             </p>
 
             <p>I am affiliated with the following organizations:</p>
@@ -89,14 +93,6 @@ export default function Contact() {
                 />
               </a>
 
-              <a href="http://www.tati.on.ca" target="_blank" rel="noreferrer">
-                <img
-                  className="affiliation-img"
-                  src="/images/TATI.webp"
-                  alt="TATI Logo"
-                />
-              </a>
-
               <a
                 href="http://www.estonianartiststoronto.com"
                 target="_blank"
@@ -106,6 +102,14 @@ export default function Contact() {
                   className="affiliation-img"
                   src="/images/EKKT.webp"
                   alt="EKKT Logo"
+                />
+              </a>
+
+              <a href="http://www.tati.on.ca" target="_blank" rel="noreferrer">
+                <img
+                  className="affiliation-img tati-logo"
+                  src="/images/TATI.webp"
+                  alt="TATI Logo"
                 />
               </a>
             </div>
@@ -203,7 +207,7 @@ export default function Contact() {
                 label="Message"
                 multiline
                 rows={4}
-                helperText="What's been troubling you?"
+                helperText="What's on your mind? Share as much or as little as you'd like!"
                 fullWidth
               />
               <br />
@@ -222,7 +226,7 @@ export default function Contact() {
                 type="submit"
                 disabled={state.submitting}
               >
-                Send
+                Send Message ✨
               </button>
               <ValidationError className="error" errors={state.errors} />
             </form>

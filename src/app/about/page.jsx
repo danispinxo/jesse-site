@@ -1,11 +1,41 @@
 "use client";
+import { useState } from "react";
 import "../styles/about.scss";
 import Image from "next/image";
 import Footer from "../components/Footer";
-import { faLeaf, faSeedling } from "@fortawesome/free-solid-svg-icons";
+import {
+  faLeaf,
+  faSeedling,
+  faChevronLeft,
+  faChevronRight,
+} from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { approaches, specialties } from "../scripts/constants";
 
 export default function AboutPage() {
+  const [currentApproachIndex, setCurrentApproachIndex] = useState(0);
+  const [currentSpecialtyIndex, setCurrentSpecialtyIndex] = useState(0);
+
+  const nextApproach = () => {
+    setCurrentApproachIndex((prev) => (prev + 1) % approaches.length);
+  };
+
+  const prevApproach = () => {
+    setCurrentApproachIndex(
+      (prev) => (prev - 1 + approaches.length) % approaches.length
+    );
+  };
+
+  const nextSpecialty = () => {
+    setCurrentSpecialtyIndex((prev) => (prev + 1) % specialties.length);
+  };
+
+  const prevSpecialty = () => {
+    setCurrentSpecialtyIndex(
+      (prev) => (prev - 1 + specialties.length) % specialties.length
+    );
+  };
+
   return (
     <main className="page-content">
       <section className="page-hero">
@@ -41,16 +71,16 @@ export default function AboutPage() {
               Therapy Institute (TATI). I am a fully qualified Registered
               Psychotherapist with the College of Registered Psychotherapists of
               Ontario (CRPO), a Professional member of the Canadian Art Therapy
-              Association (CATA), and a member of the Society of Estonian
-              Artists in Toronto (EKKT).
+              Association (CATA), a Registered Canadian Art Therapist (RCAT),
+              and a member of the Society of Estonian Artists in Toronto (EKKT).
             </p>
             <div className="credentials">
               <h3>Credentials & Education</h3>
               <ul>
-                <li>7 years of experience</li>
+                <li>8 years of experience</li>
                 <li>Registered Psychotherapist (RP)</li>
-                <li>Registered Art Therapist (RCAT)</li>
-                <li>Diploma in Art Therapy (DTATI)</li>
+                <li>Registered Canadian Art Therapist (RCAT)</li>
+                <li>Master's level Diploma in Art Therapy (DTATI)</li>
                 <li>Honours Bachelor of Arts (HBA) in Psychotherapy</li>
                 <li>
                   Licensed Member of the College of Registered Psychotherapists
@@ -59,7 +89,16 @@ export default function AboutPage() {
                 <li>
                   Professional Member of the Canadian Art Therapy Association
                 </li>
-                <li>Graduate of the Toronto Art Therapy Institute</li>
+                <li>
+                  Verified on{" "}
+                  <a
+                    href="https://www.psychologytoday.com/ca/therapists/jesse-pajuaar-toronto-on/818157"
+                    target="_blank"
+                    rel="noopener noreferer"
+                  >
+                    Psychology Today
+                  </a>
+                </li>
               </ul>
             </div>
           </div>
@@ -70,7 +109,12 @@ export default function AboutPage() {
         <h2>My Approach to Therapy</h2>
         <div className="philosophy-list-grid">
           {approaches.map((item, idx) => (
-            <div className="philosophy-list-item" key={idx}>
+            <div
+              className="philosophy-list-item"
+              key={idx}
+              data-index={idx}
+              data-active={idx === currentApproachIndex}
+            >
               <span className="philosophy-list-icon">
                 <FontAwesomeIcon icon={faLeaf} />
               </span>
@@ -80,6 +124,22 @@ export default function AboutPage() {
               </div>
             </div>
           ))}
+        </div>
+        <div className="philosophy-carousel-controls">
+          <button
+            className="philosophy-carousel-button philosophy-carousel-button-prev"
+            onClick={prevApproach}
+            aria-label="Previous approach"
+          >
+            <FontAwesomeIcon icon={faChevronLeft} />
+          </button>
+          <button
+            className="philosophy-carousel-button philosophy-carousel-button-next"
+            onClick={nextApproach}
+            aria-label="Next approach"
+          >
+            <FontAwesomeIcon icon={faChevronRight} />
+          </button>
         </div>
       </section>
 
@@ -139,14 +199,35 @@ export default function AboutPage() {
       <section className="values-list-section">
         <h2>Areas of Focus</h2>
         <div className="values-list-grid">
-          {values.map((value, index) => (
-            <div key={index} className="values-list-item">
+          {specialties.map((specialty, index) => (
+            <div
+              key={index}
+              className="values-list-item"
+              data-index={index}
+              data-active={index === currentSpecialtyIndex}
+            >
               <span className="values-list-icon">
                 <FontAwesomeIcon icon={faSeedling} />
               </span>
-              <span className="values-list-text">{value}</span>
+              <span className="values-list-text">{specialty}</span>
             </div>
           ))}
+        </div>
+        <div className="values-carousel-controls">
+          <button
+            className="values-carousel-button values-carousel-button-prev"
+            onClick={prevSpecialty}
+            aria-label="Previous specialty"
+          >
+            <FontAwesomeIcon icon={faChevronLeft} />
+          </button>
+          <button
+            className="values-carousel-button values-carousel-button-next"
+            onClick={nextSpecialty}
+            aria-label="Next specialty"
+          >
+            <FontAwesomeIcon icon={faChevronRight} />
+          </button>
         </div>
       </section>
 
@@ -166,84 +247,3 @@ export default function AboutPage() {
     </main>
   );
 }
-
-const values = [
-  "2SLGBTQIA+",
-  "Addiction",
-  "Anger",
-  "Anxiety",
-  "Body Image",
-  "Burnout/Stress",
-  "Codependence",
-  "Coping Skills",
-  "Creativity",
-  "Divorce & Break-ups",
-  "Eating Issues",
-  "Elders/Seniors",
-  "Family Conflict",
-  "Grief & Loss",
-  "Identity Exploration",
-  "Intimacy & Sex",
-  "Men's Issues",
-  "Non-Binary",
-  "Power Relations",
-  "Relationship Difficulties",
-  "Self Esteem & Confidence",
-  "Sex Work Positive",
-  "Shame",
-  "Spiritual",
-  "Trans-Specific",
-  "Trauma",
-  "Women's Issues",
-];
-
-const approaches = [
-  {
-    title: "Anti-Oppressive",
-    desc: "Acknowledge and address systemic barriers to mental health care.",
-  },
-  {
-    title: "Art Therapy",
-    desc: "Use creative expression as a tool for self-discovery and healing.",
-  },
-  {
-    title: "Attachment Focused",
-    desc: "Understand how early relationships shape current experiences and behaviors.",
-  },
-  {
-    title: "Compassionate Inquiry",
-    desc: "Gently uncover underlying emotional and psychological patterns.",
-  },
-  {
-    title: "Existential",
-    desc: "Explore the meaning of life and personal values in the therapeutic process.",
-  },
-  {
-    title: "Expressive Arts",
-    desc: "Integrate various art forms to facilitate emotional expression and healing.",
-  },
-  {
-    title: "Mindfulness",
-    desc: "Cultivate present-moment awareness to reduce stress and enhance well-being.",
-  },
-  {
-    title: "Narrative",
-    desc: "Reframe personal stories to empower and create new perspectives.",
-  },
-  {
-    title: "Relational",
-    desc: "Emphasize the importance of relationships in shaping emotional health.",
-  },
-  {
-    title: "Somatic",
-    desc: "Address the connection between the body and mind in the healing process.",
-  },
-  {
-    title: "Strengths Based",
-    desc: "Focus on individual strengths to foster resilience and growth.",
-  },
-  {
-    title: "Trauma Informed",
-    desc: "Create a safe space that acknowledges and respects the impact of trauma.",
-  },
-];

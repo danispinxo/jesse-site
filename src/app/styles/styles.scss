@@ -510,7 +510,7 @@ body {
       line-height: 1.2;
 
       .name {
-        font-size: 1.2rem;
+        font-size: 1.1rem;
         display: block;
         transition: color $transition-normal;
       }
@@ -544,6 +544,13 @@ body {
         .name,
         .studio {
           display: block;
+        }
+      }
+
+      @media (width <=3955px) {
+        .name,
+        .studio {
+          font-size: 0.8rem;
         }
       }
     }
@@ -1041,7 +1048,8 @@ body {
       flex-direction: column;
       align-items: center;
       text-align: center;
-      padding: $spacing-sm 0;
+      padding: 0;
+      gap: 0;
     }
 
     h2 {
@@ -1054,6 +1062,7 @@ body {
       grid-template-columns: 1fr;
       width: 80%;
       margin: 0 auto;
+      gap: 0;
     }
 
     .approach-list-icon {
@@ -1063,6 +1072,10 @@ body {
 
     .approach-list-title {
       margin-bottom: $spacing-xs;
+    }
+
+    .approach-list-desc {
+      margin-bottom: 0;
     }
   }
 

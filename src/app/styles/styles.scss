@@ -487,6 +487,10 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
+
+    @media (width <= 810) {
+      margin: 0 6%;
+    }
   }
 
   .navbar-logo {
@@ -510,44 +514,41 @@ body {
       line-height: 1.2;
 
       .name {
-        font-size: 1.1rem;
+        font-size: 1.6rem;
         display: block;
         transition: color $transition-normal;
       }
 
       .studio {
-        font-size: 1.1rem;
+        font-size: 1.6rem;
         color: rgba($text-light, 0.9);
         display: block;
         transition: color $transition-normal;
       }
 
-      @media (width >= $breakpoint-xl) {
-        flex-direction: row;
-        align-items: center;
-        gap: 0.5rem;
-
+      @media (width <= $breakpoint-xl) {
         .name,
         .studio {
-          font-size: 1.5rem;
+          font-size: 1.2rem;
           display: inline;
         }
       }
 
-      @media (width <= 865px) {
-        .studio {
-          display: none;
-        }
-      }
-
-      @media (width <= 765px) {
+      @media (width <= $breakpoint-lg) {
         .name,
         .studio {
-          display: block;
+          font-size: 1rem;
         }
       }
 
-      @media (width <=3955px) {
+      @media (width <= 810) {
+        .name,
+        .studio {
+          font-size: 0.9rem;
+        }
+      }
+
+      @media (width <=395px) {
         .name,
         .studio {
           font-size: 0.8rem;

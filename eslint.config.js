@@ -38,6 +38,7 @@ export default defineConfig([
         },
       ],
       "linebreak-style": ["error", "unix"],
+      "no-trailing-spaces": "error",
       quotes: ["warn", "double", { avoidEscape: true }],
       semi: ["error", "always"],
       "prefer-const": "error",

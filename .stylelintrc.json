@@ -2,11 +2,8 @@
   "extends": ["stylelint-config-standard-scss"],
   "rules": {
     "selector-class-pattern": null,
-    "scss/at-import-partial-extension": null,
-    "scss/at-import-partial-extension-blacklist": null,
-    "scss/at-import-partial-extension-whitelist": null,
-    "scss/at-import-no-partial-leading-underscore": null,
     "color-hex-length": "long",
+    "no-duplicate-selectors": true,
     "declaration-empty-line-before": null,
     "at-rule-empty-line-before": null,
     "custom-property-empty-line-before": null,

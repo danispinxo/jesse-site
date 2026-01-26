@@ -30,7 +30,7 @@ export default function StructuredData() {
         "name": "Toronto"
       },
       {
-        "@type": "City", 
+        "@type": "City",
         "name": "Barrie"
       },
       {
@@ -92,7 +92,7 @@ export default function StructuredData() {
     ],
     "serviceType": [
       "Psychotherapy",
-      "Art Therapy", 
+      "Art Therapy",
       "Online Therapy",
       "Mental Health Counseling",
       "Clinical Supervision",
@@ -131,7 +131,7 @@ export default function StructuredData() {
         "credentialCategory": "Professional License"
       },
       {
-        "@type": "EducationalOccupationalCredential", 
+        "@type": "EducationalOccupationalCredential",
         "name": "Registered Canadian Art Therapist (RCAT)",
         "credentialCategory": "Professional License"
       },
@@ -154,7 +154,7 @@ export default function StructuredData() {
       },
       {
         "@type": "Organization",
-        "name": "Canadian Art Therapy Association", 
+        "name": "Canadian Art Therapy Association",
         "url": "https://www.canadianarttherapy.org"
       }
     ],
@@ -196,7 +196,7 @@ export default function StructuredData() {
           "priceCurrency": "CAD"
         },
         {
-          "@type": "Offer", 
+          "@type": "Offer",
           "itemOffered": {
             "@type": "Service",
             "name": "Art Psychotherapy",
@@ -208,7 +208,7 @@ export default function StructuredData() {
         {
           "@type": "Offer",
           "itemOffered": {
-            "@type": "Service", 
+            "@type": "Service",
             "name": "Clinical Supervision",
             "description": "Professional supervision for therapists working toward licensure."
           },
@@ -217,7 +217,7 @@ export default function StructuredData() {
           "@type": "Offer",
           "itemOffered": {
             "@type": "Service",
-            "name": "Initial Consultation", 
+            "name": "Initial Consultation",
             "description": "Free 15-minute consultation to discuss therapy options."
           },
           "price": "0",

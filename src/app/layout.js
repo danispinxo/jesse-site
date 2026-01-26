@@ -1,16 +1,10 @@
 import "normalize.css";
-import "bootstrap/dist/css/bootstrap.min.css";
 import "./styles/styles.scss";
 import "@fortawesome/fontawesome-svg-core/styles.css";
 import { config } from "@fortawesome/fontawesome-svg-core";
 import Navbar from "./components/Navbar";
 import StructuredData from "./components/StructuredData";
-import {
-  Gabarito,
-  Harmattan,
-  Poppins,
-  Playfair_Display,
-} from "next/font/google";
+import { Gabarito, Harmattan } from "next/font/google";
 
 config.autoAddCss = false;
 
@@ -26,22 +20,6 @@ const gabarito = Gabarito({
   weight: ["400", "600", "700"],
   display: "swap",
   preload: true,
-});
-
-const poppins = Poppins({
-  subsets: ["latin"],
-  weight: ["400", "600"],
-  variable: "--font-poppins",
-  display: "swap",
-  fallback: ["system-ui", "Arial", "sans-serif"],
-});
-
-const playfair = Playfair_Display({
-  subsets: ["latin"],
-  weight: ["400", "600"],
-  variable: "--font-playfair",
-  display: "swap",
-  fallback: ["Georgia", "serif"],
 });
 
 export const metadata = {
@@ -96,7 +74,7 @@ export default function RootLayout({ children }) {
   return (
     <html
       lang="en"
-      className={`${gabarito.className} ${harmattan.className} ${poppins.variable} ${playfair.variable}`}
+      className={`${gabarito.className} ${harmattan.className}`}
     >
       <head>
         <meta name="viewport" content="width=device-width, initial-scale=1" />

@@ -96,12 +96,6 @@ export default function RootLayout({ children }) {
         <link rel="canonical" href="https://jptherapystudios.com" />
         <link rel="icon" type="image/png" href="/images/Logo.webp" />
         <link rel="manifest" href="/manifest.json" />
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link
-          rel="preconnect"
-          href="https://fonts.gstatic.com"
-          crossOrigin="anonymous"
-        />
         <title>Jesse Pajuäär Therapy Studios</title>
         <StructuredData />
       </head>

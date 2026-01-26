@@ -3,7 +3,7 @@ export default function robots() {
     rules: {
       userAgent: "*",
       allow: "/",
-      disallow: ["/api/", "/admin/"],
+      disallow: ["/admin/"],
     },
     sitemap: "https://jptherapystudios.com/sitemap.xml",
   };

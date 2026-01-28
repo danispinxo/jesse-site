@@ -2,8 +2,8 @@ import "normalize.css";
 import "./styles/styles.scss";
 import "@fortawesome/fontawesome-svg-core/styles.css";
 import { config } from "@fortawesome/fontawesome-svg-core";
-import Navbar from "./components/Navbar";
-import StructuredData from "./components/StructuredData";
+import Navbar from "./_components/Navbar";
+import StructuredData from "./_components/StructuredData";
 import { Gabarito, Harmattan } from "next/font/google";
 
 config.autoAddCss = false;

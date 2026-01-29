@@ -441,14 +441,18 @@ body {
       font-family: $font-secondary;
       font-size: 1.5rem;
       display: flex;
-      flex-direction: column;
-      align-items: flex-start;
       line-height: 1.2;
+
+      @media (width <= $breakpoint-nav) {
+        flex-direction: column;
+        align-items: flex-start;
+      }
 
       .name {
         font-size: 1.6rem;
         display: block;
         transition: color $transition-normal;
+        margin-right: 0.7rem;
       }
 
       .studio {

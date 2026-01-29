@@ -86,24 +86,13 @@ export default function Home() {
               Ontario therapist offering psychotherapy and art therapy sessions, and clinical supervision.
             </p>
             <p>
-              We all want a better life and we're doing the best we can with
-              what we have. But we get stuck sometimes, caught in routines,
-              unsure how to create the change we long for. Even asking “What do
-              I want?” can feel overwhelming, pushing us to live for others
-              while sensing something is missing. Everything we do meets some
-              need, or we wouldn't do it. Therapy needn't be about “fixing
-              people.” It can be a space of liberation, resistance, and
-              transformation. Getting to the heart of what we truly need or want
-              can be the beginning of the shift that empowers us. That clarity
-              becomes the opening chapter to a story centered on your voice, not
-              others.
+              We all want a fuller, more meaningful life, and most of us are doing the best we can with what we have. Still, it's easy to get stuck: caught in routines, living for others, or sensing that something important is missing. Even asking “What do I want?” can feel overwhelming. Therapy doesn't have to be about fixing what's “wrong.” It can be a space for clarity, liberation, and meaningful change. Everything we do meets a need, or we wouldn't do it; and getting curious about those needs can open the door to a life that feels more aligned and self-directed. You don't need to have it all figured out to begin therapy.
             </p>
             <p>
-              I approach each session with the belief that you are the expert of
-              your own life. There are no judgements or assumptions made during
-              our time; my focus is on collaborating with you to create a space
-              where your voice, your wants, and your unique perspectives are not
-              only heard, but supported and advocated for.
+              I approach each session with the belief that you are the expert of your own life. There are no judgements or assumptions made during our time; my focus is on collaborating with you to create a space where your voice, your wants, and your unique perspectives are not only heard, but supported and advocated for. You don't have to carry it alone.
+            </p>
+            <p>
+              You are not the problem, the problem is the problem; you need not limit your life to it. I bring a feminist and social-justice lens that honours you and centres your lived experience in context. Together, we focus on what matters most to you, nurture your sense of agency, and create space for change that feels possible and true to the life you want to live.
             </p>
           </div>
         </div>

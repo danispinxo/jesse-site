@@ -7,7 +7,7 @@ export default function StructuredData() {
     "name": "Jesse Pajuäär Therapy Studios",
     "alternateName": "Jesse Pajuaar Therapy Studios",
     "url": "https://jptherapystudios.com",
-    "logo": "https://jptherapystudios.com/images/Logo.webp",
+    "logo": "https://jptherapystudios.com/images/NewLogoTransp.webp",
     "image": "https://jptherapystudios.com/images/JessePajuaar.webp",
     "description": "Professional therapy and counseling services in Ontario. Registered psychotherapist and art therapist offering phone, in-person, hybrid, and remote therapy for anxiety, identity, agency, and personal growth as well as art therapy supervision and clinical supervision.",
     "address": {

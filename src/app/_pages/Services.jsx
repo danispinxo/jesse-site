@@ -11,6 +11,7 @@ import {
   reducedRateFeatures,
   supervisionFeatures,
   consultationFeatures,
+  eftCouplesFeatures,
   pricingPlans,
 } from "../scripts/constants";
 
@@ -35,9 +36,7 @@ export default function Services() {
           <div className="pricing-grid">
             {pricingPlans.map((plan, index) => (
               <div
-                className={`pricing-card ${
-                  index === 0 ? "consultation-card" : ""
-                }`}
+                className={"pricing-card"}
                 key={index}
               >
                 <h3>
@@ -80,7 +79,7 @@ export default function Services() {
                 src="/images/TreeDoor.webp"
                 alt="An illustration of an open door revealing a large tree with orange autumn leaves."
                 width={400}
-                height={300}
+                height={400}
               />
             </div>
             <div className="service-details">
@@ -114,7 +113,7 @@ export default function Services() {
                 src="/images/Psychotherapy.webp"
                 alt="An image of two sets of hands, one gesturing in speach and the other taking notes."
                 width={400}
-                height={300}
+                height={400}
               />
             </div>
             <div className="service-details">
@@ -151,7 +150,7 @@ export default function Services() {
                 src="/images/ArtTherapy.webp"
                 alt="An image of a woman laying on her side in a right angle in white lines painted on pavement."
                 width={400}
-                height={300}
+                height={400}
               />
             </div>
             <div className="service-details">
@@ -186,7 +185,7 @@ export default function Services() {
                 src="/images/LowIncome.webp"
                 alt="An image of a small man in a hat sitting on a ledge of a white geometic shape, nearby there is a ladder."
                 width={400}
-                height={300}
+                height={400}
               />
             </div>
             <div className="service-details">
@@ -215,10 +214,55 @@ export default function Services() {
             <div className="service-image">
               <Image
                 className="service-image"
+                src="/images/TwoChairs.webp"
+                alt="An image of two wooden chairs facing each other in a field. There is a bird flying in the background."
+                width={400}
+                height={400}
+              />
+            </div>
+            <div className="service-details">
+              <h2 id="eft-couples">EFT for Couples</h2>
+              <p>
+                <strong>Emotionally Focused Therapy (EFT) for Couples</strong>
+              </p>
+              <p>
+                Most couples do not fight about what they think they are
+                fighting about. Underneath the arguments about dishes, money, sex, or
+                communication, there is usually something much more vulnerable
+                going on, such as feeling alone, unimportant, criticized,
+                rejected, or not fully understood.
+              </p>
+              <p>
+                EFT helps couples slow down and understand the deeper emotions driving their patterns. Instead of
+                just learning communication skills at the surface level, we look
+                at the cycle the two of you get stuck in, for example one
+                partner pursuing while the other withdraws, and work to create
+                new and safer ways of reaching for each other.
+              </p>
+              <p>The goal isn't to decide who's right. It's to help you feel more secure, understood, and connected.
+              </p>
+              <ul className="service-features">
+                {eftCouplesFeatures.map((feature, index) => (
+                  <li key={index}>
+                    <FontAwesomeIcon icon={faCheck} className="check-icon" />
+                    {feature}
+                  </li>
+                ))}
+              </ul>
+              <Link href="/contact">
+                <button className="cta-button">Schedule Session</button>
+              </Link>
+            </div>
+          </div>
+
+          <div className="service-card featured">
+            <div className="service-image">
+              <Image
+                className="service-image"
                 src="/images/Waterfall.webp"
                 alt="A serene waterfall in a forest."
                 width={400}
-                height={300}
+                height={400}
               />
             </div>
             <div className="service-details">

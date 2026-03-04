@@ -49,7 +49,7 @@ export default function Contact() {
       ) : (
         <div className="contact-body">
           <div className="contact-info">
-            <img className="logo" src="/images/Logo.webp" alt="JPTS Logo" />
+            <img className="logo" src="/images/NewLogoTransp.webp" alt="JPTS Logo" />
             <p>
               Finding the right therapist is like finding the perfect pair of
               shoes ... the fit has to be just right! That connection matters,

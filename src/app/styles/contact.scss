@@ -74,11 +74,8 @@
 
   .logo {
     display: block;
-    max-width: 160px;
+    max-width: 300px;
     margin: 0 auto 1.5rem;
-    padding: 0.5rem;
-    border-radius: 50%;
-    box-shadow: $shadow-lg;
   }
 
   p {
@@ -116,7 +113,7 @@
       max-width: 180px;
       height: auto;
       transition: transform $transition-normal;
-      
+
       &:hover {
         transform: scale(1.05);
       }

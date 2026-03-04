@@ -29,8 +29,8 @@ const Navbar = () => {
       <div className="navbar-container">
         <Link href="/" className="navbar-logo" onClick={handleLinkClick}>
           <Image
-            src="/images/Logo.webp"
-            alt="Therapy Logo"
+            src="/images/NewLogoTransp.webp"
+            alt="JP Therapy StudiosLogo"
             width={50}
             height={50}
             className="logo-image"

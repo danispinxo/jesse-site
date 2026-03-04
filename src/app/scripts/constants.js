@@ -123,6 +123,14 @@ export const supervisionFeatures = [
   "Professional development guidance",
 ];
 
+export const eftCouplesFeatures = [
+  "Understand the cycle you get stuck in",
+  "Focus on deeper emotions, not surface arguments",
+  "Create safer ways of reaching for each other",
+  "Feel more secure, understood, and connected",
+  "Evidence-based Couples Therapy",
+];
+
 export const consultationFeatures = [
   "No fee, no obligation",
   "15-minute phone call",
@@ -143,6 +151,7 @@ export const pricingPlans = [
       "Discuss your needs",
       "Explore therapy options",
       "Learn about approaches",
+      "Phone only"
     ],
   },
   {
@@ -182,6 +191,19 @@ export const pricingPlans = [
       "Evidence-based",
       "Flexible scheduling",
       "Video or phone",
+    ],
+  },
+  {
+    title: "EFT for Couples",
+    price: "150",
+    duration: "50 minutes",
+    sectionId: "eft-couples",
+    features: [
+      "Emotion-focused couples work",
+      "Understand your cycle",
+      "Safer connection",
+      "Evidence-based EFT",
+      "Video only",
     ],
   },
   {

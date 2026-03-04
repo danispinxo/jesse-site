@@ -92,9 +92,9 @@ export default function RootLayout({ children }) {
         <meta name="mobile-web-app-capable" content="yes" />
         <meta name="apple-mobile-web-app-status-bar-style" content="default" />
         <meta name="apple-mobile-web-app-title" content="JPTS" />
-        <link rel="apple-touch-icon" href="/images/Logo.webp" />
+        <link rel="apple-touch-icon" href="/images/NewLogoTransp.webp" />
         <link rel="canonical" href="https://jptherapystudios.com" />
-        <link rel="icon" type="image/png" href="/images/Logo.webp" />
+        <link rel="icon" type="image/png" href="/images/NewLogoTransp.webp" />
         <link rel="manifest" href="/manifest.json" />
         <title>Jesse Pajuäär Therapy Studios</title>
         <StructuredData />

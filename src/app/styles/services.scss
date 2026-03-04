@@ -220,10 +220,6 @@
 
       @media (min-width: $breakpoint-md) and (max-width: $breakpoint-xl) {
         grid-template-columns: repeat(2, 1fr);
-
-        .consultation-card {
-          grid-column: 1 / -1;
-        }
       }
 
       @media (max-width: $breakpoint-md) {
@@ -231,10 +227,6 @@
         max-width: 500px;
         margin: 0 auto;
         gap: $spacing-sm;
-
-        .consultation-card {
-          grid-column: 1;
-        }
       }
 
       .pricing-card {
@@ -356,20 +348,6 @@
               color: $accent-gold;
               margin-right: $spacing-sm;
               flex-shrink: 0;
-            }
-          }
-        }
-
-        &.consultation-card {
-          @media (min-width: $breakpoint-md) and (max-width: $breakpoint-xl) {
-            .features {
-              display: grid;
-              grid-template-columns: repeat(4, 1fr);
-              gap: 0 $spacing-md;
-
-              li {
-                margin-bottom: $spacing-sm;
-              }
             }
           }
         }

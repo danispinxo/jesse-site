@@ -5,8 +5,6 @@
   margin: 0.5rem auto;
   padding: 0.5rem;
   background-color: $background-light;
-  border-radius: $border-radius-md;
-  box-shadow: $shadow-md;
 
   .footer-title {
     font-family: $font-secondary;
@@ -45,13 +43,10 @@
     }
   }
 
-  .psychology-today-verification {
+  .verification-container {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    border-top: 1px solid rgba($text-dark, 0.1);
-    padding: 1.5rem 0;
-    text-align: center;
+    justify-content: center;
     width: 100%;
 
     h6 {
@@ -59,16 +54,24 @@
       margin: 0 0 1rem;
       width: 100%;
       text-align: center;
+      font-size: 1rem;
     }
 
-    iframe {
-      border: none;
-      margin: 0 auto;
-      display: block;
-      transform-origin: center center;
-      max-width: 100%;
-      width: 200px;
-      height: 60px;
+    .verifications {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      gap: 1.5rem;
+
+      iframe {
+        border: none;
+        display: block;
+        transform-origin: center center;
+        max-width: 50%;
+        height: 60px;
+      }
+
     }
   }
 }

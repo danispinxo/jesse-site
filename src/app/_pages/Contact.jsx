@@ -69,19 +69,21 @@ export default function Contact() {
               no-fee 15-minute chat! Just fill out the form to the right and
               I'll get back to you soon.
             </p>
-            <p className="border-bottom-text">
-              Alternatively, you can request a complementary consultation session by clicking the button below.
+            <div className="border-bottom-text">
+              <h2>Booking Your Consult</h2>
+              Booking your 15-minute consult is as easy as clicking the button below.
               <Link href="https://jpts.noustalk.com/contactme" target="_blank" rel="noopener noreferrer">
                 <button className="cta-button">Request a complementary consultation session</button>
               </Link>
-            </p>
+            </div>
 
-            <p className="border-bottom-text">
-              Or, if you're ready to book with me, you can register directly with JPTS client portal to start booking sessions.
+            <div className="border-bottom-text">
+              <h2>Register as a Client</h2>
+              Ready to begin sessions? Simply click the button below to register as a client.
               <Link href="https://jpts.noustalk.com/register" target="_blank" rel="noopener noreferrer">
                 <button className="cta-button">Register</button>
               </Link>
-            </p>
+            </div>
           </div>
 
           <div className="contact-form">

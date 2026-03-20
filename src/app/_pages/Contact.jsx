@@ -69,56 +69,25 @@ export default function Contact() {
               no-fee 15-minute chat! Just fill out the form to the right and
               I'll get back to you soon.
             </p>
+            <p className="border-bottom-text">
+              Alternatively, you can request a complementary consultation session by clicking the button below.
+              <Link href="https://jpts.noustalk.com/contactme" target="_blank" rel="noopener noreferrer">
+                <button className="cta-button">Request a complementary consultation session</button>
+              </Link>
+            </p>
 
-            <p>I am affiliated with the following organizations:</p>
-
-            <div className="affiliation-images">
-              <a
-                href="http://www.canadianarttherapy.org"
-                target="_blank"
-                rel="noreferrer"
-              >
-                <img
-                  className="affiliation-img"
-                  src="/images/CATA.webp"
-                  alt="CATA Logo"
-                />
-              </a>
-
-              <a href="http://www.crpo.ca" target="_blank" rel="noreferrer">
-                <img
-                  className="affiliation-img"
-                  src="/images/CRPO.webp"
-                  alt="CRPO Logo"
-                />
-              </a>
-
-              <a
-                href="http://www.estonianartiststoronto.com"
-                target="_blank"
-                rel="noreferrer"
-              >
-                <img
-                  className="affiliation-img"
-                  src="/images/EKKT.webp"
-                  alt="EKKT Logo"
-                />
-              </a>
-
-              <a href="http://www.tati.on.ca" target="_blank" rel="noreferrer">
-                <img
-                  className="affiliation-img tati-logo"
-                  src="/images/TATI.webp"
-                  alt="TATI Logo"
-                />
-              </a>
-            </div>
+            <p className="border-bottom-text">
+              Or, if you're ready to book with me, you can register directly with JPTS client portal to start booking sessions.
+              <Link href="https://jpts.noustalk.com/register" target="_blank" rel="noopener noreferrer">
+                <button className="cta-button">Register</button>
+              </Link>
+            </p>
           </div>
 
           <div className="contact-form">
-            <p className="form-identifier">
-              <span className="name">Jesse Pajuäär, RP, RCAT, DTATI, HBA</span>
-            </p>
+            <h2 className="form-identifier">
+              Jesse Pajuäär, RP, RCAT, DTATI, HBA
+            </h2>
 
             <form onSubmit={handleSubmit} style={{ display: "block" }}>
               <TextField

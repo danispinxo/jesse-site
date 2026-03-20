@@ -99,6 +99,16 @@
   .border-bottom-text {
     border-bottom: 1px solid rgba($text-dark, 0.1);
     padding-bottom: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+
+    .cta-button {
+      text-align: center;
+      margin-top: 1rem;
+    }
   }
 
   .affiliation-images {

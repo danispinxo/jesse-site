@@ -621,6 +621,7 @@ body {
 .approach-list-section {
   padding: $spacing-xl 0;
   background: $background-light;
+  border-top: 1px solid rgba($text-dark, 0.1);
   text-align: center;
 
   h2 {

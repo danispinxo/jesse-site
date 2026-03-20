@@ -105,6 +105,56 @@ export default function About() {
         </div>
       </section>
 
+      <section className="affiliation-section">
+        <div className="affiliation-content">
+          <h2>Affiliations</h2>
+
+          <p>I am affiliated with the following organizations:</p>
+
+          <div className="affiliation-images">
+            <a
+              href="http://www.canadianarttherapy.org"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <img
+                className="affiliation-img"
+                src="/images/CATA.webp"
+                alt="CATA Logo"
+              />
+            </a>
+
+            <a href="http://www.crpo.ca" target="_blank" rel="noreferrer">
+              <img
+                className="affiliation-img"
+                src="/images/CRPO.webp"
+                alt="CRPO Logo"
+              />
+            </a>
+
+            <a
+              href="http://www.estonianartiststoronto.com"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <img
+                className="affiliation-img"
+                src="/images/EKKT.webp"
+                alt="EKKT Logo"
+              />
+            </a>
+
+            <a href="http://www.tati.on.ca" target="_blank" rel="noreferrer">
+              <img
+                className="affiliation-img tati-logo"
+                src="/images/TATI.webp"
+                alt="TATI Logo"
+              />
+            </a>
+          </div>
+        </div>
+      </section>
+
       <section className="philosophy-list-section">
         <h2>My Approach to Therapy</h2>
         <div className="philosophy-list-grid">

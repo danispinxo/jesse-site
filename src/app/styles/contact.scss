@@ -1,12 +1,11 @@
 @use "variables" as *;
 
 .covid-note {
-  max-width: 700px;
+  max-width: 1060px;
   margin: 2rem auto;
-  padding: 1.2rem;
+  padding: 1.2rem 2rem;
   background-color: rgba($primary-green, 0.06);
-  border-left: 4px solid $primary-green;
-  border-radius: 0 12px 12px 0;
+  border-radius: 12px;
   text-align: center;
 
   p {
@@ -183,7 +182,7 @@
   .form-submit-btn {
     display: block;
     width: 100%;
-    padding: 0.75rem 1.5rem;
+    padding: 1rem 2rem;
     background-color: $primary-green;
     color: $text-light;
     border: none;

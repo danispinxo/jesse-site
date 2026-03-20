@@ -36,11 +36,9 @@ export default function Contact() {
 
       <div className="covid-note">
         <p>
-          Online therapy from the comfort of your own space!
+          Secure video and phone sessions from the comfort of your own home!
           <br />
-          All sessions are currently conducted via secure video or phone calls.
-          <br />
-          Same great support, just a different (and cozy!) setting.
+          Same great support, but from your own cozy space, with no travel required.
         </p>
       </div>
 

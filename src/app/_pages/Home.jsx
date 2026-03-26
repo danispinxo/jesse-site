@@ -39,10 +39,10 @@ export default function Home() {
             Do you feel you need to make some changes but don't know where or
             how to begin?
           </p>
-          <Link href="/contact">
+          <Link href="https://jpts.noustalk.com/contactme" target="_blank" rel="noopener noreferrer">
             <button className="cta-button home-contact-button">
               <FontAwesomeIcon icon={faPaperPlane} />
-              Contact me now for a no-fee 15-minute consultation
+              Request a complementary consultation session
             </button>
           </Link>
         </div>

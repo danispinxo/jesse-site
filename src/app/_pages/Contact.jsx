@@ -36,11 +36,9 @@ export default function Contact() {
 
       <div className="covid-note">
         <p>
-          Online therapy from the comfort of your own space!
+          Secure video and phone sessions from the comfort of your own home!
           <br />
-          All sessions are currently conducted via secure video or phone calls.
-          <br />
-          Same great support, just a different (and cozy!) setting.
+          Same great support, but from your own cozy space, with no travel required.
         </p>
       </div>
 
@@ -69,56 +67,27 @@ export default function Contact() {
               no-fee 15-minute chat! Just fill out the form to the right and
               I'll get back to you soon.
             </p>
+            <div className="border-bottom-text">
+              <h2>Booking Your Consult</h2>
+              Booking your 15-minute consult is as easy as clicking the button below.
+              <Link href="https://jpts.noustalk.com/contactme" target="_blank" rel="noopener noreferrer">
+                <button className="cta-button">Request a complementary consultation session</button>
+              </Link>
+            </div>
 
-            <p>I am affiliated with the following organizations:</p>
-
-            <div className="affiliation-images">
-              <a
-                href="http://www.canadianarttherapy.org"
-                target="_blank"
-                rel="noreferrer"
-              >
-                <img
-                  className="affiliation-img"
-                  src="/images/CATA.webp"
-                  alt="CATA Logo"
-                />
-              </a>
-
-              <a href="http://www.crpo.ca" target="_blank" rel="noreferrer">
-                <img
-                  className="affiliation-img"
-                  src="/images/CRPO.webp"
-                  alt="CRPO Logo"
-                />
-              </a>
-
-              <a
-                href="http://www.estonianartiststoronto.com"
-                target="_blank"
-                rel="noreferrer"
-              >
-                <img
-                  className="affiliation-img"
-                  src="/images/EKKT.webp"
-                  alt="EKKT Logo"
-                />
-              </a>
-
-              <a href="http://www.tati.on.ca" target="_blank" rel="noreferrer">
-                <img
-                  className="affiliation-img tati-logo"
-                  src="/images/TATI.webp"
-                  alt="TATI Logo"
-                />
-              </a>
+            <div className="border-bottom-text">
+              <h2>Register as a Client</h2>
+              Ready to begin sessions? Simply click the button below to register as a client.
+              <Link href="https://jpts.noustalk.com/register" target="_blank" rel="noopener noreferrer">
+                <button className="cta-button">Register</button>
+              </Link>
             </div>
           </div>
 
           <div className="contact-form">
-            <p className="form-identifier">
-              <span className="name">Jesse Pajuäär, RP, RCAT, DTATI, HBA</span>
-            </p>
+            <h2 className="form-identifier">
+              Jesse Pajuäär, RP, RCAT, DTATI, HBA
+            </h2>
 
             <form onSubmit={handleSubmit} style={{ display: "block" }}>
               <TextField

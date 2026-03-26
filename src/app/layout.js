@@ -42,7 +42,7 @@ export const metadata = {
     type: "website",
     images: [
       {
-        url: "https://jptherapystudios.com/images/JessePajuaar.webp",
+        url: "https://jptherapystudios.com/images/NewLogo.webp",
         width: 400,
         height: 400,
         alt: "Jesse Pajuäär - Registered Psychotherapist and Art Therapist",
@@ -55,7 +55,7 @@ export const metadata = {
       "Jesse Pajuäär Therapy Studios - Registered Psychotherapist & Art Therapist",
     description:
       "Professional therapy and counseling services in Ontario. Registered psychotherapist and art therapist offering online therapy.",
-    images: ["https://jptherapystudios.com/images/JessePajuaar.webp"],
+    images: ["https://jptherapystudios.com/images/NewLogo.webp"],
   },
   robots: {
     index: true,

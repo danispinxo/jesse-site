@@ -132,7 +132,7 @@ export default function StructuredData() {
       },
       {
         "@type": "EducationalOccupationalCredential",
-        "name": "Registered Canadian Art Therapist (RCAT)",
+        "name": "Registered Canadian Art Therapist Supervisor (RCAT-S)",
         "credentialCategory": "Professional License"
       },
       {

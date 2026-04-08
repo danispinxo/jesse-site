@@ -71,7 +71,7 @@ export default function About() {
               Therapy Institute (TATI). I am a fully qualified Registered
               Psychotherapist with the College of Registered Psychotherapists of
               Ontario (CRPO), a Professional member of the Canadian Art Therapy
-              Association (CATA), a Registered Canadian Art Therapist (RCAT),
+              Association (CATA), a Registered Canadian Art Therapist (RCAT-S),
               and a member of the Society of Estonian Artists in Toronto (EKKT).
             </p>
             <div className="credentials">
@@ -79,7 +79,7 @@ export default function About() {
               <ul>
                 <li>8 years of experience</li>
                 <li>Registered Psychotherapist (RP)</li>
-                <li>Registered Canadian Art Therapist (RCAT)</li>
+                <li>Registered Canadian Art Therapist Supervisor(RCAT-S)</li>
                 <li>Master's level Diploma in Art Therapy (DTATI)</li>
                 <li>Honours Bachelor of Arts (HBA) in Psychotherapy</li>
                 <li>

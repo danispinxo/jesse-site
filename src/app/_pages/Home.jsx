@@ -80,7 +80,7 @@ export default function Home() {
           <div className="why-content">
             <p>
               <strong>
-                Registered Psychotherapist, RCAT, DTATI, HBA.
+                Registered Psychotherapist, RCAT-S, DTATI, HBA.
               </strong>
             </p>
             <p>

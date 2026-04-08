@@ -86,7 +86,7 @@ export default function Contact() {
 
           <div className="contact-form">
             <h2 className="form-identifier">
-              Jesse Pajuäär, RP, RCAT, DTATI, HBA
+              Jesse Pajuäär, RP, RCAT-S, DTATI, HBA
             </h2>
 
             <form onSubmit={handleSubmit} style={{ display: "block" }}>

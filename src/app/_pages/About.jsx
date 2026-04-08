@@ -79,7 +79,7 @@ export default function About() {
               <ul>
                 <li>8 years of experience</li>
                 <li>Registered Psychotherapist (RP)</li>
-                <li>Registered Canadian Art Therapist Supervisor(RCAT-S)</li>
+                <li>Registered Canadian Art Therapist Supervisor (RCAT-S)</li>
                 <li>Master's level Diploma in Art Therapy (DTATI)</li>
                 <li>Honours Bachelor of Arts (HBA) in Psychotherapy</li>
                 <li>

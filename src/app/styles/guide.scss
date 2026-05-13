@@ -5,10 +5,11 @@
 }
 
 .guide-intro {
-  max-width: 800px;
+  max-width: 740px;
   margin: 2rem auto;
-  padding: 2rem;
-  background-color: $background-light;
+  padding: 2.5rem;
+  background: rgba($text-light, 0.95);
+  border: 1px solid rgba($primary-green, 0.12);
   border-radius: $border-radius-md;
   box-shadow: $shadow-md;
   transition: transform $transition-normal;
@@ -19,13 +20,13 @@
 
   p {
     color: $text-dark;
-    line-height: 1.6;
+    line-height: 1.75;
     margin-bottom: 1rem;
   }
 }
 
 .section {
-  max-width: 1000px;
+  max-width: 920px;
   margin: 2rem auto;
   background-color: #ffffff;
   border-radius: $border-radius-md;
@@ -61,7 +62,7 @@
   }
 
   .section-content {
-    padding: 2rem;
+    padding: 2.5rem;
 
     .bolded-text {
       font-weight: 600;
@@ -71,7 +72,7 @@
 
     p {
       color: $text-dark;
-      line-height: 1.6;
+      line-height: 1.75;
       margin-bottom: 1.5rem;
     }
 
@@ -88,7 +89,7 @@
 
       li {
         color: $text-dark;
-        line-height: 1.6;
+        line-height: 1.7;
         margin-bottom: 0.5rem;
       }
     }

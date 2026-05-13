@@ -1,27 +1,29 @@
 @use "variables" as *;
 
 .covid-note {
-  max-width: 1060px;
-  margin: 2rem auto;
-  padding: 1.2rem 2rem;
+  max-width: 960px;
+  margin: 2.5rem auto;
+  padding: 1.5rem 2.25rem;
   background-color: rgba($primary-green, 0.06);
   border-radius: 12px;
   text-align: center;
 
   p {
     color: $primary-green;
-    line-height: 1.5;
+    line-height: 1.7;
     margin: 0;
     font-size: 1rem;
+    max-width: 60ch;
+    margin-inline: auto;
   }
 }
 
 .contact-body {
   display: flex;
   flex-wrap: wrap;
-  max-width: 1100px;
-  margin: 2rem auto;
-  gap: 2rem;
+  max-width: 1040px;
+  margin: 2.5rem auto;
+  gap: 2.5rem;
   padding: 0 1rem;
 
   @media (max-width: $breakpoint-md) {
@@ -80,8 +82,10 @@
   p {
     font-size: 1rem;
     color: $text-dark;
-    line-height: 1.6;
+    line-height: 1.75;
     margin-bottom: 1.5rem;
+    max-width: 60ch;
+    margin-inline: auto;
   }
 
   a {
@@ -147,7 +151,7 @@
 .contact-form {
   flex: 1;
   min-width: 300px;
-  padding: 2rem;
+  padding: 2.5rem;
   background-color: $background-light;
   border-radius: $border-radius-md;
   box-shadow: $shadow-md;

@@ -1,8 +1,8 @@
 @use "variables" as *;
 
 :root {
-  --font-harmattan-fallback: "Harmattan", "Arial", "Helvetica", sans-serif;
-  --font-gabarito-fallback: "Gabarito", "system-ui", "-apple-system", sans-serif;
+  --font-heading-fallback: "Fraunces", georgia, serif;
+  --font-body-fallback: "Inter", "system-ui", "-apple-system", sans-serif;
 }
 
 * {
@@ -22,8 +22,31 @@ html {
 body {
   font-family: $font-primary;
   color: $text-dark;
-  line-height: 1.6;
+  line-height: 1.72;
   background-color: $background-light;
+  font-size: 1.02rem;
+  text-rendering: optimizelegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  letter-spacing: -0.015em;
+  line-height: 1.15;
+}
+
+main p,
+main li {
+  text-wrap: pretty;
+}
+
+main p {
+  max-width: 64ch;
 }
 
 .page-content {
@@ -415,13 +438,14 @@ body {
 
   .navbar-container {
     max-width: 1400px;
-    margin: 0 12%;
+    margin: 0 auto;
+    padding: 0 1rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
 
     @media (width <= 810) {
-      margin: 0 6%;
+      padding: 0 0.5rem;
     }
   }
 
@@ -430,49 +454,51 @@ body {
     align-items: center;
     text-decoration: none;
     color: $text-light;
+    flex: 0 1 auto;
+    min-width: 0;
 
     .logo-image {
-      margin-right: $spacing-md;
+      margin-right: 0.85rem;
+      flex-shrink: 0;
     }
 
     .logo-text {
-      margin-right: 4rem;
+      margin-right: 1.75rem;
       font-family: $font-secondary;
-      font-size: 1.5rem;
       display: flex;
-      line-height: 1.2;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 0.12rem;
+      line-height: 0.95;
 
-      @media (width <= $breakpoint-nav) {
-        flex-direction: column;
-        align-items: flex-start;
+      .name,
+      .studio {
+        display: block;
+        white-space: nowrap;
+        transition: color $transition-normal;
       }
 
       .name {
-        font-size: 1.6rem;
-        display: block;
+        font-size: 1.12rem;
         transition: color $transition-normal;
-        margin-right: 0.7rem;
       }
 
       .studio {
-        font-size: 1.6rem;
+        font-size: 1.12rem;
         color: rgba($text-light, 0.9);
-        display: block;
-        transition: color $transition-normal;
       }
 
       @media (width <= $breakpoint-xl) {
         .name,
         .studio {
-          font-size: 1.2rem;
-          display: inline;
+          font-size: 1rem;
         }
       }
 
       @media (width <= $breakpoint-lg) {
         .name,
         .studio {
-          font-size: 1rem;
+          font-size: 0.92rem;
         }
       }
 
@@ -553,6 +579,9 @@ body {
         padding: $spacing-sm $spacing-md;
         border-radius: $border-radius-sm;
         transition: transform $transition-normal, box-shadow $transition-normal;
+        display: inline-flex;
+        align-items: center;
+        white-space: nowrap;
 
         &:hover {
           transform: translateY(-2px);
@@ -562,6 +591,7 @@ body {
 
         span {
           margin-right: 0.5rem;
+          white-space: nowrap;
         }
       }
     }
@@ -570,14 +600,14 @@ body {
 
 .page-hero {
   background: $background-light;
-  padding: calc($spacing-md) 0 $spacing-md;
+  padding: calc($spacing-lg + 1rem) 0 $spacing-lg;
   color: $primary-green;
   text-align: center;
   border-bottom: 1px solid rgba($primary-green, 0.08);
   position: relative;
 
   .hero-content {
-    max-width: 700px;
+    max-width: 640px;
     margin: 0 auto;
     padding: 0 $spacing-md;
 
@@ -609,11 +639,13 @@ body {
 
     .subtitle {
       display: block;
+      max-width: 34rem;
       font-size: 1.05rem;
       color: $secondary-green;
       font-weight: 500;
-      margin-top: 0.2rem;
+      margin: 0.35rem auto 0;
       letter-spacing: 0.01em;
+      line-height: 1.75;
     }
   }
 }
@@ -623,6 +655,12 @@ body {
   background: $background-light;
   border-top: 1px solid rgba($text-dark, 0.1);
   text-align: center;
+
+  .approach-content {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 $spacing-lg;
+  }
 
   h2 {
     font-family: $font-secondary;
@@ -642,6 +680,26 @@ body {
       margin: $spacing-sm auto 0;
       border-radius: 2px;
     }
+  }
+
+  .approach-intro,
+  .approach-summary {
+    max-width: 820px;
+    margin: 0 auto $spacing-md;
+    color: $text-dark;
+    font-size: 1.08rem;
+    line-height: 1.8;
+    text-align: left;
+  }
+
+  .approach-subheading {
+    max-width: 820px;
+    margin: $spacing-lg auto $spacing-md;
+    font-family: $font-primary;
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: $primary-green;
+    text-align: left;
   }
 
   .approach-list-grid {
@@ -682,6 +740,7 @@ body {
     font-size: 1rem;
     display: block;
     margin-top: 0.1em;
+    line-height: 1.7;
   }
 }
 
@@ -690,6 +749,12 @@ body {
   margin-top: 2rem;
   background: $background-light;
   text-align: center;
+
+  .specialties-content {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 $spacing-lg;
+  }
 
   h2 {
     text-align: center;
@@ -720,34 +785,54 @@ body {
     margin: 0 auto;
   }
 
-  .specialties-list-item {
+  .specialty-group {
+    padding: $spacing-lg;
+    border-radius: $border-radius-md;
+    background: rgba($text-light, 0.9);
+    border: 1px solid rgba($primary-green, 0.08);
+    text-align: left;
+  }
+
+  .specialty-group-title {
+    margin-bottom: $spacing-md;
+    font-family: $font-primary;
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: $primary-green;
+  }
+
+  .specialty-group-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
     display: flex;
-    align-items: center;
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  .specialty-group-item {
+    display: flex;
+    align-items: flex-start;
     gap: $spacing-md;
-    padding: $spacing-sm 0;
+    padding: 0;
     background: none;
     border: none;
     box-shadow: none;
-    border-bottom: 1px solid rgba($primary-green, 0.08);
   }
 
-  .specialties-list-icon {
-    color: $primary-green;
-    background: $light-green;
-    border-radius: 50%;
-    width: 2rem;
-    height: 2rem;
+  .specialty-group-icon {
+    color: $accent-gold;
     display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 1.2rem;
+    font-size: 1rem;
     flex-shrink: 0;
+    margin-top: 0.25rem;
   }
 
   .specialties-list-text {
-    font-weight: 600;
-    color: $primary-green;
-    font-size: 1.1rem;
+    font-weight: 500;
+    color: $text-dark;
+    font-size: 1.02rem;
+    line-height: 1.65;
     letter-spacing: 0.01em;
   }
 
@@ -1162,6 +1247,504 @@ body {
     .approach-list-grid,
     .specialties-list-grid {
       padding-left: 5%;
+    }
+  }
+}
+
+main.home {
+  background: linear-gradient(
+    180deg,
+    rgba($background-light, 1) 0%,
+    rgba($light-green, 0.28) 40%,
+    rgba($background-light, 0.95) 100%
+  );
+
+  &::before {
+    background: radial-gradient(
+        circle at 12% 18%,
+        rgba($secondary-green, 0.12) 0%,
+        transparent 48%
+      ),
+      radial-gradient(
+        circle at 88% 10%,
+        rgba($light-green, 0.34) 0%,
+        transparent 38%
+      ),
+      radial-gradient(
+        circle at 82% 78%,
+        rgba($primary-green, 0.09) 0%,
+        transparent 42%
+      );
+  }
+}
+
+.home .hero {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 9.5rem 0 4.5rem;
+  gap: $spacing-xl;
+
+  &::before {
+    display: none;
+  }
+
+  .hero-content {
+    margin-left: 0;
+    max-width: 580px;
+
+    h1 {
+      font-size: 3.5rem;
+      line-height: 1.05;
+      margin-bottom: $spacing-md;
+      color: $primary-green;
+      text-shadow: none;
+
+      .subtitle {
+        display: block;
+        margin-top: 1rem;
+        margin-bottom: 0;
+        font-family: $font-primary;
+        font-size: 1.55rem;
+        line-height: 1.35;
+        color: $secondary-green;
+      }
+    }
+
+    .hero-text {
+      max-width: 31rem;
+      margin-bottom: 2rem;
+      font-size: 1.18rem;
+      line-height: 1.75;
+      color: rgba($text-dark, 0.96);
+      text-shadow: none;
+    }
+  }
+
+  .hero-image-wrapper {
+    transform: none;
+
+    .hero-image-accent {
+      background: linear-gradient(
+        180deg,
+        rgba($light-green, 0.95) 0%,
+        rgba($secondary-green, 0.14) 100%
+      );
+      box-shadow: 0 16px 34px rgba($secondary-green, 0.12);
+      opacity: 1;
+      transform: rotate(4deg);
+    }
+
+    .hero-image {
+      box-shadow: 0 18px 40px rgba($primary-green, 0.12),
+        0 0 0 1px rgba($primary-green, 0.08);
+    }
+  }
+}
+
+.home .cta-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 3.25rem;
+  padding: 0.95rem 1.5rem;
+  background: $primary-green;
+  color: $text-light;
+  border: 1px solid rgba($primary-green, 0.08);
+  font-size: 1.1rem;
+  font-weight: 700;
+  letter-spacing: 0.01em;
+  opacity: 1;
+  box-shadow: 0 10px 24px rgba($primary-green, 0.18);
+
+  &:hover {
+    background: $secondary-green;
+    color: $text-light;
+    box-shadow: 0 14px 28px rgba($primary-green, 0.18);
+  }
+
+  &.home-contact-button {
+    padding: 1.05rem 1.75rem;
+    font-size: 1.2rem;
+  }
+}
+
+.home .hero-quote-section {
+  padding: 0 1rem 3rem;
+}
+
+.home .hero-quote {
+  max-width: 720px;
+  margin: 0 auto;
+  text-align: center;
+  font-family: $font-secondary;
+  font-size: 1.15rem;
+  line-height: 1.6;
+  color: rgba($primary-green, 0.95);
+
+  span {
+    display: block;
+    margin-top: 0.35rem;
+    font-family: $font-primary;
+    font-size: 0.95rem;
+    color: $text-muted;
+  }
+}
+
+.home .about-me-section {
+  margin: 0;
+  padding: 0 1rem 4rem;
+  background: transparent;
+  color: $text-dark;
+
+  .about-me-content {
+    max-width: 980px;
+    margin: 0 auto;
+    padding: clamp(2.5rem, 4vw, 3.5rem);
+    transform: none;
+    background: rgba($text-light, 0.94);
+    border: 1px solid rgba($primary-green, 0.14);
+    border-radius: $border-radius-lg;
+    box-shadow: 0 18px 40px rgba($primary-green, 0.14);
+  }
+
+  h2,
+  h3 {
+    color: $primary-green;
+    text-shadow: none;
+  }
+
+  h2 {
+    margin-bottom: 0.35rem;
+    font-family: $font-primary;
+    font-size: 1rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+
+  h3 {
+    margin-bottom: $spacing-lg;
+    font-size: 2.5rem;
+
+    &::after {
+      background: linear-gradient(90deg, rgba($secondary-green, 0.85), transparent);
+    }
+  }
+
+  .why-content {
+    max-width: none;
+    padding: 0;
+    font-size: 1.08rem;
+    line-height: 1.75;
+    text-align: left;
+    color: $text-dark;
+
+    p {
+      max-width: none;
+    }
+  }
+
+  .about-lede {
+    font-size: 1.35rem;
+    line-height: 1.55;
+    color: $primary-green;
+  }
+}
+
+.home .home-cta-strip {
+  padding: 0 1rem 4rem;
+}
+
+.home .home-cta-strip-content {
+  max-width: 980px;
+  margin: 0 auto;
+  padding: 2.5rem 2.75rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: $spacing-lg;
+  border-radius: $border-radius-lg;
+  border: 1px solid rgba($secondary-green, 0.2);
+  background: linear-gradient(
+    135deg,
+    rgba($text-light, 0.94) 0%,
+    rgba($light-green, 0.26) 100%
+  );
+  box-shadow: 0 16px 34px rgba($secondary-green, 0.14);
+
+  p {
+    max-width: 30rem;
+    margin: 0;
+    font-size: 1.2rem;
+    line-height: 1.6;
+    color: $primary-green;
+  }
+}
+
+.home .approach-list-section,
+.home .specialties-list-section {
+  background: transparent;
+  border-top: none;
+}
+
+.home .approach-list-section {
+  padding: 0 1rem 4rem;
+
+  .approach-content {
+    max-width: 980px;
+    padding: clamp(2.5rem, 4vw, 3.5rem);
+    border-radius: $border-radius-lg;
+    border: 1px solid rgba($primary-green, 0.14);
+    background: rgba($text-light, 0.94);
+    box-shadow: 0 18px 40px rgba($primary-green, 0.14);
+  }
+
+  .approach-list-grid {
+    grid-template-columns: 1fr;
+    max-width: 820px;
+    gap: 0.35rem;
+  }
+
+  .approach-list-item {
+    align-items: center;
+    padding: 0.15rem 0;
+  }
+
+  .approach-list-icon {
+    margin-top: 0;
+  }
+}
+
+.home .specialties-list-section {
+  margin-top: 0;
+  padding: 0 1rem 4.5rem;
+
+  .specialties-content {
+    max-width: 980px;
+    padding: clamp(2.5rem, 4vw, 3.5rem);
+    border-radius: $border-radius-lg;
+    border: 1px solid rgba($primary-green, 0.14);
+    background: rgba($text-light, 0.94);
+    box-shadow: 0 18px 40px rgba($primary-green, 0.14);
+  }
+
+  .specialties-list-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    max-width: none;
+    gap: 1.25rem;
+  }
+}
+
+@media (max-width: $breakpoint-xl) {
+  .home .hero {
+    width: 92%;
+    padding: 8rem 0 3rem;
+    gap: 3rem;
+
+    .hero-content {
+      margin-right: 0;
+
+      .hero-text {
+        margin-top: 0;
+      }
+
+      .cta-button {
+        font-size: 1.1rem;
+      }
+    }
+  }
+
+  .home .about-me-section,
+  .home .approach-list-section,
+  .home .specialties-list-section,
+  .home .home-cta-strip {
+    padding-left: 1rem;
+    padding-right: 1rem;
+    margin: 0;
+  }
+}
+
+@media (max-width: $breakpoint-lg) {
+  .home .hero {
+    width: 92%;
+    padding: 7rem 0 2.5rem;
+    gap: 2rem;
+    flex-direction: column;
+    text-align: center;
+
+    .hero-content {
+      margin: 0 auto;
+    }
+
+    .hero-text {
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+
+  .home .home-cta-strip-content {
+    flex-direction: column;
+    padding: 1.75rem;
+    text-align: center;
+
+    p {
+      max-width: none;
+    }
+  }
+}
+
+@media (max-width: $breakpoint-md) {
+  .home .hero {
+    width: 90%;
+    padding: 6.5rem 0 2rem;
+
+    .hero-content {
+      width: 100%;
+
+      h1 {
+        font-size: 2.7rem;
+        text-align: center;
+
+        .subtitle {
+          font-size: 1.35rem;
+        }
+      }
+    }
+
+    .hero-text {
+      font-size: 1.05rem;
+      text-align: center;
+    }
+  }
+
+  .home .hero-quote-section {
+    padding: 0 1rem 2.5rem;
+  }
+
+  .home .hero-quote {
+    font-size: 1rem;
+  }
+
+  .home .about-me-section {
+    padding: 0 1rem 3rem;
+
+    .about-me-content {
+      padding: 1.75rem 1.25rem;
+    }
+
+    h3 {
+      font-size: 2rem;
+    }
+
+    .why-content {
+      font-size: 1rem;
+      text-align: left;
+    }
+  }
+
+  .home .home-cta-strip {
+    padding: 0 1rem 3rem;
+  }
+
+  .home .home-cta-strip-content {
+    gap: 1rem;
+
+    p {
+      font-size: 1.05rem;
+    }
+  }
+
+  .home .approach-list-section,
+  .home .specialties-list-section {
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+  }
+
+  .home .approach-list-section {
+    .approach-intro,
+    .approach-subheading,
+    .approach-summary {
+      text-align: left;
+    }
+  }
+
+  .home .specialties-list-section {
+    .specialties-list-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+}
+
+@media (max-width: $breakpoint-sm) {
+  .home .hero {
+    width: 92%;
+    padding-top: 5.75rem;
+
+    .hero-content {
+      margin-left: 0;
+
+      h1 {
+        font-size: 2.2rem;
+        line-height: 1.08;
+
+        .subtitle {
+          font-size: 1.15rem;
+        }
+      }
+    }
+
+    .hero-image-wrapper {
+      .hero-image,
+      .hero-image-accent {
+        width: 260px;
+        height: 260px;
+      }
+    }
+  }
+
+  .home .hero .cta-button,
+  .home .home-cta-strip .cta-button {
+    width: 100%;
+  }
+
+  .home .about-me-section {
+    padding: 0 0.75rem 2.5rem;
+
+    .about-me-content {
+      padding: 1.5rem 1rem;
+    }
+
+    .about-lede {
+      font-size: 1.15rem;
+    }
+  }
+
+  .home .approach-list-section {
+    .approach-content {
+      padding: 1.5rem 1rem;
+    }
+
+    .approach-list-grid {
+      grid-template-columns: 1fr;
+      gap: $spacing-sm;
+    }
+
+    .approach-list-item {
+      padding: 0.35rem 0;
+      text-align: left;
+    }
+  }
+
+  .home .specialties-list-section {
+    width: 100%;
+
+    .specialties-content {
+      padding: 1.5rem 1rem;
+    }
+
+    .specialty-group {
+      padding: 1.25rem 1rem;
     }
   }
 }

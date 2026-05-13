@@ -2,14 +2,22 @@
 
 .newsletter-section {
   padding: $spacing-lg 0 $spacing-md 0;
-  background: $background-light;
+  background: linear-gradient(
+    180deg,
+    rgba($light-green, 0.14) 0%,
+    rgba($background-light, 1) 100%
+  );
   color: $primary-green;
 
   .newsletter-content {
     max-width: 500px;
     margin: 0 auto;
-    padding: 0 $spacing-md;
+    padding: $spacing-lg;
     text-align: center;
+    border-radius: $border-radius-lg;
+    background: rgba($text-light, 0.92);
+    border: 1px solid rgba($primary-green, 0.12);
+    box-shadow: $shadow-sm;
 
     h2 {
       font-family: $header-font;
@@ -72,7 +80,11 @@
 
 .resources-list-section {
   padding: $spacing-xl 0;
-  background: $background-light;
+  background: linear-gradient(
+    180deg,
+    rgba($background-light, 1) 0%,
+    rgba($light-green, 0.14) 100%
+  );
   position: relative;
   overflow: hidden;
   text-align: center;
@@ -105,17 +117,18 @@
     gap: $spacing-md $spacing-xl;
     max-width: 1100px;
     margin: 0 auto;
+    padding: 0 $spacing-lg;
   }
 
   .resources-list-item {
     display: flex;
     align-items: flex-start;
     gap: $spacing-md;
-    padding: $spacing-sm 0;
-    background: none;
-    border: none;
-    box-shadow: none;
-    border-bottom: 1px solid rgba($primary-green, 0.08);
+    padding: $spacing-lg;
+    background: rgba($text-light, 0.94);
+    border: 1px solid rgba($primary-green, 0.12);
+    box-shadow: $shadow-sm;
+    border-radius: $border-radius-md;
   }
 
   .resources-list-icon {
@@ -158,7 +171,11 @@
 
 .books-list-section {
   padding: $spacing-xl 0;
-  background: $background-light;
+  background: linear-gradient(
+    180deg,
+    rgba($text-light, 1) 0%,
+    rgba($light-green, 0.08) 100%
+  );
   position: relative;
   overflow: hidden;
   text-align: center;
@@ -191,17 +208,18 @@
     gap: $spacing-md $spacing-xl;
     max-width: 1100px;
     margin: 0 auto;
+    padding: 0 $spacing-lg;
   }
 
   .books-list-item {
     display: flex;
     align-items: flex-start;
     gap: $spacing-md;
-    padding: $spacing-sm 0;
-    background: none;
-    border: none;
-    box-shadow: none;
-    border-bottom: 1px solid rgba($primary-green, 0.08);
+    padding: $spacing-lg;
+    background: rgba($background-light, 0.96);
+    border: 1px solid rgba($primary-green, 0.1);
+    box-shadow: $shadow-sm;
+    border-radius: $border-radius-md;
   }
 
   .books-list-icon {

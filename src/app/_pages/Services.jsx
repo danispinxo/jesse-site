@@ -173,39 +173,7 @@ export default function Services() {
                 ))}
               </ul>
               <Link href="/contact">
-                <button className="cta-button">Get Started</button>
-              </Link>
-            </div>
-          </div>
-
-          <div className="service-card featured">
-            <div className="service-image">
-              <Image
-                className="service-image"
-                src="/images/LowIncome.webp"
-                alt="An image of a small man in a hat sitting on a ledge of a white geometic shape, nearby there is a ladder."
-                width={400}
-                height={400}
-              />
-            </div>
-            <div className="service-details">
-              <h2 id="reduced-rate">Reduced Rate & Sliding Scale</h2>
-              <p>
-                Sliding scale options are available to those individuals
-                demonstrating special need on a case-by-case basis. Please
-                inquire for further details.
-              </p>
-              <p>Sliding scale rates are subject to availability.</p>
-              <ul className="service-features">
-                {reducedRateFeatures.map((feature, index) => (
-                  <li key={index}>
-                    <FontAwesomeIcon icon={faCheck} className="check-icon" />
-                    {feature}
-                  </li>
-                ))}
-              </ul>
-              <Link href="/contact">
-                <button className="cta-button">Inquire</button>
+                <button className="cta-button">Book a Consultation now</button>
               </Link>
             </div>
           </div>
@@ -221,7 +189,7 @@ export default function Services() {
               />
             </div>
             <div className="service-details">
-              <h2 id="eft-couples">EFT for Couples</h2>
+              <h2 id="eft-couples">Couple&apos;s Therapy</h2>
               <p>
                 <strong>Emotionally Focused Therapy (EFT) for Couples</strong>
               </p>
@@ -286,7 +254,39 @@ export default function Services() {
                 ))}
               </ul>
               <Link href="/contact">
-                <button className="cta-button">Get Started</button>
+                <button className="cta-button">Book a Consultation now</button>
+              </Link>
+            </div>
+          </div>
+
+          <div className="service-card featured">
+            <div className="service-image">
+              <Image
+                className="service-image"
+                src="/images/LowIncome.webp"
+                alt="An image of a small man in a hat sitting on a ledge of a white geometic shape, nearby there is a ladder."
+                width={400}
+                height={400}
+              />
+            </div>
+            <div className="service-details">
+              <h2 id="reduced-rate">Reduced Rate & Sliding Scale</h2>
+              <p>
+                Sliding scale options are available to those individuals
+                demonstrating special need on a case-by-case basis. Please
+                inquire for further details.
+              </p>
+              <p>Sliding scale rates are subject to availability.</p>
+              <ul className="service-features">
+                {reducedRateFeatures.map((feature, index) => (
+                  <li key={index}>
+                    <FontAwesomeIcon icon={faCheck} className="check-icon" />
+                    {feature}
+                  </li>
+                ))}
+              </ul>
+              <Link href="/contact">
+                <button className="cta-button">Inquire</button>
               </Link>
             </div>
           </div>

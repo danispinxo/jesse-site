@@ -68,10 +68,10 @@ export default function Contact() {
               I'll get back to you soon.
             </p>
             <div className="border-bottom-text">
-              <h2>Booking Your Consult</h2>
+              <h2>Book a Free Consultation</h2>
               Booking your 15-minute consult is as easy as clicking the button below.
               <Link href="https://jpts.noustalk.com/contactme" target="_blank" rel="noopener noreferrer">
-                <button className="cta-button">Request a complementary consultation session</button>
+                <button className="cta-button">Book a Free Consultation</button>
               </Link>
             </div>
 

@@ -1,6 +1,6 @@
 // fonts
-$sub-font: var(--font-heading), "Fraunces", georgia, serif;
-$header-font: var(--font-heading), "Fraunces", georgia, serif;
+$sub-font: var(--font-heading), "Lora", georgia, serif;
+$header-font: var(--font-heading), "Lora", georgia, serif;
 $light-green: #e4c0a9;
 $primary-green: #55634f;
 $secondary-green: #73816c;
@@ -10,9 +10,9 @@ $text-light: #fffaf6;
 $text-muted: #5b4e47;
 $background-light: #f7efe6;
 $background-dark: #56624f;
-$font-primary: var(--font-body), "Inter", "system-ui", "-apple-system", "BlinkMacSystemFont",
+$font-primary: var(--font-body), "Nunito", "system-ui", "-apple-system", "BlinkMacSystemFont",
   sans-serif;
-$font-secondary: var(--font-heading), "Fraunces", georgia, serif;
+$font-secondary: var(--font-heading), "Lora", georgia, serif;
 
 // Spacing
 $spacing-xs: 0.25rem;

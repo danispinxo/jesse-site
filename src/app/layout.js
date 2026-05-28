@@ -4,11 +4,11 @@ import "@fortawesome/fontawesome-svg-core/styles.css";
 import { config } from "@fortawesome/fontawesome-svg-core";
 import Navbar from "./_components/Navbar";
 import StructuredData from "./_components/StructuredData";
-import { Fraunces, Inter } from "next/font/google";
+import { Lora, Nunito } from "next/font/google";
 
 config.autoAddCss = false;
 
-const inter = Inter({
+const nunito = Nunito({
   subsets: ["latin"],
   weight: ["400", "500", "600", "700"],
   display: "swap",
@@ -16,7 +16,7 @@ const inter = Inter({
   variable: "--font-body",
 });
 
-const fraunces = Fraunces({
+const lora = Lora({
   subsets: ["latin"],
   weight: ["500", "600", "700"],
   display: "swap",
@@ -76,7 +76,7 @@ export default function RootLayout({ children }) {
   return (
     <html
       lang="en"
-      className={`${inter.variable} ${fraunces.variable}`}
+      className={`${nunito.variable} ${lora.variable}`}
     >
       <head>
         <meta name="viewport" content="width=device-width, initial-scale=1" />

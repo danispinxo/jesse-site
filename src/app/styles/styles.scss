@@ -1,8 +1,8 @@
 @use "variables" as *;
 
 :root {
-  --font-heading-fallback: "Fraunces", georgia, serif;
-  --font-body-fallback: "Inter", "system-ui", "-apple-system", sans-serif;
+  --font-heading-fallback: "Lora", georgia, serif;
+  --font-body-fallback: "Nunito", "system-ui", "-apple-system", sans-serif;
 }
 
 * {
@@ -370,7 +370,7 @@ main p {
   left: 0;
   right: 0;
   z-index: 1000;
-  padding: $spacing-md;
+  padding: 0.75rem $spacing-md;
   transition: background-color $transition-normal;
   background-color: rgba($background-dark, 0.95);
 
@@ -396,18 +396,20 @@ main p {
     min-width: 0;
 
     .logo-image {
-      margin-right: 0.85rem;
+      margin-right: 0.65rem;
       flex-shrink: 0;
+      display: block;
     }
 
     .logo-text {
       margin-right: 1.75rem;
-      font-family: $font-secondary;
+      font-family: $font-primary;
       display: flex;
       flex-direction: column;
       align-items: flex-start;
       gap: 0.12rem;
       line-height: 0.95;
+      font-weight: 600;
 
       .name,
       .studio {
@@ -513,7 +515,7 @@ main p {
 
       &.consultation-button {
         background-color: $accent-gold;
-        color: $text-dark;
+        color: $background-light;
         padding: $spacing-sm $spacing-md;
         border-radius: $border-radius-sm;
         transition: transform $transition-normal, box-shadow $transition-normal;
@@ -524,7 +526,7 @@ main p {
         &:hover {
           transform: translateY(-2px);
           box-shadow: $shadow-md;
-          color: $text-dark;
+          color: $background-dark;
         }
 
         span {

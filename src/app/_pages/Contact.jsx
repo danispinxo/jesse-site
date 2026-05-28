@@ -84,7 +84,7 @@ export default function Contact() {
 
             <div className="border-bottom-text">
               <h2>Register as a Client</h2>
-              Ready to begin sessions? Simply click the button below to register as a client.
+              Ready to begin sessions? Simply click the button below to register as a client and I will be in touch to book our first session.
               <Link href="https://jpts.noustalk.com/register" target="_blank" rel="noopener noreferrer">
                 <button className="cta-button">Register</button>
               </Link>
@@ -177,13 +177,13 @@ export default function Contact() {
                 </NativeSelect>
               </FormControl>
               <TextField
-                className="input"
+                className="input input-message"
                 id="outlined-multiline-static"
                 name="message"
-                label="Message"
+                label="Please share a bit about why you're reaching out..."
                 multiline
                 rows={4}
-                helperText="What's on your mind? Share as much or as little as you'd like!"
+                helperText="Share as much or as little as you'd like!"
                 fullWidth
               />
               <br />

@@ -15,7 +15,8 @@ main.home .footer {
     font-family: $header-font;
     color: $primary-green;
     font-size: 1.5rem;
-    margin-bottom: 1rem;
+    padding: $spacing-sm 0 $spacing-md;
+    margin: 0;
     text-align: center;
   }
 

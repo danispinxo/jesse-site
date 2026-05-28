@@ -2,7 +2,7 @@ import "../styles/guide.scss";
 
 export default function Guide() {
   return (
-    <main className="page-content">
+    <main className="page-content guide-page">
       <section className="page-hero">
         <div className="hero-content">
           <h1>

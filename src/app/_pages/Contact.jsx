@@ -22,7 +22,7 @@ export default function Contact() {
   }, []);
 
   return (
-    <main className="page-content">
+    <main className="page-content contact-page">
       <section className="page-hero">
         <div className="hero-content">
           <h1>
@@ -47,7 +47,14 @@ export default function Contact() {
       ) : (
         <div className="contact-body">
           <div className="contact-info">
-            <img className="logo" src="/images/NewLogoTransp.webp" alt="JPTS Logo" />
+            <div className="contact-logo-wrapper">
+              <span className="contact-logo-accent" aria-hidden="true" />
+              <img
+                className="logo"
+                src="/images/NewLogoTransp.webp"
+                alt="JPTS Logo"
+              />
+            </div>
             <p>
               Finding the right therapist is like finding the perfect pair of
               shoes ... the fit has to be just right! That connection matters,
@@ -195,7 +202,7 @@ export default function Contact() {
                 type="submit"
                 disabled={state.submitting}
               >
-                Send Message ✨
+                Send Message
               </button>
               <ValidationError className="error" errors={state.errors} />
             </form>

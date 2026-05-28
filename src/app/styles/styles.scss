@@ -1049,9 +1049,10 @@ main p {
 main.home {
   background: linear-gradient(
     180deg,
-    rgba($background-light, 1) 0%,
+    $background-light 0%,
     rgba($light-green, 0.28) 40%,
-    rgba($background-light, 0.95) 100%
+    $background-light 65%,
+    $background-light 100%
   );
 
   &::before {
@@ -1172,17 +1173,21 @@ main.home {
 .home .hero-quote {
   max-width: 720px;
   margin: 0 auto;
+  padding: 2rem 2.25rem;
   text-align: center;
-  font-family: $font-secondary;
-  font-size: 1.15rem;
-  line-height: 1.6;
-  color: rgba($primary-green, 0.95);
+  border-radius: $border-radius-lg;
+  background: rgba($accent-red, 0.14);
+  font-family: $header-font;
+  font-size: 1.5rem;
+  line-height: 1.55;
+  color: $primary-green;
 
   span {
     display: block;
-    margin-top: 0.35rem;
+    margin-top: 0.75rem;
     font-family: $font-primary;
-    font-size: 0.95rem;
+    font-size: 1.08rem;
+    line-height: 1.5;
     color: $text-muted;
   }
 }
@@ -1459,7 +1464,12 @@ main.home {
   }
 
   .home .hero-quote {
-    font-size: 1rem;
+    padding: 1.5rem 1.25rem;
+    font-size: 1.25rem;
+
+    span {
+      font-size: 1rem;
+    }
   }
 
   .home .about-me-section {

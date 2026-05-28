@@ -67,63 +67,9 @@
         }
       }
 
-      .profile-name {
-        margin-bottom: $spacing-sm;
-        font-family: $font-secondary;
-        font-size: 2rem;
-        line-height: 1.1;
-        color: $primary-green;
-      }
-
-      .profile-lede {
-        font-size: 1.2rem;
-        color: $secondary-green;
-      }
-
       p {
         margin-bottom: $spacing-lg;
         line-height: 1.8;
-      }
-
-      .credentials {
-        background-color: $background-light;
-        padding: $spacing-lg;
-        border-radius: $border-radius-md;
-        margin-top: $spacing-xl;
-
-        h3 {
-          color: $secondary-green;
-          margin-bottom: $spacing-md;
-        }
-
-        p:last-child,
-        ul:last-child {
-          margin-bottom: 0;
-        }
-
-        ul {
-          list-style: none;
-          padding: 0;
-          display: grid;
-          grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-          gap: $spacing-md;
-
-          li {
-            padding-left: $spacing-md;
-            position: relative;
-
-            &::before {
-              content: "•";
-              color: $accent-gold;
-              position: absolute;
-              left: 0;
-            }
-          }
-        }
-
-        @media (width <= 480px) {
-          text-align: left;
-        }
       }
 
     }

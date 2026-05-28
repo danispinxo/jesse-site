@@ -124,28 +124,6 @@
     }
   }
 
-  .affiliation-images {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.5rem;
-    justify-content: space-around;
-    align-items: center;
-    margin-top: 1.5rem;
-
-    .affiliation-img {
-      max-width: 180px;
-      height: auto;
-      transition: transform $transition-normal;
-
-      &:hover {
-        transform: scale(1.05);
-      }
-    }
-
-    .tati-logo {
-      padding: 3rem;
-    }
-  }
 }
 
 .contact-form {

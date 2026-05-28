@@ -229,13 +229,6 @@ main p {
         margin-bottom: 0.5rem;
       }
 
-      .emphasis {
-        display: block;
-        font-size: 1.8rem;
-        color: $text-dark;
-        padding-left: 1rem;
-        text-shadow: 2px 2px 4px rgba($background-dark, 0.4);
-      }
     }
 
     .hero-text {
@@ -278,27 +271,6 @@ main p {
       width: 320px;
       height: 320px;
       object-fit: cover;
-    }
-  }
-}
-
-.treeline-divider {
-  margin-top: -300px;
-  width: 100%;
-  margin-left: 0;
-  margin-right: 0;
-
-  .treeline-element {
-    width: 100vw;
-    margin-left: calc(-50vw + 50%);
-    z-index: 10;
-
-    .treeline-image {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      object-position: bottom center;
-      display: block;
     }
   }
 }
@@ -364,40 +336,6 @@ main p {
       &:last-child {
         margin-bottom: 0;
       }
-    }
-  }
-}
-
-.contact {
-  background: linear-gradient(to bottom, $primary-green, $background-dark);
-  color: $text-light;
-  padding: $spacing-xl;
-  text-align: center;
-
-  h2 {
-    font-family: $font-secondary;
-    margin-bottom: $spacing-lg;
-    position: relative;
-    display: inline-block;
-    text-align: center;
-
-    &::after {
-      content: "";
-      display: block;
-      width: 80px;
-      height: 3px;
-      background: linear-gradient(90deg, $accent-gold, transparent);
-      margin: $spacing-sm auto 0;
-      border-radius: 2px;
-    }
-  }
-
-  .contact-info {
-    max-width: 600px;
-    margin: 0 auto;
-
-    p {
-      margin-bottom: $spacing-lg;
     }
   }
 }
@@ -728,13 +666,6 @@ main p {
     margin-top: 0.2em;
   }
 
-  .approach-list-title {
-    font-weight: 600;
-    color: $primary-green;
-    font-size: 1.1rem;
-    display: block;
-  }
-
   .approach-list-desc {
     color: $text-dark;
     font-size: 1rem;
@@ -836,10 +767,6 @@ main p {
     letter-spacing: 0.01em;
   }
 
-  .specialties-carousel-controls {
-    display: none;
-  }
-
   .hero {
     padding-top: $spacing-xl;
   }
@@ -873,10 +800,6 @@ main p {
       transform: rotate(90deg);
       margin-bottom: 0.25rem;
     }
-
-    .approach-list-title {
-      margin-bottom: $spacing-xs;
-    }
   }
 
   .specialties-list-section {
@@ -889,26 +812,6 @@ main p {
     .specialties-list-grid {
       grid-template-columns: 1fr;
       width: 70%;
-      margin: 0 auto;
-    }
-
-    .specialties-list-item {
-      justify-content: flex-start;
-    }
-  }
-
-  .philosophy-list-section,
-  .values-list-section {
-    h2 {
-      width: 80%;
-      margin-left: auto;
-      margin-right: auto;
-    }
-
-    .philosophy-list-grid,
-    .values-list-grid {
-      grid-template-columns: 1fr;
-      width: 80%;
       margin: 0 auto;
     }
   }
@@ -976,10 +879,6 @@ main p {
 }
 
 @media (max-width: $breakpoint-md) {
-  .contact {
-    text-align: center;
-  }
-
   .hero {
     width: 90%;
     padding-top: $spacing-xl;
@@ -996,9 +895,6 @@ main p {
         font-size: 2rem;
       }
 
-      .emphasis {
-        font-size: 2rem;
-      }
     }
 
     .hero-text {
@@ -1056,10 +952,6 @@ main p {
       margin-bottom: 0.25rem;
     }
 
-    .approach-list-title {
-      margin-bottom: $spacing-xs;
-    }
-
     .approach-list-desc {
       margin-bottom: 0;
     }
@@ -1080,30 +972,6 @@ main p {
       margin: 0 auto;
     }
 
-    .specialties-list-item {
-      justify-content: flex-start;
-      display: flex;
-    }
-
-    .specialties-carousel-controls {
-      display: none;
-    }
-  }
-
-  .philosophy-list-section,
-  .values-list-section {
-    h2 {
-      width: 80%;
-      margin-left: auto;
-      margin-right: auto;
-    }
-
-    .philosophy-list-grid,
-    .values-list-grid {
-      grid-template-columns: 1fr;
-      width: 80%;
-      margin: 0 auto;
-    }
   }
 }
 
@@ -1159,69 +1027,6 @@ main p {
       overflow: hidden;
     }
 
-    .specialties-list-item {
-      display: none;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      gap: $spacing-md;
-      padding: $spacing-lg 0;
-      border-bottom: none;
-
-      &[data-active="true"] {
-        display: flex;
-      }
-
-      .specialties-list-icon {
-        width: 4rem;
-        height: 4rem;
-        font-size: 2.5rem;
-        margin-bottom: $spacing-sm;
-      }
-
-      .specialties-list-text {
-        font-size: 1.3rem;
-        text-align: center;
-      }
-    }
-
-    .specialties-carousel-controls {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      position: absolute;
-      top: 70%;
-      left: 0;
-      right: 0;
-      transform: translateY(-50%);
-      padding: 0 $spacing-md;
-      pointer-events: none;
-    }
-
-    .specialties-carousel-button {
-      background: none;
-      color: $primary-green;
-      border: none;
-      width: auto;
-      height: auto;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      cursor: pointer;
-      font-size: 1.2rem;
-      padding: $spacing-sm;
-      transition: color $transition-normal, transform $transition-normal;
-      pointer-events: auto;
-
-      &:hover {
-        color: $secondary-green;
-        transform: scale(1.2);
-      }
-
-      &:active {
-        transform: scale(0.9);
-      }
-    }
   }
 
 }

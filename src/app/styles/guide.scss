@@ -2,41 +2,41 @@
 
 .guide-page {
   background: $text-light;
+
+  .footer {
+    margin-top: $spacing-sm;
+    padding-top: 0;
+  }
 }
 
 .guide-intro {
   max-width: 740px;
   margin: 2rem auto;
   padding: 2.5rem;
-  background: rgba($text-light, 0.95);
-  border: 1px solid rgba($primary-green, 0.12);
+  background: $background-light;
+  border: none;
   border-radius: $border-radius-md;
   box-shadow: $shadow-md;
-  transition: transform $transition-normal;
-
-  &:hover {
-    transform: translateY(-5px);
-  }
 
   p {
     color: $text-dark;
     line-height: 1.75;
     margin-bottom: 1rem;
   }
+
+  .guide-intro-lede {
+    font-weight: 600;
+    margin-bottom: 0;
+  }
 }
 
 .section {
   max-width: 920px;
   margin: 2rem auto;
-  background-color: #ffffff;
+  background-color: $background-light;
   border-radius: $border-radius-md;
   box-shadow: $shadow-md;
   overflow: hidden;
-  transition: transform $transition-normal;
-
-  &:hover {
-    transform: translateY(-5px);
-  }
 
   .section-label {
     background: linear-gradient(135deg, $primary-green, $secondary-green);

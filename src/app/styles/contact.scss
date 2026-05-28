@@ -32,11 +32,16 @@
   }
 }
 
+.contact-content-section {
+  background: $background-light;
+  padding: $spacing-xl 0;
+}
+
 .contact-body {
   display: flex;
   flex-wrap: wrap;
   max-width: 1040px;
-  margin: 2.5rem auto;
+  margin: 0 auto;
   gap: 2.5rem;
   padding: 0 1rem;
 
@@ -49,10 +54,10 @@
   flex: 1;
   min-width: 300px;
   padding: 2rem;
-  background-color: $background-light;
-  border-radius: 12px;
+  background-color: $text-light;
+  border-radius: $border-radius-md;
   box-shadow: $shadow-md;
-  border: 1px solid rgba($primary-green, 0.08);
+  border: none;
   text-align: center;
 
   .guide-link {
@@ -187,9 +192,10 @@
   flex: 1;
   min-width: 300px;
   padding: 2.5rem;
-  background-color: $background-light;
+  background-color: $text-light;
   border-radius: $border-radius-md;
   box-shadow: $shadow-md;
+  border: none;
 
   .form-identifier {
     font-family: $header-font;

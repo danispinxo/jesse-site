@@ -252,14 +252,14 @@ main p {
       right: -12px;
       width: 330px;
       height: 330px;
-      background: $accent-gold;
+      background: $accent-red;
       border-radius: $border-radius-md;
       z-index: 0;
       filter: blur(0.5px);
       opacity: 0.85;
       transition: box-shadow 0.3s;
-      box-shadow: 0 10px 32px rgba($accent-gold, 0.2),
-        0 0 0 1px rgba($accent-gold, 0.1);
+      box-shadow: 0 10px 32px rgba($accent-red, 0.2),
+        0 0 0 1px rgba($accent-red, 0.1);
       transform: rotate(2deg);
     }
 
@@ -312,7 +312,7 @@ main p {
       display: block;
       width: 80px;
       height: 3px;
-      background: linear-gradient(90deg, $accent-gold, transparent);
+      background: linear-gradient(90deg, $accent-red, transparent);
       margin: $spacing-sm auto 0;
       border-radius: 2px;
     }
@@ -342,7 +342,7 @@ main p {
 }
 
 .cta-button {
-  background-color: $accent-gold;
+  background-color: $accent-red;
   color: $text-dark;
   padding: $spacing-md $spacing-lg;
   border: none;
@@ -447,10 +447,10 @@ main p {
 
     &:hover {
       .logo-text {
-        color: $accent-gold;
+        color: $accent-red;
 
         .studio {
-          color: rgba($accent-gold, 0.9);
+          color: rgba($accent-red, 0.9);
         }
       }
     }
@@ -498,11 +498,11 @@ main p {
       transition: color $transition-normal;
 
       &:hover {
-        color: $accent-gold;
+        color: $accent-red;
       }
 
       &.consultation-button {
-        background-color: $accent-gold;
+        background-color: $accent-red;
         color: $background-light;
         padding: $spacing-sm $spacing-md;
         border-radius: $border-radius-sm;
@@ -604,7 +604,7 @@ main p {
       display: block;
       width: 80px;
       height: 3px;
-      background: linear-gradient(90deg, $accent-gold, transparent);
+      background: linear-gradient(90deg, $accent-red, transparent);
       margin: $spacing-sm auto 0;
       border-radius: 2px;
     }
@@ -650,7 +650,7 @@ main p {
   }
 
   .approach-list-icon {
-    color: $accent-gold;
+    color: $accent-red;
     font-size: 1.5rem;
     flex-shrink: 0;
     margin-top: 0.2em;
@@ -692,7 +692,7 @@ main p {
       display: block;
       width: 80px;
       height: 3px;
-      background: linear-gradient(90deg, $accent-gold, transparent);
+      background: linear-gradient(90deg, $accent-red, transparent);
       margin: $spacing-sm auto 0;
       border-radius: 2px;
     }
@@ -742,7 +742,7 @@ main p {
   }
 
   .specialty-group-icon {
-    color: $accent-gold;
+    color: $accent-red;
     display: flex;
     font-size: 1rem;
     flex-shrink: 0;
@@ -1240,12 +1240,29 @@ main.home {
     p {
       max-width: none;
     }
+
+    .about-credentials {
+      margin: 0 0 0.05rem;
+      line-height: 1.3;
+
+      strong {
+        font-weight: 700;
+      }
+    }
+
+    .about-subtitle {
+      margin: 0 0 $spacing-md;
+      font-size: 0.98rem;
+      line-height: 1.3;
+      font-weight: 500;
+      color: $text-dark;
+    }
   }
 
   .about-lede {
     font-size: 1.35rem;
     line-height: 1.55;
-    color: $primary-green;
+    color: $accent-red;
   }
 }
 

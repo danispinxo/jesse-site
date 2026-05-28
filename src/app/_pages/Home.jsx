@@ -96,10 +96,10 @@ export default function Home() {
           <h2 id="about-heading">About Me</h2>
           <h3>Jesse Pajuäär</h3>
           <div className="why-content">
-            <p>
+            <p className="about-credentials">
               <strong>Registered Psychotherapist, RCAT-S, DTATI, HBA</strong>
             </p>
-            <p>
+            <p className="about-subtitle">
               Offering psychotherapy, art therapy, and clinical supervision
               across Ontario
             </p>

@@ -4,7 +4,7 @@ import "@fortawesome/fontawesome-svg-core/styles.css";
 import { config } from "@fortawesome/fontawesome-svg-core";
 import Navbar from "./_components/Navbar";
 import StructuredData from "./_components/StructuredData";
-import { Lora, Nunito } from "next/font/google";
+import { Antic_Slab, Lora, Nunito } from "next/font/google";
 
 config.autoAddCss = false;
 
@@ -22,6 +22,14 @@ const lora = Lora({
   display: "swap",
   preload: true,
   variable: "--font-heading",
+});
+
+const anticSlab = Antic_Slab({
+  subsets: ["latin"],
+  weight: "400",
+  display: "swap",
+  preload: true,
+  variable: "--font-secondary",
 });
 
 export const metadata = {
@@ -76,7 +84,7 @@ export default function RootLayout({ children }) {
   return (
     <html
       lang="en"
-      className={`${nunito.variable} ${lora.variable}`}
+      className={`${nunito.variable} ${lora.variable} ${anticSlab.variable}`}
     >
       <head>
         <meta name="viewport" content="width=device-width, initial-scale=1" />

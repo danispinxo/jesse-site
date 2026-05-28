@@ -46,10 +46,6 @@ main li {
   text-wrap: pretty;
 }
 
-main p {
-  max-width: 64ch;
-}
-
 .page-content {
   margin-top: 80px;
 }
@@ -528,7 +524,7 @@ main p {
 
 .page-hero {
   background: $background-light;
-  padding: calc($spacing-lg + 1rem) 0 $spacing-lg;
+  padding: $spacing-md 0 $spacing-lg;
   color: $primary-green;
   text-align: center;
   border-bottom: 1px solid rgba($primary-green, 0.08);
@@ -755,55 +751,6 @@ main p {
     font-size: 1.02rem;
     line-height: 1.65;
     letter-spacing: 0.01em;
-  }
-
-  .hero {
-    padding-top: $spacing-xl;
-  }
-
-  .page-hero {
-    padding: calc($spacing-md) 0 $spacing-md;
-    padding-top: 400px;
-  }
-
-  .approach-list-section {
-    h2 {
-      width: 80%;
-      margin-left: auto;
-      margin-right: auto;
-    }
-
-    .approach-list-grid {
-      grid-template-columns: 1fr;
-      width: 80%;
-      margin: 0 auto;
-    }
-
-    .approach-list-item {
-      flex-direction: column;
-      align-items: center;
-      text-align: center;
-      padding: $spacing-sm 0;
-    }
-
-    .approach-list-icon {
-      transform: rotate(90deg);
-      margin-bottom: 0.25rem;
-    }
-  }
-
-  .specialties-list-section {
-    h2 {
-      width: 70%;
-      margin-left: auto;
-      margin-right: auto;
-    }
-
-    .specialties-list-grid {
-      grid-template-columns: 1fr;
-      width: 70%;
-      margin: 0 auto;
-    }
   }
 }
 

@@ -1,5 +1,74 @@
 @use "variables" as *;
 
+.services-page {
+  background: $background-light;
+
+  .page-hero {
+    background: transparent;
+    border-bottom: 1px solid rgba($primary-green, 0.08);
+    padding: $spacing-sm 0 $spacing-lg;
+
+    .hero-content {
+      max-width: 580px;
+
+      h1 {
+        display: block;
+        width: 100%;
+        font-family: $header-font;
+        font-size: 3.5rem;
+        line-height: 1.05;
+        margin-bottom: $spacing-md;
+        color: $primary-green;
+
+        &::after {
+          content: "";
+          display: block;
+          width: 80px;
+          height: 3px;
+          background: linear-gradient(90deg, $accent-red, transparent);
+          border-radius: 2px;
+          margin: $spacing-sm auto 0;
+          opacity: 1;
+        }
+
+        .subtitle {
+          display: block;
+          max-width: none;
+          margin: 0.35rem auto 0;
+          font-family: $font-primary;
+          font-size: 1rem;
+          font-weight: 700;
+          letter-spacing: 0.08em;
+          text-transform: uppercase;
+          line-height: 1.4;
+          color: $primary-green;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: $breakpoint-md) {
+  .services-page .page-hero .hero-content h1 {
+    font-size: 2.7rem;
+
+    .subtitle {
+      font-size: 0.92rem;
+    }
+  }
+}
+
+@media (max-width: $breakpoint-sm) {
+  .services-page .page-hero .hero-content h1 {
+    font-size: 2.2rem;
+    line-height: 1.08;
+
+    .subtitle {
+      font-size: 0.85rem;
+    }
+  }
+}
+
 .main-services {
   padding: $spacing-xl 0;
   background-color: $text-light;
@@ -68,7 +137,7 @@
         }
 
         h2 {
-          font-family: $font-secondary;
+          font-family: $header-font;
           color: $primary-green;
           margin-bottom: $spacing-lg;
           font-size: 1.8rem;
@@ -113,7 +182,7 @@
 
         .service-features {
           list-style: none;
-          padding: 0;
+          padding: 0 0 0 $spacing-md;
           margin-bottom: $spacing-lg;
 
           @media (max-width: $breakpoint-md) {
@@ -139,6 +208,16 @@
         }
 
         .cta-button {
+          color: $text-light;
+          opacity: 1;
+
+          &:hover {
+            background-color: $accent-red;
+            color: $text-dark;
+            transform: translateY(-2px);
+            box-shadow: $shadow-md;
+          }
+
           @media (max-width: $breakpoint-md) {
             width: 100%;
             padding: $spacing-sm;
@@ -172,7 +251,7 @@
 }
 
 .pricing {
-  padding: $spacing-xl 0;
+  padding: $spacing-lg 0 $spacing-xl;
   background-color: $text-light;
 
   .pricing-content {
@@ -190,13 +269,14 @@
     }
 
     h2 {
+      display: block;
+      width: 100%;
       text-align: center;
-      font-family: $font-secondary;
+      font-family: $header-font;
       color: $primary-green;
-      margin-bottom: $spacing-xl;
+      margin: $spacing-md 0 $spacing-lg;
       font-size: 2rem;
-      position: relative;
-      display: inline-block;
+      font-weight: 700;
 
       &::after {
         content: "";
@@ -209,8 +289,8 @@
       }
 
       @media (max-width: $breakpoint-md) {
-        font-size: 1.8rem;
-        margin-bottom: $spacing-lg;
+        font-size: 1.75rem;
+        margin: $spacing-sm 0 $spacing-md;
       }
     }
 
@@ -253,9 +333,11 @@
         }
 
         h3 {
+          font-family: $header-font;
           color: $secondary-green;
           margin-bottom: $spacing-md;
           font-size: 1.5rem;
+          font-weight: 700;
 
           @media (max-width: $breakpoint-md) {
             font-size: 1.3rem;
@@ -268,15 +350,17 @@
             transition: all $transition-normal;
             position: relative;
             display: inline-block;
-            padding: 4px 8px;
-            margin: -4px -8px;
+            padding: 10px 14px;
+            margin: -10px -14px;
 
             &::before {
               content: "";
               position: absolute;
               inset: 0;
-              border: 2px solid $primary-green;
+              border: 2px solid $accent-red;
               border-radius: $border-radius-sm;
+              box-shadow: 0 8px 24px rgba($accent-red, 0.45),
+                0 2px 8px rgba($accent-red, 0.35);
               clip-path: polygon(0 0, 0 0, 0 0, 0 0);
               pointer-events: none;
             }
@@ -284,7 +368,7 @@
             &:hover {
               color: $primary-green;
               transform: translateY(-1px);
-              box-shadow: $shadow-lg;
+              box-shadow: none;
             }
 
             &:active {
@@ -354,6 +438,16 @@
         }
 
         .cta-button {
+          color: $text-light;
+          opacity: 1;
+
+          &:hover {
+            background-color: $accent-red;
+            color: $text-dark;
+            transform: translateY(-2px);
+            box-shadow: $shadow-md;
+          }
+
           @media (max-width: $breakpoint-md) {
             width: 100%;
             padding: $spacing-sm;

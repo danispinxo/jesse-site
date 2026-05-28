@@ -1,33 +1,118 @@
 @use "variables" as *;
 
+.resources-page {
+  background: $text-light;
+
+  .footer {
+    margin-top: $spacing-sm;
+    padding-top: 0;
+  }
+
+  .page-hero {
+    background: $background-light;
+    padding: $spacing-sm 0 $spacing-xl;
+    border-bottom: none;
+
+    .hero-content {
+      max-width: 580px;
+
+      h1 {
+        display: block;
+        width: 100%;
+        font-family: $header-font;
+        font-size: 3.5rem;
+        line-height: 1.05;
+        margin-bottom: $spacing-md;
+        color: $primary-green;
+        letter-spacing: normal;
+        font-weight: inherit;
+        position: static;
+
+        &::after {
+          content: "";
+          display: block;
+          width: 80px;
+          height: 3px;
+          background: linear-gradient(90deg, $accent-red, transparent);
+          border-radius: 2px;
+          margin: $spacing-sm auto 0;
+          opacity: 1;
+        }
+
+        .subtitle {
+          display: block;
+          max-width: none;
+          margin: 0.35rem auto 0;
+          font-family: $font-primary;
+          font-size: 1rem;
+          font-weight: 700;
+          letter-spacing: 0.08em;
+          text-transform: uppercase;
+          line-height: 1.4;
+          color: $primary-green;
+        }
+      }
+    }
+  }
+
+  .resources-list-section,
+  .books-list-section {
+    background: transparent;
+  }
+}
+
+@media (max-width: $breakpoint-md) {
+  .resources-page .page-hero .hero-content h1 {
+    font-size: 2.7rem;
+
+    .subtitle {
+      font-size: 0.92rem;
+    }
+  }
+
+  .newsletter-section .newsletter-content h2 {
+    font-size: 1.75rem;
+  }
+}
+
+@media (max-width: $breakpoint-sm) {
+  .resources-page .page-hero .hero-content h1 {
+    font-size: 2.2rem;
+    line-height: 1.08;
+
+    .subtitle {
+      font-size: 0.85rem;
+    }
+  }
+}
+
 .newsletter-section {
-  padding: $spacing-lg 0 $spacing-md 0;
-  background: linear-gradient(
-    180deg,
-    rgba($light-green, 0.14) 0%,
-    rgba($background-light, 1) 100%
-  );
-  color: $primary-green;
+  padding: $spacing-lg 1rem $spacing-xl;
+  background: transparent;
+  text-align: center;
 
   .newsletter-content {
-    max-width: 500px;
+    box-sizing: border-box;
+    width: 100%;
+    max-width: 980px;
     margin: 0 auto;
-    padding: $spacing-lg;
+    padding: 2.5rem 2.75rem;
     text-align: center;
     border-radius: $border-radius-lg;
-    background: rgba($text-light, 0.92);
-    border: 1px solid rgba($primary-green, 0.12);
-    box-shadow: $shadow-sm;
+    border: none;
+    background: $primary-green;
+    box-shadow: $shadow-md;
 
     h2 {
+      display: block;
+      width: 100%;
       font-family: $header-font;
-      font-size: 1.5rem;
+      font-size: 2rem;
       font-weight: 700;
-      margin-bottom: 0.5rem;
-      color: $primary-green;
-      letter-spacing: 0.01em;
-      position: relative;
-      display: inline-block;
+      line-height: 1.1;
+      margin-bottom: $spacing-md;
+      color: $text-light;
+      text-align: center;
 
       &::after {
         content: "";
@@ -36,62 +121,63 @@
         height: 3px;
         background: linear-gradient(90deg, $accent-red, transparent);
         border-radius: 2px;
-        margin: $spacing-sm auto 0 auto;
+        margin: $spacing-sm auto 0;
       }
     }
 
     p {
-      margin-bottom: $spacing-md;
-      font-size: 1rem;
-      color: $secondary-green;
+      max-width: 32rem;
+      margin: 0 auto $spacing-md;
+      font-size: 1.1rem;
+      line-height: 1.6;
+      color: $text-light;
     }
 
     a {
-      color: $primary-green;
+      color: $text-light;
+      font-weight: 600;
       text-decoration: underline;
+      text-underline-offset: 0.15em;
 
       &:hover {
-        color: $secondary-green;
+        color: $accent-red;
       }
     }
 
     .cta-button {
-      background-color: $primary-green;
-      color: $text-light;
+      background-color: $accent-red;
+      color: $background-light;
       padding: $spacing-sm $spacing-lg;
       border: none;
       border-radius: 6px;
       font-size: 1rem;
-      font-weight: 700;
+      font-weight: 500;
       cursor: pointer;
       letter-spacing: 0.01em;
-      box-shadow: none;
+      opacity: 1;
+      box-shadow: $shadow-md;
       transition: background $transition-normal, color $transition-normal,
-        transform $transition-normal;
+        transform $transition-normal, box-shadow $transition-normal;
 
       &:hover {
-        background: $secondary-green;
-        color: $accent-red;
+        background-color: $accent-red;
+        color: $background-dark;
         transform: translateY(-2px);
+        box-shadow: $shadow-lg;
       }
     }
   }
 }
 
 .resources-list-section {
-  padding: $spacing-xl 0;
-  background: linear-gradient(
-    180deg,
-    rgba($background-light, 1) 0%,
-    rgba($light-green, 0.14) 100%
-  );
+  padding: $spacing-lg 0;
   position: relative;
-  overflow: hidden;
+  overflow: visible;
   text-align: center;
 
   h2 {
     text-align: center;
-    font-family: $font-secondary;
+    font-family: $header-font;
     color: $primary-green;
     margin-bottom: $spacing-lg;
     position: relative;
@@ -114,44 +200,59 @@
     z-index: 1;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-    gap: $spacing-md $spacing-xl;
+    gap: $spacing-lg;
     max-width: 1100px;
     margin: 0 auto;
-    padding: 0 $spacing-lg;
+    padding: 0 $spacing-lg $spacing-lg;
   }
 
   .resources-list-item {
-    display: flex;
-    align-items: flex-start;
-    gap: $spacing-md;
     padding: $spacing-lg;
-    background: rgba($text-light, 0.94);
-    border: 1px solid rgba($primary-green, 0.12);
-    box-shadow: $shadow-sm;
+    background: $background-light;
+    border: none;
+    box-shadow: $shadow-md;
     border-radius: $border-radius-md;
   }
 
+  .resources-list-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: $spacing-sm;
+  }
+
   .resources-list-icon {
-    color: $primary-green;
-    background: $light-green;
+    color: $text-light;
+    background: $accent-red;
     border-radius: 50%;
     width: 2rem;
     height: 2rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 1.2rem;
+    display: grid;
+    place-items: center;
+    line-height: 0;
+    font-size: 0.9rem;
     flex-shrink: 0;
-    margin-top: 0.2em;
+    margin: $spacing-xs 0;
+
+    svg {
+      display: block;
+      width: 1em;
+      height: 1em;
+      margin: 0;
+      transform: translateY(0.5px);
+    }
   }
 
   .resources-list-title {
+    font-family: $font-secondary;
     font-weight: 600;
     color: $primary-green;
     font-size: 1.1rem;
     display: block;
 
     a {
+      font-family: inherit;
       color: $primary-green;
       text-decoration: underline;
 
@@ -165,24 +266,19 @@
     color: $text-dark;
     font-size: 1rem;
     display: block;
-    margin-top: 0.1em;
+    line-height: 1.6;
   }
 }
 
 .books-list-section {
-  padding: $spacing-xl 0;
-  background: linear-gradient(
-    180deg,
-    rgba($text-light, 1) 0%,
-    rgba($light-green, 0.08) 100%
-  );
+  padding: $spacing-lg 0;
   position: relative;
-  overflow: hidden;
+  overflow: visible;
   text-align: center;
 
   h2 {
     text-align: center;
-    font-family: $font-secondary;
+    font-family: $header-font;
     color: $primary-green;
     margin-bottom: $spacing-lg;
     position: relative;
@@ -204,45 +300,61 @@
     position: relative;
     z-index: 1;
     display: grid;
+    align-items: stretch;
     grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-    gap: $spacing-md $spacing-xl;
+    gap: $spacing-lg;
     max-width: 1100px;
     margin: 0 auto;
-    padding: 0 $spacing-lg;
+    padding: $spacing-lg $spacing-lg 0;
   }
 
   .books-list-item {
-    display: flex;
-    align-items: flex-start;
-    gap: $spacing-md;
     padding: $spacing-lg;
-    background: rgba($background-light, 0.96);
-    border: 1px solid rgba($primary-green, 0.1);
-    box-shadow: $shadow-sm;
+    background: $background-light;
+    border: none;
+    box-shadow: $shadow-md;
     border-radius: $border-radius-md;
   }
 
+  .books-list-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: $spacing-sm;
+  }
+
   .books-list-icon {
-    color: $secondary-green;
-    background: $light-green;
+    color: $text-light;
+    background: $accent-red;
     border-radius: 50%;
     width: 2rem;
     height: 2rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 1.2rem;
+    display: grid;
+    place-items: center;
+    line-height: 0;
+    font-size: 0.9rem;
     flex-shrink: 0;
-    margin-top: 0.2em;
+    margin: $spacing-xs 0;
+
+    svg {
+      display: block;
+      width: 1em;
+      height: 1em;
+      margin: 0;
+      transform: translateY(0.5px);
+    }
   }
 
   .books-list-title {
+    font-family: $font-secondary;
     font-weight: 600;
     color: $primary-green;
     font-size: 1.1rem;
     display: block;
 
     a {
+      font-family: inherit;
       color: $primary-green;
       text-decoration: underline;
 

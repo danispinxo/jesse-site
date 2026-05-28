@@ -80,7 +80,7 @@ export const pricingPlans = [
     duration: "50 minutes",
     sectionId: "art-psychotherapy",
     features: [
-      "Creative sessions",
+      "Creative exploration",
       "Supportive space",
       "Process-focused",
       "Boost self-expression",
@@ -172,7 +172,7 @@ export const articles = [
     link: "https://www.reddoorshelter.ca/",
   },
   {
-    title: "Get Help Here: Mental health support (Government of Canada)",
+    title: "Get Help Here (Government of Canada)",
     description:
       "This official Government of Canada portal provides a comprehensive directory of mental health resources, crisis lines, and support services available across the country. The site offers information for people in crisis, youth, Indigenous Peoples, veterans, and those seeking help with substance use or family violence. It also connects users to national organizations, suicide prevention resources, and local supports, ensuring that everyone in Canada can find the help they need, when they need it.",
     link: "https://www.canada.ca/en/public-health/campaigns/get-help-here.html",

@@ -8,7 +8,7 @@ import { articles, recommendedBooks } from "../scripts/constants";
 
 export default function Resources() {
   return (
-    <main className="page-content">
+    <main className="page-content resources-page">
       <section className="page-hero">
         <div className="hero-content">
           <h1>
@@ -25,9 +25,6 @@ export default function Resources() {
         <div className="resources-list-grid">
           {articles.map((article, index) => (
             <div key={index} className="resources-list-item">
-              <span className="resources-list-icon">
-                <FontAwesomeIcon icon={faSeedling} />
-              </span>
               <div className="resources-list-content">
                 <span className="resources-list-title">
                   <Link
@@ -37,6 +34,9 @@ export default function Resources() {
                   >
                     {article.title}
                   </Link>
+                </span>
+                <span className="resources-list-icon" aria-hidden="true">
+                  <FontAwesomeIcon icon={faSeedling} />
                 </span>
                 <span className="resources-list-desc">
                   {article.description}
@@ -52,9 +52,6 @@ export default function Resources() {
         <div className="books-list-grid">
           {recommendedBooks.map((book, index) => (
             <div key={index} className="books-list-item">
-              <span className="books-list-icon">
-                <FontAwesomeIcon icon={faBook} />
-              </span>
               <div className="books-list-content">
                 <span className="books-list-title">
                   <Link
@@ -66,6 +63,9 @@ export default function Resources() {
                   </Link>
                 </span>
                 <span className="books-list-author">by {book.author}</span>
+                <span className="books-list-icon" aria-hidden="true">
+                  <FontAwesomeIcon icon={faBook} />
+                </span>
                 <span className="books-list-desc">{book.description}</span>
               </div>
             </div>

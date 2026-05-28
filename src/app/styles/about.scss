@@ -1,31 +1,85 @@
+@use "sass:color";
 @use "variables" as *;
 
-.page-hero {
-  .hero-content {
-    h1 {
-      font-family: $header-font;
-    }
+$about-content-max: 980px;
+$about-section-x: 1rem;
+$about-card-padding: clamp(2rem, 4vw, 3rem);
+$about-card-surface: $background-light;
 
-    .subtitle {
-      font-family: $font-primary;
-      font-weight: 400;
-      line-height: 1.6;
+@mixin about-section-shell {
+  padding: 0 $about-section-x $spacing-lg;
+  background: transparent;
+}
+
+@mixin about-content-card {
+  box-sizing: border-box;
+  width: 100%;
+  max-width: $about-content-max;
+  margin-left: auto;
+  margin-right: auto;
+  padding: $about-card-padding;
+  border-radius: $border-radius-lg;
+  background: $about-card-surface;
+  border: none;
+  box-shadow: $shadow-md;
+}
+
+.about-page {
+  background: $text-light;
+
+  .footer {
+    margin-top: $spacing-sm;
+    padding-top: 0;
+  }
+
+  .page-hero {
+    background: $background-light;
+    padding: $spacing-sm 0 $spacing-xl;
+
+    .hero-content {
+      max-width: 580px;
+
+      h1 {
+        display: block;
+        width: 100%;
+        font-family: $header-font;
+        font-size: 3.5rem;
+        line-height: 1.05;
+        margin-bottom: $spacing-md;
+        color: $primary-green;
+
+        &::after {
+          width: 80px;
+          height: 3px;
+          background: linear-gradient(90deg, $accent-red, transparent);
+          border-radius: 2px;
+          margin: $spacing-sm auto 0;
+          opacity: 1;
+        }
+
+        .subtitle {
+          display: block;
+          max-width: none;
+          margin: 0.35rem auto 0;
+          font-family: $font-primary;
+          font-size: 1rem;
+          font-weight: 700;
+          letter-spacing: 0.08em;
+          text-transform: uppercase;
+          line-height: 1.4;
+          color: $primary-green;
+        }
+      }
     }
   }
 }
 
 .profile-section {
-  padding: $spacing-xl 0;
-  background: linear-gradient(
-    180deg,
-    rgba($text-light, 1) 0%,
-    rgba($light-green, 0.12) 100%
-  );
+  @include about-section-shell;
+  padding-top: $spacing-xl;
 
   .profile-content {
-    max-width: 1100px;
-    margin: 0 auto;
-    padding: 0 $spacing-lg;
+    @include about-content-card;
     display: flex;
     gap: $spacing-xl;
     align-items: flex-start;
@@ -35,28 +89,84 @@
       text-align: center;
     }
 
+    @media (max-width: $breakpoint-md) {
+      gap: $spacing-lg;
+    }
+
     .profile-image-wrapper {
+      position: relative;
       flex: 0 0 280px;
       width: 280px;
-      aspect-ratio: 1;
-      border-radius: 50%;
-      overflow: hidden;
-      box-shadow: 0 12px 28px rgb(47 39 35 / 12%);
+      height: 280px;
+      overflow: visible;
+
+      @media (min-width: $breakpoint-lg) {
+        margin-top: $spacing-xl;
+      }
+
+      @media (max-width: $breakpoint-lg) {
+        margin: 0 auto;
+      }
+
+      @media (min-width: $breakpoint-md) and (max-width: $breakpoint-lg) {
+        margin-top: $spacing-xl;
+        margin-left: auto;
+        margin-right: auto;
+      }
 
       @media (max-width: $breakpoint-md) {
         flex-basis: 150px;
         width: 150px;
+        height: 150px;
+        margin-top: $spacing-md;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .profile-image-accent {
+        position: absolute;
+        top: -60px;
+        right: -120px;
+        bottom: auto;
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+        background: linear-gradient(
+          180deg,
+          rgba($light-green, 0.95) 0%,
+          rgba($secondary-green, 0.14) 100%
+        );
+        box-shadow: 0 16px 34px rgba($secondary-green, 0.12);
+        transform: rotate(4deg);
+        z-index: 0;
+
+        @media (min-width: $breakpoint-md) and (max-width: $breakpoint-lg) {
+          top: 24px;
+          right: -88px;
+        }
+
+        @media (max-width: $breakpoint-md) {
+          top: 8px;
+          right: -8px;
+        }
       }
 
       .profile-image {
+        position: relative;
+        z-index: 1;
         display: block;
         width: 100%;
         height: 100%;
+        border-radius: 50%;
+        overflow: hidden;
         object-fit: cover;
+        box-shadow: 0 12px 28px rgb(47 39 35 / 12%);
       }
     }
 
     .profile-text {
+      position: relative;
+      z-index: 2;
       flex: 1 1 auto;
       min-width: 0;
       text-align: left;
@@ -66,11 +176,12 @@
       }
 
       h2 {
+        display: block;
+        width: 100%;
         font-family: $header-font;
         color: $primary-green;
-        margin-bottom: $spacing-lg;
-        position: relative;
-        display: inline-block;
+        margin-bottom: $spacing-md;
+        text-align: center;
 
         &::after {
           content: "";
@@ -84,30 +195,28 @@
       }
 
       p {
-        margin-bottom: $spacing-lg;
-        line-height: 1.8;
+        position: relative;
+        z-index: 3;
+        margin-bottom: $spacing-md;
+        line-height: 1.75;
       }
 
+      p:last-child {
+        margin-bottom: 0;
+      }
     }
   }
 }
 
 .about-details-section {
-  padding: $spacing-lg 0 $spacing-xl;
-  background: rgba($background-light, 0.95);
+  @include about-section-shell;
 
   .about-details-content {
-    max-width: 920px;
-    margin: 0 auto;
-    padding: clamp(2rem, 4vw, 3rem);
+    @include about-content-card;
     display: flex;
     flex-direction: column;
-    gap: $spacing-xl;
+    gap: $spacing-md;
     align-items: start;
-    border-radius: $border-radius-lg;
-    background: rgba($text-light, 0.92);
-    border: 1px solid rgba($primary-green, 0.12);
-    box-shadow: $shadow-sm;
 
     @media (max-width: $breakpoint-lg) {
       padding: 1.75rem 1.25rem;
@@ -116,13 +225,15 @@
 
   .about-summary {
     h2 {
-      font-family: $font-secondary;
-      color: $primary-green;
-      margin-bottom: $spacing-lg;
-      font-size: 2rem;
+      display: block;
+      width: 100%;
+      margin-bottom: $spacing-md;
+      font-family: $header-font;
+      font-size: 2.5rem;
       font-weight: 700;
-      position: relative;
-      display: inline-block;
+      line-height: 1.1;
+      text-align: center;
+      color: $primary-green;
 
       &::after {
         content: "";
@@ -135,23 +246,33 @@
       }
     }
 
-    .profile-name {
-      margin-bottom: $spacing-sm;
-      font-family: $font-secondary;
-      font-size: 2rem;
-      line-height: 1.1;
-      color: $primary-green;
+    .about-credentials {
+      margin: 0 0 0.05rem;
+      line-height: 1.3;
+
+      strong {
+        font-weight: 700;
+      }
     }
 
-    .profile-lede {
-      font-size: 1.2rem;
-      color: $secondary-green;
+    .about-subtitle {
+      margin: 0 0 $spacing-md;
+      font-size: 0.98rem;
+      line-height: 1.3;
+      font-weight: 500;
+      color: $text-dark;
+    }
+
+    .about-lede {
+      font-size: 1.35rem;
+      line-height: 1.55;
+      color: $accent-red;
     }
 
     p {
       max-width: none;
-      margin-bottom: 1rem;
-      line-height: 1.8;
+      margin-bottom: 0.75rem;
+      line-height: 1.75;
       color: $text-dark;
     }
 
@@ -166,8 +287,11 @@
   padding-top: 0;
 
   h3 {
-    color: $secondary-green;
-    margin-bottom: $spacing-md;
+    font-family: $header-font;
+    color: $primary-green;
+    margin-bottom: $spacing-sm;
+    font-size: 1.5rem;
+    font-weight: 700;
   }
 
   ul {
@@ -188,38 +312,39 @@
         left: 0;
       }
     }
+
+    a {
+      color: $accent-red;
+      font-weight: 600;
+      text-decoration: underline;
+      text-underline-offset: 0.15em;
+
+      &:hover {
+        color: color.adjust($accent-red, $lightness: -8%);
+      }
+    }
   }
 }
 
 .affiliation-section {
-  padding: $spacing-xl 0;
-  background: linear-gradient(
-    180deg,
-    rgba($light-green, 0.16) 0%,
-    rgba($background-light, 1) 100%
-  );
-  border-top: 1px solid rgba($text-dark, 0.1);
+  @include about-section-shell;
+  padding-bottom: 2.75rem;
+  overflow: visible;
   text-align: center;
 
   .affiliation-content {
-    max-width: 1100px;
-    margin: 0 auto;
-    padding: $spacing-lg;
-    border-radius: $border-radius-lg;
-    background: rgba($text-light, 0.9);
-    border: 1px solid rgba($primary-green, 0.12);
-    box-shadow: $shadow-sm;
+    @include about-content-card;
   }
 
   h2 {
+    display: block;
+    width: 100%;
     text-align: center;
-    font-family: $font-secondary;
+    font-family: $header-font;
     color: $primary-green;
     margin-bottom: $spacing-lg;
     font-size: 2rem;
     font-weight: 700;
-    position: relative;
-    display: inline-block;
 
     &::after {
       content: "";
@@ -241,52 +366,90 @@
   .affiliation-images {
     display: flex;
     flex-wrap: wrap;
-    gap: 0.5rem;
-    justify-content: space-around;
+    gap: $spacing-md;
+    justify-content: center;
     align-items: center;
     margin-top: $spacing-md;
 
-    .affiliation-img {
-      max-width: 180px;
-      height: auto;
+    a {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 9.5rem;
+      height: 9.5rem;
+      border-radius: 50%;
+      background: $text-light;
+      padding: $spacing-md;
       transition: transform $transition-normal;
 
       &:hover {
-        transform: scale(1.05);
+        transform: translateY(-2px);
       }
     }
 
+    .affiliation-img {
+      display: block;
+      width: 100%;
+      max-width: 6.5rem;
+      height: auto;
+      max-height: 5.5rem;
+      object-fit: contain;
+    }
+
     .tati-logo {
-      padding: 3rem;
+      max-width: 5rem;
+      max-height: 4.5rem;
+    }
+
+    @media (min-width: $breakpoint-md) and (max-width: $breakpoint-lg) {
+      gap: $spacing-sm;
+
+      a {
+        width: 7rem;
+        height: 7rem;
+        padding: $spacing-sm;
+      }
+
+      .affiliation-img {
+        max-width: 4.5rem;
+        max-height: 3.75rem;
+      }
+
+      .tati-logo {
+        max-width: 3.5rem;
+        max-height: 3rem;
+      }
     }
   }
 }
 
 .cta-section {
-  padding: $spacing-lg 0 $spacing-md 0;
-  background: linear-gradient(
-    180deg,
-    rgba($text-light, 0.96) 0%,
-    rgba($light-green, 0.12) 100%
-  );
-  color: $primary-green;
+  @include about-section-shell;
   text-align: center;
-  border-top: 1px solid rgba($primary-green, 0.08);
 
   .cta-content {
-    max-width: 500px;
-    margin: 0 auto;
-    padding: 0 $spacing-md;
+    box-sizing: border-box;
+    width: 100%;
+    max-width: $about-content-max;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 2.5rem 2.75rem;
+    border-radius: $border-radius-lg;
+    border: none;
+    background: $primary-green;
+    box-shadow: $shadow-md;
+    text-align: center;
 
     h2 {
+      display: block;
+      width: 100%;
       font-family: $header-font;
-      font-size: 1.5rem;
+      font-size: 2rem;
       font-weight: 700;
-      margin-bottom: 0.5rem;
-      color: $primary-green;
-      letter-spacing: 0.01em;
-      position: relative;
-      display: inline-block;
+      line-height: 1.1;
+      margin-bottom: $spacing-md;
+      color: $text-light;
+      text-align: center;
 
       &::after {
         content: "";
@@ -295,45 +458,58 @@
         height: 3px;
         background: linear-gradient(90deg, $accent-red, transparent);
         border-radius: 2px;
-        margin: $spacing-sm auto 0 auto;
+        margin: $spacing-sm auto 0;
       }
     }
 
     p {
-      margin-bottom: $spacing-md;
-      font-size: 1rem;
-      color: $secondary-green;
+      max-width: 32rem;
+      margin: 0 auto $spacing-md;
+      font-size: 1.1rem;
+      line-height: 1.6;
+      color: $text-light;
     }
 
     .cta-button {
-      background-color: $primary-green;
-      color: $text-light;
+      background-color: $accent-red;
+      color: $background-light;
       padding: $spacing-sm $spacing-lg;
       border: none;
       border-radius: 6px;
       font-size: 1rem;
-      font-weight: 700;
+      font-weight: 500;
       cursor: pointer;
       letter-spacing: 0.01em;
-      box-shadow: none;
+      opacity: 1;
+      box-shadow: $shadow-md;
       transition: background $transition-normal, color $transition-normal,
-        transform $transition-normal;
+        transform $transition-normal, box-shadow $transition-normal;
 
       &:hover {
-        background: $secondary-green;
-        color: $accent-red;
+        background-color: $accent-red;
+        color: $background-dark;
         transform: translateY(-2px);
+        box-shadow: $shadow-lg;
       }
     }
   }
 }
 
 @media (max-width: $breakpoint-md) {
+  .about-page .page-hero .hero-content h1 {
+    font-size: 2.7rem;
+
+    .subtitle {
+      font-size: 0.92rem;
+    }
+  }
+
   .about-details-section {
     .about-summary {
       text-align: left;
 
-      .profile-name {
+      h2 {
+        text-align: center;
         font-size: 1.75rem;
       }
     }
@@ -342,26 +518,37 @@
   .credentials-card {
     text-align: left;
   }
+
+  .cta-section .cta-content h2 {
+    font-size: 1.75rem;
+  }
+}
+
+@media (max-width: $breakpoint-sm) {
+  .about-page .page-hero .hero-content h1 {
+    font-size: 2.2rem;
+    line-height: 1.08;
+
+    .subtitle {
+      font-size: 0.85rem;
+    }
+  }
 }
 
 .values-list-section {
-  padding: $spacing-xl;
-  background: linear-gradient(
-    180deg,
-    rgba($light-green, 0.14) 0%,
-    rgba($text-light, 1) 100%
-  );
+  @include about-section-shell;
   text-align: center;
 
   h2 {
+    display: block;
+    width: 100%;
     text-align: center;
-    font-family: $font-secondary;
+    font-family: $header-font;
     color: $primary-green;
     margin-bottom: $spacing-lg;
     font-size: 2rem;
     font-weight: 700;
     position: relative;
-    display: inline-block;
 
     &::after {
       content: "";
@@ -375,13 +562,8 @@
   }
 
   .values-content {
-    max-width: 860px;
-    margin: 0 auto;
-    padding: clamp(2rem, 4vw, 3rem);
-    border-radius: $border-radius-lg;
-    background: rgba($text-light, 0.92);
-    border: 1px solid rgba($primary-green, 0.12);
-    box-shadow: $shadow-sm;
+    @include about-content-card;
+    text-align: left;
   }
 
   .values-intro {
@@ -389,13 +571,15 @@
     font-size: 1.08rem;
     line-height: 1.85;
     text-align: left;
-    margin: 0 auto $spacing-lg;
+    margin: 0 0 $spacing-lg;
+    padding: 0;
   }
 
   .support-approach-list {
     list-style: none;
-    max-width: 760px;
-    margin: 0 0 $spacing-lg;
+    width: 88%;
+    max-width: 42rem;
+    margin: 0 auto $spacing-lg;
     padding: 0;
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -424,32 +608,22 @@
 }
 
 .therapy-feels-section {
-  padding: $spacing-xl;
-  background: linear-gradient(
-    180deg,
-    rgba($text-light, 1) 0%,
-    rgba($light-green, 0.14) 100%
-  );
+  @include about-section-shell;
 
   .therapy-feels-content {
-    max-width: 860px;
-    margin: 0 auto;
-    padding: clamp(2rem, 4vw, 3rem);
-    border-radius: $border-radius-lg;
-    background: rgba($background-light, 0.95);
-    border: 1px solid rgba($primary-green, 0.12);
-    box-shadow: $shadow-sm;
+    @include about-content-card;
     text-align: left;
   }
 
   .therapy-feels-content h3 {
+    display: block;
+    width: 100%;
     font-family: $header-font;
     color: $primary-green;
     margin-bottom: $spacing-lg;
     font-size: 2rem;
     font-weight: 700;
-    position: relative;
-    display: inline-block;
+    text-align: center;
 
     &::after {
       content: "";
@@ -457,14 +631,14 @@
       width: 80px;
       height: 3px;
       background: linear-gradient(90deg, $accent-red, transparent);
-      margin: $spacing-sm auto 0 0;
+      margin: $spacing-sm auto 0;
       border-radius: 2px;
     }
   }
 
   .therapy-feels-intro,
   .therapy-feels-summary {
-    max-width: 820px;
+    max-width: none;
     margin: 0 0 $spacing-md;
     color: $text-dark;
     font-size: 1.08rem;
@@ -473,7 +647,7 @@
   }
 
   .therapy-feels-subheading {
-    max-width: 820px;
+    max-width: none;
     margin: $spacing-lg 0 $spacing-md;
     font-family: $font-primary;
     font-size: 1.15rem;
@@ -486,7 +660,8 @@
     display: grid;
     grid-template-columns: 1fr;
     gap: 0.35rem;
-    max-width: 820px;
+    max-width: none;
+    padding-left: $spacing-md;
   }
 
   .therapy-feels-item {
@@ -526,10 +701,6 @@
   .therapy-feels-section {
     .therapy-feels-content h3 {
       font-size: 1.75rem;
-
-      &::after {
-        margin-left: 0;
-      }
     }
 
     .therapy-feels-content {

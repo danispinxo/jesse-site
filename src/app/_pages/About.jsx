@@ -28,7 +28,7 @@ const therapyWithMePoints = [
 
 export default function About() {
   return (
-    <main className="page-content">
+    <main className="page-content about-page">
       <section className="page-hero">
         <div className="hero-content">
           <h1>
@@ -43,6 +43,7 @@ export default function About() {
       <section className="profile-section">
         <div className="profile-content">
           <div className="profile-image-wrapper">
+            <span className="profile-image-accent" aria-hidden="true" />
             <Image
               className="profile-image"
               src="/images/Headshot2.jpg"
@@ -93,15 +94,14 @@ export default function About() {
         <div className="about-details-content">
           <div className="about-summary">
             <h2>About Me</h2>
-            <p className="profile-name">Jesse Pajuäär</p>
-            <p>
+            <p className="about-credentials">
               <strong>Registered Psychotherapist, RCAT-S, DTATI, HBA</strong>
             </p>
-            <p>
+            <p className="about-subtitle">
               Offering psychotherapy, art therapy, and clinical supervision
               across Ontario
             </p>
-            <p className="profile-lede">
+            <p className="about-lede">
               I believe therapy should feel like a place where you can exhale.
             </p>
             <p>

@@ -45,11 +45,11 @@ export default function About() {
           <div className="profile-image-wrapper">
             <Image
               className="profile-image"
-              src="/images/JessePajuaar.webp"
+              src="/images/Headshot2.jpg"
               alt="Headshot of Jesse Pajuaar"
-              width={400}
-              height={400}
-              sizes="(max-width: 480px) 150px, (max-width: 640px) 180px, (max-width: 768px) 250px, 400px"
+              width={280}
+              height={280}
+              sizes="(max-width: 480px) 150px, (max-width: 640px) 180px, (max-width: 768px) 220px, 280px"
               style={{ height: "auto" }}
               priority
             />

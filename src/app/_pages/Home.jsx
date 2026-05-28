@@ -81,15 +81,17 @@ export default function Home() {
         </div>
         <div className="hero-image-wrapper">
           <span className="hero-image-accent" />
-          <Image
-            className="hero-image"
-            src="/images/JessePajuaar.webp"
-            alt="Professional headshot of Jesse Pajuäär, a registered psychotherapist"
-            width={320}
-            height={320}
-            priority
-            sizes="(max-width: 768px) 250px, 320px"
-          />
+          <div className="hero-image-clip">
+            <Image
+              className="hero-image"
+              src="/images/JessePajuaar.webp"
+              alt="Professional headshot of Jesse Pajuäär, a registered psychotherapist"
+              width={420}
+              height={420}
+              priority
+              sizes="(max-width: 576px) 280px, 350px"
+            />
+          </div>
         </div>
       </section>
 

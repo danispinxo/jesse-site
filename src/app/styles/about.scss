@@ -1,5 +1,19 @@
 @use "variables" as *;
 
+.page-hero {
+  .hero-content {
+    h1 {
+      font-family: $header-font;
+    }
+
+    .subtitle {
+      font-family: $font-primary;
+      font-weight: 400;
+      line-height: 1.6;
+    }
+  }
+}
+
 .profile-section {
   padding: $spacing-xl 0;
   background: linear-gradient(
@@ -22,9 +36,10 @@
     }
 
     .profile-image-wrapper {
-      flex: 0 0 340px;
-      width: 340px;
-      border-radius: 10%;
+      flex: 0 0 280px;
+      width: 280px;
+      aspect-ratio: 1;
+      border-radius: 50%;
       overflow: hidden;
       box-shadow: 0 12px 28px rgb(47 39 35 / 12%);
 
@@ -36,7 +51,8 @@
       .profile-image {
         display: block;
         width: 100%;
-        height: auto;
+        height: 100%;
+        object-fit: cover;
       }
     }
 
@@ -50,7 +66,7 @@
       }
 
       h2 {
-        font-family: $font-secondary;
+        font-family: $header-font;
         color: $primary-green;
         margin-bottom: $spacing-lg;
         position: relative;

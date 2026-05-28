@@ -19,7 +19,7 @@ const therapyWithMePoints = [
 ];
 const reasonsForComingGroups = [
   {
-    title: "You feel",
+    title: "You feel...",
     items: [
       "anxious, overwhelmed, or stuck in your thoughts",
       "angry more often than you'd like",
@@ -28,7 +28,7 @@ const reasonsForComingGroups = [
     ],
   },
   {
-    title: "Your relationships",
+    title: "Your relationships...",
     items: [
       "feel confusing, painful, or repetitive",
       "are shaped by old family dynamics",
@@ -36,7 +36,7 @@ const reasonsForComingGroups = [
     ],
   },
   {
-    title: "You're navigating",
+    title: "You're navigating...",
     items: [
       "a major life transition",
       "questions about identity, gender, or sexuality",
@@ -46,10 +46,12 @@ const reasonsForComingGroups = [
     ],
   },
   {
-    title: "You want",
+    title: "You want...",
     items: [
       "to reconnect with creativity",
       "to feel more at home in yourself",
+      "support making changes that feel long overdue",
+      "a clearer sense of direction and purpose",
     ],
   },
 ];

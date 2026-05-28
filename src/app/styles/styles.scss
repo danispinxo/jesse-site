@@ -679,7 +679,7 @@ main p {
 
   h2 {
     text-align: center;
-    font-family: $font-secondary;
+    font-family: $header-font;
     color: $primary-green;
     margin-bottom: $spacing-lg;
     font-size: 2rem;
@@ -1361,6 +1361,15 @@ main.home {
     max-width: none;
     gap: 1.25rem;
   }
+
+  .specialty-group {
+    padding: $spacing-lg;
+    border-radius: $border-radius-md;
+    background: $background-light;
+    border: none;
+    text-align: left;
+    box-shadow: none;
+  }
 }
 
 @media (max-width: $breakpoint-xl) {
@@ -1571,7 +1580,7 @@ main.home {
     }
 
     .specialty-group {
-      padding: 1.25rem 1rem;
+      padding: $spacing-md;
     }
   }
 }

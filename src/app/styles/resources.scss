@@ -325,10 +325,16 @@
 @media (max-width: $breakpoint-md) {
   .resources-list-section,
   .books-list-section {
+    width: 100%;
+    max-width: none;
+    margin: 0;
+    padding: $spacing-md 0;
+
     .resources-list-grid,
     .books-list-grid {
       grid-template-columns: 1fr;
-      padding: 1.5rem 0;
+      gap: $spacing-md;
+      padding: 0 1rem $spacing-md;
     }
   }
 }
@@ -336,12 +342,8 @@
 @media (max-width: $breakpoint-sm) {
   .resources-list-section,
   .books-list-section {
-    width: 80%;
-    max-width: 400px;
-    margin-left: 1.5rem;
-  }
-
-  h2 {
-    font-size: 2rem;
+    h2 {
+      font-size: 2rem;
+    }
   }
 }

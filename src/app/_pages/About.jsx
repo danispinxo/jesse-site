@@ -1,43 +1,34 @@
 "use client";
-import { useState } from "react";
 import "../styles/about.scss";
 import Image from "next/image";
 import Footer from "../_components/Footer";
-import {
-  faLeaf,
-  faSeedling,
-  faChevronLeft,
-  faChevronRight,
-} from "@fortawesome/free-solid-svg-icons";
+import { faArrowRight, faLeaf } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { approaches, specialties } from "../scripts/constants";
+
+const consultationUrl = "https://jpts.noustalk.com/contactme";
+const supportApproaches = [
+  "Art therapy",
+  "Narrative therapy",
+  "Couples therapy",
+  "Identity, performance, and masculinity",
+  "Political & Social Justice",
+  "Attachment",
+];
+const therapyWithMePoints = [
+  "Space to explore your thoughts and emotions without judgment",
+  "Gentle curiosity about how your past shapes your present",
+  "Attention to how stress, trauma, and emotion live in the body",
+  "Support in understanding your identity, values, and sense of self",
+  "Conversations about masculinity, roles, and expectations that may feel hard to name",
+  "Creative and expressive tools when words aren't enough",
+  "Awareness of how social, cultural, and political systems impact your well-being",
+  "A focus on your strengths, resilience, and capacity for growth",
+  "A pace that feels safe, collaborative, and respectful",
+];
 
 export default function About() {
-  const [currentApproachIndex, setCurrentApproachIndex] = useState(0);
-  const [currentSpecialtyIndex, setCurrentSpecialtyIndex] = useState(0);
-
-  const nextApproach = () => {
-    setCurrentApproachIndex((prev) => (prev + 1) % approaches.length);
-  };
-
-  const prevApproach = () => {
-    setCurrentApproachIndex(
-      (prev) => (prev - 1 + approaches.length) % approaches.length
-    );
-  };
-
-  const nextSpecialty = () => {
-    setCurrentSpecialtyIndex((prev) => (prev + 1) % specialties.length);
-  };
-
-  const prevSpecialty = () => {
-    setCurrentSpecialtyIndex(
-      (prev) => (prev - 1 + specialties.length) % specialties.length
-    );
-  };
-
   return (
-    <main className="page-content">
+    <main className="page-content about-page">
       <section className="page-hero">
         <div className="hero-content">
           <h1>
@@ -51,57 +42,191 @@ export default function About() {
 
       <section className="profile-section">
         <div className="profile-content">
-          <div className="profile-image">
+          <div className="profile-image-wrapper">
+            <span className="profile-image-accent" aria-hidden="true" />
             <Image
               className="profile-image"
-              src="/images/JessePajuaar.webp"
+              src="/images/Headshot2.jpg"
               alt="Headshot of Jesse Pajuaar"
-              width={400}
-              height={400}
-              sizes="(max-width: 480px) 150px, (max-width: 640px) 180px, (max-width: 768px) 250px, 400px"
+              width={280}
+              height={280}
+              sizes="(max-width: 480px) 150px, (max-width: 640px) 180px, (max-width: 768px) 220px, 280px"
               style={{ height: "auto" }}
               priority
             />
           </div>
           <div className="profile-text">
-            <h2>Professional Background</h2>
+            <h2>How I Can Help</h2>
             <p>
-              I received my Honours BA in Psychology from York University, and
-              my Masters level diploma in Art Therapy from the Toronto Art
-              Therapy Institute (TATI). I am a fully qualified Registered
-              Psychotherapist with the College of Registered Psychotherapists of
-              Ontario (CRPO), a Professional member of the Canadian Art Therapy
-              Association (CATA), a Registered Canadian Art Therapist (RCAT-S),
-              and a member of the Society of Estonian Artists in Toronto (EKKT).
+              We all want a fuller, more meaningful life, and most of us are
+              doing the best we can with what we have. Still, it is easy to
+              get stuck: caught in routines, living for others, or sensing
+              that something important is missing. Even asking "What do I
+              want?" can feel overwhelming. Therapy does not have to be about
+              fixing what is "wrong." It can be a space for clarity,
+              liberation, and meaningful change. Everything we do meets a
+              need, or we would not do it; and getting curious about those
+              needs can open the door to a life that feels more aligned and
+              self-directed. You do not need to have it all figured out to
+              begin therapy.
             </p>
-            <div className="credentials">
-              <h3>Credentials & Education</h3>
-              <ul>
-                <li>8 years of experience</li>
-                <li>Registered Psychotherapist (RP)</li>
-                <li>Registered Canadian Art Therapist Supervisor (RCAT-S)</li>
-                <li>Master's level Diploma in Art Therapy (DTATI)</li>
-                <li>Honours Bachelor of Arts (HBA) in Psychotherapy</li>
-                <li>
-                  Licensed Member of the College of Registered Psychotherapists
-                  of Ontario
-                </li>
-                <li>
-                  Professional Member of the Canadian Art Therapy Association
-                </li>
-                <li>
-                  Verified on{" "}
-                  <a
-                    href="https://www.psychologytoday.com/ca/therapists/jesse-pajuaar-toronto-on/818157"
-                    target="_blank"
-                    rel="noopener noreferer"
-                  >
-                    Psychology Today
-                  </a>
-                </li>
-              </ul>
-            </div>
+            <p>
+              I approach each session with the belief that you are the expert
+              of your own life. There are no judgements or assumptions made
+              during our time; my focus is on collaborating with you to
+              create a space where your voice, your wants, and your unique
+              perspectives are not only heard, but supported and advocated
+              for. You do not have to carry it alone.
+            </p>
+            <p>
+              You are not the problem, the problem is the problem; you need
+              not limit your life to it. I bring a feminist and social-justice
+              lens that honours you and centres your lived experience in
+              context. Together, we focus on what matters most to you,
+              nurture your sense of agency, and create space for change that
+              feels possible and true to the life you want to live.
+            </p>
           </div>
+        </div>
+      </section>
+
+      <section className="about-details-section">
+        <div className="about-details-content">
+          <div className="about-summary">
+            <h2>About Me</h2>
+            <p className="about-credentials">
+              <strong>Registered Psychotherapist, RCAT-S, DTATI, HBA</strong>
+            </p>
+            <p className="about-subtitle">
+              Offering psychotherapy, art therapy, and clinical supervision
+              across Ontario
+            </p>
+            <p className="about-lede">
+              I believe therapy should feel like a place where you can exhale.
+            </p>
+            <p>
+              Many people come to me feeling stuck, overwhelmed, or unsure of
+              what they need, only knowing that something does not feel right.
+              You do not need to have the right words or a clear goal to begin.
+              We start wherever you are.
+            </p>
+            <p>
+              In our work together, you can expect a space that is
+              collaborative, non-judgmental, and grounded in curiosity. I
+              approach each session with the belief that you are the expert in
+              your own life, and my role is to help you make sense of patterns,
+              reconnect with yourself, and move toward a life that feels more
+              aligned and meaningful.
+            </p>
+            <p>
+              My practice is informed by a feminist, anti-oppressive, and
+              social-justice lens that honours your lived experience and the
+              systems that shape it. You do not have to carry things alone
+              here.
+            </p>
+          </div>
+
+          <div className="credentials-card">
+            <h3>Credentials & Education</h3>
+            <ul>
+              <li>8 years of experience</li>
+              <li>Registered Psychotherapist (RP)</li>
+              <li>Registered Canadian Art Therapist Supervisor (RCAT-S)</li>
+              <li>Master's level Diploma in Art Therapy (DTATI)</li>
+              <li>Honours Bachelor of Arts (HBA) in Psychotherapy</li>
+              <li>
+                Licensed Member of the College of Registered Psychotherapists
+                of Ontario
+              </li>
+              <li>
+                Professional Member of the Canadian Art Therapy Association
+              </li>
+              <li>
+                Verified on{" "}
+                <a
+                  href="https://www.psychologytoday.com/ca/therapists/jesse-pajuaar-toronto-on/818157"
+                  target="_blank"
+                  rel="noopener noreferer"
+                >
+                  Psychology Today
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section className="values-list-section">
+        <div className="values-content">
+          <h2>Areas I Commonly Support Clients With</h2>
+          <p className="values-intro">
+            I often work with people navigating anxiety, depression, trauma,
+            relationship challenges, identity exploration, grief, family
+            conflict, work stress, addiction, self-esteem, and life
+            transitions. I also provide affirming support for 2SLGBTQIA+
+            clients, those exploring gender and sexuality, and individuals
+            seeking sex-positive and kink-allied therapy.
+          </p>
+          <ul className="support-approach-list" role="list">
+            {supportApproaches.map((item) => (
+              <li className="support-approach-item" key={item} role="listitem">
+                <span className="support-approach-icon" aria-hidden="true">
+                  <FontAwesomeIcon icon={faLeaf} />
+                </span>
+                <span className="support-approach-text">{item}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </section>
+
+      <section className="therapy-feels-section">
+        <div className="therapy-feels-content">
+          <h3>What Therapy With Me Feels Like</h3>
+          <p className="therapy-feels-intro">
+            You don't need to have the right words when you arrive. We start
+            wherever you are.
+          </p>
+          <p className="therapy-feels-intro">
+            Our work together helps you slow down, notice what's happening
+            inside, and make sense of patterns that may have been with you for
+            a long time. We look at your story, your relationships, your body,
+            and the systems you live within - not as problems to fix, but as
+            places to understand.
+          </p>
+          <h4 className="therapy-feels-subheading">
+            In our sessions, you can expect:
+          </h4>
+          <div className="therapy-feels-list" role="list">
+            {therapyWithMePoints.map((item, idx) => (
+              <div className="therapy-feels-item" key={idx} role="listitem">
+                <span className="therapy-feels-icon" aria-hidden="true">
+                  <FontAwesomeIcon icon={faArrowRight} />
+                </span>
+                <p className="therapy-feels-text">{item}</p>
+              </div>
+            ))}
+          </div>
+          <p className="therapy-feels-summary">
+            This is therapy that honors the whole person: your history, your
+            body, your relationships, and your lived experience.
+          </p>
+        </div>
+      </section>
+
+      <section className="cta-section">
+        <div className="cta-content">
+          <h2>Ready to Take the First Step?</h2>
+          <p>
+            Schedule a free consultation to discuss how we can work together.
+          </p>
+          <a
+            href={consultationUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <button className="cta-button">Book a Free Consultation</button>
+          </a>
         </div>
       </section>
 
@@ -152,144 +277,6 @@ export default function About() {
               />
             </a>
           </div>
-        </div>
-      </section>
-
-      <section className="philosophy-list-section">
-        <h2>My Approach to Therapy</h2>
-        <div className="philosophy-list-grid">
-          {approaches.map((item, idx) => (
-            <div
-              className="philosophy-list-item"
-              key={idx}
-              data-index={idx}
-              data-active={idx === currentApproachIndex}
-            >
-              <span className="philosophy-list-icon">
-                <FontAwesomeIcon icon={faLeaf} />
-              </span>
-              <div>
-                <span className="philosophy-list-title">{item.title}</span>
-                <span className="philosophy-list-desc">{item.desc}</span>
-              </div>
-            </div>
-          ))}
-        </div>
-        <div className="philosophy-carousel-controls">
-          <button
-            className="philosophy-carousel-button philosophy-carousel-button-prev"
-            onClick={prevApproach}
-            aria-label="Previous approach"
-          >
-            <FontAwesomeIcon icon={faChevronLeft} />
-          </button>
-          <button
-            className="philosophy-carousel-button philosophy-carousel-button-next"
-            onClick={nextApproach}
-            aria-label="Next approach"
-          >
-            <FontAwesomeIcon icon={faChevronRight} />
-          </button>
-        </div>
-      </section>
-
-      <section className="profile-section">
-        <div className="profile-content">
-          <div className="profile-text">
-            <div className="credentials">
-              <h4>How I Can Help </h4>
-              <p>
-                Our work together begins with the belief that you are the expert
-                on your own life, and that I am here to help motivate and
-                empower you towards the personal growth that matters most to
-                you. I also believe that our relationships, communities, and
-                social contexts have a significant impact in shaping who we are,
-                what we take notice of in the world, and how we come to engage
-                with that world. I see the therapeutic relationship as no
-                different, and therefore provide a collaborative, nonjudgmental,
-                compassionate, and safe atmosphere where clients feel both heard
-                and seen. In all aspects of therapy, I take a non-pathologizing,
-                culturally sensitive, and anti-oppressive stance that seeks to
-                disrupt and reposition systemically oppressive narratives.
-              </p>
-              <p>
-                Through an integrative approach, I tailor my practice to best
-                meet each client's unique needs and perspectives while working
-                from an attachment, trauma-informed, and systems-based lens.
-                This may include any combination of art therapy, narrative
-                therapy, somatic therapy (mind-body), gestalt therapy, and
-                family/systems therapy. In short, this means looking closely at
-                meaningful relationships and life events, reauthoring harmful
-                narratives, empowering you through the contextualizing and
-                processing of significant experiences, and working on
-                reconnecting with your emotional and bodily intelligences.
-              </p>
-              <p>
-                For those curious about art therapy, here's a bit about how I
-                practice. I focus on using creative practices as a way to help
-                reframe and (re)examine how we look at ourselves, our
-                relationships, and the world. Art therapy isn't about the end
-                goal of creating "Art," but about the process. This process
-                means tapping into parts of the brain that often get overlooked
-                or underused, but actually provide a wealth of knowledge about
-                how we each uniquely experience and perceive the world. Through
-                the use of imagination, metaphor, symbolism, and associations,
-                art therapy can help clients garner new perspectives, and even
-                help us problem solve in new ways. In short, art therapy
-                provides a nonthreatening means of accessing, externalizing,
-                making sense of, and integrating difficult thoughts, feelings,
-                and experiences when we find that words alone are seemingly not
-                up to the task.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section className="values-list-section">
-        <h2>Areas of Focus</h2>
-        <div className="values-list-grid">
-          {specialties.map((specialty, index) => (
-            <div
-              key={index}
-              className="values-list-item"
-              data-index={index}
-              data-active={index === currentSpecialtyIndex}
-            >
-              <span className="values-list-icon">
-                <FontAwesomeIcon icon={faSeedling} />
-              </span>
-              <span className="values-list-text">{specialty}</span>
-            </div>
-          ))}
-        </div>
-        <div className="values-carousel-controls">
-          <button
-            className="values-carousel-button values-carousel-button-prev"
-            onClick={prevSpecialty}
-            aria-label="Previous specialty"
-          >
-            <FontAwesomeIcon icon={faChevronLeft} />
-          </button>
-          <button
-            className="values-carousel-button values-carousel-button-next"
-            onClick={nextSpecialty}
-            aria-label="Next specialty"
-          >
-            <FontAwesomeIcon icon={faChevronRight} />
-          </button>
-        </div>
-      </section>
-
-      <section className="cta-section">
-        <div className="cta-content">
-          <h2>Ready to Take the First Step?</h2>
-          <p>
-            Schedule a free consultation to discuss how we can work together.
-          </p>
-          <a href="/contact">
-            <button className="cta-button">Book Your Consultation</button>
-          </a>
         </div>
       </section>
 

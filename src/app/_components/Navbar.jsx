@@ -31,8 +31,8 @@ const Navbar = () => {
           <Image
             src="/images/NewLogoTransp.webp"
             alt="JP Therapy StudiosLogo"
-            width={50}
-            height={50}
+            width={64}
+            height={64}
             className="logo-image"
           />
           <span className="logo-text">

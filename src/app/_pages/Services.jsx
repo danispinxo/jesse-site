@@ -17,7 +17,7 @@ import {
 
 export default function Services() {
   return (
-    <main className="page-content">
+    <main className="page-content services-page">
       <section className="page-hero">
         <div className="hero-content">
           <h1>
@@ -173,7 +173,7 @@ export default function Services() {
                 ))}
               </ul>
               <Link href="/contact">
-                <button className="cta-button">Get Started</button>
+                <button className="cta-button">Book a Consultation now</button>
               </Link>
             </div>
           </div>
@@ -221,7 +221,7 @@ export default function Services() {
               />
             </div>
             <div className="service-details">
-              <h2 id="eft-couples">EFT for Couples</h2>
+              <h2 id="eft-couples">Couple&apos;s Therapy</h2>
               <p>
                 <strong>Emotionally Focused Therapy (EFT) for Couples</strong>
               </p>
@@ -286,7 +286,7 @@ export default function Services() {
                 ))}
               </ul>
               <Link href="/contact">
-                <button className="cta-button">Get Started</button>
+                <button className="cta-button">Book a Consultation now</button>
               </Link>
             </div>
           </div>

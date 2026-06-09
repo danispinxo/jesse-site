@@ -1,11 +1,15 @@
 @use "variables" as *;
 
+.services-page {
+  background: $background-light;
+}
+
 .main-services {
   padding: $spacing-xl 0;
   background-color: $text-light;
 
   .services-content {
-    max-width: 1200px;
+    max-width: 1120px;
     margin: 0 auto;
     padding: 0 $spacing-lg;
     display: flex;
@@ -68,7 +72,7 @@
         }
 
         h2 {
-          font-family: $font-secondary;
+          font-family: $header-font;
           color: $primary-green;
           margin-bottom: $spacing-lg;
           font-size: 1.8rem;
@@ -80,7 +84,7 @@
             display: block;
             width: 80px;
             height: 3px;
-            background: linear-gradient(90deg, $accent-gold, transparent);
+            background: linear-gradient(90deg, $accent-red, transparent);
             margin: $spacing-sm auto 0;
             border-radius: 2px;
           }
@@ -101,8 +105,9 @@
 
         p {
           margin-bottom: $spacing-lg;
-          line-height: 1.6;
+          line-height: 1.75;
           font-size: 1.1rem;
+          max-width: 60ch;
 
           @media (max-width: $breakpoint-md) {
             font-size: 1rem;
@@ -112,7 +117,7 @@
 
         .service-features {
           list-style: none;
-          padding: 0;
+          padding: 0 0 0 $spacing-md;
           margin-bottom: $spacing-lg;
 
           @media (max-width: $breakpoint-md) {
@@ -130,7 +135,7 @@
             }
 
             .check-icon {
-              color: $accent-gold;
+              color: $accent-red;
               margin-right: $spacing-sm;
               flex-shrink: 0;
             }
@@ -138,6 +143,16 @@
         }
 
         .cta-button {
+          color: $text-light;
+          opacity: 1;
+
+          &:hover {
+            background-color: $accent-red;
+            color: $text-dark;
+            transform: translateY(-2px);
+            box-shadow: $shadow-md;
+          }
+
           @media (max-width: $breakpoint-md) {
             width: 100%;
             padding: $spacing-sm;
@@ -171,11 +186,11 @@
 }
 
 .pricing {
-  padding: $spacing-xl 0;
+  padding: $spacing-lg 0 $spacing-xl;
   background-color: $text-light;
 
   .pricing-content {
-    max-width: 1200px;
+    max-width: 1120px;
     margin: 0 auto;
     padding: 0 $spacing-lg;
     text-align: center;
@@ -189,27 +204,28 @@
     }
 
     h2 {
+      display: block;
+      width: 100%;
       text-align: center;
-      font-family: $font-secondary;
+      font-family: $header-font;
       color: $primary-green;
-      margin-bottom: $spacing-xl;
+      margin: $spacing-md 0 $spacing-lg;
       font-size: 2rem;
-      position: relative;
-      display: inline-block;
+      font-weight: 700;
 
       &::after {
         content: "";
         display: block;
         width: 80px;
         height: 3px;
-        background: linear-gradient(90deg, $accent-gold, transparent);
+        background: linear-gradient(90deg, $accent-red, transparent);
         margin: $spacing-sm auto 0;
         border-radius: 2px;
       }
 
       @media (max-width: $breakpoint-md) {
-        font-size: 1.8rem;
-        margin-bottom: $spacing-lg;
+        font-size: 1.75rem;
+        margin: $spacing-sm 0 $spacing-md;
       }
     }
 
@@ -252,9 +268,11 @@
         }
 
         h3 {
+          font-family: $header-font;
           color: $secondary-green;
           margin-bottom: $spacing-md;
           font-size: 1.5rem;
+          font-weight: 700;
 
           @media (max-width: $breakpoint-md) {
             font-size: 1.3rem;
@@ -267,15 +285,17 @@
             transition: all $transition-normal;
             position: relative;
             display: inline-block;
-            padding: 4px 8px;
-            margin: -4px -8px;
+            padding: 10px 14px;
+            margin: -10px -14px;
 
             &::before {
               content: "";
               position: absolute;
               inset: 0;
-              border: 2px solid $primary-green;
+              border: 2px solid $accent-red;
               border-radius: $border-radius-sm;
+              box-shadow: 0 8px 24px rgba($accent-red, 0.45),
+                0 2px 8px rgba($accent-red, 0.35);
               clip-path: polygon(0 0, 0 0, 0 0, 0 0);
               pointer-events: none;
             }
@@ -283,7 +303,7 @@
             &:hover {
               color: $primary-green;
               transform: translateY(-1px);
-              box-shadow: $shadow-lg;
+              box-shadow: none;
             }
 
             &:active {
@@ -345,7 +365,7 @@
             }
 
             .check-icon {
-              color: $accent-gold;
+              color: $accent-red;
               margin-right: $spacing-sm;
               flex-shrink: 0;
             }
@@ -353,6 +373,16 @@
         }
 
         .cta-button {
+          color: $text-light;
+          opacity: 1;
+
+          &:hover {
+            background-color: $accent-red;
+            color: $text-dark;
+            transform: translateY(-2px);
+            box-shadow: $shadow-md;
+          }
+
           @media (max-width: $breakpoint-md) {
             width: 100%;
             padding: $spacing-sm;

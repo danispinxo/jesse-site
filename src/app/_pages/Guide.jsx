@@ -1,8 +1,9 @@
 import "../styles/guide.scss";
+import Footer from "../_components/Footer";
 
 export default function Guide() {
   return (
-    <main className="page-content">
+    <main className="page-content guide-page">
       <section className="page-hero">
         <div className="hero-content">
           <h1>
@@ -15,11 +16,15 @@ export default function Guide() {
       </section>
 
       <div className="guide-intro">
-        If you search “therapist Toronto” the Internet will give you millions of
-        search results. Literally. Finding the right therapist can feel hopeless
-        and exhausting. And if you're searching for a therapist, you're probably
-        already under a certain amount of stress as it is. Don't despair!
-        Streamline your search by working through the FOUR following steps:
+        <p>
+          If you do an online search for a therapist in your area you will be bombarded with so many options that one often doesn't know where to begin. This makes finding the right therapist can feel, daunting, hopeless and exhausting. If you're searching for a therapist, you're likely already under a certain amount of stress as it is.
+        </p>
+        <p className="guide-intro-lede">
+          Don&apos;t despair, though! This guide will help you navigate the
+          search process and find the right therapist for you by working through
+          the 4 following steps:
+        </p>
+
       </div>
 
       <div className="section">
@@ -42,7 +47,7 @@ export default function Guide() {
           <p className="subtitle">1. A psychiatrist is a medical doctor.</p>
           <ul className="single-column">
             <li>
-              They can prescribe drugs (i.e., anti-depressant, anti-anxiety, or
+              They can prescribe medications (i.e., anti-depressant, anti-anxiety, or
               anti-psychotic medication)
             </li>
             <li>
@@ -85,8 +90,8 @@ export default function Guide() {
           </p>
 
           <ul className="single-column">
-            <li>They cannot prescribe medication*</li>
-            <li>They cannot diagnose mental health conditions*</li>
+            <li>They cannot prescribe medication</li>
+            <li>They cannot diagnose mental health conditions</li>
             <li>
               Your insurance may cover psychotherapist services—check to see
               whether your coverage includes the designation Registered
@@ -318,6 +323,8 @@ export default function Guide() {
           </p>
         </div>
       </div>
+
+      <Footer />
     </main>
   );
 }

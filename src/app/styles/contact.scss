@@ -1,27 +1,48 @@
 @use "variables" as *;
 
+.contact-page {
+  background-color: $text-light;
+  min-height: calc(100vh - 80px);
+
+  .footer {
+    margin-top: $spacing-sm;
+    padding-top: 0;
+  }
+
+}
+
 .covid-note {
-  max-width: 1060px;
-  margin: 2rem auto;
-  padding: 1.2rem 2rem;
-  background-color: rgba($primary-green, 0.06);
-  border-radius: 12px;
+  box-sizing: border-box;
+  max-width: 980px;
+  margin: $spacing-lg auto;
+  padding: 2rem 2.5rem;
+  background: $primary-green;
+  border: none;
+  border-radius: $border-radius-lg;
+  box-shadow: $shadow-md;
   text-align: center;
 
   p {
-    color: $primary-green;
-    line-height: 1.5;
+    color: $text-light;
+    line-height: 1.6;
     margin: 0;
-    font-size: 1rem;
+    font-size: 1.1rem;
+    max-width: 42rem;
+    margin-inline: auto;
   }
+}
+
+.contact-content-section {
+  background: $background-light;
+  padding: $spacing-xl 0;
 }
 
 .contact-body {
   display: flex;
   flex-wrap: wrap;
-  max-width: 1100px;
-  margin: 2rem auto;
-  gap: 2rem;
+  max-width: 1040px;
+  margin: 0 auto;
+  gap: 2.5rem;
   padding: 0 1rem;
 
   @media (max-width: $breakpoint-md) {
@@ -33,10 +54,10 @@
   flex: 1;
   min-width: 300px;
   padding: 2rem;
-  background-color: #ffffff;
-  border-radius: 12px;
+  background-color: $text-light;
+  border-radius: $border-radius-md;
   box-shadow: $shadow-md;
-  border: 1px solid rgba($primary-green, 0.08);
+  border: none;
   text-align: center;
 
   .guide-link {
@@ -44,44 +65,73 @@
     text-align: center;
 
     a {
-      color: $text-light;
-      font-size: 1.1rem;
-      font-weight: 500;
-      padding: 0.75rem 1.5rem;
-      border-radius: $border-radius-md;
-      background-color: $primary-green;
-      border: 2px solid $primary-green;
+      color: $background-light;
+      font-size: 1rem;
+      font-weight: 600;
+      padding: $spacing-sm $spacing-md;
+      border-radius: $border-radius-sm;
+      background-color: $accent-red;
+      border: none;
       display: inline-block;
-      transition: all $transition-normal;
-      position: relative;
       text-decoration: none;
+      transition: transform $transition-normal, box-shadow $transition-normal,
+        color $transition-normal;
 
       &:hover {
-        background-color: $secondary-green;
-        border-color: $secondary-green;
+        background-color: $accent-red;
         transform: translateY(-2px);
-        box-shadow: 0 10px 28px rgb(0 0 0 / 30%), 0 24px 64px rgb(0 0 0 / 25%);
-        color: $text-light;
-      }
-
-      &:active {
-        transform: translateY(0);
-        box-shadow: 0 4px 16px rgb(0 0 0 / 25%);
+        box-shadow: $shadow-md;
+        color: $background-dark;
       }
     }
   }
 
-  .logo {
+  .contact-logo-wrapper {
+    position: relative;
     display: block;
-    max-width: 300px;
+    width: min(100%, 300px);
     margin: 0 auto 1.5rem;
+    overflow: visible;
+
+    .contact-logo-accent {
+      position: absolute;
+      top: 60%;
+      left: 70%;
+      width: 75%;
+      aspect-ratio: 1;
+      border-radius: 50%;
+      background: linear-gradient(
+        180deg,
+        rgba($light-green, 0.95) 0%,
+        rgba($secondary-green, 0.14) 100%
+      );
+      box-shadow: 0 16px 34px rgba($secondary-green, 0.12);
+      transform: translate(-50%, -50%) rotate(4deg);
+      z-index: 0;
+
+      @media (max-width: $breakpoint-md) {
+        top: 48%;
+        left: 78%;
+      }
+    }
+
+    .logo {
+      position: relative;
+      z-index: 1;
+      display: block;
+      width: 100%;
+      max-width: 300px;
+      margin: 0 auto;
+    }
   }
 
   p {
     font-size: 1rem;
     color: $text-dark;
-    line-height: 1.6;
+    line-height: 1.75;
     margin-bottom: 1.5rem;
+    max-width: 60ch;
+    margin-inline: auto;
   }
 
   a {
@@ -97,70 +147,96 @@
 
   .border-bottom-text {
     border-bottom: 1px solid rgba($text-dark, 0.1);
-    padding-bottom: 1.5rem;
+    padding: $spacing-md 0 $spacing-lg;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
-    gap: 1rem;
+    gap: $spacing-md;
+
+    h2 {
+      font-family: $font-secondary;
+      font-weight: 600;
+      color: $primary-green;
+    }
 
     .cta-button {
+      background-color: $accent-red;
+      color: $background-light;
+      padding: $spacing-md $spacing-lg;
+      border: none;
+      border-radius: $border-radius-sm;
+      font-size: 1rem;
+      font-weight: 600;
+      cursor: pointer;
+      opacity: 1;
       text-align: center;
-      margin-top: 1rem;
-      color: black;
+      margin-top: 0;
+      transition: transform $transition-normal, box-shadow $transition-normal,
+        color $transition-normal;
 
       &:hover {
-        background-color: $accent-gold;
-        border-color: $accent-gold;
+        background-color: $accent-red;
         transform: translateY(-2px);
-        box-shadow: 0 10px 28px rgb(97 70 0 / 30%), 0 24px 64px rgb(97 70 0 / 25%),;
-        color: black;
-      }
-    }
-  }
-
-  .affiliation-images {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.5rem;
-    justify-content: space-around;
-    align-items: center;
-    margin-top: 1.5rem;
-
-    .affiliation-img {
-      max-width: 180px;
-      height: auto;
-      transition: transform $transition-normal;
-
-      &:hover {
-        transform: scale(1.05);
+        box-shadow: $shadow-md;
+        color: $background-dark;
       }
     }
 
-    .tati-logo {
-      padding: 3rem;
+    &:last-child {
+      border-bottom: none;
+      padding-bottom: 0;
+      margin-top: $spacing-lg;
     }
   }
+
 }
 
 .contact-form {
   flex: 1;
   min-width: 300px;
-  padding: 2rem;
-  background-color: $background-light;
+  padding: 2.5rem;
+  background-color: $text-light;
   border-radius: $border-radius-md;
   box-shadow: $shadow-md;
+  border: none;
 
   .form-identifier {
+    font-family: $header-font;
     text-align: center;
     margin-bottom: 2rem;
-    font-weight: 600;
+    font-weight: 500;
     color: $primary-green;
   }
 
   .input {
     margin-bottom: 1.5rem;
+  }
+
+  .MuiInputLabel-root,
+  .MuiFormLabel-root {
+    font-family: $font-primary;
+    font-weight: 400;
+
+    &.Mui-focused,
+    &.MuiInputLabel-shrink {
+      font-weight: 400;
+    }
+  }
+
+  .MuiFormControlLabel-label {
+    font-family: $font-primary;
+    font-weight: 400;
+  }
+
+  .MuiInputBase-root,
+  .MuiFormHelperText-root {
+    font-family: $font-primary;
+  }
+
+  .input-message .MuiInputLabel-root {
+    font-style: italic;
   }
 
   .checkbox-container {
@@ -181,23 +257,35 @@
 
   .form-submit-btn {
     display: block;
-    width: 100%;
-    padding: 1rem 2rem;
-    background-color: $primary-green;
-    color: $text-light;
+    width: auto;
+    min-width: 11rem;
+    max-width: 100%;
+    margin: $spacing-md auto 0;
+    padding: $spacing-md $spacing-xl;
+    background-color: $accent-red;
+    color: $background-light;
     border: none;
     border-radius: $border-radius-sm;
+    font-family: $font-primary;
+    font-size: 1rem;
     font-weight: 600;
     cursor: pointer;
-    transition: background-color $transition-normal;
+    transition: transform $transition-normal, box-shadow $transition-normal,
+      color $transition-normal;
 
-    &:hover {
-      background-color: $secondary-green;
+    &:hover:not(:disabled) {
+      background-color: $accent-red;
+      transform: translateY(-2px);
+      box-shadow: $shadow-md;
+      color: $background-dark;
     }
 
     &:disabled {
       background-color: rgba($text-dark, 0.3);
+      color: $text-light;
       cursor: not-allowed;
+      transform: none;
+      box-shadow: none;
     }
   }
 

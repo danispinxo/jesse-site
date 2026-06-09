@@ -4,22 +4,32 @@ import "@fortawesome/fontawesome-svg-core/styles.css";
 import { config } from "@fortawesome/fontawesome-svg-core";
 import Navbar from "./_components/Navbar";
 import StructuredData from "./_components/StructuredData";
-import { Gabarito, Harmattan } from "next/font/google";
+import { Antic_Slab, Lora, Nunito } from "next/font/google";
 
 config.autoAddCss = false;
 
-const harmattan = Harmattan({
+const nunito = Nunito({
   subsets: ["latin"],
-  weight: ["400", "600"],
+  weight: ["400", "500", "600", "700"],
   display: "swap",
   preload: true,
+  variable: "--font-body",
 });
 
-const gabarito = Gabarito({
+const lora = Lora({
   subsets: ["latin"],
-  weight: ["400", "600", "700"],
+  weight: ["500", "600", "700"],
   display: "swap",
   preload: true,
+  variable: "--font-heading",
+});
+
+const anticSlab = Antic_Slab({
+  subsets: ["latin"],
+  weight: "400",
+  display: "swap",
+  preload: true,
+  variable: "--font-secondary",
 });
 
 export const metadata = {
@@ -74,7 +84,7 @@ export default function RootLayout({ children }) {
   return (
     <html
       lang="en"
-      className={`${gabarito.className} ${harmattan.className}`}
+      className={`${nunito.variable} ${lora.variable} ${anticSlab.variable}`}
     >
       <head>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -87,8 +97,8 @@ export default function RootLayout({ children }) {
         <meta name="language" content="en-CA" />
         <meta name="geo.region" content="CA-ON" />
         <meta name="geo.placename" content="Ontario, Canada" />
-        <meta name="theme-color" content="#2d5a3d" />
-        <meta name="msapplication-TileColor" content="#2d5a3d" />
+        <meta name="theme-color" content="#55634f" />
+        <meta name="msapplication-TileColor" content="#55634f" />
         <meta name="mobile-web-app-capable" content="yes" />
         <meta name="apple-mobile-web-app-status-bar-style" content="default" />
         <meta name="apple-mobile-web-app-title" content="JPTS" />

@@ -1,26 +1,25 @@
 // fonts
-$sub-font: "Harmattan", sans-serif;
-$header-font: "Gabarito", sans-serif;
-$light-green: #b7bf98;
-$primary-green: #1a4d2e;
-$secondary-green: #2d6a4f;
-$accent-gold: #d4af37;
-$text-dark: #333333;
-$text-light: #ffffff;
-$text-muted: #666666;
-$background-light: #f5f5f0;
-$background-dark: #214d2d;
-$font-primary: "Gabarito", "system-ui", "-apple-system", "BlinkMacSystemFont",
+$sub-font: var(--font-heading), "Lora", georgia, serif;
+$header-font: var(--font-heading), "Lora", georgia, serif;
+$light-green: #e4c0a9;
+$primary-green: #55634f;
+$secondary-green: #73816c;
+$accent-red: #c9785b;
+$text-dark: #2f2723;
+$text-light: #fffaf6;
+$text-muted: #5b4e47;
+$background-light: #f7efe6;
+$background-dark: #56624f;
+$font-primary: var(--font-body), "Nunito", "system-ui", "-apple-system", "BlinkMacSystemFont",
   sans-serif;
-$font-secondary: "Harmattan", "Arial", "Helvetica", "Liberation Sans",
-  sans-serif;
+$font-secondary: var(--font-secondary), "Antic Slab", georgia, serif;
 
 // Spacing
 $spacing-xs: 0.25rem;
 $spacing-sm: 0.5rem;
 $spacing-md: 1rem;
-$spacing-lg: 2rem;
-$spacing-xl: 4rem;
+$spacing-lg: 2.25rem;
+$spacing-xl: 5rem;
 
 // Border Radius
 $border-radius-sm: 8px;
@@ -35,9 +34,9 @@ $breakpoint-xl: 1225px;
 $breakpoint-nav: 1290px;
 
 // Shadows
-$shadow-sm: 0 2px 4px rgb(0 0 0 / 10%);
-$shadow-md: 0 4px 6px rgb(0 0 0 / 10%);
-$shadow-lg: 0 10px 15px rgb(0 0 0 / 10%);
+$shadow-sm: 0 4px 10px rgb(47 39 35 / 10%);
+$shadow-md: 0 10px 24px rgb(47 39 35 / 14%);
+$shadow-lg: 0 20px 44px rgb(47 39 35 / 18%);
 
 // Transitions
 $transition-fast: 0.2s ease;

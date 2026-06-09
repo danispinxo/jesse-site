@@ -1,41 +1,42 @@
 @use "variables" as *;
 
-.page-content {
-  margin-top: 80px;
+.guide-page {
+  background: $text-light;
+
+  .footer {
+    margin-top: $spacing-sm;
+    padding-top: 0;
+  }
 }
 
 .guide-intro {
-  max-width: 800px;
+  max-width: 740px;
   margin: 2rem auto;
-  padding: 2rem;
-  background-color: $background-light;
+  padding: 2.5rem;
+  background: $background-light;
+  border: none;
   border-radius: $border-radius-md;
   box-shadow: $shadow-md;
-  transition: transform $transition-normal;
-
-  &:hover {
-    transform: translateY(-5px);
-  }
 
   p {
     color: $text-dark;
-    line-height: 1.6;
+    line-height: 1.75;
     margin-bottom: 1rem;
+  }
+
+  .guide-intro-lede {
+    font-weight: 600;
+    margin-bottom: 0;
   }
 }
 
 .section {
-  max-width: 1000px;
+  max-width: 920px;
   margin: 2rem auto;
-  background-color: #ffffff;
+  background-color: $background-light;
   border-radius: $border-radius-md;
   box-shadow: $shadow-md;
   overflow: hidden;
-  transition: transform $transition-normal;
-
-  &:hover {
-    transform: translateY(-5px);
-  }
 
   .section-label {
     background: linear-gradient(135deg, $primary-green, $secondary-green);
@@ -61,7 +62,7 @@
   }
 
   .section-content {
-    padding: 2rem;
+    padding: 2.5rem;
 
     .bolded-text {
       font-weight: 600;
@@ -71,7 +72,7 @@
 
     p {
       color: $text-dark;
-      line-height: 1.6;
+      line-height: 1.75;
       margin-bottom: 1.5rem;
     }
 
@@ -88,7 +89,7 @@
 
       li {
         color: $text-dark;
-        line-height: 1.6;
+        line-height: 1.7;
         margin-bottom: 0.5rem;
       }
     }

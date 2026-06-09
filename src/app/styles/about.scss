@@ -457,8 +457,14 @@ $about-card-surface: $background-light;
 
 @media (max-width: $breakpoint-md) {
   .about-details-section {
+    padding-inline: 1.25rem;
+
+    .about-details-content {
+      padding-inline: 1.75rem;
+    }
+
     .about-summary {
-      text-align: left;
+      text-align: center;
 
       h2 {
         text-align: center;

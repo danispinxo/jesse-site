@@ -108,6 +108,11 @@
       box-shadow: 0 16px 34px rgba($secondary-green, 0.12);
       transform: translate(-50%, -50%) rotate(4deg);
       z-index: 0;
+
+      @media (max-width: $breakpoint-md) {
+        top: 48%;
+        left: 78%;
+      }
     }
 
     .logo {

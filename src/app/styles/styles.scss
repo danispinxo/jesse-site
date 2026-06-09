@@ -429,6 +429,16 @@ main li {
         font-size: 0.8rem;
       }
 
+      @media (min-width: $breakpoint-md) and (max-width: $breakpoint-xl) {
+        font-size: 1.08rem;
+        font-weight: 600;
+      }
+
+      @media (min-width: $breakpoint-sm) and (max-width: $breakpoint-md) {
+        font-size: 1rem;
+        font-weight: 600;
+      }
+
       .name,
       .studio {
         display: block;
@@ -488,11 +498,23 @@ main li {
       }
     }
 
+    @media (min-width: $breakpoint-sm) and (max-width: $breakpoint-md) {
+      .nav-link {
+        font-size: 1.1rem;
+        font-weight: 600;
+      }
+    }
+
     .nav-link {
       color: $text-light;
       text-decoration: none;
       font-weight: 500;
       transition: color $transition-normal;
+
+      @media (min-width: $breakpoint-md) and (max-width: $breakpoint-xl) {
+        font-size: 1.06rem;
+        font-weight: 600;
+      }
 
       &:hover {
         color: $accent-red;
@@ -1388,11 +1410,22 @@ main.home {
 
   .home .about-me-section,
   .home .approach-list-section,
-  .home .specialties-list-section,
   .home .home-cta-strip {
     padding-left: 1rem;
     padding-right: 1rem;
     margin: 0;
+  }
+}
+
+@media (min-width: $breakpoint-md) and (max-width: $breakpoint-xl) {
+  .home .specialties-list-section {
+    padding-inline: 0.75rem;
+    margin: 0;
+
+    .specialties-content {
+      padding-block: clamp(2.5rem, 4vw, 3.5rem);
+      padding-inline: 1.5rem;
+    }
   }
 }
 
@@ -1463,10 +1496,16 @@ main.home {
   }
 
   .home .about-me-section {
-    padding: 0 1rem 3rem;
+    padding: 0 1.25rem 3rem;
 
     .about-me-content {
-      padding: 1.75rem 1.25rem;
+      padding: 1.75rem 1.75rem;
+      text-align: center;
+    }
+
+    h2,
+    h3 {
+      text-align: center;
     }
 
     h3 {
@@ -1475,7 +1514,7 @@ main.home {
 
     .why-content {
       font-size: 1rem;
-      text-align: left;
+      text-align: center;
     }
   }
 
@@ -1484,30 +1523,75 @@ main.home {
   }
 
   .home .home-cta-strip-content {
+    padding: 1.25rem 1.25rem;
     gap: 1rem;
 
     p {
+      margin-left: 0;
       font-size: 1.05rem;
+      font-weight: 600;
+    }
+
+    .cta-button {
+      font-weight: 600;
     }
   }
 
-  .home .approach-list-section,
-  .home .specialties-list-section {
+  .home .approach-list-section {
     padding-left: 0.5rem;
     padding-right: 0.5rem;
   }
 
   .home .approach-list-section {
     .approach-intro,
-    .approach-subheading,
     .approach-summary {
       text-align: left;
+    }
+
+    .approach-subheading {
+      text-align: center;
+    }
+
+    .approach-list-grid {
+      text-align: center;
+    }
+
+    .approach-list-item {
+      justify-content: center;
+      text-align: center;
     }
   }
 
   .home .specialties-list-section {
+    padding: 0 1rem 3rem;
+    margin-inline: auto;
+    width: 100%;
+    box-sizing: border-box;
+
+    h2 {
+      width: 100%;
+      margin-inline: auto;
+    }
+
+    .specialties-content {
+      width: 100%;
+      max-width: 100%;
+      margin-inline: auto;
+      padding: 1.5rem 1rem;
+      box-sizing: border-box;
+    }
+
     .specialties-list-grid {
       grid-template-columns: 1fr;
+      width: 100%;
+      max-width: 100%;
+      margin: 0;
+    }
+
+    .specialty-group {
+      width: 100%;
+      padding: 1.5rem 1.25rem;
+      box-sizing: border-box;
     }
   }
 }
@@ -1577,11 +1661,19 @@ main.home {
     width: 100%;
   }
 
+  .home .home-cta-strip-content {
+    padding: 1rem 1rem;
+
+    p {
+      font-weight: 600;
+    }
+  }
+
   .home .about-me-section {
-    padding: 0 0.75rem 2.5rem;
+    padding: 0 1.25rem 2.5rem;
 
     .about-me-content {
-      padding: 1.5rem 1rem;
+      padding: 1.5rem 1.75rem;
     }
 
     .about-lede {
@@ -1601,19 +1693,28 @@ main.home {
 
     .approach-list-item {
       padding: 0.35rem 0;
-      text-align: left;
+      justify-content: center;
+      text-align: center;
+    }
+
+    .approach-subheading {
+      text-align: center;
+    }
+
+    .approach-list-grid {
+      text-align: center;
     }
   }
 
   .home .specialties-list-section {
-    width: 100%;
+    padding: 0 1rem 2.5rem;
 
     .specialties-content {
       padding: 1.5rem 1rem;
     }
 
     .specialty-group {
-      padding: $spacing-md;
+      padding: 1.5rem 1.25rem;
     }
   }
 }

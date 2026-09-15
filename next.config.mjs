@@ -5,9 +5,6 @@ const nextConfig = {
   compress: true,
   poweredByHeader: false,
   trailingSlash: false,
-  experimental: {
-    cssChunking: "strict",
-  },
 
   async redirects() {
     return [

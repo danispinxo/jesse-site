@@ -16,20 +16,20 @@
     "@emotion/react": "^11.14.0",
     "@emotion/styled": "^11.14.1",
     "@formspree/react": "^3.0.0",
-    "@fortawesome/free-solid-svg-icons": "^7.2.0",
-    "@fortawesome/react-fontawesome": "^3.3.1",
-    "@mui/material": "^9.0.1",
-    "next": "16.2.12",
+    "@fortawesome/free-solid-svg-icons": "^7.3.1",
+    "@fortawesome/react-fontawesome": "^3.5.0",
+    "@mui/material": "^9.4.0",
+    "next": "16.3.5",
     "normalize.css": "^8.0.1",
-    "react": "^19.2.6",
-    "react-dom": "^19.2.6",
-    "sass": "^1.99.0"
+    "react": "^19.3.0",
+    "react-dom": "^19.3.0",
+    "sass": "^1.104.1"
   },
   "devDependencies": {
-    "eslint": "^10.0.2",
-    "stylelint": "^17.0.0",
+    "eslint": "^10.10.0",
+    "stylelint": "^17.15.0",
     "stylelint-config-standard-scss": "^17.0.0",
-    "stylelint-scss": "^7.0.0"
+    "stylelint-scss": "^7.2.0"
   },
   "engines": {
     "node": "v22.14.0"

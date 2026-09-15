@@ -2,6 +2,9 @@ import { defineConfig } from "eslint/config";
 
 export default defineConfig([
   {
+    ignores: [".next/**", ".cache/**", "node_modules/**", "out/**", "build/**"],
+  },
+  {
     files: ["**/*.{js,jsx}"],
     languageOptions: {
       ecmaVersion: 2021,

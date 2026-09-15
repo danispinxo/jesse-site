@@ -214,7 +214,6 @@ main li {
       line-height: 1.1;
       margin-bottom: $spacing-sm;
       text-shadow: 2px 2px 4px rgba($background-dark, 0.3);
-      font-display: swap;
       text-rendering: optimizelegibility;
       -webkit-font-smoothing: antialiased;
       -moz-osx-font-smoothing: grayscale;
@@ -1521,7 +1520,7 @@ main.home {
     padding: 0 1.25rem 3rem;
 
     .about-me-content {
-      padding: 1.75rem 1.75rem;
+      padding: 1.75rem;
       text-align: center;
     }
 
@@ -1545,7 +1544,7 @@ main.home {
   }
 
   .home .home-cta-strip-content {
-    padding: 1.25rem 1.25rem;
+    padding: 1.25rem;
     gap: 1rem;
 
     p {
@@ -1562,9 +1561,7 @@ main.home {
   .home .approach-list-section {
     padding-left: 0.5rem;
     padding-right: 0.5rem;
-  }
 
-  .home .approach-list-section {
     .approach-intro,
     .approach-summary {
       text-align: left;
@@ -1684,7 +1681,7 @@ main.home {
   }
 
   .home .home-cta-strip-content {
-    padding: 1rem 1rem;
+    padding: 1rem;
 
     p {
       font-weight: 600;
@@ -1711,6 +1708,7 @@ main.home {
     .approach-list-grid {
       grid-template-columns: 1fr;
       gap: $spacing-sm;
+      text-align: center;
     }
 
     .approach-list-item {
@@ -1720,10 +1718,6 @@ main.home {
     }
 
     .approach-subheading {
-      text-align: center;
-    }
-
-    .approach-list-grid {
       text-align: center;
     }
   }

@@ -51,8 +51,27 @@ export default function Services() {
                     plan.title
                   )}
                 </h3>
-                <p className="price">{plan.price}</p>
-                <p className="duration">{plan.duration}</p>
+                {plan.priceOptions ? (
+                  <div className="price-options">
+                    {plan.priceOptions.map((option) => (
+                      <div className="price-option" key={option.duration}>
+                        <p className="price">{option.price}</p>
+                        <p className="duration">{option.duration}</p>
+                      </div>
+                    ))}
+                  </div>
+                ) : (
+                  <div className="price-block">
+                    <p
+                      className={
+                        plan.priceIsText ? "price price-text" : "price"
+                      }
+                    >
+                      {plan.price}
+                    </p>
+                    <p className="duration">{plan.duration}</p>
+                  </div>
+                )}
                 <ul className="features">
                   {plan.features.map((feature, featureIndex) => (
                     <li key={featureIndex}>
@@ -61,7 +80,7 @@ export default function Services() {
                     </li>
                   ))}
                 </ul>
-                <Link href="/contact">
+                <Link href="/contact" className="pricing-cta">
                   <button className="cta-button">Book Now</button>
                 </Link>
               </div>

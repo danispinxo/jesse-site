@@ -246,6 +246,8 @@
       }
 
       .pricing-card {
+        display: flex;
+        flex-direction: column;
         background-color: $background-light;
         padding: $spacing-lg;
         border-radius: $border-radius-md;
@@ -273,10 +275,15 @@
           margin-bottom: $spacing-md;
           font-size: 1.5rem;
           font-weight: 700;
+          min-height: 2.2em;
+          display: flex;
+          align-items: center;
+          justify-content: center;
 
           @media (max-width: $breakpoint-md) {
             font-size: 1.3rem;
             margin-bottom: $spacing-sm;
+            min-height: 0;
           }
 
           .pricing-card-link {
@@ -312,11 +319,30 @@
           }
         }
 
+        .price-block,
+        .price-options {
+          margin-bottom: $spacing-lg;
+          min-height: 5.5rem;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+
+          @media (max-width: $breakpoint-md) {
+            margin-bottom: $spacing-md;
+            min-height: 0;
+          }
+        }
+
+        .price-block {
+          flex-direction: column;
+        }
+
         .price {
           font-size: 2.5rem;
           font-weight: 700;
           color: $primary-green;
-          margin-bottom: $spacing-sm;
+          margin: 0 0 $spacing-xs;
+          line-height: 1.1;
 
           @media (max-width: $breakpoint-md) {
             font-size: 2rem;
@@ -331,24 +357,70 @@
               font-size: 1.2rem;
             }
           }
+
+          &.price-text {
+            &::before {
+              content: none;
+            }
+          }
+        }
+
+        .price-options {
+          gap: 0;
+          width: 100%;
+
+          .price-option {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 0 $spacing-sm;
+
+            &:not(:last-child) {
+              border-right: 1px solid rgba($primary-green, 0.2);
+            }
+
+            .price {
+              font-size: 2rem;
+              margin-bottom: $spacing-xs;
+
+              @media (max-width: $breakpoint-md) {
+                font-size: 1.75rem;
+              }
+
+              &::before {
+                font-size: 1.15rem;
+
+                @media (max-width: $breakpoint-md) {
+                  font-size: 1rem;
+                }
+              }
+            }
+
+            .duration {
+              margin: 0;
+              font-size: 0.95rem;
+            }
+          }
         }
 
         .duration {
           color: $text-dark;
-          margin-bottom: $spacing-lg;
+          margin: 0;
           font-size: 1.1rem;
 
           @media (max-width: $breakpoint-md) {
             font-size: 1rem;
-            margin-bottom: $spacing-md;
           }
         }
 
         .features {
           list-style: none;
           padding: 0;
-          margin-bottom: $spacing-lg;
+          margin: 0 0 $spacing-lg;
           text-align: left;
+          flex: 1;
 
           @media (max-width: $breakpoint-md) {
             margin-bottom: $spacing-md;
@@ -370,6 +442,11 @@
               flex-shrink: 0;
             }
           }
+        }
+
+        .pricing-cta {
+          margin-top: auto;
+          display: block;
         }
 
         .cta-button {

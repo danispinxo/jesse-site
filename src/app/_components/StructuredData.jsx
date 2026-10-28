@@ -105,7 +105,7 @@ export default function StructuredData() {
     "medicalSpecialty": [
       "Mental Health"
     ],
-    "priceRange": "$90-$150",
+    "priceRange": "$160-$285",
     "paymentAccepted": ["Cash", "Credit Card", "Debit Card", "E-Transfer"],
     "currenciesAccepted": "CAD",
     "openingHours": "Mo-Fr 09:00-17:00",
@@ -192,7 +192,7 @@ export default function StructuredData() {
             "name": "Individual Psychotherapy",
             "description": "One-on-one therapy sessions focused on personal growth and mental health."
           },
-          "price": "140",
+          "price": "160",
           "priceCurrency": "CAD"
         },
         {
@@ -202,7 +202,27 @@ export default function StructuredData() {
             "name": "Art Psychotherapy",
             "description": "Creative therapy sessions using art as a tool for healing and self-discovery."
           },
-          "price": "140",
+          "price": "160",
+          "priceCurrency": "CAD"
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Couple's Therapy",
+            "description": "Emotionally Focused Therapy (EFT) for couples."
+          },
+          "price": "175",
+          "priceCurrency": "CAD"
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Couple's Therapy (Extended)",
+            "description": "90-minute Emotionally Focused Therapy (EFT) for couples."
+          },
+          "price": "285",
           "priceCurrency": "CAD"
         },
         {
@@ -210,7 +230,7 @@ export default function StructuredData() {
           "itemOffered": {
             "@type": "Service",
             "name": "Clinical Supervision",
-            "description": "Professional supervision for therapists working toward licensure."
+            "description": "Professional supervision for therapists working toward licensure. Inquire for rates."
           },
         },
         {

@@ -63,7 +63,7 @@ export const pricingPlans = [
   },
   {
     title: "Psychotherapy",
-    price: "140",
+    price: "160",
     duration: "50 minutes",
     sectionId: "psychotherapy",
     features: [
@@ -76,7 +76,7 @@ export const pricingPlans = [
   },
   {
     title: "Art Psychotherapy",
-    price: "140",
+    price: "160",
     duration: "50 minutes",
     sectionId: "art-psychotherapy",
     features: [
@@ -89,7 +89,8 @@ export const pricingPlans = [
   },
   {
     title: "Reduced Rate",
-    price: "90-130",
+    price: "Inquire",
+    priceIsText: true,
     duration: "50 minutes",
     sectionId: "reduced-rate",
     features: [
@@ -102,9 +103,11 @@ export const pricingPlans = [
   },
   {
     title: "Couple's Therapy",
-    price: "150",
-    duration: "50 minutes",
     sectionId: "eft-couples",
+    priceOptions: [
+      { price: "175", duration: "50 minutes" },
+      { price: "285", duration: "90 minutes" },
+    ],
     features: [
       "Emotion-focused",
       "Understand your cycle",
@@ -115,7 +118,8 @@ export const pricingPlans = [
   },
   {
     title: "Clinical Supervision",
-    price: "100-160",
+    price: "Inquire",
+    priceIsText: true,
     duration: "50 minutes",
     sectionId: "clinical-supervision",
     features: [
